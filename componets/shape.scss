@@ -1,0 +1,48 @@
+@mixin square(
+	$position,
+	$z-index,
+	$width,
+	$height,
+	$top,
+	$left,
+	$backgroundColor,
+	$backgroundImage,
+	$rotate,
+	$borderRadius
+) {
+	position: $position;
+	z-index: $z-index;
+	width: $width;
+	height: $height;
+	top: $top;
+	left: $left;
+	background-color: $backgroundColor;
+	background-image: $backgroundImage;
+	rotate: $rotate;
+	border-radius: $borderRadius;
+}
+
+#shape1 {
+	@include square(
+		relative,
+		-1,
+		250px,
+		250px,
+		0,
+		-11px,
+		rgb(82, 5, 25),
+		linear-gradient(rgba(0, 0, 0, 0.7), rgb(82, 5, 25)),
+		-45deg,
+		10px
+	);
+}
+#shape2 {
+	@extend #shape1;
+	top: 60px;
+	left: -100px;
+}
+#shape3 {
+	@extend #shape1;
+	top: -300px;
+	left: 190px;
+}

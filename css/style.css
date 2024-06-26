@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #f5f5dc;
+}
+
+.bntMenu {
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0px;
+  border-radius: 3px;
+}
+.bntMenu .icon1, .bntMenu .icon4, .bntMenu .icon3, .bntMenu .icon2 {
+  display: inline-block;
+  background-image: url(../../../../../public/icons/iconHome.png);
+  min-width: 1.88rem;
+  min-height: 1.88rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bntMenu .icon2 {
+  background-image: url(../../../../../public/icons/iconNetworking.png);
+}
+.bntMenu .icon3 {
+  background-image: url(../../../../../public/icons/iconFiles.png);
+}
+.bntMenu .icon4 {
+  background-image: url(../../../../../public/icons/iconConfig.png);
+}
+
+.bntMenu {
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0px;
+  border-radius: 3px;
+}
+.bntMenu .icon1, .bntMenu .icon2, .bntMenu .icon3, .bntMenu .icon4 {
+  display: inline-block;
+  background-image: url(../../../../../public/icons/iconHome.png);
+  min-width: 1.88rem;
+  min-height: 1.88rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bntMenu .icon2 {
+  background-image: url(../../../../../public/icons/iconNetworking.png);
+}
+.bntMenu .icon3 {
+  background-image: url(../../../../../public/icons/iconFiles.png);
+}
+.bntMenu .icon4 {
+  background-image: url(../../../../../public/icons/iconConfig.png);
+}
+
+#side-bar {
+  position: fixed;
+  bottom: 0;
+  right: -40vw;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(51, 51, 51);
+  border-top-left-radius: 5px;
+  background-image: linear-gradient(rgb(51, 51, 51), rgb(51, 51, 51)), linear-gradient(to top, rgb(245, 245, 220) 0%, rgb(51, 51, 51) 70%);
+  background-origin: padding-box;
+  background-clip: content-box, padding-box;
+  min-width: 40vw;
+  min-height: 15.63rem;
+  padding-left: 0.18rem;
+}
+#side-bar .layoutSideBar {
+  margin: 10px;
+}
+
+#container-menu-mobile {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  font-size: 1.2em;
+  background-color: rgb(51, 51, 51);
+  width: 100%;
+  height: 4.38rem;
+  border-radius: 0.63rem 0.63rem 0 0;
+}
+
+.container-major {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgb(40, 0, 10));
+  background-color: #28000a;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.container-major #content {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.videoFormat {
+  width: 50%;
+  height: auto;
+}
+
+#comentario {
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

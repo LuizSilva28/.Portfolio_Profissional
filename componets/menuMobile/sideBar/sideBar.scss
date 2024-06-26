@@ -1,0 +1,24 @@
+#side-bar {
+	position: fixed;
+	bottom: 0;
+	right: -40vw;
+	z-index: 3;
+	display: flex;
+	justify-content: space-around;
+	background-color: $color-cinza;
+	border-top-left-radius: 5px;
+	background-image: linear-gradient($color-cinza, $color-cinza), linear-gradient(to top, $color-bege 0%, $color-cinza 70%);
+	background-origin: padding-box ;
+	background-clip: content-box, padding-box;
+	min-width: 40vw;
+	min-height: 15.63rem;
+	padding-left: 0.18rem;
+
+	.layoutSideBar{
+		margin: 10px;
+
+		
+		}
+	
+}
+
