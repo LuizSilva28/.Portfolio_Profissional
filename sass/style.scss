@@ -10,8 +10,7 @@
 
 @import "./others/variables/colors.scss";
 //@import "./others/componets/shape.scss";
-@import "../componets/menuMobile/buttons/buttons.scss";
-@import "../componets/menuMobile/menu/menu.scss";
+@import "./others/componets/menuMobile/menu/menu.scss";
 
 .container-major {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgb(40, 0, 10));

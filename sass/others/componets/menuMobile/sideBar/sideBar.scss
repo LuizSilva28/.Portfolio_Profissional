@@ -1,7 +1,7 @@
-#side-bar {
+.sideBar {
 	position: fixed;
 	bottom: 0;
-	right: -40vw;
+	right: -60vw;
 	z-index: 3;
 	display: flex;
 	justify-content: space-around;
@@ -13,12 +13,20 @@
 	min-width: 40vw;
 	min-height: 15.63rem;
 	padding-left: 0.18rem;
+	transition: .3s;
 
 	.layoutSideBar{
 		margin: 10px;
 
 		
 		}
+
 	
+	
+}
+
+.sideBarClose{
+	right: 0vw;
+	transition: .3s;
 }
 

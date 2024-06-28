@@ -1,4 +1,4 @@
-import { criarBntsMenu } from "../componets/menuMobile/buttons/index.js";
+import { criarBntsMenu } from "../sass/others/componets/menuMobile/buttons/index.js";
 
 
 criarBntsMenu();
