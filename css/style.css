@@ -6,6 +6,28 @@
   color: #f5f5dc;
 }
 
+.icon1, .icon4, .icon3, .icon2 {
+  display: inline-block;
+  background-image: url(../../../../../public/icons/iconHome.png);
+  min-width: 1.88rem;
+  min-height: 1.88rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.icon2 {
+  background-image: url(../../../../../public/icons/iconNetworking.png);
+}
+
+.icon3 {
+  background-image: url(../../../../../public/icons/iconFiles.png);
+}
+
+.icon4 {
+  background-image: url(../../../../../public/icons/iconConfig.png);
+}
+
 .bntMenu {
   font-size: 0.8em;
   text-align: center;
@@ -13,23 +35,6 @@
   border-radius: 3px;
   background-color: transparent;
   border: none;
-}
-.bntMenu .icon1, .bntMenu .icon4, .bntMenu .icon3, .bntMenu .icon2 {
-  display: inline-block;
-  background-image: url(../../../../../public/icons/iconHome.png);
-  min-width: 1.88rem;
-  min-height: 1.88rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.bntMenu .icon2 {
-  background-image: url(../../../../../public/icons/iconNetworking.png);
-}
-.bntMenu .icon3 {
-  background-image: url(../../../../../public/icons/iconFiles.png);
-}
-.bntMenu .icon4 {
-  background-image: url(../../../../../public/icons/iconConfig.png);
 }
 
 .sideBar {
@@ -51,6 +56,7 @@
 }
 .sideBar .layoutSideBar {
   margin: 10px;
+  background-color: red;
 }
 
 .sideBarClose {
@@ -58,7 +64,16 @@
   transition: 0.3s;
 }
 
-#container-menu-mobile {
+#menu {
+  position: absolute;
+  display: flex;
+  top: 0;
+  z-index: 10;
+  background-color: azure;
+  width: 100vw;
+  height: auto;
+}
+#menu #container-menu-mobile {
   position: fixed;
   display: flex;
   justify-content: space-around;
@@ -68,7 +83,7 @@
   left: 0;
   font-size: 1.2em;
   background-color: rgb(51, 51, 51);
-  width: 100%;
+  max-width: 100vw;
   height: 4.38rem;
   border-radius: 0.63rem 0.63rem 0 0;
 }

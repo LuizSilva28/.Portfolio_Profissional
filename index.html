@@ -10,7 +10,9 @@
 			rel="stylesheet"
 			href="./css/style.css" />
 			
-		<script type="module" src="./scripts/index.js" defer></script>
+		<script type="module" src="./sass/index.js" defer></script>
+		<script type="module" src="./scripts/server.js" defer></script>
+
 
 		<title>Luiz Henrique dos Santos Silva</title>
 		
@@ -28,7 +30,7 @@
 		
 
 		<header id="menu" > 
-			<div id="container-menu-mobile">
+			<nav id="container-menu-mobile">
 				<!-- <buttom type="button" class="bntMenu" id="bntMenu-1">
 					<i class="icon1">
 					</i>
@@ -50,17 +52,16 @@
 					<p class="dois">config</p>
 				</buttom>-->
 				
-			</div>
+			</nav>
 
-			<div class="sideBar" id="side-bar">
+			<section class="sideBar" id="side-bar">
 				<div class="layoutSideBar">
-					<i class="iconSide"></i>
-					<p>Lorem, ipsum dolor </p>
+					<button type="button" id="sideBarBnt-1" class="bntSideBar">
+						<i class="SideBarIconBnt1"></i>
+					</button>
+					<p id="sideBarTextBnt1">Lorem, ipsum dolor </p>
 				</div>
-				
-				
-				
-			</div>
+			</section>
 		</header>
 		<main id="content">
 

@@ -1,9 +1,7 @@
 {
   "extends": [
     "development"
-    
   ],
- 
   "hints": {
     "compat-api/css": [
       "default",
@@ -12,12 +10,12 @@
           "rotate"
         ]
       }
-      
-
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
     ]
   }
-  
-  
-
-  
 }

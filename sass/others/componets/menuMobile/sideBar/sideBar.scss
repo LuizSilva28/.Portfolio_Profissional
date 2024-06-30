@@ -1,3 +1,5 @@
+@import "../../buttons/bntWhats/style.scss";
+
 .sideBar {
 	position: fixed;
 	bottom: 0;
@@ -7,26 +9,22 @@
 	justify-content: space-around;
 	background-color: $color-cinza;
 	border-top-left-radius: 5px;
-	background-image: linear-gradient($color-cinza, $color-cinza), linear-gradient(to top, $color-bege 0%, $color-cinza 70%);
-	background-origin: padding-box ;
+	background-image: linear-gradient($color-cinza, $color-cinza),
+		linear-gradient(to top, $color-bege 0%, $color-cinza 70%);
+	background-origin: padding-box;
 	background-clip: content-box, padding-box;
 	min-width: 40vw;
 	min-height: 15.63rem;
 	padding-left: 0.18rem;
-	transition: .3s;
+	transition: 0.3s;
 
-	.layoutSideBar{
+	.layoutSideBar {
 		margin: 10px;
-
-		
-		}
-
-	
-	
+		background-color: red;
+	}
 }
 
-.sideBarClose{
+.sideBarClose {
 	right: 0vw;
-	transition: .3s;
+	transition: 0.3s;
 }
-

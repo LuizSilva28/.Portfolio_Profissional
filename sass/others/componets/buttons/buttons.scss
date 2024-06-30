@@ -1,0 +1,13 @@
+@import "./bnt_Menu/style.scss";
+@import "./bntNetworks/style.scss";
+@import "./bntPdfs/style.scss";
+@import "./bntConfig/style.scss";
+
+.bntMenu {
+	font-size: 0.8em;
+	text-align: center;
+	padding: 0px;
+	border-radius: 3px;
+	background-color: transparent;
+	border: none;
+}
