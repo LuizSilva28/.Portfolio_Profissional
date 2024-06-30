@@ -21,11 +21,59 @@ export function criarBntsMenu(
 	bntsMenu.appendChild(icon);
 	bntsMenu.appendChild(text);
 	containerMenuMobile.appendChild(bntsMenu);
-	bntsMenu.id === "bntMenu1" ? 0 : bntsMenu.addEventListener("click", (e) => {
-		e.preventDefault;
-		const sideBar = document.getElementById("side-bar");
-		sideBar.classList.toggle("sideBarClose");
-	});
+	bntsMenu.id === "bntMenu1"
+		? 0
+		: bntsMenu.addEventListener("click", (e) => {
+				e.preventDefault;
+				let bntClicked = e.currentTarget.id;
+				console.log(e.currentTarget.id);
+				let textBnt = "";
+				switch (bntClicked) {
+					case "bntMenu2":
+						for (let i = 1; i <= 5; i++) {
+							i === 1
+								? (textBnt = "whatsapp")
+								: i === 2
+								? (textBnt = "instagram")
+								: i === 3
+								? (textBnt = "linkedin")
+								: i === 4
+								? (textBnt = "github")
+								: (textBnt = "email");
+
+							criarBntsSideBar(
+								`sideBarBnt-${i}`,
+								"button",
+								"sideBarBnts",
+								`SideBarIconBnt${i}`,
+								`text${i}`,
+								textBnt
+							);
+						}
+						break;
+					case "bntMenu3":
+						for (let i = 6; i <= 8; i++) {
+							i === 6
+								? (textBnt = "Currículo")
+								: i === 7
+								? (textBnt = "Unicesumar")
+								:  (textBnt = "Onibitcode");
+							criarBntsSideBar(
+								`sideBarBnt-${i}`,
+								"button",
+								"sideBarBnts",
+								`SideBarIconBnt${i}`,
+								`text${i}`,
+								textBnt,
+							);
+						}
+						break;
+					default:
+						console.log("Deu erro");
+				}
+				const sideBar = document.getElementById("side-bar");
+				sideBar.classList.toggle("sideBarClose");
+		  });
 }
 export function criarBntsSideBar(
 	idBtn,
@@ -35,21 +83,26 @@ export function criarBntsSideBar(
 	textId,
 	textBtn
 ) {
-	const containerSideBar = document.querySelector("#side-bar");
+	const containerlayoutSideBar = document.querySelector(".layoutSideBar");
 	const divDadBnts = document.createElement("div");
+	divDadBnts.classList.add("divDadBnts");
+
 	const bntsSideBar = document.createElement("button");
 	bntsSideBar.id = idBtn;
 	bntsSideBar.type = typeBtn;
 	bntsSideBar.classList.add(`${classBtn}`);
+
 	const icon = document.createElement("i");
 	icon.classList.add(`${classIcon}`);
+
 	const text = document.createElement("p");
 	text.id = `${textId}`;
 	text.textContent = `${textBtn}`;
+
 	bntsSideBar.appendChild(icon);
 	divDadBnts.appendChild(bntsSideBar);
 	divDadBnts.appendChild(text);
-	containerSideBar.appendChild(divDadBnts);
+	containerlayoutSideBar.appendChild(divDadBnts);
 }
 
 /*export function criarBntsMenu() {

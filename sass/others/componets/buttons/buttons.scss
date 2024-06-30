@@ -1,13 +1,31 @@
-@import "./bnt_Menu/style.scss";
-@import "./bntNetworks/style.scss";
-@import "./bntPdfs/style.scss";
-@import "./bntConfig/style.scss";
+@import "./bnt1Menu/style.scss";
+@import "./bnt2Networks/style.scss";
+@import "./bnt3Pdfs/style.scss";
+@import "./bnt4Config/style.scss";
+@import "./bnt5Whats/style.scss";
+@import"./bnt6Insta/style.scss";
+@import"./bnt7Linkedin/style.scss";
+@import "./bnt8GitHub/style.scss";
+@import "./bnt9Email/style.scss";
 
-.bntMenu {
+
+
+.bntsMenu {
 	font-size: 0.8em;
 	text-align: center;
 	padding: 0px;
 	border-radius: 3px;
 	background-color: transparent;
 	border: none;
+}
+
+
+.sideBarBnts {
+	display: flex;
+	min-width: 1.37rem;
+	min-height: 1.37rem;
+	border-radius: 5px;
+	background-color: $color-douradoEscuro;
+	border: none;
+	transition: 0.3s;
 }

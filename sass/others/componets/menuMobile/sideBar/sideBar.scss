@@ -1,4 +1,4 @@
-@import "../../buttons/bntWhats/style.scss";
+//@import "../../buttons/bntWhats/style.scss";
 
 .sideBar {
 	position: fixed;
@@ -20,7 +20,21 @@
 
 	.layoutSideBar {
 		margin: 10px;
-		background-color: red;
+		width: 100%;
+
+		.divDadBnts {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			transition: 0.3s;
+
+			&:hover {
+				.sideBarBnts {
+					margin-top: 0.13rem;
+					min-height: 1.24rem;
+				}
+			}
+		}
 	}
 }
 
