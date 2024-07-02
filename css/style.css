@@ -28,7 +28,7 @@
   background-image: url(../../../../../public/icons/iconsMenu/configs.svg);
 }
 
-.SideBarIconBnt1, .SideBarIconBnt5, .SideBarIconBnt4, .SideBarIconBnt3, .SideBarIconBnt2 {
+.SideBarIconBnt1, .SideBarIconBnt10, .SideBarIconBnt9, .SideBarIconBnt7, .SideBarIconBnt8, .SideBarIconBnt6, .SideBarIconBnt5, .SideBarIconBnt4, .SideBarIconBnt3, .SideBarIconBnt2 {
   display: block;
   background-image: url(../../../../../public/icons//iconsSideBar/iconsWhats.svg);
   min-width: 1.37rem;
@@ -54,6 +54,22 @@
 
 .SideBarIconBnt5 {
   background-image: url(../../../../../public/icons//iconsSideBar/iconEmail.svg);
+}
+
+.SideBarIconBnt6 {
+  background-image: url(../../../../../public/icons/iconsSideBar/iconCurriculum.svg);
+}
+
+.SideBarIconBnt7, .SideBarIconBnt8 {
+  background-image: url(../../../../../public/icons//iconsSideBar/iconGridCurriculum.svg);
+}
+
+.SideBarIconBnt9 {
+  background-image: url(../../../../../public/icons/iconsSideBar/iconThemeDark.svg);
+}
+
+.SideBarIconBnt10 {
+  background-image: url(../../../../../public/icons//iconsSideBar/iconAccessibility.svg);
 }
 
 .bntsMenu {

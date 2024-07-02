@@ -57,14 +57,29 @@ export function criarBntsMenu(
 								? (textBnt = "Currículo")
 								: i === 7
 								? (textBnt = "Unicesumar")
-								:  (textBnt = "Onibitcode");
+								: (textBnt = "Onibitcode");
 							criarBntsSideBar(
 								`sideBarBnt-${i}`,
 								"button",
 								"sideBarBnts",
 								`SideBarIconBnt${i}`,
 								`text${i}`,
-								textBnt,
+								textBnt
+							);
+						}
+						break;
+					case "bntMenu4":
+						for (let i = 9; i <= 10; i++) {
+							i === 9
+								? (textBnt = "tema")
+								: (textBnt = "Acessibilidade");
+							criarBntsSideBar(
+								`sideBarBnt-${i}`,
+								"button", 
+								"sideBarBnts",
+								`SideBarIconBnt${i}`,
+								`text${i}`,
+								textBnt
 							);
 						}
 						break;
