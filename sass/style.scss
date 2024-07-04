@@ -1,16 +1,23 @@
-* {
-	
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-	color: #f5f5dc;
-}
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
 
 @import "./others/variables/colors.scss";
+@import "./others/componets/shapes/style.scss";
 //@import "./others/componets/shape.scss";
 @import "./others/componets/menuMobile/menu/menu.scss";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	@import "./others/variables/colors.scss";
+	color: $color-bege;
+	font-family: "Comfortaa", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
 
 .container-major {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgb(40, 0, 10));
