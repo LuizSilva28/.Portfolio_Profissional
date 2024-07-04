@@ -6,6 +6,16 @@
   color: #f5f5dc;
 }
 
+.icon0 {
+  display: inline-block;
+  background-image: url(../../../../../public/icons/iconsMenu/menuClose.svg);
+  min-width: 1.88rem;
+  min-height: 1.88rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
 .icon1, .icon4, .icon3, .icon2 {
   display: inline-block;
   background-image: url(../../../../../public/icons/iconsMenu/home.svg);
@@ -31,8 +41,8 @@
 .SideBarIconBnt1, .SideBarIconBnt10, .SideBarIconBnt9, .SideBarIconBnt7, .SideBarIconBnt8, .SideBarIconBnt6, .SideBarIconBnt5, .SideBarIconBnt4, .SideBarIconBnt3, .SideBarIconBnt2 {
   display: block;
   background-image: url(../../../../../public/icons//iconsSideBar/iconsWhats.svg);
-  min-width: 1.37rem;
-  min-height: 1.24rem;
+  min-width: 1.76rem;
+  min-height: 1.52rem;
   background-size: cover;
   border-radius: 5px;
   background-repeat: no-repeat;
@@ -83,9 +93,9 @@
 
 .sideBarBnts {
   display: flex;
-  min-width: 1.37rem;
-  min-height: 1.37rem;
-  border-radius: 5px;
+  min-width: 1.76rem;
+  min-height: 1.76rem;
+  border-radius: 6px;
   background-color: rgb(176, 150, 0);
   border: none;
   transition: 0.3s;
@@ -98,7 +108,6 @@
   z-index: 3;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(51, 51, 51);
   border-top-left-radius: 5px;
   background-image: linear-gradient(rgb(51, 51, 51), rgb(51, 51, 51)), linear-gradient(to top, rgb(245, 245, 220) 0%, rgb(51, 51, 51) 70%);
   background-origin: padding-box;
@@ -115,7 +124,9 @@
 .sideBar .layoutSideBar .divDadBnts {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  margin: 0 0 0 0.35rem;
   transition: 0.3s;
 }
 .sideBar .layoutSideBar .divDadBnts:hover .sideBarBnts {
@@ -125,6 +136,26 @@
 
 .sideBarClose {
   right: 0vw;
+  transition: 0.3s;
+}
+
+.bntCloseSidebar {
+  position: fixed;
+  bottom: 0;
+  left: -62vw;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-image: linear-gradient(rgb(51, 51, 51), rgb(51, 51, 51));
+  min-width: 60vw;
+  height: 4.38rem;
+  transition: 0.3s;
+}
+
+.closeBnt {
+  left: 0vw;
   transition: 0.3s;
 }
 

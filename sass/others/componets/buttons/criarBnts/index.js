@@ -21,13 +21,13 @@ export function criarBntsMenu(
 	bntsMenu.appendChild(icon);
 	bntsMenu.appendChild(text);
 	containerMenuMobile.appendChild(bntsMenu);
-	bntsMenu.id === "bntMenu1"
+	bntsMenu.id === 'bntMenu1'
 		? 0
-		: bntsMenu.addEventListener("click", (e) => {
+		: bntsMenu.addEventListener('click', (e) => {
 				e.preventDefault;
 				let bntClicked = e.currentTarget.id;
 				console.log(e.currentTarget.id);
-				let textBnt = "";
+				let textBnt = '';
 				switch (bntClicked) {
 					case "bntMenu2":
 						for (let i = 1; i <= 5; i++) {
@@ -49,7 +49,8 @@ export function criarBntsMenu(
 								`text${i}`,
 								textBnt
 							);
-						}
+						};
+						bntCloseSidebar();
 						break;
 					case "bntMenu3":
 						for (let i = 6; i <= 8; i++) {
@@ -58,6 +59,7 @@ export function criarBntsMenu(
 								: i === 7
 								? (textBnt = "Unicesumar")
 								: (textBnt = "Onibitcode");
+
 							criarBntsSideBar(
 								`sideBarBnt-${i}`,
 								"button",
@@ -66,7 +68,9 @@ export function criarBntsMenu(
 								`text${i}`,
 								textBnt
 							);
-						}
+						};
+						bntCloseSidebar();
+
 						break;
 					case "bntMenu4":
 						for (let i = 9; i <= 10; i++) {
@@ -81,15 +85,52 @@ export function criarBntsMenu(
 								`text${i}`,
 								textBnt
 							);
-						}
+						};
+						bntCloseSidebar();
 						break;
 					default:
 						console.log("Deu erro");
 				}
-				const sideBar = document.getElementById("side-bar");
-				sideBar.classList.toggle("sideBarClose");
+				const sideBar = document.getElementById('side-bar');
+				sideBar.classList.add("sideBarClose");
+				const closeBnt = document.querySelector("#bntCloseSidebar");
+				closeBnt.classList.add("closeBnt");
+				
 		  });
-}
+};
+
+export function bntCloseSidebar (){
+	const header = document.getElementById('menu');
+	const bntCloseSidebar = document.createElement('div');
+	bntCloseSidebar.id = 'bntCloseSidebar';
+	bntCloseSidebar.classList.toggle("bntCloseSidebar");
+
+	const iconX = document.createElement('i');
+	iconX.classList.add('icon0');
+
+	bntCloseSidebar.appendChild(iconX);
+	header.appendChild(bntCloseSidebar);
+
+	bntCloseSidebar.addEventListener('click', () => {
+        const sideBar = document.getElementById('side-bar');
+        sideBar.classList.toggle('sideBarClose');
+        
+        const closeBnt = document.querySelectord('.closeBnt');
+		closeBnt.classList.toggle("closeBnt");
+		
+		const divDadBnts = document.querySelectorAll(".divDadBnts");
+		console.log(divDadBnts);
+		
+		for (let i = 0; i < divDadBnts.length; i++) {
+			console.log(divDadBnts.length);
+			divDadBnts[i].remove();
+			console.log(divDadBnts.length);
+		}
+    });
+
+
+};
+
 export function criarBntsSideBar(
 	idBtn,
 	typeBtn,
@@ -118,7 +159,7 @@ export function criarBntsSideBar(
 	divDadBnts.appendChild(bntsSideBar);
 	divDadBnts.appendChild(text);
 	containerlayoutSideBar.appendChild(divDadBnts);
-}
+};
 
 /*export function criarBntsMenu() {
 	let text1 = `menu`,

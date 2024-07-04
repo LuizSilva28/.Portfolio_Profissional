@@ -7,7 +7,6 @@
 	z-index: 3;
 	display: flex;
 	justify-content: space-around;
-	background-color: $color-cinza;
 	border-top-left-radius: 5px;
 	background-image: linear-gradient($color-cinza, $color-cinza),
 		linear-gradient(to top, $color-bege 0%, $color-cinza 70%);
@@ -25,7 +24,9 @@
 		.divDadBnts {
 			display: flex;
 			align-items: center;
-			gap: 10px;
+			gap: .4rem;
+			min-height: 2.5rem;
+			margin: 0 0 0 .35rem;
 			transition: 0.3s;
 
 			&:hover {
@@ -40,5 +41,26 @@
 
 .sideBarClose {
 	right: 0vw;
+	transition: 0.3s;
+}
+
+.bntCloseSidebar{
+	position: fixed;
+	bottom: 0;
+	left: -62vw;
+	z-index: 3;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 1rem 3rem;
+	background-image: linear-gradient($color-cinza, $color-cinza);
+	min-width: 60vw;
+	height: 4.38rem;
+	transition: 0.3s;
+
+}
+
+.closeBnt {
+	left: 0vw;
 	transition: 0.3s;
 }

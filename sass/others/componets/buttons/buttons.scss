@@ -1,3 +1,4 @@
+@import "./bnt0CloseSidebar/style.scss";
 @import "./bnt1Menu/style.scss";
 @import "./bnt2Networks/style.scss";
 @import "./bnt3Pdfs/style.scss";
@@ -27,10 +28,11 @@
 
 .sideBarBnts {
 	display: flex;
-	min-width: 1.37rem;
-	min-height: 1.37rem;
-	border-radius: 5px;
+	min-width: 1.76rem;
+	min-height: 1.76rem;
+	border-radius: 6px;
 	background-color: $color-douradoEscuro;
 	border: none;
 	transition: 0.3s;
+
 }
