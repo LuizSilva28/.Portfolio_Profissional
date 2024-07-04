@@ -115,7 +115,7 @@ export function bntCloseSidebar (){
         const sideBar = document.getElementById('side-bar');
         sideBar.classList.toggle('sideBarClose');
         
-        const closeBnt = document.querySelectord('.closeBnt');
+        const closeBnt = document.querySelector('.closeBnt');
 		closeBnt.classList.toggle("closeBnt");
 		
 		const divDadBnts = document.querySelectorAll(".divDadBnts");
