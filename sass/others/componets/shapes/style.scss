@@ -1,10 +1,9 @@
-@mixin layoutSquare($position, $z-index, $top, $left, $width,
-	$height,) {
+@mixin layoutSquare($position, $z-index, $top, $left, $width, $height) {
 	position: $position;
 	z-index: $z-index;
 	top: $top;
 	left: $left;
-    width: $width;
+	width: $width;
 	height: $height;
 }
 
@@ -25,33 +24,37 @@
 }
 
 .layoutShape1 {
+	position: absolute;
+	display: block;
+	z-index: -1;
+	width: 350px;
+	height: auto;
+	padding: 50px;
+	top: 0px;
+	left: -11px;
+	background-image: url(../../../../public/assets/Rectangle.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		object-fit: cover;
+}
+	
+.layoutShape2 {
+	@extend .layoutShape1;
+	top: 328px;
+	left: -75px;
 
-    position: relative;
-    z-index: -1;
-    width: auto;
-    height: auto;
-    top: 0px;
-    left: 0px;
-    border: 2px solid red;
-
-	.shape1 {
-		@include square(
-			250px,
-			250px,
-			rgb(82, 5, 25),
-			linear-gradient(rgba(0, 0, 0, 0.7), rgb(82, 5, 25)),
-			-45deg,
-			10px
-		);
+	.shape2 {
+		@extend .shape1;
 	}
 }
-.shape2 {
-	@extend .shape1;
-	top: 60px;
-	left: -100px;
-}
-.shape3 {
-	@extend .shape1;
-	top: -300px;
-	left: 190px;
+
+.layoutShape3 {
+	@extend .layoutShape1;
+	top: 200px;
+	left: 198px;
+	.shape3 {
+		@extend .shape1;
+		top: -300px;
+		left: 190px;
+	}
 }
