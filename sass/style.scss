@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
-
 @import "./others/variables/colors.scss";
+@import "./others/variables/fonts.scss";
 @import "./others/componets/shapes/style.scss";
 //@import "./others/componets/shape.scss";
-@import "./others/componets/menuMobile/menu/menu.scss";
+@import "./others/componets/menuMobile/menu/style.scss";
+@import "./others/componets/carousel/container/style.scss";
 
 * {
 	padding: 0;
@@ -30,12 +31,33 @@
 		z-index: 1;
 		width: 100%;
 		height: 100%;
+		font-size: $font-primary;
+		padding: 0 2rem 0 2rem;
 	}
-}
 
-.videoFormat {
-	width: 50%;
-	height: auto;
+	#about-me {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		color: white;
+		font-size: 1.2em;
+		min-width: 100%;
+
+		#presentation {
+			display: flex;
+			flex-direction: column;
+
+			height: auto;
+
+			.textPresentation {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
 }
 
 #comentario {
