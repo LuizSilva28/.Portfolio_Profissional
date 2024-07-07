@@ -6,6 +6,7 @@
 //@import "./others/componets/shape.scss";
 @import "./others/componets/menuMobile/menu/style.scss";
 @import "./others/componets/carousel/container/style.scss";
+@import "./others/componets/carousel/container/style.scss";
 
 * {
 	padding: 0;
@@ -21,6 +22,9 @@
 }
 
 .container-major {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgb(40, 0, 10));
 	background-color: #28000a;
 	background-repeat: no-repeat;
@@ -48,14 +52,27 @@
 			flex-direction: column;
 
 			height: auto;
+			.titles{
+				margin:0 0 0 1rem;
 
+			}
+			#audio{
+				margin:1rem 0  1rem 0;
+
+				.controls{
+					background-color: none;
+				}
+			}
 			.textPresentation {
 				display: flex;
 				flex-direction: column;
 				flex-wrap: wrap;
+				font-size: $font-secondary;
+				margin: 1rem 0 1rem 0;
 				width: 100%;
 				height: 100%;
 			}
+
 		}
 	}
 }

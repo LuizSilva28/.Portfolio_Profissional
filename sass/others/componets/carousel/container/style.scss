@@ -1,6 +1,23 @@
-#container-carousel{
-    display: flex;
-    width: 200px;
-    min-height: 100px;
-    border: 2px solid blue;
+@import "../cards/style.scss";
+
+#container-carousel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 18.8rem;
+	min-height: 9.4rem;
+	margin: 1rem 0 2rem 0;
+	border: 2px solid blue;
+
+	.carousel {
+		border: 2px red;
+		overflow: hidden;
+		width: 15.6rem;
+		max-height: 9.4rem;
+
+		.ContainerItems {
+			display: flex;
+			transform: translateX(0);
+		}
+	}
 }
