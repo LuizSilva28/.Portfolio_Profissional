@@ -1,23 +1,35 @@
+import { criarEventsSlidesItems } from "../cards/script.js";
 import { criarButtomBack, criarButtomNext } from "../buttons/script.js";
 
-
 export function criarCarousel() {
+	criarButtomBack();
 
-    criarButtomBack();
- const containerCarousel = document.querySelector('#container-carousel');
-const carousel = document.createElement('div');
-carousel.classList.add('carousel');
-const containerItems = document.createElement('div');
-containerItems.classList.add("ContainerItems");
+	const containerCarousel = document.querySelector("#container-carousel"); //wrapper
 
-for (let i = 1; i <4; i++){
-    const item = document.createElement('div');
-    item.classList.add('item');
-    item.classList.add(`item${i}`);
-    containerItems.appendChild(item);
-}
-carousel.appendChild(containerItems);
-containerCarousel.appendChild(carousel);
+	const carouselList = document.createElement("div"); //slide-wrapper ou [data-slide = "wrapper"]
+	carouselList.classList.add("carouselList");
+	carouselList.setAttribute("data-slide", "wrapper");
 
-    criarButtomNext();
+	const containerItems = document.createElement("div"); // slide-list
+	containerItems.classList.add("ContainerItems");
+	containerItems.setAttribute("data-slide", "list");
+
+	//slide-item
+	const createItem = (index) => {
+		const item = document.createElement("div");
+		item.setAttribute("data-slide", "item");
+		item.classList.add(`item${index}`);
+		return item;
+	};
+
+	for (let i = 0; i <= 4; i++) {
+		containerItems.appendChild(createItem(i));
+	}
+	
+	carouselList.appendChild(containerItems);
+	containerCarousel.appendChild(carouselList);
+	criarButtomNext();
+
+	//   Eventos
+	criarEventsSlidesItems();
 }

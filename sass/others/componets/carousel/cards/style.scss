@@ -1,36 +1,33 @@
 
 
-.item{
-     display: block;
+
+.item0{
+    display: block;
     min-width: 5rem;
-    margin-left: 5px;
+    margin-left: .5rem;
     height: 8rem;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     object-fit: cover;
-}
-
-.item1{
-    @extend .item;
     background-image: url(.././../../../../public/imgs/img1.jpg);
 }
-.item2{
-    @extend .item;
+.item1{
+    @extend .item0;
     background-image: url(.././../../../../public/imgs/img2.jpg);
   
 }
-.item3{
-    @extend .item;
+.item2{
+    @extend .item0;
     background-image: url(.././../../../../public/imgs/img3.jpg);
    
 }
-.iitem{
-    @extend .item;
+.item3{
+    @extend .item0;
     background-image: url(.././../../../../public/imgs/img4.jpg);
    
 }
-.iitem{
-    @extend .item;
+.item4{
+    @extend .item0;
     background-image: url(.././../../../../public/imgs/img5.jpg);
    
 }

@@ -10,15 +10,16 @@
 	margin: 1rem 0 2rem 0;
 	border: 2px solid blue;
 
-	.carousel {
-		border: 2px red;
+	.carouselList{
+		display: inherit;
+		border: 2px solid red;
 		overflow: hidden;
 		width: 15.6rem;
 		max-height: 9.4rem;
 
 		.ContainerItems {
 			display: flex;
-			transform: translateX(0);
+			//transform: translateX(-5.5rem);
 		}
 	}
 }
