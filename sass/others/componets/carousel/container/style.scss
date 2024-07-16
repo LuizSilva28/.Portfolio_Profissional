@@ -3,9 +3,9 @@
 
 #container-carousel {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	width: 18.8rem;
+	width: 20rem;
 	min-height: 9.4rem;
 	margin: 1rem 0 2rem 0;
 	border: 2px solid blue;
@@ -14,8 +14,9 @@
 		display: inherit;
 		border: 2px solid red;
 		overflow: hidden;
-		width: 15.6rem;
+		width: 16.5rem;
 		max-height: 9.4rem;
+		//margin: 0 .2rem 0 .2rem;
 
 		.ContainerItems {
 			display: flex;

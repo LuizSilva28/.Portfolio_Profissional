@@ -3,37 +3,43 @@ export function criarEventsSlidesItems() {
 	const slideList = document.querySelector('[data-slide="list"]');
 	const slideItems = document.querySelectorAll('[data-slide="item"]');
 
-	let startPoint = 0,
-		savedPosition = 0,
-		currentPoint = 0;
+	const state = {
+		startPoint: 0,
+		savedPosition: 0,
+		currentPoint: 0,
+		moviment: 0,
+		currentSlideIndex: 0,
+	};
 
-	function onMouseDown(event) {
+	function onMouseDown(event, index) {
 		const slideItem = event.currentTarget;
-		startPoint = event.clientX;
-		currentPoint = startPoint - savedPosition; // usar console.log para entender melhor
+		state.startPoint = event.clientX;
+		state.currentPoint = state.startPoint - state.savedPosition; // usar console.log para entender melhor
+		state.currentSlideIndex = index;
 		slideItem.addEventListener("mousemove", onMouseMove);
-		console.log("pixel do mouseDown: ", startPoint);
 	}
 
 	function onMouseMove(event) {
-		const moviment = event.clientX - startPoint; // moviment = pixel do mousemove - pontoInicial, (emquanto o botão estiver pressiondado o valor de pixel mousemove será atualizado, porém quando soltar o último valor registrado  será subtraido pelo ponto inicial, que é o pixel onde o cursor se localizava quando o botão foi clicado), obs: os pixels do mousemove e startPointer é referente a tela e não ao elemento 
-		const position = event.clientX - currentPoint;
-		console.log(
-			"pixel do mausemove ",
-			event.clientX,
-			"-",
-			"ponto de partida",
-			startPoint,
-			" = ",
-			moviment, 
-		);
+		// moviment = pixel do mousemove - pontoInicial, (emquanto o botão estiver pressiondado o valor de pixel mousemove será atualizado, porém quando soltar o último valor registrado  será subtraido pelo ponto inicial, que é o pixel onde o cursor se localizava quando o botão foi clicado), obs: os pixels do mousemove e startPointer é referente a tela e não ao elemento
+
+		state.moviment = event.clientX - state.startPoint;
+
+		console.log('pixel do mousemove', event.clientX, ' - ', 'ponto de partida', state.startPoint, ' = ', state.moviment)
+
+		const position = event.clientX - state.currentPoint;
 		slideList.style.transform = "translateX(" + position + "px)";
-		savedPosition = position;
+		state.savedPosition = position;
 	}
 
 	function onMouseUp(event) {
 		const slideItem = event.currentTarget;
-		console.log("soltei o botão do mouse");
+		const slideWidth = slideItem.clientWidth;
+		console.log(slideWidth);
+		if (state.moviment < -20) {
+			const position = (state.currentSlideIndex + 1) * slideWidth;
+			slideList.style.transform = "translateX(" + (-position) + "px)";
+		}
+
 		slideItem.removeEventListener("mousemove", onMouseMove);
 	}
 	console.log(slideItems);
@@ -42,7 +48,9 @@ export function criarEventsSlidesItems() {
 		slideItem.addEventListener("dragstart", function (event) {
 			event.preventDefault();
 		});
-		slideItem.addEventListener("mousedown", onMouseDown);
+		slideItem.addEventListener("mousedown", function (event) {
+			onMouseDown(event, index);
+		});
 		slideItem.addEventListener("mouseup", onMouseUp);
 	});
 }

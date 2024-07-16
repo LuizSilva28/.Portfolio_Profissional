@@ -210,11 +210,10 @@
 
 .bntCarousel {
   position: relative;
-  min-width: 2rem;
+  min-width: 1.5rem;
   min-height: 4rem;
   background-color: aquamarine;
   border-radius: 0.5rem;
-  margin: 0.3rem;
 }
 
 .item0, .item4, .item3, .item2, .item1 {
@@ -246,9 +245,9 @@
 
 #container-carousel {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 18.8rem;
+  width: 20rem;
   min-height: 9.4rem;
   margin: 1rem 0 2rem 0;
   border: 2px solid blue;
@@ -257,7 +256,7 @@
   display: inherit;
   border: 2px solid red;
   overflow: hidden;
-  width: 15.6rem;
+  width: 16.5rem;
   max-height: 9.4rem;
 }
 #container-carousel .carouselList .ContainerItems {
@@ -266,11 +265,10 @@
 
 .bntCarousel {
   position: relative;
-  min-width: 2rem;
+  min-width: 1.5rem;
   min-height: 4rem;
   background-color: aquamarine;
   border-radius: 0.5rem;
-  margin: 0.3rem;
 }
 
 .item0, .item1, .item2, .item3, .item4 {
@@ -302,9 +300,9 @@
 
 #container-carousel {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 18.8rem;
+  width: 20rem;
   min-height: 9.4rem;
   margin: 1rem 0 2rem 0;
   border: 2px solid blue;
@@ -313,7 +311,7 @@
   display: inherit;
   border: 2px solid red;
   overflow: hidden;
-  width: 15.6rem;
+  width: 16.5rem;
   max-height: 9.4rem;
 }
 #container-carousel .carouselList .ContainerItems {
