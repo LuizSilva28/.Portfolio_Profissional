@@ -219,7 +219,7 @@
 .item0, .item4, .item3, .item2, .item1 {
   display: block;
   min-width: 5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.415rem;
   height: 8rem;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -274,7 +274,7 @@
 .item0, .item1, .item2, .item3, .item4 {
   display: block;
   min-width: 5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.415rem;
   height: 8rem;
   background-repeat: no-repeat;
   background-size: 100% 100%;

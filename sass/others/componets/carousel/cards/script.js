@@ -11,6 +11,11 @@ export function criarEventsSlidesItems() {
 		currentSlideIndex: 0,
 	};
 
+	function translateSlide(position) {
+		slideList.style.transform = `translateX(${position}px)`;
+		state.savedPosition = position;
+	}
+
 	function onMouseDown(event, index) {
 		const slideItem = event.currentTarget;
 		state.startPoint = event.clientX;
@@ -24,10 +29,19 @@ export function criarEventsSlidesItems() {
 
 		state.moviment = event.clientX - state.startPoint;
 
-		console.log('pixel do mousemove', event.clientX, ' - ', 'ponto de partida', state.startPoint, ' = ', state.moviment)
+		/*console.log(
+			"pixel do mousemove",
+			event.clientX,
+			" - ",
+			"ponto de partida",
+			state.startPoint,
+			" = ",
+			state.moviment
+		);*/
 
 		const position = event.clientX - state.currentPoint;
-		slideList.style.transform = "translateX(" + position + "px)";
+		//slideList.style.transform = "translateX(" + position + "px)";
+		translateSlide(position);
 		state.savedPosition = position;
 	}
 
@@ -37,7 +51,13 @@ export function criarEventsSlidesItems() {
 		console.log(slideWidth);
 		if (state.moviment < -20) {
 			const position = (state.currentSlideIndex + 1) * slideWidth;
-			slideList.style.transform = "translateX(" + (-position) + "px)";
+			translateSlide(-position);
+		} else if (state.moviment > 20) {
+			const position = (state.currentSlideIndex - 1) * slideWidth;
+			translateSlide(-position);
+		} else {
+			const position = state.currentSlideIndex * slideWidth;
+			translateSlide(-position);
 		}
 
 		slideItem.removeEventListener("mousemove", onMouseMove);
