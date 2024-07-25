@@ -1,8 +1,11 @@
+@import "../../../variables/colors.scss";
+
 .bntCarousel{
     position: relative;
     min-width: 1.5rem;
     min-height: 4rem;
-    background-color: aquamarine;
+    background-color: $color-secundary;
     border-radius: .5rem;
+    border: none;
     
 }

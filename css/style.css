@@ -212,8 +212,9 @@
   position: relative;
   min-width: 1.5rem;
   min-height: 4rem;
-  background-color: aquamarine;
+  background-color: rgb(85, 107, 47);
   border-radius: 0.5rem;
+  border: none;
 }
 
 .item0, .item4, .item3, .item2, .item1 {
@@ -250,11 +251,9 @@
   width: 20rem;
   min-height: 9.4rem;
   margin: 1rem 0 2rem 0;
-  border: 2px solid blue;
 }
 #container-carousel .carouselList {
   display: inherit;
-  border: 2px solid red;
   overflow: hidden;
   width: 16.5rem;
   max-height: 9.4rem;
@@ -267,8 +266,9 @@
   position: relative;
   min-width: 1.5rem;
   min-height: 4rem;
-  background-color: aquamarine;
+  background-color: rgb(85, 107, 47);
   border-radius: 0.5rem;
+  border: none;
 }
 
 .item0, .item1, .item2, .item3, .item4 {
@@ -305,17 +305,78 @@
   width: 20rem;
   min-height: 9.4rem;
   margin: 1rem 0 2rem 0;
-  border: 2px solid blue;
 }
 #container-carousel .carouselList {
   display: inherit;
-  border: 2px solid red;
   overflow: hidden;
   width: 16.5rem;
   max-height: 9.4rem;
 }
 #container-carousel .carouselList .ContainerItems {
   display: flex;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+.audio-player .play-pause {
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.audio-player .play {
+  display: block;
+  background-image: url(../../../../public/icons/content/iconPlay.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+}
+.audio-player .pause {
+  display: block;
+  background-image: url(../../../../public/icons/content/iconPause.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+}
+.audio-player #progress-time-container {
+  flex-grow: 1;
+  max-width: 15rem;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.audio-player #progress-time-container #progress-time {
+  height: 100%;
+  background-color: #33480d;
+  width: 0;
+  border-radius: 5px;
+}
+.audio-player #progress-volume-container {
+  flex-grow: 1;
+  max-width: 5rem;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.audio-player #progress-volume-container #progress-volume {
+  height: 100%;
+  background-color: #33480d;
+  width: 0;
+  border-radius: 5px;
+}
+.audio-player span {
+  font-size: 14px;
 }
 
 * {

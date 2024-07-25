@@ -48,7 +48,6 @@
 
 			<section id="about-me" class="aboutMe">
 				
-
 				<div id="container-carousel" >
 					
 					
@@ -57,12 +56,24 @@
 				<article id="presentation">
 					<h1 class="titles">Sobre mim</h1>
 					<!-- áudio para o texto sobre mim-->
-					<div id="audio">
-						<audio controls class="controls">
-                            <source src="./public/audios/sobre_mim.mp3.opus" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-					</div>
+					<div class="audio-player">
+        				<audio id="audio"  preload="metadata">
+							<source src="public\audios\sobre_mim.mp3.opus" type="audio/mp3">
+						</audio>
+        				<button id="play-pause" class="play-pause play" data-audio="play-pause">
+							<!--<i class="play" data-audio="iconPlayingAudio"></i>-->
+						</button>
+       					<div id="progress-time-container">
+            				<div id="progress-time"></div>
+        				</div>
+						<button>
+                            <span id="volume-value">100%</span>
+						</button>
+						<div id="progress-volume-container">
+            				<div id="progress-volume"></div>
+        				</div>
+        				<span id="current-time">0:00</span> / <span id="duration">0:00</span>
+    				</div>
 					<p class="textPresentation">A cidade estava em festa. Luzes coloridas enfeitavam as ruas, e as pessoas caminhavam sorridentes, conversando animadamente. O aroma de comida típica permeava o ar, misturado ao som alegre das músicas tradicionais. Crianças corriam, rindo e brincando, enquanto os adultos aproveitavam a companhia dos amigos. 
 					</p>
 					<!--
