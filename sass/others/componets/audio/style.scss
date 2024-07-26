@@ -21,12 +21,8 @@
 		height: 1rem;
 	}
 	.pause {
-		display: block;
+		@extend .play;
 		background-image: url(../../../../public/icons/content/iconPause.svg);
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 1rem;
-		height: 1rem;
 	}
 	#progress-time-container {
 		flex-grow: 1;
@@ -45,7 +41,27 @@
 		}
 	}
 
-	#progress-volume-container {
+	.bntVolume {
+		@extend .play-pause;
+		//background-color: rgb(92, 169, 205);
+		//background: transparent;
+		/*border: none;
+		padding: 6px 8px;
+		margin-right: 10px;
+		cursor: pointer;*/
+	}
+	.volume {
+		@extend .play;
+		background-image: url(../../../../public/icons/content/iconAudio.svg);
+		
+	}
+	.volumeMuted {
+		@extend .play;
+		background-image: url(../../../../public/icons/content/iconAudioMuted.svg);
+		
+	}
+
+	#bar-volume-container {
 		flex-grow: 1;
 		max-width: 5rem;
 		height: 5px;
@@ -54,7 +70,7 @@
 		margin: 0 10px;
 		cursor: pointer;
 
-		#progress-volume{
+		#bar-volume-content {
 			height: 100%;
 			background-color: #33480d;
 			width: 0;

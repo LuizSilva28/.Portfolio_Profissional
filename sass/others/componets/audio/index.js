@@ -10,9 +10,11 @@ export function createAudio() {
 		const playPauseBtn = document.querySelector(
 			'[data-audio="play-pause"]'
 		);
-		const iconPlayingAudio = document.querySelector(
-			'[data-audio="iconPlayingAudio"]'
+		const bntVolume = document.querySelector("#bnt-volume");
+		const barVolumeContainer = document.querySelector(
+			"#bar-volume-container"
 		);
+		const barVolumeContent = document.querySelector("#bar-volume-content");
 
 		let isPlaying = false;
 
@@ -60,5 +62,27 @@ export function createAudio() {
 			const seconds = Math.floor(time % 60);
 			return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 		}
+
+		bntVolume.addEventListener("click", function () {
+			const volume = audio.volume;
+			audio.volume = volume === 0 ? 1 : 0;
+			bntVolume.classList.toggle("volumeMuted");
+		});
+		barVolumeContainer.addEventListener("click", function (e) {
+			const width = this.clientWidth; //pega a largural total do elemento.
+			const clickX = e.offsetX; //offsetX pega o pixel do elemento referente a area do próprio elemento.
+			console.log('teste 1 -',audio.volume);
+			audio.volume = (clickX / width) ;//atualiza o volume do audio baseado no click do mouse.
+			console.log("teste 2 -", audio.volume);
+			barVolumeContent.style.width = `${clickX}px`;
+			
+			
+			
+			if (audio.volume < 0.1) {
+				bntVolume.classList.add("volumeMuted");
+			} else {
+				bntVolume.classList.remove("volumeMuted");
+			}
+		});
 	});
 }
