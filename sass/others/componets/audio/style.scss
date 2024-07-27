@@ -1,14 +1,17 @@
+
+
 .audio-player {
 	display: flex;
+	width: 100%;
 	align-items: center;
 	border-radius: 5px;
-	padding: 10px;
-
+	padding: 0.6rem 0.6rem 0.6rem 0;
+    // Fazer uma mixin para otimizar código
 	.play-pause {
 		background: transparent;
 		border: none;
 		padding: 6px 8px;
-		margin-right: 10px;
+		margin: 0 10px 0 0;
 		cursor: pointer;
 	}
 	.play {
@@ -27,38 +30,46 @@
 	#progress-time-container {
 		flex-grow: 1;
 		max-width: 15rem;
+		min-width: 5rem;
 		height: 5px;
 		background-color: #fff;
 		border-radius: 5px;
-		margin: 0 10px;
+		margin: 0 10px 0 0;
 		cursor: pointer;
 
 		#progress-time {
 			height: 100%;
-			background-color: #33480d;
+			background-color: $color-secondary;
 			width: 0;
 			border-radius: 5px;
 		}
 	}
 
+	.bntPlaySpeedAudio {
+		display: flex;
+		background: transparent;
+		margin: 0 10px 0 0;
+		padding: 0.5em;
+		font-size: $font-small;
+		align-items: center;
+		justify-content: center;
+		min-width: 1rem;
+		min-height: 1rem;
+		border: 2px solid $color-secondary;
+		cursor: pointer;
+		border-radius: 50%
+	}
+
 	.bntVolume {
 		@extend .play-pause;
-		//background-color: rgb(92, 169, 205);
-		//background: transparent;
-		/*border: none;
-		padding: 6px 8px;
-		margin-right: 10px;
-		cursor: pointer;*/
 	}
 	.volume {
 		@extend .play;
 		background-image: url(../../../../public/icons/content/iconAudio.svg);
-		
 	}
 	.volumeMuted {
 		@extend .play;
 		background-image: url(../../../../public/icons/content/iconAudioMuted.svg);
-		
 	}
 
 	#bar-volume-container {
@@ -73,12 +84,10 @@
 		#bar-volume-content {
 			height: 100%;
 			background-color: #33480d;
-			width: 0;
+			width: 5rem;
 			border-radius: 5px;
 		}
 	}
 
-	span {
-		font-size: 14px;
-	}
+	
 }

@@ -15,6 +15,9 @@ export function createAudio() {
 			"#bar-volume-container"
 		);
 		const barVolumeContent = document.querySelector("#bar-volume-content");
+		const bntPlaySpeedAudio = document.querySelector(
+			'[data-audio="speed-audio"]'
+		);
 
 		let isPlaying = false;
 
@@ -44,11 +47,7 @@ export function createAudio() {
 			const progressPercent = (currentTime * 100) / duration;
 			progress.style.width = `${progressPercent}%`;
 
-			// Atualizar o tempo atual e a duração
-			currentTimeElement.textContent = formatTime(currentTime);
-			durationElement.textContent = formatTime(duration);
 		});
-
 		progressContainer.addEventListener("click", function (e) {
 			const width = this.clientWidth; //pega a largural total do elemento.
 			const clickX = e.offsetX; //offsetX pega o pixel do elemento referente a area do próprio elemento.
@@ -57,27 +56,47 @@ export function createAudio() {
 			audio.currentTime = (clickX / width) * duration; //
 		});
 
-		function formatTime(time) {
-			const minutes = Math.floor(time / 60);
-			const seconds = Math.floor(time % 60);
-			return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+		let audioVolumeSaved = 1;
+		let barVolumeContenSaved = "";
+		let audioVolumeAtualizado = 1;
+
+		bntPlaySpeedAudio.addEventListener("click", function () {
+			let speedAudio = audio.playbackRate; //velocidade atual do audio
+			audio.playbackRate = speedAudio === 1 ? 1.5 : 1;
+
+			speedAudio === 1
+				? (this.textContent = "1.5x")
+				: (this.textContent = "1x");
+
+			console.log(speedAudio);
+		});
+
+		function setAudioMuted(volumeAtual) {
+			audio.volume = volumeAtual === 0 ? audioVolumeAtualizado : 0;
+			audioVolumeSaved = audio.volume;
+			console.log("descobrindo valor retornado :", audioVolumeSaved);
+
+			audio.volume === 0
+				? (barVolumeContent.style.width = "0px")
+				: (barVolumeContent.style.width = barVolumeContenSaved);
 		}
 
 		bntVolume.addEventListener("click", function () {
 			const volume = audio.volume;
-			audio.volume = volume === 0 ? 1 : 0;
+			let volumeAtual = volume * audioVolumeSaved;
+			setAudioMuted(volumeAtual);
 			bntVolume.classList.toggle("volumeMuted");
 		});
 		barVolumeContainer.addEventListener("click", function (e) {
 			const width = this.clientWidth; //pega a largural total do elemento.
 			const clickX = e.offsetX; //offsetX pega o pixel do elemento referente a area do próprio elemento.
-			console.log('teste 1 -',audio.volume);
-			audio.volume = (clickX / width) ;//atualiza o volume do audio baseado no click do mouse.
-			console.log("teste 2 -", audio.volume);
+			
+			audio.volume = clickX / width; //atualiza o volume do audio baseado no click do mouse.
+			audioVolumeAtualizado= audio.volume;
+			
 			barVolumeContent.style.width = `${clickX}px`;
-			
-			
-			
+			barVolumeContenSaved = `${clickX}px`;
+
 			if (audio.volume < 0.1) {
 				bntVolume.classList.add("volumeMuted");
 			} else {

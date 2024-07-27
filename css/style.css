@@ -212,7 +212,7 @@
   position: relative;
   min-width: 1.5rem;
   min-height: 4rem;
-  background-color: rgb(85, 107, 47);
+  background-color: rgb(51, 72, 13);
   border-radius: 0.5rem;
   border: none;
 }
@@ -266,7 +266,7 @@
   position: relative;
   min-width: 1.5rem;
   min-height: 4rem;
-  background-color: rgb(85, 107, 47);
+  background-color: rgb(51, 72, 13);
   border-radius: 0.5rem;
   border: none;
 }
@@ -318,15 +318,16 @@
 
 .audio-player {
   display: flex;
+  width: 100%;
   align-items: center;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0.6rem 0.6rem 0.6rem 0;
 }
 .audio-player .play-pause, .audio-player .bntVolume {
   background: transparent;
   border: none;
   padding: 6px 8px;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
   cursor: pointer;
 }
 .audio-player .play, .audio-player .volumeMuted, .audio-player .volume, .audio-player .pause {
@@ -343,23 +344,32 @@
 .audio-player #progress-time-container {
   flex-grow: 1;
   max-width: 15rem;
+  min-width: 5rem;
   height: 5px;
   background-color: #fff;
   border-radius: 5px;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   cursor: pointer;
 }
 .audio-player #progress-time-container #progress-time {
   height: 100%;
-  background-color: #33480d;
+  background-color: rgb(51, 72, 13);
   width: 0;
   border-radius: 5px;
 }
-.audio-player .bntVolume {
-  /*border: none;
-  padding: 6px 8px;
-  margin-right: 10px;
-  cursor: pointer;*/
+.audio-player .bntPlaySpeedAudio {
+  display: flex;
+  background: transparent;
+  margin: 0 10px 0 0;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  min-width: 1rem;
+  min-height: 1rem;
+  border: 2px solid rgb(51, 72, 13);
+  cursor: pointer;
+  border-radius: 50%;
 }
 .audio-player .volume {
   background-image: url(../../../../public/icons/content/iconAudio.svg);
@@ -379,11 +389,8 @@
 .audio-player #bar-volume-container #bar-volume-content {
   height: 100%;
   background-color: #33480d;
-  width: 0;
+  width: 5rem;
   border-radius: 5px;
-}
-.audio-player span {
-  font-size: 14px;
 }
 
 * {
