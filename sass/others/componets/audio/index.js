@@ -18,6 +18,9 @@ export function createAudio() {
 		const bntPlaySpeedAudio = document.querySelector(
 			'[data-audio="speed-audio"]'
 		);
+		const contentBntAudio = document.querySelector(
+			'[data-audio="contentBntAudio"]'
+		);
 
 		let isPlaying = false;
 
@@ -65,8 +68,8 @@ export function createAudio() {
 			audio.playbackRate = speedAudio === 1 ? 1.5 : 1;
 
 			speedAudio === 1
-				? (this.textContent = "1.5x")
-				: (this.textContent = "1x");
+				? (contentBntAudio.textContent = "1.5x")
+				: (contentBntAudio.textContent = "1x");
 
 			console.log(speedAudio);
 		});
