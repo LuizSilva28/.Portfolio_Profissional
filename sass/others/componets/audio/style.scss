@@ -1,10 +1,12 @@
+// Fazer uma mixin para otimizar código
 .audio-player {
 	display: flex;
 	width: 100%;
 	align-items: center;
 	border-radius: 5px;
-	padding: 0.6rem 0.6rem 0.6rem 0;
-	// Fazer uma mixin para otimizar código
+	margin: 0 0 0 1rem;
+	
+	
 	.play-pause {
 		background: transparent;
 		border: none;
@@ -29,9 +31,9 @@
 		flex-grow: 1;
 		max-width: 15rem;
 		min-width: 5rem;
-		height: 5px;
+		height: 4px;
 		background-color: #fff;
-		border-radius: 5px;
+		border-radius: 4px;
 		margin: 0 10px 0 0;
 		cursor: pointer;
 
@@ -39,7 +41,7 @@
 			height: 100%;
 			background-color: $color-secondary;
 			width: 0;
-			border-radius: 5px;
+			border-radius: 4px;
 		}
 	}
 
@@ -79,9 +81,9 @@
 	#bar-volume-container {
 		flex-grow: 1;
 		max-width: 5rem;
-		height: 5px;
+		height: 4px;
 		background-color: #fff;
-		border-radius: 5px;
+		border-radius: 4px;
 		margin: 0 10px;
 		cursor: pointer;
 
@@ -89,7 +91,7 @@
 			height: 100%;
 			background-color: #33480d;
 			width: 5rem;
-			border-radius: 5px;
+			border-radius: 4px;
 		}
 	}
 }

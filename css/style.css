@@ -321,7 +321,7 @@
   width: 100%;
   align-items: center;
   border-radius: 5px;
-  padding: 0.6rem 0.6rem 0.6rem 0;
+  margin: 0 0 0 1rem;
 }
 .audio-player .play-pause, .audio-player .bntVolume {
   background: transparent;
@@ -345,9 +345,9 @@
   flex-grow: 1;
   max-width: 15rem;
   min-width: 5rem;
-  height: 5px;
+  height: 4px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 4px;
   margin: 0 10px 0 0;
   cursor: pointer;
 }
@@ -355,7 +355,7 @@
   height: 100%;
   background-color: rgb(51, 72, 13);
   width: 0;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .audio-player .bntPlaySpeedAudio {
   display: flex;
@@ -384,9 +384,9 @@
 .audio-player #bar-volume-container {
   flex-grow: 1;
   max-width: 5rem;
-  height: 5px;
+  height: 4px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 4px;
   margin: 0 10px;
   cursor: pointer;
 }
@@ -394,14 +394,18 @@
   height: 100%;
   background-color: #33480d;
   width: 5rem;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 iframe {
-  background: url("../../../../public/imgs/pexels-creative-vix-9754.jpg");
-  background-size: cover;
   width: 20rem;
   height: 10rem;
+  margin: 1.5rem 0 1.5rem 0;
+  /*
+  background: url("../../../../public/imgs/pexels-creative-vix-9754.jpg") ; 
+
+
+   z-index: 5;*/
 }
 
 /*{
@@ -452,7 +456,7 @@ iframe {
   height: auto;
 }
 .container-major #about-me #presentation .titles {
-  margin: 0 0 0 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
 .container-major #about-me #presentation #audio {
   margin: 1rem 0 1rem 0;
