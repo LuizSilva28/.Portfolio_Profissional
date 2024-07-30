@@ -1,14 +1,17 @@
+// Fazer uma mixin para otimizar código
 .audio-player {
 	display: flex;
+	width: 100%;
 	align-items: center;
 	border-radius: 5px;
-	padding: 10px;
-
+	margin: 0 0 0 1rem;
+	
+	
 	.play-pause {
 		background: transparent;
 		border: none;
 		padding: 6px 8px;
-		margin-right: 10px;
+		margin: 0 10px 0 0;
 		cursor: pointer;
 	}
 	.play {
@@ -27,58 +30,68 @@
 	#progress-time-container {
 		flex-grow: 1;
 		max-width: 15rem;
-		height: 5px;
+		min-width: 5rem;
+		height: 4px;
 		background-color: #fff;
-		border-radius: 5px;
-		margin: 0 10px;
+		border-radius: 4px;
+		margin: 0 10px 0 0;
 		cursor: pointer;
 
 		#progress-time {
 			height: 100%;
-			background-color: #33480d;
+			background-color: $color-secondary;
 			width: 0;
-			border-radius: 5px;
+			border-radius: 4px;
+		}
+	}
+
+	.bntPlaySpeedAudio {
+		display: flex;
+		flex-direction: column;
+		background: transparent;
+		margin: 0 10px 0 0;
+		place-content: center;
+		place-items: center;
+		//padding: 0.5em;
+		font-size: $font-small;
+		min-width: 2.5em;
+		min-height: 2.5em;
+		border: 2px solid $color-secondary;
+		cursor: pointer;
+		border-radius: 50%;
+
+		.textBntSpeedAudio {
+			width: auto;
+			height: .7rem;
 		}
 	}
 
 	.bntVolume {
 		@extend .play-pause;
-		//background-color: rgb(92, 169, 205);
-		//background: transparent;
-		/*border: none;
-		padding: 6px 8px;
-		margin-right: 10px;
-		cursor: pointer;*/
 	}
 	.volume {
 		@extend .play;
 		background-image: url(../../../../public/icons/content/iconAudio.svg);
-		
 	}
 	.volumeMuted {
 		@extend .play;
 		background-image: url(../../../../public/icons/content/iconAudioMuted.svg);
-		
 	}
 
 	#bar-volume-container {
 		flex-grow: 1;
 		max-width: 5rem;
-		height: 5px;
+		height: 4px;
 		background-color: #fff;
-		border-radius: 5px;
+		border-radius: 4px;
 		margin: 0 10px;
 		cursor: pointer;
 
 		#bar-volume-content {
 			height: 100%;
 			background-color: #33480d;
-			width: 0;
-			border-radius: 5px;
+			width: 5rem;
+			border-radius: 4px;
 		}
-	}
-
-	span {
-		font-size: 14px;
 	}
 }
