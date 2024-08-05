@@ -1,4 +1,4 @@
-const standardcard = [
+export const standardcard = [
 	{
 		id: 1,
 		image: "https://via.placeholder.com/150",
