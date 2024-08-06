@@ -5,7 +5,7 @@ export const standardcard = [
 		title: "CSS3 e CSS Moderno",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -15,7 +15,7 @@ export const standardcard = [
 		title: "JavaScript ",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -25,7 +25,7 @@ export const standardcard = [
 		title: "ReactJS ",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -35,7 +35,7 @@ export const standardcard = [
 		title: "NodeJS ",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -45,7 +45,7 @@ export const standardcard = [
 		title: "Sass",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -55,7 +55,7 @@ export const standardcard = [
 		title: "Html5 ",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -65,7 +65,7 @@ export const standardcard = [
 		title: "Bootstrap ",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -75,7 +75,7 @@ export const standardcard = [
 		title: "Express.js ",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -85,7 +85,7 @@ export const standardcard = [
 		title: "Kanban",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
@@ -95,7 +95,7 @@ export const standardcard = [
 		title: "PostgreSQL ",
 		description: {
 			xp: "1 ano",
-			nivel: "75%",
+			skillLevel: "75%",
 			projects: 5,
 		},
 	},
