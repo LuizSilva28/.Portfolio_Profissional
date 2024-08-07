@@ -1,7 +1,7 @@
 export const standardcard = [
 	{
 		id: 1,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/prototipo.jpeg",
 		title: "CSS3 e CSS Moderno",
 		description: {
 			xp: "1 ano",
@@ -11,7 +11,7 @@ export const standardcard = [
 	},
 	{
 		id: 2,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/javascript-series.jpg",
 		title: "JavaScript ",
 		description: {
 			xp: "1 ano",
@@ -21,7 +21,7 @@ export const standardcard = [
 	},
 	{
 		id: 3,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/js.jpg",
 		title: "ReactJS ",
 		description: {
 			xp: "1 ano",
@@ -31,7 +31,7 @@ export const standardcard = [
 	},
 	{
 		id: 4,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/node.png",
 		title: "NodeJS ",
 		description: {
 			xp: "1 ano",
@@ -41,7 +41,7 @@ export const standardcard = [
 	},
 	{
 		id: 5,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/layoutJS.jpeg",
 		title: "Sass",
 		description: {
 			xp: "1 ano",
@@ -51,7 +51,7 @@ export const standardcard = [
 	},
 	{
 		id: 6,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/html5.jpeg",
 		title: "Html5 ",
 		description: {
 			xp: "1 ano",
@@ -61,7 +61,7 @@ export const standardcard = [
 	},
 	{
 		id: 7,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/rascunho.jpeg",
 		title: "Bootstrap ",
 		description: {
 			xp: "1 ano",
@@ -71,7 +71,7 @@ export const standardcard = [
 	},
 	{
 		id: 8,
-		image: "https://via.placeholder.com/150",
+		image: "public/imgs/hardskills/programando.jpeg",
 		title: "Express.js ",
 		description: {
 			xp: "1 ano",

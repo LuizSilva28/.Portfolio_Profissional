@@ -6,57 +6,65 @@ export function createGridSkills() {
 		'[data-gridSkills="gridSkills"]'
 	);
 
-	function createMiniCard(i) {
+	function createMiniCard(i, object) {
 		const miniCard = document.createElement("div");
 		miniCard.classList.add("miniCard");
 		miniCard.classList.add(`item-${i}`);
 		containerSkills.appendChild(miniCard);
+		miniCard.style.backgroundImage = `url('${object.image}')`;
 		console.log("estou sendo chamado");
 	}
 
 	//depurar esta função
-	function createCardForDetails (){
+	function createCardForDetails(object) {
 		const cardDetails = document.createElement("div");
 		cardDetails.classList.add("cardDetails");
 
 		const imgOfCard = document.createElement("div");
 		imgOfCard.classList.add("imgOfCard");
 
-		const titleOfCard = document.createElement("h4");
-        titleOfCard.textContent = object.title;
+		const titleOfCard = document.createElement("h6");
+		titleOfCard.classList.add("title");
+		titleOfCard.textContent = `${object.title}`;
 
-		const descriptionOfCard = document.createElement("div");
-		descriptionOfCard.classList.add("descriptionOfCard");
-		
 		const description = document.createElement("p");
 		description.textContent = "Descrição";
+		description.classList.add("description");
+
+		const descriptionsOfCard = document.createElement("div");
+		descriptionsOfCard.classList.add("descriptionsOfCard");
+		
 
 		const xp = document.createElement("p");
-		xp.textContent = object.xp;
+		xp.textContent = `${object.description.xp}`;
 
 		const skillLevel = document.createElement("p");
-		skillLevel.textContent = object.skillLevel;
+		skillLevel.textContent = `${object.description.skillLevel}` ;
 
 		const projects = document.createElement("p");
-		projects.textContent = object.projects;
+		projects.textContent = `${object.description.projects}`;
+
 		
-		descriptionOfCard.appendChild(description);
-		descriptionOfCard.appendChild(xp);
-		descriptionOfCard.appendChild(skillLevel);
-		descriptionOfCard.appendChild(projects);
+
+		descriptionsOfCard.appendChild(xp);
+		descriptionsOfCard.appendChild(skillLevel);
+		descriptionsOfCard.appendChild(projects);
 
 		cardDetails.appendChild(imgOfCard);
 		cardDetails.appendChild(titleOfCard);
-		cardDetails.appendChild(descriptionOfCard);
+		cardDetails.appendChild(description);
+		cardDetails.appendChild(descriptionsOfCard);
 
 		containerSkills.appendChild(cardDetails);
-
-
 	}
 
 	standardcard.forEach((object) => {
 		i++
-		createMiniCard(i);
-		//createCardForDetails(object);
+		console.log(object.id)
+		
+		createMiniCard(i, object);
+		
 	});
+	createCardForDetails(standardcard[0]);
+	
 }
