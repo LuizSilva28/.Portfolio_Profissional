@@ -424,20 +424,22 @@ iframe {
   gap: 0.3em;
 }
 #container-skills .miniCard {
-  display: block;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+  border-radius: 0.4rem;
   min-width: 4.43rem;
   min-height: 4.43rem;
+}
+#container-skills .selected {
+  border: 2px solid rgb(255, 215, 0);
 }
 #container-skills .cardDetails {
   padding: 2px;
 }
 #container-skills .cardDetails .imgOfCard {
   display: block;
-  background-image: url("../../../../public/imgs/hardskills/programando.jpeg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   min-width: 100%;

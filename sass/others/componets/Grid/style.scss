@@ -9,14 +9,15 @@
 	gap: 0.3em;
 
 	.miniCard {
-		display: block;
-		//background-image: url('../../../../public/imgs/hardskills/javascript-series.jpg');
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size:  cover;
 		background-position: center;
-		//border: 1px solid green;
+		border-radius: .4rem;
 		min-width: 4.43rem;
 		min-height: 4.43rem;
+	}
+	.selected{
+		border: 2px solid $color-dourado;
 	}
 
 	.cardDetails {
@@ -25,23 +26,23 @@
 
 		.imgOfCard {
 			display: block;
-			background-image: url("../../../../public/imgs/hardskills/programando.jpeg");
-			background-size: cover;
+			//background-image: url("../../../../public/imgs/hardskills/programando.jpeg");
+			background-size: 100% 100%;
 			background-position: center;
 			background-repeat: no-repeat;
 			min-width: 100%;
 			min-height: 100%;
 		}
 
-		.title{
+		.title {
 			font-weight: bold;
-            margin: 0.9em 0 0.9em 0.9em;
+			margin: 0.9em 0 0.9em 0.9em;
 		}
-		.description{
+		.description {
 			font-size: $font-secondary;
 			margin: 0.9em 0 0.9em 0.9em;
 		}
-		.descriptionsOfCard{
+		.descriptionsOfCard {
 			font-size: $font-secondary;
 			text-align: end;
 			//border: 1px solid green;
@@ -90,7 +91,7 @@
 		grid-row: 5/6;
 	}
 
-	.cardDetails{
+	.cardDetails {
 		grid-column: 2/3;
 		grid-row: 1/3;
 	}

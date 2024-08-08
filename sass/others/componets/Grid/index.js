@@ -8,18 +8,23 @@ export function createGridSkills() {
 	function createMiniCard( object) {
 		const miniCard = document.createElement("div");
 		miniCard.classList.add("miniCard");
+		miniCard.dataset.minicard ="miniCard";
 		miniCard.classList.add(`item-${object.id}`);
+		
 		miniCard.style.backgroundImage = `url('${object.image}')`;
 		containerSkills.appendChild(miniCard);
+		object.id === 1 ? miniCard.classList.add("selected") : '';
+		
+		
+
 		//console.log(object.image);
 
 		miniCard.addEventListener("click", function () {
-			
-			// Adicione aqui seu código para abrir a modal com os detalhes da habilidade.
-			/*if (object.id > 0){
-		    let objectPrevious = object.id - 1;
-				deleteCardPrevious(objectPrevious);
-			}*/
+			const elementsMiniCard = document.querySelectorAll('[data-minicard = "miniCard"]');
+			elementsMiniCard.forEach((element) => {
+                element.classList.remove("selected");
+            });
+			miniCard.classList.add("selected");
 			deleteCardPrevious();
 			console.log('removi card anterior');
 			createCardForDetails(object);
@@ -35,6 +40,8 @@ export function createGridSkills() {
 
 		const imgOfCard = document.createElement("div");
 		imgOfCard.classList.add("imgOfCard");
+		imgOfCard.style.backgroundImage = `url('${object.image}')`;
+	
 
 		const titleOfCard = document.createElement("h6");
 		titleOfCard.classList.add("title");
@@ -73,8 +80,6 @@ export function createGridSkills() {
 			'[data-gridSkills="modal"]'
 		);
 			cardDetails.parentNode.removeChild(cardDetails);
-			//const cardPrevious = document.querySelector(`.item-${object.id}`);
-			//cardPrevious.parentNode.removeChild(cardPrevious);
 	}
 
 	standardcard.forEach((object) => {
