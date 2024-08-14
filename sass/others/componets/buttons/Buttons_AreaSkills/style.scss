@@ -1,0 +1,22 @@
+.bntHardskills{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 4.375rem;
+    height: 2rem;
+    border-radius: .7rem;
+    background-image: radial-gradient(  ellipse at center, $color-dourado,$color-douradoEscuro );
+    border: none;  
+}
+
+.bntHardskills::after{
+    content: "";
+    display: block;
+    z-index: 12 ;
+    width: 4.375rem;
+    height: 4rem;
+    background-color: $color-dourado;
+    background-image: radial-gradient(  $color-dourado 1.2rem, $color-douradoEscuro 3.1rem,  $color-douradoEscuro 100%);
+     position: absolute;
+     transform: rotate(-20deg) ;
+}

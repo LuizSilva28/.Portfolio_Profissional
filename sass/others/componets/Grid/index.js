@@ -23,12 +23,12 @@ export function createGridSkills() {
 			const elementsMiniCard = document.querySelectorAll('[data-minicard = "miniCard"]');
 			elementsMiniCard.forEach((element) => {
                 element.classList.remove("selected");
-            });
+            }); 
 			miniCard.classList.add("selected");
 			deleteCardPrevious();
 			console.log('removi card anterior');
 			createCardForDetails(object);
-			console.log("adicionei novo card ");
+			console.log(object);
 		});
 	}
 
@@ -76,10 +76,8 @@ export function createGridSkills() {
 	}
 
 	function deleteCardPrevious() {
-		let cardDetails = document.querySelector(
-			'[data-gridSkills="modal"]'
-		);
-			cardDetails.parentNode.removeChild(cardDetails);
+		let cardDetails = document.querySelector('[data-gridSkills="modal"]');
+		cardDetails.parentNode.removeChild(cardDetails);
 	}
 
 	standardcard.forEach((object) => {

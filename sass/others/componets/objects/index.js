@@ -6,7 +6,7 @@ export const standardcard = [
 		description: {
 			xp: "1 ano",
 			skillLevel: "75%",
-			projects: 5,
+			projects: 2,
 		},
 	},
 	{
@@ -14,7 +14,7 @@ export const standardcard = [
 		image: "public/imgs/hardskills/javascript-series.jpg",
 		title: "JavaScript ",
 		description: {
-			xp: "1 ano",
+			xp: "3 ano",
 			skillLevel: "75%",
 			projects: 5,
 		},
@@ -25,7 +25,7 @@ export const standardcard = [
 		title: "ReactJS ",
 		description: {
 			xp: "1 ano",
-			skillLevel: "75%",
+			skillLevel: "50%",
 			projects: 5,
 		},
 	},
@@ -35,8 +35,8 @@ export const standardcard = [
 		title: "NodeJS ",
 		description: {
 			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 5,
+			skillLevel: "50%",
+			projects: 1,
 		},
 	},
 	{
