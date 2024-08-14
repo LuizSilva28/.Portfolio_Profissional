@@ -116,27 +116,35 @@
   background-image: url(../../../../../public/icons//iconsSideBar/iconAccessibility.svg);
 }
 
-.bntHardskills {
+.bntAreaskills {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   position: relative;
   overflow: hidden;
-  width: 4.375rem;
+  width: 6.25rem;
   height: 2rem;
+  color: rgb(51, 51, 51);
   border-radius: 0.7rem;
-  background-image: radial-gradient(ellipse at center, rgb(255, 217, 0), rgb(155, 132, 0));
+  background: transparent;
   border: none;
 }
-
-.bntHardskills::after {
+.bntAreaskills::before {
   content: "";
   display: block;
-  z-index: 12;
-  width: 4.375rem;
+  z-index: -12;
+  width: 10.375rem;
   height: 4rem;
   background-color: rgb(255, 217, 0);
-  background-image: radial-gradient(rgb(255, 217, 0) 1.2rem, rgb(155, 132, 0) 3.1rem, rgb(155, 132, 0) 100%);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
   position: absolute;
-  transform: rotate(-20deg);
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntAreaskills:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
 }
 
 .bntsMenu {

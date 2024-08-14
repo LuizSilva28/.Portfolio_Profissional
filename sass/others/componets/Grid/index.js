@@ -1,4 +1,4 @@
-import { standardcard } from "../objects/index.js";
+import { standardcard } from "../objects/hardskills/index.js";
 export function createGridSkills() {
 	let i = 0;
 	const containerSkills = document.querySelector(
