@@ -1,20 +1,20 @@
 
 
-export const standardcard = [
+export const standardCardSoftskills = [
 	{
 		id: 1,
-		image: "public/imgs/hardskills/prototipo.jpeg",
-		title: "CSS3 e CSS Moderno",
+		image: "public/imgs/softskills/img3.jpeg",
+		title: "Gestão de tempo",
 		description: {
-			xp: "1 ano",
+			xp: "2 ano",
 			skillLevel: "75%",
-			projects: 2,
+			projects: 5,
 		},
 	},
 	{
 		id: 2,
-		image: "public/imgs/hardskills/javascript-series.jpg",
-		title: "JavaScript ",
+		image: "public/imgs/softskills/img7.jpeg",
+		title: "Comunicação",
 		description: {
 			xp: "3 ano",
 			skillLevel: "75%",
@@ -23,8 +23,8 @@ export const standardcard = [
 	},
 	{
 		id: 3,
-		image: "public/imgs/hardskills/js.jpg",
-		title: "ReactJS ",
+		image: "public/imgs/softskills/img6.jpeg",
+		title: "Criatividade ",
 		description: {
 			xp: "1 ano",
 			skillLevel: "50%",
@@ -33,8 +33,18 @@ export const standardcard = [
 	},
 	{
 		id: 4,
-		image: "public/imgs/hardskills/node.png",
-		title: "NodeJS ",
+		image: "public/imgs/softskills/img1.jpeg",
+		title: "Empatia",
+		description: {
+			xp: "1 ano",
+			skillLevel: "75%",
+			projects: 2,
+		},
+	},
+	{
+		id: 5,
+		image: "public/imgs/softskills/img9.jpeg",
+		title: "Trabalho em equipe",
 		description: {
 			xp: "1 ano",
 			skillLevel: "50%",
@@ -42,29 +52,20 @@ export const standardcard = [
 		},
 	},
 	{
-		id: 5,
-		image: "public/imgs/hardskills/layoutJS.jpeg",
-		title: "Sass",
-		description: {
-			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
-	},
-	{
 		id: 6,
-		image: "public/imgs/hardskills/html5.jpeg",
-		title: "Html5 ",
+		image: "public/imgs/softskills/img8.png",
+		title: "Melhoria de processo",
 		description: {
 			xp: "1 ano",
 			skillLevel: "75%",
 			projects: 5,
 		},
 	},
+
 	{
 		id: 7,
-		image: "public/imgs/hardskills/rascunho.jpeg",
-		title: "Bootstrap ",
+		image: "public/imgs/softskills/img10.png",
+		title: "Resolução de problemas",
 		description: {
 			xp: "1 ano",
 			skillLevel: "75%",
@@ -73,8 +74,8 @@ export const standardcard = [
 	},
 	{
 		id: 8,
-		image: "public/imgs/hardskills/programando.jpeg",
-		title: "Express.js ",
+		image: "public/imgs/softskills/img4.jpeg",
+		title: "Curiosidade",
 		description: {
 			xp: "1 ano",
 			skillLevel: "75%",
@@ -83,8 +84,8 @@ export const standardcard = [
 	},
 	{
 		id: 9,
-		image: "https://via.placeholder.com/150",
-		title: "Kanban",
+		image: "public/imgs/softskills/img5.png",
+		title: "Capacidade de Analise",
 		description: {
 			xp: "1 ano",
 			skillLevel: "75%",
@@ -93,8 +94,8 @@ export const standardcard = [
 	},
 	{
 		id: 10,
-		image: "https://via.placeholder.com/150",
-		title: "PostgreSQL ",
+		image: "public/imgs/softskills/img2.gif",
+		title: "lógica de programação",
 		description: {
 			xp: "1 ano",
 			skillLevel: "75%",

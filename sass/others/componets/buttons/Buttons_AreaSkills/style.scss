@@ -1,43 +1,46 @@
-.bntAreaskills {
+@import "./bntCertificate/style.scss";
+
+.containerButtons {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	width: 6.25rem;
-	height: 2rem;
-	color: $color-cinza;
-	border-radius: 0.7rem;
-	background: transparent;
-	//background-image: radial-gradient(  ellipse at center, $color-dourado,$color-douradoEscuro );
-	border: none;
 
-	&::before {
-		content: "";
-		display: block;
+	.bntAreaskills {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		margin: 1rem;
+		width: 6.25rem;
+		height: 2rem;
+		color: $color-cinza;
+		border-radius: 0.7rem;
+		background: transparent;
+		border: none;
 
-		z-index: -12;
-		width: 10.375rem;
-		height: 4rem;
-		background-color: $color-dourado;
-		background-image: radial-gradient(
-			$color-dourado 2rem,
-			$color-douradoEscuro 4.2rem,
-			$color-douradoEscuro 40%
-		);
-		position: absolute;
-		transform: rotate(-15deg);
-        transition: transform 0.3s ;
+		&::before {
+			content: "";
+			display: block;
 
-		
-	}
+			z-index: -12;
+			width: 10.375rem;
+			height: 4rem;
+			background-color: $color-dourado;
+			background-image: radial-gradient(
+				$color-dourado 2rem,
+				$color-douradoEscuro 4.2rem,
+				$color-douradoEscuro 40%
+			);
+			position: absolute;
+			transform: rotate(-15deg);
+			transition: transform 0.3s;
+		}
 
-    &:hover {
+		&:hover {
 			&::before {
-                transform:scaleY(0.8);
+				transform: scaleY(0.8);
 				transition: transform 0.3s ease-in-out;
-               
 			}
 		}
+	}
 }

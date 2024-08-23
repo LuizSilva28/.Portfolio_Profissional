@@ -1,3 +1,8 @@
+import { standardCardHardskills } from "../../objects/hardskills/index.js";
+import { standardCardSoftskills } from "../../objects/softskills/index.js";
+
+import { createGridSkills, createModalCertificate } from "../../Grid/index.js";
+
 
 export function createBntsMenu(
 	idBtn,
@@ -159,18 +164,72 @@ export function createBntsSideBar(
 	containerlayoutSideBar.appendChild(divDadBnts);
 }
 
-//BUTTOMS AREADO CONHECIMENTO
+//BUTTOnS AREA DO CONHECIMENTO
 
-export function createShowSkillsButtons(txtButtom, dataValue) {
-	const buttom = document.createElement.apply("buttom");
-	buttom.setAttribute("data-areaSkills", `${dataValue}`);
-	buttom.classList.add = "bntAreaskills";
-	buttom.textContent = `${txtButtom}`;
+export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
+	console.log("Funcionando!");
 
-	buttom.addEventListener("click", () => {
-		const skills = document.querySelector(
-			`[data-areaSkills="${dataValue}"]`
+	const containerButtons = document.querySelector(
+		'[data-areaSkills="containerButtons"]'
+	);
+	const buttonsAreaSkills = document.createElement("buttom");
+
+	buttonsAreaSkills.setAttribute("data-areaSkills", `${dataValue}`);
+	buttonsAreaSkills.classList.add("bntAreaskills");
+	buttonsAreaSkills.id = `bnnSkill-${idBtn}`;
+	idBtn === 1 ? buttonsAreaSkills.classList.add("activeSkills") : "";
+
+	buttonsAreaSkills.textContent = `${txtButtom}`;
+	containerButtons.appendChild(buttonsAreaSkills);
+
+	buttonsAreaSkills.addEventListener("click", () => {
+		
+		const bntSoftskills = document.querySelector(
+			'[data-areaSkills="Softskills"]'
 		);
-		skills.classList.add("effectHover");
+		const bntHardskills = document.querySelector(
+			'[data-areaSkills="Hardskills"]'
+		);
+		const gridskiils = document.querySelector('[data-areaskills="containerGrid"]');
+		if (idBtn === 1) {
+			bntHardskills === null
+				? buttonsAreaSkills.classList.add("activeSkills")
+				: "";
+			
+			gridskiils.parentNode.removeChild(gridskiils);
+
+			createGridSkills(standardCardHardskills);
+
+		} else if (idBtn === 2) {
+			
+			bntHardskills.classList.remove("activeSkills");
+			bntSoftskills === null
+				? buttonsAreaSkills.classList.add("activeSkills")
+				: "";
+
+			gridskiils.parentNode.removeChild(gridskiils);
+			createGridSkills(standardCardSoftskills);
+		}
 	});
 }
+
+export function createBntCertificate(image){
+	const cardDetails = document.querySelector('[data-gridskills="cardDetails"]');
+
+	const bntCertificate = document.createElement('button');
+	bntCertificate.textContent = 'Certificado';
+	bntCertificate.classList.add('bntCertificate');
+	
+	const iconBntCertificate = document.createElement("i");
+	iconBntCertificate.classList.add("iconCertificate");
+
+	bntCertificate.appendChild(iconBntCertificate);
+	cardDetails.appendChild(bntCertificate);
+
+	bntCertificate.addEventListener('click', () => {
+		
+        createModalCertificate(image);
+    });
+
+}
+// Evento deve criar um grid de acordo com o botão clicado, o mesmo deve forncer as informações para a criação do grid, e também deve remover o grid anterior;

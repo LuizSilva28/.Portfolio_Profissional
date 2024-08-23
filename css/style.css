@@ -116,13 +116,40 @@
   background-image: url(../../../../../public/icons//iconsSideBar/iconAccessibility.svg);
 }
 
-.bntAreaskills {
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(../../../../../../public/icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.containerButtons {
+  display: flex;
+}
+.containerButtons .bntAreaskills {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
+  margin: 1rem;
   width: 6.25rem;
   height: 2rem;
   color: rgb(51, 51, 51);
@@ -130,7 +157,7 @@
   background: transparent;
   border: none;
 }
-.bntAreaskills::before {
+.containerButtons .bntAreaskills::before {
   content: "";
   display: block;
   z-index: -12;
@@ -142,7 +169,7 @@
   transform: rotate(-15deg);
   transition: transform 0.3s;
 }
-.bntAreaskills:hover::before {
+.containerButtons .bntAreaskills:hover::before {
   transform: scaleY(0.8);
   transition: transform 0.3s ease-in-out;
 }
@@ -444,7 +471,27 @@ iframe {
             background: `url(${poster}) top center no-repeat; background-size: cover;`
 
 }*/
-#container-skills {
+.gridSkills {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gridSkills .modalCertificate {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: 20;
+  color: black;
+  border: 2px solid rgb(187, 215, 156);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: center center;
+}
+.gridSkills #container-skills {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   width: 100%;
@@ -454,7 +501,7 @@ iframe {
   margin: 2rem 1rem 1rem 0;
   gap: 0.5em 1rem;
 }
-#container-skills .miniCard {
+.gridSkills #container-skills .miniCard {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -462,13 +509,13 @@ iframe {
   min-width: 4.43rem;
   min-height: 4.43rem;
 }
-#container-skills .selected {
+.gridSkills #container-skills .selected {
   border: 2px solid rgb(255, 217, 0);
 }
-#container-skills .cardDetails {
+.gridSkills #container-skills .cardDetails {
   padding: 2px;
 }
-#container-skills .cardDetails .imgOfCard {
+.gridSkills #container-skills .cardDetails .imgOfCard {
   display: block;
   background-size: 100% 100%;
   background-position: center;
@@ -478,60 +525,60 @@ iframe {
   height: 100%;
   object-fit: fill;
 }
-#container-skills .cardDetails .title {
+.gridSkills #container-skills .cardDetails .title {
   font-weight: bold;
-  margin: 0.9em 0 0.9em 0.9em;
+  margin: 0.9em 0 0.9em 0;
 }
-#container-skills .cardDetails .description {
+.gridSkills #container-skills .cardDetails .description {
   font-size: 0.9rem;
-  margin: 0.9em 0 0.9em 0.9em;
+  margin: 0.9em 0 0.9em 0;
 }
-#container-skills .cardDetails .descriptionsOfCard {
+.gridSkills #container-skills .cardDetails .descriptionsOfCard {
   font-size: 0.9rem;
   text-align: end;
   padding: 0 0 0.5em 0.5em;
 }
-#container-skills .item-1 {
+.gridSkills #container-skills .item-1 {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-#container-skills .item-2 {
+.gridSkills #container-skills .item-2 {
   grid-column: 1/2;
   grid-row: 2/3;
 }
-#container-skills .item-3 {
+.gridSkills #container-skills .item-3 {
   grid-column: 1/2;
   grid-row: 3/4;
 }
-#container-skills .item-4 {
+.gridSkills #container-skills .item-4 {
   grid-column: 1/2;
   grid-row: 4/5;
 }
-#container-skills .item-5 {
+.gridSkills #container-skills .item-5 {
   grid-column: 1/2;
   grid-row: 5/6;
 }
-#container-skills .item-6 {
+.gridSkills #container-skills .item-6 {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-#container-skills .item-7 {
+.gridSkills #container-skills .item-7 {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-#container-skills .item-8 {
+.gridSkills #container-skills .item-8 {
   grid-column: 3/4;
   grid-row: 3/4;
 }
-#container-skills .item-9 {
+.gridSkills #container-skills .item-9 {
   grid-column: 3/4;
   grid-row: 4/5;
 }
-#container-skills .item-10 {
+.gridSkills #container-skills .item-10 {
   grid-column: 3/4;
   grid-row: 5/6;
 }
-#container-skills .cardDetails {
+.gridSkills #container-skills .cardDetails {
   grid-column: 2/3;
   grid-row: 1/3;
 }

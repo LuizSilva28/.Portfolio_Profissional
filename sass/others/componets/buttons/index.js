@@ -1,4 +1,4 @@
-import { createBntsMenu, createBntsSideBar } from "./criarBnts/index.js";
+import { createBntsMenu, createShowSkillsButtons } from "./criarBnts/index.js";
 
 export const bnt1 = createBntsMenu(
 	"bntMenu1",
@@ -32,5 +32,6 @@ export const bnt4 = createBntsMenu(
 	"text4",
 	"configs"
 );
+export const bnt5 = createShowSkillsButtons("Hardskills", "Hardskills", 1);
 
-
+export const bnt6 = createShowSkillsButtons("Softkills", "Softkills", 2);
