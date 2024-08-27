@@ -213,7 +213,7 @@ export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 	});
 }
 
-export function createBntCertificate(image){
+export function createBntCertificate(certificateURL){
 	const cardDetails = document.querySelector('[data-gridskills="cardDetails"]');
 
 	const bntCertificate = document.createElement('button');
@@ -227,9 +227,9 @@ export function createBntCertificate(image){
 	cardDetails.appendChild(bntCertificate);
 
 	bntCertificate.addEventListener('click', () => {
-		
-        createModalCertificate(image);
-    });
+		//window.location.href = `${certificateURL}`;
+		createModalCertificate(certificateURL);
+	});
 
 }
 // Evento deve criar um grid de acordo com o botão clicado, o mesmo deve forncer as informações para a criação do grid, e também deve remover o grid anterior;

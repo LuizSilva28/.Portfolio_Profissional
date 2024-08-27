@@ -139,6 +139,12 @@
   background-position: center;
 }
 
+.bntCloseModal {
+  position: inherit;
+  bottom: 0;
+  color: black;
+}
+
 .containerButtons {
   display: flex;
 }
@@ -472,24 +478,26 @@ iframe {
 
 }*/
 .gridSkills {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .gridSkills .modalCertificate {
   position: absolute;
-  width: 80%;
+  width: 95%;
   height: 80%;
   z-index: 20;
   color: black;
-  border: 2px solid rgb(187, 215, 156);
   display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   object-fit: contain;
   background-position: center center;
+}
+.gridSkills .modalCertificate .pdfContainer {
+  width: 100%;
+  height: 90%;
 }
 .gridSkills #container-skills {
   display: grid;
@@ -501,16 +509,25 @@ iframe {
   margin: 2rem 1rem 1rem 0;
   gap: 0.5em 1rem;
 }
+.gridSkills #container-skills .backgroundAnimated {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: rgb(155, 132, 0);
+  z-index: 1;
+}
 .gridSkills #container-skills .miniCard {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 0.4rem;
+  margin: 4px;
   min-width: 4.43rem;
   min-height: 4.43rem;
 }
 .gridSkills #container-skills .selected {
   border: 2px solid rgb(255, 217, 0);
+  transition: 0.3s ease-out;
 }
 .gridSkills #container-skills .cardDetails {
   padding: 2px;

@@ -8,6 +8,7 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 2,
 		},
+		certificate: "",
 	},
 	{
 		id: 2,
@@ -18,6 +19,7 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 5,
 		},
+		certificate: "public/Pdfs/Dominando_o_Node.pdf",
 	},
 	{
 		id: 3,
@@ -28,6 +30,7 @@ export const standardCardHardskills = [
 			skillLevel: "50%",
 			projects: 5,
 		},
+		certificate: "public/Pdfs/Sass.pdf",
 	},
 	{
 		id: 4,
@@ -38,6 +41,7 @@ export const standardCardHardskills = [
 			skillLevel: "50%",
 			projects: 1,
 		},
+		certificate: "public/Pdfs/Banco_de_Dados_SQL_no_NodeJs.pdf",
 	},
 	{
 		id: 5,
@@ -48,6 +52,7 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 5,
 		},
+		certificate: "",
 	},
 	{
 		id: 6,
@@ -58,6 +63,7 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 5,
 		},
+		certificate: "public/Pdfs/html5.pdf",
 	},
 	{
 		id: 7,
@@ -68,6 +74,7 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 5,
 		},
+		certificate: "public/Pdfs/Fundamentos_do_React.pdf",
 	},
 	{
 		id: 8,
@@ -78,6 +85,7 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 5,
 		},
+		certificate: "",
 	},
 	{
 		id: 9,
@@ -88,6 +96,7 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 5,
 		},
+		certificate: "",
 	},
 	{
 		id: 10,
@@ -98,5 +107,6 @@ export const standardCardHardskills = [
 			skillLevel: "75%",
 			projects: 5,
 		},
+		certificate: "public/Pdfs/css.pdf",
 	},
 ];

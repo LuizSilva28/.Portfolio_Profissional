@@ -10,7 +10,54 @@ export function createGridSkills(object) {
 	containerGrid.id = "container-skills";
 	containerSkills.appendChild(containerGrid);
 
+	function createBackgroundAnimated(object) {
+		const backgroundAnimated = document.createElement("div");
+		backgroundAnimated.classList.add("backgroundAnimated");
+		backgroundAnimated.classList.add(`item-${object.id}`);
+		containerGrid.appendChild(backgroundAnimated);
+
+		/*
+		
+		TAREFAS: 	
+
+		1. Criar um fundo animado que iniciara no card 1, e ao se moverá para o card em que o cursor estiver em cima.
+		2. Criar um efeito de transição que o fundo se moverá gradualmente para o card em que o cursor estiver em cima.
+
+		*/
+
+		/*
+		
+		SOLUÇÕES:
+		1. criar um elemento que estará localizado no mesmo local do card um, e com o z-index ele ficará por traz do card;
+		function createBackgroundAnimated (){
+			const backgroundAnimated = document.createElement("div");
+			backgroundAnimated.classList.add("backgroundAnimated");
+			backgroundAnimated.classList.add(`item-1`);
+			
+		}
+
+		2. Este elemento tem que se mover pelos cards de acordo com a localização do cursor, ex: se o curso entrar no card 5 o elemento se moverá em direção ao mesmo;
+			devo setar uma localização inicial para o elemento backgroundAnimated;
+			function moveBackgroundAnimated (object) {
+				if (saveClass !== null){
+				    backgroundAnimated.classList.remove(saveClass);
+				}
+				backgroundAnimated.classList.add(`item-${object.id}`);
+				saveClass = `item-${object.id`
+			}
+			devo capturar a localização e o ID do elemento miniCard ao entrar com o cursor em sua area, e usar estar informações para setar uma nova localização para o elemento backgroundAnimated por parametro;
+		{
+		    
+			backgroundAnimated.classList.add(``); 
+		}
+
+
+		*/
+	}
+
 	function createMiniCard(object) {
+		
+
 		const miniCard = document.createElement("div");
 		miniCard.classList.add("miniCard");
 		miniCard.dataset.minicard = "miniCard";
@@ -35,6 +82,7 @@ export function createGridSkills(object) {
 			createCardForDetails(object);
 			console.log(object);
 		});
+		
 	}
 
 	//depurar esta função
@@ -79,7 +127,7 @@ export function createGridSkills(object) {
 
 		containerGrid.appendChild(cardDetails);
 
-		createBntCertificate(object.image);
+		createBntCertificate(object.certificate);
 
 	}
 
@@ -101,17 +149,30 @@ export function createGridSkills(object) {
 
 	
 }
-export function createModalCertificate(image) {
+
+export function createModalCertificate(certificateURL) {
 	const containerSkills = document.querySelector(
 		'[data-gridSkills="gridSkills"]'
 	);
-	console.log("função chamada");
 	const modal = document.createElement("div");
 	modal.classList.add("modalCertificate");
 	modal.setAttribute("data-areaskills", "modal");
-	modal.textContent = 'Modal Criado';
-	modal.style.backgroundImage = `url("${image}")`;
 
+	//iframe
+
+	let iframePDF = document.createElement("iframe");
+	iframePDF.setAttribute("src", certificateURL);
+	iframePDF.classList.add("pdfContainer");
+
+	//modal.style.backgroundImage = `url("${image}")`;
+	//Button
+	const bntCloseModal = document.createElement("button");
+	bntCloseModal.textContent = "X";
+	bntCloseModal.classList.add("bntCloseModal");
+	modal.appendChild(bntCloseModal);
+	bntCloseModal.addEventListener("click", () => {
+		modal.parentNode.removeChild(modal);
+	});
+	modal.appendChild(iframePDF);
 	containerSkills.appendChild(modal);
-	console.log(modal);
 }
