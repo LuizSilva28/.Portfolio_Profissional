@@ -167,7 +167,6 @@ export function createBntsSideBar(
 //BUTTOnS AREA DO CONHECIMENTO
 
 export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
-	console.log("Funcionando!");
 
 	const containerButtons = document.querySelector(
 		'[data-areaSkills="containerButtons"]'

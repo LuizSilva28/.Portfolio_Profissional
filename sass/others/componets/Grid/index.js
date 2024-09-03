@@ -1,4 +1,4 @@
-import {createBntCertificate} from "../buttons/criarBnts/index.js";
+import { createBntCertificate } from "../buttons/criarBnts/index.js";
 
 export function createGridSkills(object) {
 	let i = 0;
@@ -6,17 +6,20 @@ export function createGridSkills(object) {
 		'[data-gridSkills="gridSkills"]'
 	);
 	const containerGrid = document.createElement("div");
-	containerGrid.setAttribute("data-areaskills","containerGrid");
+	containerGrid.setAttribute("data-areaskills", "containerGrid");
 	containerGrid.id = "container-skills";
 	containerSkills.appendChild(containerGrid);
 
-	function createBackgroundAnimated(object) {
+	function createBackgroundAnimated(objectID) {
 		const backgroundAnimated = document.createElement("div");
 		backgroundAnimated.classList.add("backgroundAnimated");
-		backgroundAnimated.classList.add(`item-${object.id}`);
+		backgroundAnimated.classList.add(`item-${objectID}`);
 		containerGrid.appendChild(backgroundAnimated);
+		
+	}
+	
 
-		/*
+	/*
 		
 		TAREFAS: 	
 
@@ -25,39 +28,55 @@ export function createGridSkills(object) {
 
 		*/
 
+	
 		/*
-		
 		SOLUÇÕES:
 		1. criar um elemento que estará localizado no mesmo local do card um, e com o z-index ele ficará por traz do card;
-		function createBackgroundAnimated (){
-			const backgroundAnimated = document.createElement("div");
-			backgroundAnimated.classList.add("backgroundAnimated");
-			backgroundAnimated.classList.add(`item-1`);
-			
-		}
+	function createBackgroundAnimated() {
+		const backgroundAnimated = document.createElement("div");
+		backgroundAnimated.setAttribute(
+			"data-areaskills",
+			"backgroundAnimated"
+		);
+		backgroundAnimated.classList.add("backgroundAnimated");
+		let saveClass = `item-1`;
+		backgroundAnimated.classList.add(`${saveClass}`);
+		containerGrid.appendChild(backgroundAnimated);
+	}*/
 
+	function removeBackgroundAnimated(objectID) {
+		const containerGrid = document.querySelector(
+			'[data-areaskills="containerGrid"]'
+		);
+
+		const backgroundAnimated = document.querySelector(`.backgroundAnimated`);
+		containerGrid.removeChild(backgroundAnimated);
+	}
+
+
+	/*
 		2. Este elemento tem que se mover pelos cards de acordo com a localização do cursor, ex: se o curso entrar no card 5 o elemento se moverá em direção ao mesmo;
-			devo setar uma localização inicial para o elemento backgroundAnimated;
-			function moveBackgroundAnimated (object) {
-				if (saveClass !== null){
-				    backgroundAnimated.classList.remove(saveClass);
-				}
-				backgroundAnimated.classList.add(`item-${object.id}`);
-				saveClass = `item-${object.id`
-			}
-			devo capturar a localização e o ID do elemento miniCard ao entrar com o cursor em sua area, e usar estar informações para setar uma nova localização para o elemento backgroundAnimated por parametro;
+			devo setar uma localização inicial para o elemento backgroundAnimated;*/
+	/*
+	function moveBackgroundAnimated(objectID) {
+		
+		let saveClassAtual, classPrevious;
+
+		saveClassAtual = objectID;
+		createBackgroundAnimated(objectID);
+
+		classPrevious = saveClassAtual;
+		classPrevious !== 0 ? removeBackgroundAnimated(classPrevious) : "";
+	}*/
+
+	/*
+			devo capturar a localização e o ID do elemento miniCard ao entrar com o cursor em sua area, e usar estas informações para setar uma nova localização para o elemento backgroundAnimated por parametro;
 		{
 		    
 			backgroundAnimated.classList.add(``); 
-		}
-
-
-		*/
-	}
+		}*/
 
 	function createMiniCard(object) {
-		
-
 		const miniCard = document.createElement("div");
 		miniCard.classList.add("miniCard");
 		miniCard.dataset.minicard = "miniCard";
@@ -78,11 +97,20 @@ export function createGridSkills(object) {
 			});
 			miniCard.classList.add("selected");
 			deleteCardPrevious();
-			console.log("removi card anterior");
 			createCardForDetails(object);
-			console.log(object);
+			
 		});
-		
+
+		miniCard.addEventListener("mouseenter", function () {
+			console.log('entrei na area do miniCard!', object.id)
+			createBackgroundAnimated(object.id);
+
+		});
+
+		miniCard.addEventListener("mouseout", function () {
+			console.log("sai da area do miniCard!", object.id);
+			removeBackgroundAnimated(object.id);
+		});
 	}
 
 	//depurar esta função
@@ -115,7 +143,6 @@ export function createGridSkills(object) {
 		const projects = document.createElement("p");
 		projects.textContent = `${object.description.projects}`;
 
-
 		descriptionsOfCard.appendChild(xp);
 		descriptionsOfCard.appendChild(skillLevel);
 		descriptionsOfCard.appendChild(projects);
@@ -128,7 +155,6 @@ export function createGridSkills(object) {
 		containerGrid.appendChild(cardDetails);
 
 		createBntCertificate(object.certificate);
-
 	}
 
 	function deleteCardPrevious() {
@@ -137,17 +163,14 @@ export function createGridSkills(object) {
 		);
 		cardDetails.parentNode.removeChild(cardDetails);
 	}
-	
 
 	const activeSkills = document.querySelector(".activeSkills");
-	console.log(activeSkills);
 
+	
 	object.forEach((object) => {
 		createMiniCard(object);
 	});
 	createCardForDetails(object[0]);
-
-	
 }
 
 export function createModalCertificate(certificateURL) {
