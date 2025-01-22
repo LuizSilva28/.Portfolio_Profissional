@@ -10,49 +10,33 @@ export function createGridSkills(object) {
 	containerGrid.id = "container-skills";
 	containerSkills.appendChild(containerGrid);
 
-	function createBackgroundAnimated(objectID) {
-		const backgroundAnimated = document.createElement("div");
-		backgroundAnimated.classList.add("backgroundAnimated");
-		backgroundAnimated.classList.add(`item-${objectID}`);
-		containerGrid.appendChild(backgroundAnimated);
-		
-	}
-	
-
-	/*
-		
-		TAREFAS: 	
-
-		1. Criar um fundo animado que iniciara no card 1, e ao se moverá para o card em que o cursor estiver em cima.
-		2. Criar um efeito de transição que o fundo se moverá gradualmente para o card em que o cursor estiver em cima.
-
-		*/
-
-	
-		/*
-		SOLUÇÕES:
-		1. criar um elemento que estará localizado no mesmo local do card um, e com o z-index ele ficará por traz do card;
 	function createBackgroundAnimated() {
+		const cardInitial = document.querySelector(".item-1");
+		const locationInitial = cardInitial.getBoundingClientRect();
 		const backgroundAnimated = document.createElement("div");
-		backgroundAnimated.setAttribute(
-			"data-areaskills",
-			"backgroundAnimated"
-		);
 		backgroundAnimated.classList.add("backgroundAnimated");
-		let saveClass = `item-1`;
-		backgroundAnimated.classList.add(`${saveClass}`);
 		containerGrid.appendChild(backgroundAnimated);
-	}*/
 
-	function removeBackgroundAnimated(objectID) {
-		const containerGrid = document.querySelector(
-			'[data-areaskills="containerGrid"]'
-		);
+		const elementAnimated = document.querySelector(".backgroundAnimated");
+		elementAnimated.style.width = `${locationInitial.width + 8}px`;
+		elementAnimated.style.height = `${locationInitial.height + 8}px`;
 
-		const backgroundAnimated = document.querySelector(`.backgroundAnimated`);
-		containerGrid.removeChild(backgroundAnimated);
+		elementAnimated.style.transform = `translate(${locationInitial.x - 30}px, ${locationInitial.y - 170}px)`;
 	}
 
+	function moveBackgroundAnimated(newLocation) {
+		console.log(newLocation);
+		const elementAnimated = document.querySelector(".backgroundAnimated");
+		elementAnimated.style.transform = `translate(${newLocation.x - 30}px, ${
+			newLocation.y - 170
+		}px)`;
+	}
+
+	function myPosition(objectId) {
+		const element = document.querySelector(`.item-${objectId}`);
+		const myLocation = element.getBoundingClientRect();
+		return myLocation;
+	}
 
 	/*
 		2. Este elemento tem que se mover pelos cards de acordo com a localização do cursor, ex: se o curso entrar no card 5 o elemento se moverá em direção ao mesmo;
@@ -86,8 +70,6 @@ export function createGridSkills(object) {
 		containerGrid.appendChild(miniCard);
 		object.id === 1 ? miniCard.classList.add("selected") : "";
 
-		//console.log(object.image);
-
 		miniCard.addEventListener("click", function () {
 			const elementsMiniCard = document.querySelectorAll(
 				'[data-minicard = "miniCard"]'
@@ -98,18 +80,11 @@ export function createGridSkills(object) {
 			miniCard.classList.add("selected");
 			deleteCardPrevious();
 			createCardForDetails(object);
-			
 		});
 
 		miniCard.addEventListener("mouseenter", function () {
-			console.log('entrei na area do miniCard!', object.id)
-			createBackgroundAnimated(object.id);
-
-		});
-
-		miniCard.addEventListener("mouseout", function () {
-			console.log("sai da area do miniCard!", object.id);
-			removeBackgroundAnimated(object.id);
+			let newLocation = myPosition(object.id);
+			moveBackgroundAnimated(newLocation);
 		});
 	}
 
@@ -166,11 +141,11 @@ export function createGridSkills(object) {
 
 	const activeSkills = document.querySelector(".activeSkills");
 
-	
 	object.forEach((object) => {
 		createMiniCard(object);
 	});
 	createCardForDetails(object[0]);
+	createBackgroundAnimated();
 }
 
 export function createModalCertificate(certificateURL) {
