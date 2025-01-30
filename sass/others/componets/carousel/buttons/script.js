@@ -1,5 +1,6 @@
 
 	const containerCarousel = document.querySelector("#container-carousel");
+    
     export function criarButtonBack() {
         const buttonBack = document.createElement("button");
         buttonBack.classList.add("bntCarousel");

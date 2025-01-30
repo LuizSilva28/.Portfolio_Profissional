@@ -1,142 +1,259 @@
 import { criarButtonNext } from "../buttons/script.js";
 
-export function criarSlidesItems() {
-	const containerItems = document.querySelector('[data-slide="list"]');
+export function criarSlidesItems(container, itemFor) {
+	container.style.transform = `translateX(-205.28px)`;
+
 	const createItem = (index) => {
 		const item = document.createElement("div");
 		item.setAttribute("data-slide", "item");
-		item.classList.add(`item${index}`);
+		item.classList.add(`${itemFor}-${index}`);
 		return item;
 	};
 
 	for (let i = 0; i <= 4; i++) {
-		containerItems.appendChild(createItem(i));
+		container.appendChild(createItem(i));
 	}
 
 	criarEventsSlidesItems();
 }
-
 export function criarEventsSlidesItems() {
 	const slideWrapper = document.querySelector('[data-slide="wrapper"]');
 	const slideList = document.querySelector('[data-slide="list"]');
+	const replicaSlideList = document.querySelector(
+		'[data-slide="listReplica"]'
+	);
 	const slideItems = document.querySelectorAll('[data-slide="item"]');
-	// const buttomPrevious = document.querySelector(
-	// 	'[data-slide="nav-previous-button"]'
-	// );
-	// const buttomNext = document.querySelector('[data-slide="nav-next-button"]');
 
 	const state = {
+		referencePoint: -205.28,
 		startPoint: 0,
-		savedPosition: 0,
+		savedPosition: -205.28,
 		currentPoint: 0,
 		movement: 0,
-		currentSlideIndex: 0,
+		currentSlideIndex: 1,
+	};
+	const replicaState = {
+		replicaReferencePoint: -205.28,
+		replicaStartPoint: 1,
+		replicaCurrentPoint: 0,
+		replicaMovement: 0,
+		replicaCurrentSlideIndex: 1,
+		replicaSavedPosition: -205.28,
 	};
 
 	function translateSlide({ position }) {
-		state.savedPosition = position;
-		slideList.style.transform = `translateX(${position}px)`;
+		if (state.savedPosition !== position) {
+			state.savedPosition = position;
+			slideList.style.transform = `translateX(${position}px)`;
+		}
 	}
-	function setVisibleSlide({ index, animate }) {
-		const slideItem = slideItems[index];
+	function translateSlideReplica({ replicaPosition }) {
+		if (replicaState.replicaSavedPosition !== replicaPosition) {
+			replicaState.replicaSavedPosition = replicaPosition;
+			replicaSlideList.style.transform = `translateX(${replicaPosition}px)`;
+		}
+	}
+	function setVisibleSlide(
+		{ boolean, animate },
+		{ replicaBoolean, replicaAnimate }
+	) {
+		const slideItem = slideItems[1];
 		const slideWidth = slideItem.clientWidth;
 		const computedStyle = getComputedStyle(slideItem);
 		const slideMargin = parseFloat(computedStyle.marginLeft);
-		const slideTotalSizeWidth = slideWidth + slideMargin;
-		const position = index * slideTotalSizeWidth;
-		state.currentSlideIndex = index;
-		slideList.style.transition =
-			animate === true ? "transform .5s" : "none";
-		translateSlide({ position: -position });
+
+		if (boolean === true) {
+			const slideTotalSizeWidth = -(slideWidth + slideMargin);
+
+			let position = state.savedPosition + slideTotalSizeWidth;
+
+			console.log("teste");
+			console.log("position = ", position);
+			console.log("teste");
+
+			if (position < -615.84) {
+				console.log("validando movimento direita");
+				position = 307.92;
+				animate = false;
+			}
+			slideList.style.transition =
+				animate === true ? "transform .5s" : "none";
+			translateSlide({ position });
+		} else {
+			const slideTotalSizeWidth = slideWidth + slideMargin;
+
+			let position = state.savedPosition + slideTotalSizeWidth;
+			if (position > 410.56) {
+				console.log("validando movimento direita");
+				position = -513.2;
+				animate = false;
+			}
+			slideList.style.transition =
+				animate === true ? "transform .5s" : "none";
+			translateSlide({ position: position });
+		}
+
+		if (replicaBoolean === true) {
+			const slideTotalSizeWidth = -(slideWidth + slideMargin);
+			let replicaPosition =
+				replicaState.replicaSavedPosition + slideTotalSizeWidth;
+
+			if (replicaPosition < -1129) {
+				console.log("validando movimento direita");
+				replicaPosition = -102.64;
+				replicaAnimate = false;
+			}
+
+			replicaSlideList.style.transition =
+				replicaAnimate === true ? "transform .5s" : "none";
+			translateSlideReplica({ replicaPosition });
+		} else {
+			const slideTotalSizeWidth = slideWidth + slideMargin;
+			let replicaPosition =
+				replicaState.replicaSavedPosition + slideTotalSizeWidth;
+
+			if (replicaPosition > -102.64) {
+				replicaPosition = -1026.4;
+				replicaAnimate = false;
+			}
+			replicaSlideList.style.transition =
+				replicaAnimate === true ? "transform .5s" : "none";
+			translateSlideReplica({ replicaPosition });
+		}
 	}
 
 	function newSetVisibleSlide({ index, animate }) {
-		console.log("ok");
 		const position = state.savedPosition - state.movement;
-		console.log(
-			"posição salva: ",
-			state.savedPosition,
-			" - ",
-			"movimento feito: ",
-			state.movement,
-			" = ",
-			position
-		);
+		const replicaPosition =
+			replicaState.savedPositionReplica - replicaState.replicaMovement;
 
 		slideList.style.transition =
 			animate === true ? "transform .5s" : "none";
 		translateSlide({ position: position });
-	}
 
+		replicaSlideList.style.transition =
+			animate === true ? "transform .5s" : "none";
+		translateSlide(replicaPosition);
+	}
 	function nextSlide() {
-		setVisibleSlide({ index: state.currentSlideIndex + 1, animate: true });
-		console.log(state.savedPosition);
-		console.log(state.savedPosition === 102.64);
+		console.log("\nPróximo\n");
+		setVisibleSlide(
+			{ boolean: true, animate: true },
+			{ replicaBoolean: true, replicaAnimate: true }
+		);
 	}
 	function previousSlide() {
 		console.log("previous");
-		setVisibleSlide({
-			index: state.currentSlideIndex - 1,
-			animate: true,
-		});
+		setVisibleSlide(
+			{ boolean: false, animate: true },
+			{ replicaBoolean: false, replicaAnimate: true }
+		);
 	}
 
-	function onMouseDown(event, index) {
-		const slideItem = event.currentTarget;
-		state.startPoint = event.clientX;
-		console.log("ponto inicial = ", state.startPoint);
-		console.log("..................");
-		console.log("posição salva = ", state.savedPosition);
-		console.log("..................");
+	// function onMouseDown(event) {
+	// 	const slideItem = event.currentTarget;
+	// 	state.startPoint = event.clientX;
+	// 	console.log("ponto inicial: ", state.startPoint);
 
-		state.currentPoint = state.startPoint - state.savedPosition;
-		console.log("posição atual = ", state.currentPoint);
-		state.currentSlideIndex = index;
-		console.log("Slide Item atual = ", index);
-		slideList.style.transition = "none";
+	// 	slideList.style.transition = "none";
 
-		slideItem.addEventListener("mousemove", onMouseMove);
-	}
+	// 	replicaState.replicaStartPoint = event.clientX;
 
-	function onMouseMove(event) {
-		state.movement = event.clientX - state.startPoint;
-		console.log("movimento realizado = ", state.movement);
-		const position = event.clientX - state.currentPoint;
-		console.log("Posição = ", position);
+	// 	slideItem.addEventListener("mousemove", onMouseMove);
+	// }
 
-		translateSlide({ position: position });
-		state.savedPosition = position;
-	}
-	function onMouseUp(event) {
-		const slideItem = event.currentTarget;
-		console.log("teste-1");
-		if (state.movement < -20) {
-			nextSlide();
-		} else if (state.movement > 20) {
-			previousSlide();
-		} else {
-			console.log("OK");
-			newSetVisibleSlide({
-				index: state.currentSlideIndex,
-				animate: true,
-			});
-		}
-		console.log("position saved: ", state.savedPosition);
-		slideItem.removeEventListener("mousemove", onMouseMove);
-	}
+	// function onMouseMove(event) {
+	// 	state.movement = event.clientX - state.startPoint;
+	// 	console.log(
+	// 		"event.clientX ",
+	// 		event.clientX,
+	// 		"  - Posição inicial: ",
+	// 		state.startPoint,
+	// 		"= Movimento feito: ",
+	// 		state.movement
+	// 	);
 
-	slideItems.forEach(function (slideItem, index) {
-		slideItem.addEventListener("dragstart", function (event) {
-			event.preventDefault();
-		});
-		slideItem.addEventListener("mousedown", function (event) {
-			onMouseDown(event, index);
-			console.log("OK");
+	// 	state.currentPoint = state.movement + state.savedPosition;
+	// 	console.log(
+	// 		"movimento feito ",
+	// 		state.movement,
+	// 		"  - Posição salva: ",
+	// 		state.savedPosition,
+	// 		"= ponto atual: ",
+	// 		state.currentPoint
+	// 	);
 
-			slideItem.addEventListener("mouseup", onMouseUp);
-		});
+	// 	const position = state.currentPoint;
+	// 	console.log("\n------------------\n");
 
-	});
+	// 	translateSlide({ position: position });
+
+	// 	replicaState.replicaMovement =
+	// 		event.clientX - replicaState.replicaStartPoint;
+	// 	console.log("\n------------------\n");
+
+	// 	console.log(
+	// 		"event.clientX ",
+	// 		event.clientX,
+	// 		"  - Posição inicial da replica: ",
+	// 		replicaState.replicaStartPoint,
+	// 		"= movimento da replica: ",
+	// 		replicaState.replicaMovement
+	// 	);
+
+	// 	replicaState.replicaCurrentPoint =
+	// 		replicaState.replicaMovement - replicaState.replicaSavedPosition;
+
+	// 	const replicaPosition = replicaState.replicaCurrentPoint;
+
+	// 	console.log("\n------------------\n");
+
+	// 	console.log(
+	// 		"movimento feito pela replica",
+	// 		replicaState.replicaMovement,
+	// 		"  - Posição salva da replica : ",
+	// 		replicaState.replicaSavedPosition,
+	// 		"= posição da replica: ",
+	// 		replicaPosition
+	// 	);
+
+	// 	translateSlideReplica({ replicaPosition: replicaPosition });
+
+	// 	console.log("final");
+	// }
+
+	// function onMouseUp(event) {
+	// 	const slideItem = event.currentTarget;
+	// 	console.log("\n position saved", state.savedPosition);
+	// 	if (state.movement < -20 && replicaState.replicaMovement < -20) {
+	// 		nextSlide();
+	// 	} else if (state.movement > 20 && replicaState.replicaMovement > 20) {
+	// 		previousSlide();
+	// 	} else {
+	// 		newSetVisibleSlide(
+	// 			{
+	// 				index: state.currentSlideIndex,
+	// 				animate: true,
+	// 			},
+	// 			{
+	// 				replicaIndex: replicaState.replicaCurrentSlideIndex,
+	// 				replicaAnimate: true,
+	// 			}
+	// 		);
+	// 	}
+	// 	slideItem.removeEventListener("mousemove", onMouseMove);
+	// }
+
+	// slideItems.forEach(function (slideItem) {
+	// 	slideItem.addEventListener("dragstart", function (event) {
+	// 		console.log("teste");
+	// 		event.preventDefault();
+	// 	});
+
+	// 	//slideItem.addEventListener("mousedown", onMouseDown);
+
+	// 	slideItem.addEventListener("mouseup", onMouseUp);
+	// });
 
 	const buttonNext = document.querySelector('[data-slide="nav-next-button"]');
 	buttonNext.addEventListener("click", nextSlide);

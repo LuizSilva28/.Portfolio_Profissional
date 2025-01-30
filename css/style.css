@@ -281,7 +281,7 @@
   border: none;
 }
 
-.item0, .item4, .item3, .item2, .item1 {
+.itemList-0, .itemList-4, .itemList-3, .itemList-2, .itemList-1 {
   display: block;
   position: relative;
   min-width: 6rem;
@@ -293,19 +293,19 @@
   background-image: url(.././../../../../public/imgs/projetos/img1.jpg);
 }
 
-.item1 {
+.itemList-1 {
   background-image: url(.././../../../../public/imgs/projetos/img2.jpg);
 }
 
-.item2 {
+.itemList-2 {
   background-image: url(.././../../../../public/imgs/projetos/img3.jpg);
 }
 
-.item3 {
+.itemList-3 {
   background-image: url(.././../../../../public/imgs/projetos/img4.jpg);
 }
 
-.item4 {
+.itemList-4 {
   background-image: url(.././../../../../public/imgs/projetos/img5.jpg);
 }
 
@@ -324,6 +324,9 @@
   max-height: 9.4rem;
 }
 #container-carousel .carouselList .ContainerItems {
+  display: flex;
+}
+#container-carousel .carouselList .containerItemsReplica {
   display: flex;
 }
 
@@ -336,7 +339,7 @@
   border: none;
 }
 
-.item0, .item1, .item2, .item3, .item4 {
+.itemList-0, .itemList-1, .itemList-2, .itemList-3, .itemList-4 {
   display: block;
   position: relative;
   min-width: 6rem;
@@ -348,19 +351,19 @@
   background-image: url(.././../../../../public/imgs/projetos/img1.jpg);
 }
 
-.item1 {
+.itemList-1 {
   background-image: url(.././../../../../public/imgs/projetos/img2.jpg);
 }
 
-.item2 {
+.itemList-2 {
   background-image: url(.././../../../../public/imgs/projetos/img3.jpg);
 }
 
-.item3 {
+.itemList-3 {
   background-image: url(.././../../../../public/imgs/projetos/img4.jpg);
 }
 
-.item4 {
+.itemList-4 {
   background-image: url(.././../../../../public/imgs/projetos/img5.jpg);
 }
 
@@ -379,6 +382,9 @@
   max-height: 9.4rem;
 }
 #container-carousel .carouselList .ContainerItems {
+  display: flex;
+}
+#container-carousel .carouselList .containerItemsReplica {
   display: flex;
 }
 
