@@ -1,9 +1,9 @@
-import { criarSlidesItems } from "../cards/script.js";
-import { criarButtonBack, criarButtonNext } from "../buttons/script.js";
+import { createSlidesItems } from "../cards/script.js";
+import { createButtonBack, createButtonNext } from "../buttons/script.js";
 
-export function criarCarousel() {
+export function createCarousel() {
 
-	criarButtonBack();
+	createButtonBack();
 
 	const containerCarousel = document.querySelector("#container-carousel"); 
 	const carouselList = document.createElement("div"); 
@@ -22,10 +22,10 @@ export function criarCarousel() {
 	carouselList.appendChild(containerItemsReplica);
 	containerCarousel.appendChild(carouselList);
 
-	criarButtonNext();
+	createButtonNext();
 	
-	criarSlidesItems(containerItems, "itemList");
-	criarSlidesItems(containerItemsReplica, "itemList");
+	createSlidesItems(containerItems, "itemList");
+	createSlidesItems(containerItemsReplica, "itemList");
 	
 
 	

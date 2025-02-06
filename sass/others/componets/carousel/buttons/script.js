@@ -1,7 +1,7 @@
 
 	const containerCarousel = document.querySelector("#container-carousel");
     
-    export function criarButtonBack() {
+    export function createButtonBack() {
         const buttonBack = document.createElement("button");
         buttonBack.classList.add("bntCarousel");
         containerCarousel.appendChild(buttonBack);
@@ -9,7 +9,7 @@
        
     }
 
-    export function criarButtonNext() {
+    export function createButtonNext() {
         const buttonNext = document.createElement("button");
         buttonNext.classList.add("bntCarousel");
         containerCarousel.appendChild(buttonNext);
