@@ -2,7 +2,7 @@ import { createButtonNext } from "../buttons/script.js";
 
 export function createSlidesItems(container, itemFor) {
 	container.style.transform = `translateX(-205.28px)`;
-
+	container.setAttribute("draggable", "true");
 	const createItem = (index) => {
 		const item = document.createElement("div");
 		item.setAttribute("data-slide", "item");
@@ -39,22 +39,14 @@ function createEventsSlidesItems() {
 		replicaCurrentSlideIndex: 1,
 		replicaSavedPosition: -205.28,
 	};
-	function translateSlide({ whoMoved: whoMoved, position: position }) {
+	function translateSlide({ position: position }) {
 		if (state.savedPosition !== position) {
-			if (whoMoved === "draggedMouse") {
-				console.log("translate 1: ", position);
-				position = position - state.movement;
-				console.log("translate 1: ", position);
-			}
 			state.savedPosition = position;
 			slideList.style.transform = `translateX(${position}px)`;
 		}
 	}
-	function translateSlideReplica({ whoMoved: whoMoved, replicaPosition }) {
+	function translateSlideReplica({ replicaPosition }) {
 		if (replicaState.replicaSavedPosition !== replicaPosition) {
-			if (whoMoved === "draggedMouse") {
-				replicaPosition -= replicaState.replicaMovement;
-			}
 			replicaState.replicaSavedPosition = replicaPosition;
 			replicaSlideList.style.transform = `translateX(${replicaPosition}px)`;
 		}
@@ -72,6 +64,11 @@ function createEventsSlidesItems() {
 		if (boolean === true) {
 			const slideTotalSizeWidth = -(slideWidth + slideMargin);
 			let position = state.savedPosition + slideTotalSizeWidth;
+			if (whoMoved === "draggedMouse") {
+				position =
+					state.savedPosition +
+					(slideTotalSizeWidth - state.movement);
+			}
 			if (position < -615.84) {
 				console.log("teste 1: ", position);
 				position = 307.92;
@@ -82,25 +79,35 @@ function createEventsSlidesItems() {
 			}
 			slideList.style.transition =
 				animate === true ? "transform .5s" : "none";
-			translateSlide({ whoMoved: whoMoved, position: position });
+			translateSlide({ position: position });
 		} else {
+			console.log("position salvo: ", state.savedPosition);
 			const slideTotalSizeWidth = slideWidth + slideMargin;
-
 			let position = state.savedPosition + slideTotalSizeWidth;
+			console.log("position: ", position);
+			if (whoMoved === "draggedMouse") {
+				position =
+					state.savedPosition +
+					(slideTotalSizeWidth - state.movement);
+			}
 			if (position > 410.56) {
 				position = -513.2;
 				animate = false;
 			}
 			slideList.style.transition =
 				animate === true ? "transform .5s" : "none";
-			translateSlide({ whoMoved: whoMoved, position: position });
+			translateSlide({ position: position });
 		}
 
 		if (replicaBoolean === true) {
 			const slideTotalSizeWidth = -(slideWidth + slideMargin);
 			let replicaPosition =
 				replicaState.replicaSavedPosition + slideTotalSizeWidth;
-
+			if (whoMoved === "draggedMouse") {
+				replicaPosition =
+					replicaState.replicaSavedPosition +
+					(slideTotalSizeWidth - replicaState.replicaMovement);
+			}
 			if (replicaPosition < -1129) {
 				replicaPosition = -102.64;
 				replicaAnimate = false;
@@ -115,6 +122,11 @@ function createEventsSlidesItems() {
 			const slideTotalSizeWidth = slideWidth + slideMargin;
 			let replicaPosition =
 				replicaState.replicaSavedPosition + slideTotalSizeWidth;
+			if (whoMoved === "draggedMouse") {
+				replicaPosition =
+					replicaState.replicaSavedPosition +
+					(slideTotalSizeWidth - replicaState.replicaMovement);
+			}
 			if (replicaPosition > -102.64) {
 				replicaPosition = -1026.4;
 				replicaAnimate = false;
@@ -122,7 +134,6 @@ function createEventsSlidesItems() {
 			replicaSlideList.style.transition =
 				replicaAnimate === true ? "transform .5s" : "none";
 			translateSlideReplica({
-				whoMoved: whoMoved,
 				replicaPosition: replicaPosition,
 			});
 		}
@@ -197,8 +208,12 @@ function createEventsSlidesItems() {
 			});
 		}
 	}
-	slideList.addEventListener("mousedown", onMouseDown);
-	replicaSlideList.addEventListener("mousedown", onMouseDown);
+	slideList.addEventListener("dragstart", (event) => {
+		event.preventDefault;
+		slideList.addEventListener("mousedown", onMouseDown);
+		slideList.addEventListener("mouseout", onMouseUp);
+		replicaSlideList.addEventListener("mousedown", onMouseDown);
+	});
 
 	const buttonNext = document.querySelector('[data-slide="nav-next-button"]');
 	buttonNext.addEventListener("click", nextSlide);
