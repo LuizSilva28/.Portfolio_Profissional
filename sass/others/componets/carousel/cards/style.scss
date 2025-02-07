@@ -1,33 +1,38 @@
+.itemList-0 {
+	display: block;
+	position: relative;
+	min-width: 6rem;
+	margin-left: 0.415rem;
+	height: 8rem;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	object-fit: cover;
+	background-image: url(.././../../../../public/imgs/projetos/img1.jpg);
+}
 
+// .itemListReplica-0 {
+// 	@extend .itemList-0;
+// }
 
+.itemList-1 {
+	@extend .itemList-0;
+	background-image: url(.././../../../../public/imgs/projetos/img2.jpg);
+}
 
-.item0{
-    display: block;
-    min-width: 5rem;
-    margin-left: .415rem;
-    height: 8rem;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    object-fit: cover;
-    background-image: url(.././../../../../public/imgs/img1.jpg);
+// .itemListReplica-1 {
+//     @extend .itemList-0;
+// 	@extend .itemList-1;
+// }
+
+.itemList-2 {
+	@extend .itemList-0;
+	background-image: url(.././../../../../public/imgs/projetos/img3.jpg);
 }
-.item1{
-    @extend .item0;
-    background-image: url(.././../../../../public/imgs/img2.jpg);
-  
+.itemList-3 {
+	@extend .itemList-0;
+	background-image: url(.././../../../../public/imgs/projetos/img4.jpg);
 }
-.item2{
-    @extend .item0;
-    background-image: url(.././../../../../public/imgs/img3.jpg);
-   
-}
-.item3{
-    @extend .item0;
-    background-image: url(.././../../../../public/imgs/img4.jpg);
-   
-}
-.item4{
-    @extend .item0;
-    background-image: url(.././../../../../public/imgs/img5.jpg);
-   
+.itemList-4 {
+	@extend .itemList-0;
+	background-image: url(.././../../../../public/imgs/projetos/img5.jpg);
 }

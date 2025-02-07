@@ -77,7 +77,6 @@ export function createAudio() {
 		function setAudioMuted(volumeAtual) {
 			audio.volume = volumeAtual === 0 ? audioVolumeAtualizado : 0;
 			audioVolumeSaved = audio.volume;
-			console.log("descobrindo valor retornado :", audioVolumeSaved);
 
 			audio.volume === 0
 				? (barVolumeContent.style.width = "0px")

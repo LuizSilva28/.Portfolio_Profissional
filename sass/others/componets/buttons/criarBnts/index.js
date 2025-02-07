@@ -1,4 +1,10 @@
-export function criarBntsMenu(
+import { standardCardHardskills } from "../../objects/hardskills/index.js";
+import { standardCardSoftskills } from "../../objects/softskills/index.js";
+
+import { createGridSkills, createModalCertificate } from "../../Grid/index.js";
+
+
+export function createBntsMenu(
 	idBtn,
 	typeBtn,
 	classBtn,
@@ -21,13 +27,13 @@ export function criarBntsMenu(
 	bntsMenu.appendChild(icon);
 	bntsMenu.appendChild(text);
 	containerMenuMobile.appendChild(bntsMenu);
-	bntsMenu.id === 'bntMenu1'
+	bntsMenu.id === "bntMenu1"
 		? 0
-		: bntsMenu.addEventListener('click', (e) => {
+		: bntsMenu.addEventListener("click", (e) => {
 				e.preventDefault;
 				let bntClicked = e.currentTarget.id;
 				console.log(e.currentTarget.id);
-				let textBnt = '';
+				let textBnt = "";
 				switch (bntClicked) {
 					case "bntMenu2":
 						for (let i = 1; i <= 5; i++) {
@@ -41,7 +47,7 @@ export function criarBntsMenu(
 								? (textBnt = "github")
 								: (textBnt = "email");
 
-							criarBntsSideBar(
+							createBntsSideBar(
 								`sideBarBnt-${i}`,
 								"button",
 								"sideBarBnts",
@@ -49,7 +55,7 @@ export function criarBntsMenu(
 								`text${i}`,
 								textBnt
 							);
-						};
+						}
 						bntCloseSidebar();
 						break;
 					case "bntMenu3":
@@ -60,7 +66,7 @@ export function criarBntsMenu(
 								? (textBnt = "Unicesumar")
 								: (textBnt = "Onibitcode");
 
-							criarBntsSideBar(
+							createBntsSideBar(
 								`sideBarBnt-${i}`,
 								"button",
 								"sideBarBnts",
@@ -68,7 +74,7 @@ export function criarBntsMenu(
 								`text${i}`,
 								textBnt
 							);
-						};
+						}
 						bntCloseSidebar();
 
 						break;
@@ -77,61 +83,58 @@ export function criarBntsMenu(
 							i === 9
 								? (textBnt = "tema")
 								: (textBnt = "Acessibilidade");
-							criarBntsSideBar(
+							createBntsSideBar(
 								`sideBarBnt-${i}`,
-								"button", 
+								"button",
 								"sideBarBnts",
 								`SideBarIconBnt${i}`,
 								`text${i}`,
 								textBnt
 							);
-						};
+						}
 						bntCloseSidebar();
 						break;
 					default:
 						console.log("Deu erro");
 				}
-				const sideBar = document.getElementById('side-bar');
+				const sideBar = document.getElementById("side-bar");
 				sideBar.classList.add("sideBarClose");
 				const closeBnt = document.querySelector("#bntCloseSidebar");
 				closeBnt.classList.add("closeBnt");
-				
 		  });
-};
+}
 
-export function bntCloseSidebar (){
-	const header = document.getElementById('menu');
-	const bntCloseSidebar = document.createElement('div');
-	bntCloseSidebar.id = 'bntCloseSidebar';
+export function bntCloseSidebar() {
+	const header = document.getElementById("menu");
+	const bntCloseSidebar = document.createElement("div");
+	bntCloseSidebar.id = "bntCloseSidebar";
 	bntCloseSidebar.classList.toggle("bntCloseSidebar");
 
-	const iconX = document.createElement('i');
-	iconX.classList.add('icon0');
+	const iconX = document.createElement("i");
+	iconX.classList.add("icon0");
 
 	bntCloseSidebar.appendChild(iconX);
 	header.appendChild(bntCloseSidebar);
 
-	bntCloseSidebar.addEventListener('click', () => {
-        const sideBar = document.getElementById('side-bar');
-        sideBar.classList.toggle('sideBarClose');
-        
-        const closeBnt = document.querySelector('.closeBnt');
+	bntCloseSidebar.addEventListener("click", () => {
+		const sideBar = document.getElementById("side-bar");
+		sideBar.classList.toggle("sideBarClose");
+
+		const closeBnt = document.querySelector(".closeBnt");
 		closeBnt.classList.toggle("closeBnt");
-		
+
 		const divDadBnts = document.querySelectorAll(".divDadBnts");
 		console.log(divDadBnts);
-		
+
 		for (let i = 0; i < divDadBnts.length; i++) {
 			console.log(divDadBnts.length);
 			divDadBnts[i].remove();
 			console.log(divDadBnts.length);
 		}
-    });
+	});
+}
 
-
-};
-
-export function criarBntsSideBar(
+export function createBntsSideBar(
 	idBtn,
 	typeBtn,
 	classBtn,
@@ -159,36 +162,73 @@ export function criarBntsSideBar(
 	divDadBnts.appendChild(bntsSideBar);
 	divDadBnts.appendChild(text);
 	containerlayoutSideBar.appendChild(divDadBnts);
-};
+}
 
-/*export function criarBntsMenu() {
-	let text1 = `menu`,
-		text2 = `Redes`,
-		text3 = `pdfs`,
-		text4 = `config`;
-	for (let i = 1; i <= 4; i++) {
-		const containerMenuMobile = document.querySelector(
-			"#container-menu-mobile"
+//BUTTOnS AREA DO CONHECIMENTO
+
+export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
+
+	const containerButtons = document.querySelector(
+		'[data-areaSkills="containerButtons"]'
+	);
+	const buttonsAreaSkills = document.createElement("buttom");
+
+	buttonsAreaSkills.setAttribute("data-areaSkills", `${dataValue}`);
+	buttonsAreaSkills.classList.add("bntAreaskills");
+	buttonsAreaSkills.id = `bnnSkill-${idBtn}`;
+	idBtn === 1 ? buttonsAreaSkills.classList.add("activeSkills") : "";
+
+	buttonsAreaSkills.textContent = `${txtButtom}`;
+	containerButtons.appendChild(buttonsAreaSkills);
+
+	buttonsAreaSkills.addEventListener("click", () => {
+		
+		const bntSoftskills = document.querySelector(
+			'[data-areaSkills="Softskills"]'
 		);
-		const bntsMenu = document.createElement("button");
-		bntsMenu.id = `bntMenu${i}`;
-		bntsMenu.type = "button";
-		bntsMenu.classList.add("bntMenu");
-		const icon = document.createElement("i");
-		icon.classList.add(`icon${i}`);
-		const text = document.createElement("p");
-		text.id = `bntText${i}`;
-		text.textContent = ` ${
-			i === 1 ? text1 : i === 2 ? text2 : i === 3 ? text3 : text4
-		}`;
-		bntsMenu.appendChild(icon);
-		bntsMenu.appendChild(text);
-		containerMenuMobile.appendChild(bntsMenu);
-		bntsMenu.addEventListener("click", (e) => {
-			e.preventDefault;
-			console.log("estou aqui");
-			const sideBar = document.getElementById("side-bar");
-			sideBar.classList.toggle("sideBarClose");
-		});
-	}
-}*/
+		const bntHardskills = document.querySelector(
+			'[data-areaSkills="Hardskills"]'
+		);
+		const gridskiils = document.querySelector('[data-areaskills="containerGrid"]');
+		if (idBtn === 1) {
+			bntHardskills === null
+				? buttonsAreaSkills.classList.add("activeSkills")
+				: "";
+			
+			gridskiils.parentNode.removeChild(gridskiils);
+
+			createGridSkills(standardCardHardskills);
+
+		} else if (idBtn === 2) {
+			
+			bntHardskills.classList.remove("activeSkills");
+			bntSoftskills === null
+				? buttonsAreaSkills.classList.add("activeSkills")
+				: "";
+
+			gridskiils.parentNode.removeChild(gridskiils);
+			createGridSkills(standardCardSoftskills);
+		}
+	});
+}
+
+export function createBntCertificate(certificateURL){
+	const cardDetails = document.querySelector('[data-gridskills="cardDetails"]');
+
+	const bntCertificate = document.createElement('button');
+	bntCertificate.textContent = 'Certificado';
+	bntCertificate.classList.add('bntCertificate');
+	
+	const iconBntCertificate = document.createElement("i");
+	iconBntCertificate.classList.add("iconCertificate");
+
+	bntCertificate.appendChild(iconBntCertificate);
+	cardDetails.appendChild(bntCertificate);
+
+	bntCertificate.addEventListener('click', () => {
+		//window.location.href = `${certificateURL}`;
+		createModalCertificate(certificateURL);
+	});
+
+}
+// Evento deve criar um grid de acordo com o botão clicado, o mesmo deve forncer as informações para a criação do grid, e também deve remover o grid anterior;

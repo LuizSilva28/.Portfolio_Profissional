@@ -1,0 +1,142 @@
+.gridSkills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.modalCertificate {
+		position: absolute;
+
+		width: 95%;
+		height: 80%;
+		z-index: 20;
+		color: black;
+		//border: 2px solid rgb(187, 215, 156);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-repeat: no-repeat;
+		object-fit: contain;
+		background-position: center center;
+
+		.pdfContainer {
+			width: 100%;
+			height: 90%;
+		}
+	}
+
+	#container-skills {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		width: 100%;
+		color: white;
+		font-size: 1.2em;
+		min-width: 100%;
+		margin: 2rem 1rem 1rem 0;
+		gap: 0.5em 1rem;
+
+		.backgroundAnimated {
+			position: absolute;
+			border-radius: 0.4rem;
+			background-color: $color-douradoEscuro;
+			z-index: -1;
+			min-width: 4.43rem;
+			min-height: 4.43rem;
+			-moz-transition: transform 1.5s;
+			-webkit-transition: transform 1.5s;
+			-ms-transition: transform 1.5s;
+			-o-transition: transform 1.5s;
+			transition: transform 1.5s;
+		}
+
+		.miniCard {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			border-radius: 0.4rem;
+			margin: 4px;
+			min-width: 4.43rem;
+			min-height: 4.43rem;
+		}
+		.selected {
+			border: 2px solid $color-dourado;
+			transition: 0.3s ease-out;
+		}
+
+		.cardDetails {
+			padding: 2px;
+
+			.imgOfCard {
+				display: block;
+
+				background-size: 100% 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 0.4rem;
+				min-width: 100%;
+				height: 100%;
+				object-fit: fill;
+			}
+
+			.title {
+				font-weight: bold;
+				margin: 0.9em 0 0.9em 0;
+			}
+			.description {
+				font-size: $font-secondary;
+				margin: 0.9em 0 0.9em 0;
+			}
+			.descriptionsOfCard {
+				font-size: $font-secondary;
+				text-align: end;
+				//border: 1px solid green;
+				padding: 0 0 0.5em 0.5em;
+			}
+		}
+
+		.item-1 {
+			grid-column: 1/2;
+			grid-row: 1/2;
+		}
+		.item-2 {
+			grid-column: 1/2;
+			grid-row: 2/3;
+		}
+		.item-3 {
+			grid-column: 1/2;
+			grid-row: 3/4;
+		}
+		.item-4 {
+			grid-column: 1/2;
+			grid-row: 4/5;
+		}
+		.item-5 {
+			grid-column: 1/2;
+			grid-row: 5/6;
+		}
+		.item-6 {
+			grid-column: 3/4;
+			grid-row: 1/2;
+		}
+		.item-7 {
+			grid-column: 3/4;
+			grid-row: 2/3;
+		}
+		.item-8 {
+			grid-column: 3/4;
+			grid-row: 3/4;
+		}
+		.item-9 {
+			grid-column: 3/4;
+			grid-row: 4/5;
+		}
+		.item-10 {
+			grid-column: 3/4;
+			grid-row: 5/6;
+		}
+
+		.cardDetails {
+			grid-column: 2/3;
+			grid-row: 1/3;
+		}
+	}
+}
