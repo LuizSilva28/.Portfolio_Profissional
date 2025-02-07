@@ -195,8 +195,6 @@ function createEventsSlidesItems() {
 	}
 	function onMouseUp(event) {
 		event.preventDefault();
-		slideList.removeEventListener("mousemove", onMouseMove);
-		replicaSlideList.removeEventListener("mousemove", onMouseMove);
 
 		if (state.movement < -20 && replicaState.replicaMovement < -20) {
 			nextSlide("draggedMouse");
@@ -207,12 +205,17 @@ function createEventsSlidesItems() {
 				animate: true,
 			});
 		}
+		slideList.removeEventListener("mousemove", onMouseMove);
+		slideList.removeEventListener("mouseout", onMouseUp);
+		replicaSlideList.removeEventListener("mousemove", onMouseMove);
+		replicaSlideList.removeEventListener("mouseout", onMouseUp);
 	}
 	slideList.addEventListener("dragstart", (event) => {
 		event.preventDefault;
 		slideList.addEventListener("mousedown", onMouseDown);
 		slideList.addEventListener("mouseout", onMouseUp);
 		replicaSlideList.addEventListener("mousedown", onMouseDown);
+		replicaSlideList.addEventListener("mouseout", onMouseUp);
 	});
 
 	const buttonNext = document.querySelector('[data-slide="nav-next-button"]');
