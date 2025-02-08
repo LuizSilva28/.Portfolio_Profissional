@@ -14,7 +14,7 @@
   height: 345px;
   top: 0;
   left: -1.15vw;
-  background-image: url(../../../../public/assets/Rectangle.svg);
+  background-image: url(./public/assets/Rectangle.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -42,7 +42,7 @@
 
 .icon0 {
   display: inline-block;
-  background-image: url(../../../../../public/icons/iconsMenu/menuClose.svg);
+  background-image: url(./public/icons/iconsMenu/menuClose.svg);
   min-width: 1.88rem;
   min-height: 1.88rem;
   background-size: contain;
@@ -52,7 +52,7 @@
 
 .icon1, .icon4, .icon3, .icon2 {
   display: inline-block;
-  background-image: url(../../../../../public/icons/iconsMenu/home.svg);
+  background-image: url(./public/icons/iconsMenu/home.svg);
   min-width: 1.88rem;
   min-height: 1.88rem;
   background-size: cover;
@@ -61,20 +61,20 @@
 }
 
 .icon2 {
-  background-image: url(../../../../../public/icons/iconsMenu/redes.svg);
+  background-image: url(./public/icons/iconsMenu/redes.svg);
 }
 
 .icon3 {
-  background-image: url(../../../../../public/icons/iconsMenu/pdfs.svg);
+  background-image: url(./public/icons/iconsMenu/pdfs.svg);
 }
 
 .icon4 {
-  background-image: url(../../../../../public/icons/iconsMenu/configs.svg);
+  background-image: url(./public/icons/iconsMenu/configs.svg);
 }
 
 .SideBarIconBnt1, .SideBarIconBnt10, .SideBarIconBnt9, .SideBarIconBnt7, .SideBarIconBnt8, .SideBarIconBnt6, .SideBarIconBnt5, .SideBarIconBnt4, .SideBarIconBnt3, .SideBarIconBnt2 {
   display: block;
-  background-image: url(../../../../../public/icons//iconsSideBar/iconsWhats.svg);
+  background-image: url(./public/icons//iconsSideBar/iconsWhats.svg);
   min-width: 1.76rem;
   min-height: 1.52rem;
   background-size: cover;
@@ -85,35 +85,35 @@
 }
 
 .SideBarIconBnt2 {
-  background-image: url(../../../../../public/icons//iconsSideBar/iconInsta.svg);
+  background-image: url(./public/icons//iconsSideBar/iconInsta.svg);
 }
 
 .SideBarIconBnt3 {
-  background-image: url(../../../../../public/icons//iconsSideBar/iconLikedin.svg);
+  background-image: url(./public/icons//iconsSideBar/iconLikedin.svg);
 }
 
 .SideBarIconBnt4 {
-  background-image: url(../../../../../public/icons//iconsSideBar/iconGitHub.svg);
+  background-image: url(./public/icons//iconsSideBar/iconGitHub.svg);
 }
 
 .SideBarIconBnt5 {
-  background-image: url(../../../../../public/icons//iconsSideBar/iconEmail.svg);
+  background-image: url(./public/icons//iconsSideBar/iconEmail.svg);
 }
 
 .SideBarIconBnt6 {
-  background-image: url(../../../../../public/icons/iconsSideBar/iconCurriculum.svg);
+  background-image: url(./public/icons/iconsSideBar/iconCurriculum.svg);
 }
 
 .SideBarIconBnt7, .SideBarIconBnt8 {
-  background-image: url(../../../../../public/icons//iconsSideBar/iconGridCurriculum.svg);
+  background-image: url(./public/icons//iconsSideBar/iconGridCurriculum.svg);
 }
 
 .SideBarIconBnt9 {
-  background-image: url(../../../../../public/icons/iconsSideBar/iconThemeDark.svg);
+  background-image: url(./public/icons/iconsSideBar/iconThemeDark.svg);
 }
 
 .SideBarIconBnt10 {
-  background-image: url(../../../../../public/icons//iconsSideBar/iconAccessibility.svg);
+  background-image: url(./public/icons//iconsSideBar/iconAccessibility.svg);
 }
 
 .bntCertificate {
@@ -133,7 +133,7 @@
   height: 1.8rem;
   border-radius: 0.5rem;
   background-color: rgb(51, 51, 51);
-  background-image: url(../../../../../../public/icons/areaSkills/openCertificate.svg);
+  background-image: url(./public/icons/areaSkills/openCertificate.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -290,23 +290,23 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   object-fit: cover;
-  background-image: url(.././../../../../public/imgs/projetos/img1.jpg);
+  background-image: url(./public/imgs/projetos/img1.jpg);
 }
 
 .itemList-1 {
-  background-image: url(.././../../../../public/imgs/projetos/img2.jpg);
+  background-image: url(./public/imgs/projetos/img2.jpg);
 }
 
 .itemList-2 {
-  background-image: url(.././../../../../public/imgs/projetos/img3.jpg);
+  background-image: url(./public/imgs/projetos/img3.jpg);
 }
 
 .itemList-3 {
-  background-image: url(.././../../../../public/imgs/projetos/img4.jpg);
+  background-image: url(./public/imgs/projetos/img4.jpg);
 }
 
 .itemList-4 {
-  background-image: url(.././../../../../public/imgs/projetos/img5.jpg);
+  background-image: url(./public/imgs/projetos/img5.jpg);
 }
 
 #container-carousel {
@@ -348,23 +348,23 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   object-fit: cover;
-  background-image: url(.././../../../../public/imgs/projetos/img1.jpg);
+  background-image: url(./public/imgs/projetos/img1.jpg);
 }
 
 .itemList-1 {
-  background-image: url(.././../../../../public/imgs/projetos/img2.jpg);
+  background-image: url(./public/imgs/projetos/img2.jpg);
 }
 
 .itemList-2 {
-  background-image: url(.././../../../../public/imgs/projetos/img3.jpg);
+  background-image: url(./public/imgs/projetos/img3.jpg);
 }
 
 .itemList-3 {
-  background-image: url(.././../../../../public/imgs/projetos/img4.jpg);
+  background-image: url(./public/imgs/projetos/img4.jpg);
 }
 
 .itemList-4 {
-  background-image: url(.././../../../../public/imgs/projetos/img5.jpg);
+  background-image: url(./public/imgs/projetos/img5.jpg);
 }
 
 #container-carousel {
@@ -404,14 +404,14 @@
 }
 .audio-player .play, .audio-player .volumeMuted, .audio-player .volume, .audio-player .pause {
   display: block;
-  background-image: url(../../../../public/icons/content/iconPlay.svg);
+  background-image: url(./public/icons/content/iconPlay.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 1rem;
   height: 1rem;
 }
 .audio-player .pause {
-  background-image: url(../../../../public/icons/content/iconPause.svg);
+  background-image: url(./public/icons/content/iconPause.svg);
 }
 .audio-player #progress-time-container {
   flex-grow: 1;
@@ -448,10 +448,10 @@
   height: 0.7rem;
 }
 .audio-player .volume {
-  background-image: url(../../../../public/icons/content/iconAudio.svg);
+  background-image: url(./public/icons/content/iconAudio.svg);
 }
 .audio-player .volumeMuted {
-  background-image: url(../../../../public/icons/content/iconAudioMuted.svg);
+  background-image: url(./public/icons/content/iconAudioMuted.svg);
 }
 .audio-player #bar-volume-container {
   flex-grow: 1;
@@ -474,7 +474,7 @@ iframe {
   height: 10rem;
   margin: 1.5rem 0 1.5rem 0;
   /*
-  background: url("../../../../public/imgs/pexels-creative-vix-9754.jpg") ; 
+  background: url("./public/imgs/pexels-creative-vix-9754.jpg") ; 
 
 
    z-index: 5;*/
