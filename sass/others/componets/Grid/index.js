@@ -13,52 +13,45 @@ export function createGridSkills(object) {
 	function createBackgroundAnimated() {
 		const cardInitial = document.querySelector(".item-1");
 		const locationInitial = cardInitial.getBoundingClientRect();
+		console.log("local do elemento a ser posicionado: ");
+		console.log(locationInitial);
+
+		let locationX = locationInitial.x;
+		let locationY = locationInitial.y;
+
 		const backgroundAnimated = document.createElement("div");
 		backgroundAnimated.classList.add("backgroundAnimated");
+
+		let locationBackgroundAnimated =
+			backgroundAnimated.getBoundingClientRect();
+
+		console.log("local de origin do elemento animado:");
+		console.log(locationBackgroundAnimated);
+
+		backgroundAnimated.style.transform = `translate( ${0}px, ${0}px)`;
+		backgroundAnimated.style.width = `${locationInitial.width + 8}px`;
+		backgroundAnimated.style.height = `${locationInitial.height + 8}px`;
 		containerGrid.appendChild(backgroundAnimated);
-
-		const elementAnimated = document.querySelector(".backgroundAnimated");
-		elementAnimated.style.width = `${locationInitial.width + 8}px`;
-		elementAnimated.style.height = `${locationInitial.height + 8}px`;
-
-		elementAnimated.style.transform = `translate(${locationInitial.x - 30}px, ${locationInitial.y - 170}px)`;
 	}
 
 	function moveBackgroundAnimated(newLocation) {
-		console.log(newLocation);
-		const elementAnimated = document.querySelector(".backgroundAnimated");
-		elementAnimated.style.transform = `translate(${newLocation.x - 30}px, ${
-			newLocation.y - 170
-		}px)`;
+		const cardInitial = document.querySelector(".item-1");
+		const locationInitial = cardInitial.getBoundingClientRect();
+		const backgroundAnimated = document.querySelector(
+			".backgroundAnimated"
+		);
+		let locationX = newLocation.x - locationInitial.x;
+		let locationY = newLocation.y - locationInitial.y;
+		backgroundAnimated.style.transform = `translate( ${locationX}px, ${locationY}px)`;
 	}
-
 	function myPosition(objectId) {
 		const element = document.querySelector(`.item-${objectId}`);
-		const myLocation = element.getBoundingClientRect();
-		return myLocation;
+		console.log("position: ");
+		let locationElement = element.getBoundingClientRect();
+		console.log(locationElement);
+
+		return locationElement;
 	}
-
-	/*
-		2. Este elemento tem que se mover pelos cards de acordo com a localização do cursor, ex: se o curso entrar no card 5 o elemento se moverá em direção ao mesmo;
-			devo setar uma localização inicial para o elemento backgroundAnimated;*/
-	/*
-	function moveBackgroundAnimated(objectID) {
-		
-		let saveClassAtual, classPrevious;
-
-		saveClassAtual = objectID;
-		createBackgroundAnimated(objectID);
-
-		classPrevious = saveClassAtual;
-		classPrevious !== 0 ? removeBackgroundAnimated(classPrevious) : "";
-	}*/
-
-	/*
-			devo capturar a localização e o ID do elemento miniCard ao entrar com o cursor em sua area, e usar estas informações para setar uma nova localização para o elemento backgroundAnimated por parametro;
-		{
-		    
-			backgroundAnimated.classList.add(``); 
-		}*/
 
 	function createMiniCard(object) {
 		const miniCard = document.createElement("div");
