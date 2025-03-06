@@ -1,7 +1,7 @@
 export const standardCardHardskills = [
 	{
 		id: 1,
-		image: "public/imgs/hardskills/img10.jpeg",
+		image: "/imgs/hardskills/img10.jpeg",
 		title: "GitHub",
 		description: {
 			xp: "2 ano",
@@ -12,18 +12,18 @@ export const standardCardHardskills = [
 	},
 	{
 		id: 2,
-		image: "public/imgs/hardskills/img5.png",
+		image: "/imgs/hardskills/img5.png",
 		title: "Node.js",
 		description: {
 			xp: "1 ano",
 			skillLevel: "75%",
 			projects: 5,
 		},
-		certificate: "public/Pdfs/Dominando_o_Node.pdf",
+		certificate: "/Pdfs/Dominando_o_Node.pdf",
 	},
 	{
 		id: 3,
-		image: "public/imgs/hardskills/img8.jpg",
+		image: "/imgs/hardskills/img8.jpg",
 		title: "Sass",
 		description: {
 			xp: "2 ano",
@@ -34,18 +34,18 @@ export const standardCardHardskills = [
 	},
 	{
 		id: 4,
-		image: "public/imgs/hardskills/img7.jpeg",
+		image: "/imgs/hardskills/img7.jpeg",
 		title: "PostgreSQL ",
 		description: {
 			xp: "1 ano",
 			skillLevel: "50%",
 			projects: 1,
 		},
-		certificate: "public/Pdfs/Banco_de_Dados_SQL_no_NodeJs.pdf",
+		certificate: "/Pdfs/Banco_de_Dados_SQL_no_NodeJs.pdf",
 	},
 	{
 		id: 5,
-		image: "public/imgs/hardskills/img1.png",
+		image: "/imgs/hardskills/img1.png",
 		title: "Bootstrap",
 		description: {
 			xp: "2 ano",
@@ -56,18 +56,18 @@ export const standardCardHardskills = [
 	},
 	{
 		id: 6,
-		image: "public/imgs/hardskills/img3.jpeg",
+		image: "/imgs/hardskills/img3.jpeg",
 		title: "Html5 ",
 		description: {
 			xp: "2 ano",
 			skillLevel: "75%",
 			projects: 5,
 		},
-		certificate: "public/Pdfs/html5.pdf",
+		certificate: "/Pdfs/html5.pdf",
 	},
 	{
 		id: 7,
-		image: "public/imgs/hardskills/img6.jpeg",
+		image: "/imgs/hardskills/img6.jpeg",
 		title: "React.js ",
 		description: {
 			xp: "1 ano",
@@ -78,7 +78,7 @@ export const standardCardHardskills = [
 	},
 	{
 		id: 8,
-		image: "public/imgs/hardskills/img9.jpeg",
+		image: "/imgs/hardskills/img9.jpeg",
 		title: "Express.js ",
 		description: {
 			xp: "1 ano",
@@ -89,7 +89,7 @@ export const standardCardHardskills = [
 	},
 	{
 		id: 9,
-		image: "public/imgs/hardskills/img4.jpeg",
+		image: "/imgs/hardskills/img4.jpeg",
 		title: "Javascript",
 		description: {
 			xp: "1 ano",
@@ -100,7 +100,7 @@ export const standardCardHardskills = [
 	},
 	{
 		id: 10,
-		image: "public/imgs/hardskills/img2.jpeg",
+		image: "/imgs/hardskills/img2.jpeg",
 		title: "Css",
 		description: {
 			xp: "2 ano",

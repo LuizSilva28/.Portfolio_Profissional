@@ -1,0 +1,30 @@
+
+
+
+
+
+.containerChartAndLegend {
+	display: flex;
+	.graficoContainer {
+		/* margin: 3rem auto 3rem auto; */
+		width: 150px;
+		height: 150px;
+	}
+	#legend-container {
+		width: 150px;
+		height: 150px;
+		overflow: scroll;
+		//scrollbar-color: transparent;
+		margin: 0 0 1rem 0;
+	}
+}
+
+.square {
+	width: 250px;
+	height: 150px;
+	border-radius: 2rem;
+	background-color: rgba(51, 72, 13, 0.6);
+	padding: 1rem;
+
+
+}

@@ -52,9 +52,9 @@ export function createAudio() {
 
 		});
 		progressContainer.addEventListener("click", function (e) {
-			const width = this.clientWidth; //pega a largural total do elemento.
-			const clickX = e.offsetX; //offsetX pega o pixel do elemento referente a area do próprio elemento.
-			const duration = audio.duration; // referencia o objeto audio, duration é a propriedade que pega o tempo total do audio referenciado.
+			const width = this.clientWidth; 
+			const clickX = e.offsetX;
+			const duration = audio.duration;
 
 			audio.currentTime = (clickX / width) * duration; //
 		});
@@ -64,7 +64,7 @@ export function createAudio() {
 		let audioVolumeAtualizado = 1;
 
 		bntPlaySpeedAudio.addEventListener("click", function () {
-			let speedAudio = audio.playbackRate; //velocidade atual do audio
+			let speedAudio = audio.playbackRate;
 			audio.playbackRate = speedAudio === 1 ? 1.5 : 1;
 
 			speedAudio === 1
@@ -90,10 +90,9 @@ export function createAudio() {
 			bntVolume.classList.toggle("volumeMuted");
 		});
 		barVolumeContainer.addEventListener("click", function (e) {
-			const width = this.clientWidth; //pega a largural total do elemento.
-			const clickX = e.offsetX; //offsetX pega o pixel do elemento referente a area do próprio elemento.
-			
-			audio.volume = clickX / width; //atualiza o volume do audio baseado no click do mouse.
+			const width = this.clientWidth; 
+			const clickX = e.offsetX; 
+			audio.volume = clickX / width; 
 			audioVolumeAtualizado= audio.volume;
 			
 			barVolumeContent.style.width = `${clickX}px`;
