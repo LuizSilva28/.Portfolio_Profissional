@@ -11,6 +11,9 @@
 @import "./others/componets/video/style.scss";
 @import "./others/componets/Grid/style.scss";
 
+//Graphcs
+@import "./others/componets/charts/style.scss";
+
 * {
 	padding: 0;
 	margin: 0;
@@ -55,14 +58,13 @@
 			flex-direction: column;
 
 			height: auto;
-			.titles{
-				margin:1rem 0 1rem 1rem;
-
+			.titles {
+				margin: 1rem 0 1rem 1rem;
 			}
-			#audio{
-				margin:1rem 0  1rem 0;
+			#audio {
+				margin: 1rem 0 1rem 0;
 
-				.controls{
+				.controls {
 					background-color: none;
 				}
 			}
@@ -75,13 +77,11 @@
 				width: 100%;
 				height: 100%;
 			}
-
 		}
 	}
 
-	#area-insight{
-
-		.skillTitle{
+	#area-insight {
+		.skillTitle {
 			font-size: $font-primary;
 			margin: 2rem 0 3rem 0;
 		}

@@ -7,7 +7,7 @@
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	object-fit: cover;
-	background-image: url(.././../../../../public/imgs/projetos/img1.jpg);
+	background-image: url(./imgs/projetos/img1.jpg);
 }
 
 // .itemListReplica-0 {
@@ -16,7 +16,7 @@
 
 .itemList-1 {
 	@extend .itemList-0;
-	background-image: url(.././../../../../public/imgs/projetos/img2.jpg);
+	background-image: url(./imgs/projetos/img2.jpg);
 }
 
 // .itemListReplica-1 {
@@ -26,13 +26,13 @@
 
 .itemList-2 {
 	@extend .itemList-0;
-	background-image: url(.././../../../../public/imgs/projetos/img3.jpg);
+	background-image: url(./imgs/projetos/img3.jpg);
 }
 .itemList-3 {
 	@extend .itemList-0;
-	background-image: url(.././../../../../public/imgs/projetos/img4.jpg);
+	background-image: url(./imgs/projetos/img4.jpg);
 }
 .itemList-4 {
 	@extend .itemList-0;
-	background-image: url(.././../../../../public/imgs/projetos/img5.jpg);
+	background-image: url(./imgs/projetos/img5.jpg);
 }

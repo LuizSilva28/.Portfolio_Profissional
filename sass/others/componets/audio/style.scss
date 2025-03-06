@@ -17,7 +17,7 @@
 	.play {
 		display: block;
 
-		background-image: url(../../../../public/icons/content/iconPlay.svg);
+		background-image: url(./icons/content/iconPlay.svg);
 		background-size: contain;
 		background-repeat: no-repeat;
 		width: 1rem;
@@ -25,7 +25,7 @@
 	}
 	.pause {
 		@extend .play;
-		background-image: url(../../../../public/icons/content/iconPause.svg);
+		background-image: url(./icons/content/iconPause.svg);
 	}
 	#progress-time-container {
 		flex-grow: 1;
@@ -71,11 +71,11 @@
 	}
 	.volume {
 		@extend .play;
-		background-image: url(../../../../public/icons/content/iconAudio.svg);
+		background-image: url(./icons/content/iconAudio.svg);
 	}
 	.volumeMuted {
 		@extend .play;
-		background-image: url(../../../../public/icons/content/iconAudioMuted.svg);
+		background-image: url(./icons/content/iconAudioMuted.svg);
 	}
 
 	#bar-volume-container {

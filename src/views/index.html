@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="main.css" />
+
+		<!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/chart.js"
+			defer></script>
+		<script
+			type="module"
+			src="main.js"
+			defer></script>
+		<!--<script type="module" src="./scripts/server.js" defer></scrip>-->
+
+		<title>Luiz Henrique dos Santos Silva</title>
+	</head>
+	<body class="container-major">
+		<!--geometric shapes for backgroud -->
+
+		<div class="shapesBackgroundForBody">
+			<div class="layoutShape1">
+				<div class="shape1"></div>
+			</div>
+			<div class="layoutShape2">
+				<div class="shape2"></div>
+			</div>
+			<div class="layoutShape3">
+				<div class="shape3"></div>
+			</div>
+		</div>
+		<header id="menu">
+			<nav id="container-menu-mobile"></nav>
+
+			<section
+				class="sideBar"
+				id="side-bar">
+				<div class="layoutSideBar"></div>
+			</section>
+		</header>
+		<main id="content">
+			<section
+				id="about-me"
+				class="aboutMe">
+				<div id="container-carousel"></div>
+
+				<article id="presentation">
+					<h1 class="titles">Sobre mim</h1>
+					<!-- áudio para o texto sobre mim-->
+					<div class="audio-player">
+						<audio
+							id="audio"
+							preload="metadata">
+							<source
+								src="/audios/sobre_mim.mp3.opus"
+								type="audio/mp3" />
+						</audio>
+						<button
+							id="play-pause"
+							class="play-pause play"
+							data-audio="play-pause">
+							<!--<i class="play" data-audio="iconPlayingAudio"></i>-->
+						</button>
+						<div id="progress-time-container">
+							<div id="progress-time"></div>
+						</div>
+						<button
+							class="bntPlaySpeedAudio"
+							data-audio="speed-audio">
+							<span
+								class="textBntSpeedAudio"
+								data-audio="contentBntAudio"
+								>1x</span
+							>
+						</button>
+						<button
+							id="bnt-volume"
+							class="bntVolume volume"></button>
+						<div id="bar-volume-container">
+							<div id="bar-volume-content"></div>
+						</div>
+					</div>
+					<p class="textPresentation">
+						A cidade estava em festa. Luzes coloridas enfeitavam as
+						ruas, e as pessoas caminhavam sorridentes, conversando
+						animadamente. O aroma de comida típica permeava o ar,
+						misturado ao som alegre das músicas tradicionais.
+						Crianças corriam, rindo e brincando, enquanto os adultos
+						aproveitavam a companhia dos amigos.
+					</p>
+
+					<iframe
+						src="https://www.youtube.com/embed/KXBREbl-Ihg"
+						title="Apresentação profissional"
+						frameborder="0"
+						sandbox="allow-scripts allow-same-origin"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; 		gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen>
+					</iframe>
+				</article>
+			</section>
+
+			<section id="area-insight">
+				<h2 class="skillTitle">Área do conhecimento</h2>
+				<div
+					class="containerButtons"
+					data-areaSkills="containerButtons"></div>
+				<div
+					class="gridSkills"
+					data-gridSkills="gridSkills"></div>
+			</section>
+
+			<section id="profile-test">
+				<h2>Teste de perfil</h2>
+				<div class="containerChartAndLegend">
+					<div class="graficoContainer">
+						<canvas
+							id="polarAreaChart"
+							class="grafico"></canvas>
+					</div>
+					<div id="legend-container"></div>
+				</div>
+				<div class="square"></div>
+				<div id="table-profile-test"></div>
+				<a href="">ver completo...</a>
+			</section>
+
+			<section id="area-projects">
+				<h2>Projetos</h2>
+				<section id="container-projects">
+					<div class="cardPrincipal">
+						<!-- <img
+							src=""
+							alt="" /> -->
+						<h3>Hardskills</h3>
+						<button>Cartificado</button>
+					</div>
+					<div class="carouselVertical"></div>
+				</section>
+			</section>
+
+			<section id="area-feedback">
+				<section>
+					<i>icon</i>
+					<h2>Deixe sua avaliação</h2>
+
+					<label for="name">Nome: </label>
+					<input
+						type="text"
+						id="name"
+						placeholder="ex: João Gustavo" />
+
+					<label for="email">Email: </label>
+					<input
+						type="email"
+						id="email"
+						placeholder="ex: joão@gmail.com" />
+
+					<h3>Nível de satisção <i>icon</i></h3>
+					<ul id="container-stars">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+
+					<label for="comentario">Comentário:</label>
+					<textarea
+						name=""
+						id="comentario"
+						cols="30"
+						rows="10"
+						maxlength="200"></textarea>
+					<br />
+					<button>Enviar</button>
+				</section>
+				<section>
+					<button>Avalie</button>
+					<div class="cardComent">
+						<p>nome</p>
+						<p>nota <i>icon</i></p>
+						<p>email</p>
+						<p>comentário</p>
+					</div>
+				</section>
+				<section id="formacoes">
+					<div>
+						<div>
+							<!-- <img
+								src=""
+								alt="" /> -->
+						</div>
+
+						<button>1</button>
+					</div>
+					<div>
+						<div>
+							<!-- <img
+								src=""
+								alt="" /> -->
+						</div>
+
+						<button>2</button>
+					</div>
+					<div>
+						<div>
+							<!-- <img
+								src=""
+								alt="" /> -->
+						</div>
+
+						<button>3</button>
+					</div>
+				</section>
+				<footer>
+					<div>
+						<i>icon</i>
+						<p>name</p>
+					</div>
+					<div>
+						<i>icon</i>
+						<p>name</p>
+					</div>
+					<div>
+						<i>icon</i>
+						<p>name</p>
+					</div>
+					<div>
+						<i>icon</i>
+						<p>name</p>
+					</div>
+					<div>
+						<i>icon</i>
+						<p>name</p>
+					</div>
+					<div>
+						<i>icon</i>
+						<p>name</p>
+					</div>
+				</footer>
+			</section>
+		</main>
+	</body>
+</html>

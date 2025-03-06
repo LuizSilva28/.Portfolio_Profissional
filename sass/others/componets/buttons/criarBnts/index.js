@@ -3,7 +3,6 @@ import { standardCardSoftskills } from "../../objects/softskills/index.js";
 
 import { createGridSkills, createModalCertificate } from "../../Grid/index.js";
 
-
 export function createBntsMenu(
 	idBtn,
 	typeBtn,
@@ -15,6 +14,7 @@ export function createBntsMenu(
 	const containerMenuMobile = document.querySelector(
 		"#container-menu-mobile"
 	);
+	console.log(containerMenuMobile);
 	const bntsMenu = document.createElement("button");
 	bntsMenu.id = idBtn;
 	bntsMenu.type = typeBtn;
@@ -167,7 +167,6 @@ export function createBntsSideBar(
 //BUTTOnS AREA DO CONHECIMENTO
 
 export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
-
 	const containerButtons = document.querySelector(
 		'[data-areaSkills="containerButtons"]'
 	);
@@ -182,25 +181,24 @@ export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 	containerButtons.appendChild(buttonsAreaSkills);
 
 	buttonsAreaSkills.addEventListener("click", () => {
-		
 		const bntSoftskills = document.querySelector(
 			'[data-areaSkills="Softskills"]'
 		);
 		const bntHardskills = document.querySelector(
 			'[data-areaSkills="Hardskills"]'
 		);
-		const gridskiils = document.querySelector('[data-areaskills="containerGrid"]');
+		const gridskiils = document.querySelector(
+			'[data-areaskills="containerGrid"]'
+		);
 		if (idBtn === 1) {
 			bntHardskills === null
 				? buttonsAreaSkills.classList.add("activeSkills")
 				: "";
-			
+
 			gridskiils.parentNode.removeChild(gridskiils);
 
 			createGridSkills(standardCardHardskills);
-
 		} else if (idBtn === 2) {
-			
 			bntHardskills.classList.remove("activeSkills");
 			bntSoftskills === null
 				? buttonsAreaSkills.classList.add("activeSkills")
@@ -212,23 +210,24 @@ export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 	});
 }
 
-export function createBntCertificate(certificateURL){
-	const cardDetails = document.querySelector('[data-gridskills="cardDetails"]');
+export function createBntCertificate(certificateURL) {
+	const cardDetails = document.querySelector(
+		'[data-gridskills="cardDetails"]'
+	);
 
-	const bntCertificate = document.createElement('button');
-	bntCertificate.textContent = 'Certificado';
-	bntCertificate.classList.add('bntCertificate');
-	
+	const bntCertificate = document.createElement("button");
+	bntCertificate.textContent = "Certificado";
+	bntCertificate.classList.add("bntCertificate");
+
 	const iconBntCertificate = document.createElement("i");
 	iconBntCertificate.classList.add("iconCertificate");
 
 	bntCertificate.appendChild(iconBntCertificate);
 	cardDetails.appendChild(bntCertificate);
 
-	bntCertificate.addEventListener('click', () => {
+	bntCertificate.addEventListener("click", () => {
 		//window.location.href = `${certificateURL}`;
 		createModalCertificate(certificateURL);
 	});
-
 }
 // Evento deve criar um grid de acordo com o botão clicado, o mesmo deve forncer as informações para a criação do grid, e também deve remover o grid anterior;
