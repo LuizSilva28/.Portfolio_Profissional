@@ -1,10 +1,8 @@
-
-
-
-
+@import "../../variables/colors.scss";
 
 .containerChartAndLegend {
 	display: flex;
+	margin: 2rem 0 1rem 0;
 	.graficoContainer {
 		/* margin: 3rem auto 3rem auto; */
 		width: 150px;
@@ -13,18 +11,56 @@
 	#legend-container {
 		width: 150px;
 		height: 150px;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-x: hidden;
 		//scrollbar-color: transparent;
 		margin: 0 0 1rem 0;
+	}
+	#legend-container::-webkit-scrollbar {
+		display: none;
 	}
 }
 
 .square {
-	width: 250px;
-	height: 150px;
-	border-radius: 2rem;
+	width: 100%;
+	height: 100px;
+	border-radius: 1rem;
 	background-color: rgba(51, 72, 13, 0.6);
 	padding: 1rem;
+}
 
+.linkForFullMindsight {
+	display: flex;
+	justify-content: end;
+	margin: 0.5rem 0 0 0;
+	width: 100%;
+	.fullMindsight {
+		color: $color-dourado;
+	}
+}
+.containerImgMindsight {
+	position: absolute;
+	justify-items: end;
+	top: 2rem;
+	width: 100%;
+	height: 100%;
 
+	.imgFullMindsight {
+		width: inherit;
+		height: inherit;
+		background-image: url(./imgs/mindsight/mindsight.jpeg);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	.bntCloseContainerMindsight {
+		margin-top: 0.2rem;
+		color: $color-dourado;
+	}
+}
+.closedSeeMindsight {
+	display: none;
+	left: -22rem;
+}
+.activeSeeMindsight {
+	display: block;
 }

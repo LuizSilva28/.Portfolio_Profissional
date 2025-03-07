@@ -50,10 +50,10 @@ function scribePhrases(phrase) {
 }
 
 function createSquare(value) {
-	const square = document.getElementById("square");
+	const square = document.querySelector(".square");
 	const textRemove = document.getElementById("descriptiveText");
 	if (textRemove) {
-		console.log("teste");
+		//console.log("teste");
 		square.removeChild(textRemove);
 	}
 
@@ -65,14 +65,6 @@ function createSquare(value) {
 	scribePhrases(phrases[value]);
 }
 
-// Tooltip.positioners.myCustomPositioner = function (elements, eventPosition) {
-// 	const tooltip = this;
-
-// 	return {
-// 		x: 200,
-// 		y: 800,
-// 	};
-// };
 const getOrCreateLegendList = (chart, id) => {
 	const legendContainer = document.getElementById(id);
 	let listContainer = legendContainer.querySelector("ul");
@@ -107,7 +99,8 @@ const htmlLegendPlugin = {
 			li.style.cursor = "pointer";
 			li.style.display = "flex";
 			li.style.flexDirection = "row";
-			li.style.margin = "0px 0px 4px 10px";
+			li.style.margin = "0px 4px 8px 0px";
+
 			li.onclick = () => {
 				const { type } = chart.config;
 				if (type === "polarArea") {
@@ -126,14 +119,18 @@ const htmlLegendPlugin = {
 			boxSpan.style.borderWidth = item.lineWidth + "px";
 			boxSpan.style.display = "inline-block";
 			boxSpan.style.flexShrink = 0;
-			boxSpan.style.height = "20px";
+			boxSpan.style.height = "100%";
 			boxSpan.style.marginRight = "10px";
 			boxSpan.style.width = "20px";
+			boxSpan.style.marginLeft = 1;
+			//	boxSpan.style.padding = 1;
 
 			const textContainer = document.createElement("p");
 			textContainer.style.color = item.fontColor;
 			textContainer.style.margin = 0;
 			textContainer.style.padding = 0;
+			textContainer.style.color = " rgb(245, 245, 220)";
+
 			textContainer.style.textDecoration = item.hidden
 				? "line-through"
 				: "";
@@ -179,24 +176,24 @@ export async function generateGraph() {
 					84.62, 54.37, 89.16, 91.43, 91.43, 53.72, 82.34, 68.7,
 				],
 				backgroundColor: [
-					"rgb(136, 81, 57)",
-					"rgb(243, 142, 75)",
-					"rgb(33, 34, 32)",
-					"rgb(24, 83, 56)",
-					"rgb(60, 170, 32)",
-					"rgb(112, 53, 43)",
-					"rgb(66, 207, 195)",
-					"rgb(135, 236, 95)",
-					"rgb(33, 197, 162)",
-					"rgb(170, 82, 23)",
-					"rgb(22, 110, 103)",
-					"rgb(54, 163, 235)",
-					"rgb(83, 81, 228)",
-					"rgb(12, 52, 78)",
-					"rgb(118, 248, 118)",
-					"rgb(247, 245, 128)",
+					"rgb(194, 91, 0)",
+					"rgb(255, 158, 1)",
+					"rgb(0, 37, 40)",
+					"rgb(0, 122, 81)",
+					"rgb(21, 161, 28)",
+					"rgb(164, 75, 61)",
+					"rgb(73, 242, 148)",
+					"rgb(166, 240, 39)",
+					"rgb(2, 204, 130)",
+					"rgb(223, 108, 37)",
+					"rgb(1, 139, 150)",
+					"rgb(38, 188, 238)",
+					"rgb(72, 112, 225)",
+					"rgb(5, 74, 116)",
+					"rgb(128, 224, 99)",
+					"rgb(255, 227, 129)",
 				],
-				borderColor: "rgb(36, 34, 34)",
+				borderColor: "rgb(255, 255, 255)",
 				borderWidth: 1,
 			},
 		],
@@ -205,11 +202,9 @@ export async function generateGraph() {
 		type: "polarArea",
 		data: data,
 		responsive: true,
-		backgroundColor: "rgb(255, 251, 251)",
 
 		options: {
 			maintainAspectRatio: false,
-
 			events: [
 				"mousemove",
 				"mouseout",
@@ -217,7 +212,6 @@ export async function generateGraph() {
 				"touchstart",
 				"touchmove",
 			],
-
 			plugins: {
 				htmlLegend: {
 					// ID of the container to put the legend in
@@ -227,12 +221,33 @@ export async function generateGraph() {
 					display: false,
 				},
 			},
-
 			onClick: (e, elements, chart) => {
 				const value = elements[0].index;
 				createSquare(value);
 			},
 		},
 		plugins: [htmlLegendPlugin],
+	});
+}
+
+export function displayFullInforrmation() {
+	const seeAllInformation = document.querySelector(".fullMindsight");
+
+	seeAllInformation.addEventListener("click", () => {
+		const activeSeeMindsight = document.querySelector(
+			".containerImgMindsight "
+		);
+		//console.log(activeSeeMindsight);
+		activeSeeMindsight.classList.remove("closedSeeMindsight");
+	});
+	const closeSeeAllInformation = document.querySelector(
+		".bntCloseContainerMindsight"
+	);
+	closeSeeAllInformation.addEventListener("click", () => {
+		const closeSeeMindsight = document.querySelector(
+			".containerImgMindsight"
+		);
+		//console.log(activeSeeMindsight);
+		closeSeeMindsight.classList.add("closedSeeMindsight");
 	});
 }

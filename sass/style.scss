@@ -6,7 +6,6 @@
 //@import "./others/componets/shape.scss";
 @import "./others/componets/menuMobile/menu/style.scss";
 @import "./others/componets/carousel/container/style.scss";
-@import "./others/componets/carousel/container/style.scss";
 @import "./others/componets/audio/style.scss";
 @import "./others/componets/video/style.scss";
 @import "./others/componets/Grid/style.scss";
@@ -85,6 +84,11 @@
 			font-size: $font-primary;
 			margin: 2rem 0 3rem 0;
 		}
+	}
+
+	#profile-test {
+		position: relative;
+		margin: 3rem auto 3rem auto;
 	}
 }
 
