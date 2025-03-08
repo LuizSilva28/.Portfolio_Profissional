@@ -220,6 +220,7 @@ function createEventsSlidesItems() {
 
 	const buttonNext = document.querySelector('[data-slide="nav-next-button"]');
 	buttonNext.addEventListener("click", nextSlide);
+	
 	const buttonPrevious = document.querySelector(
 		'[data-slide="nav-previous-button"]'
 	);

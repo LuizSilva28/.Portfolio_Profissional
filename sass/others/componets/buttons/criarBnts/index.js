@@ -163,7 +163,11 @@ export function createBntsSideBar(
 	containerlayoutSideBar.appendChild(divDadBnts);
 }
 
-//BUTTOnS AREA DO CONHECIMENTO
+//BUTTONS CAROUSEL
+
+
+
+//BUTTONS AREA OF KNOWLEDGE
 
 export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 	const containerButtons = document.querySelector(
@@ -229,4 +233,4 @@ export function createBntCertificate(certificateURL) {
 		createModalCertificate(certificateURL);
 	});
 }
-// Evento deve criar um grid de acordo com o botão clicado, o mesmo deve forncer as informações para a criação do grid, e também deve remover o grid anterior;
+

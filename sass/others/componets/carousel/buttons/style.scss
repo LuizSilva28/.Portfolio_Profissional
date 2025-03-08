@@ -1,11 +1,44 @@
 @import "../../../variables/colors.scss";
 
-.bntCarousel{
-    position: relative;
-    min-width: 1.5rem;
-    min-height: 4rem;
-    background-color: $color-secondary;
-    border-radius: .5rem;
-    border: none;
-    
+.bntCarousel {
+	position: relative;
+	justify-items: center;
+	width: 1.5rem;
+	min-height: 100%;
+	background-color: $variantColor-secundary3;
+	border-radius: 0.2rem;
+	border: none;
+	padding: 3px;
+
+	.backArrowPart1 {
+		position: absolute;
+		z-index: 1;
+		top: 0.2rem;
+		left: 0.7rem;
+		height: 3.9rem;
+		width: 2px;
+		border-radius: 0 0 0 8px;
+		rotate: calc(10deg);
+		background-color: $variantColor-secundary2;
+	}
+	.backArrowPart2 {
+		position: absolute;
+		top: 3.8rem;
+		left: 0.7rem;
+		height: 3.9rem;
+		width: 2px;
+		border-radius: 0 0 8px 0;
+		rotate: calc(170deg);
+		background-color: rgb(4, 4, 4);
+	}
+	.nextArrowPart1 {
+		@extend .backArrowPart1;
+		border-radius: 8px 0 0 0;
+		rotate: calc(170deg);
+	}
+	.nextArrowPart2 {
+			@extend .backArrowPart2;
+		border-radius: 0 8px 0 0;
+		rotate: calc(10deg);
+	}
 }
