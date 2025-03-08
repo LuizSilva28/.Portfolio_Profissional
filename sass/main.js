@@ -8,19 +8,20 @@ import { createGridSkills } from "./others/componets/Grid/index.js";
 
 import { standardCardHardskills } from "./others/componets/objects/hardskills/index.js";
 
-import { generateGraph } from "./others/componets/charts/polarAreaChart.js";
+import {
+	generateGraph,
+	displayFullInforrmation,
+} from "./others/componets/charts/polarAreaChart.js";
 
+allBntsMenu();
 
-	allBntsMenu();
+createCarousel();
 
-	createCarousel();
+createAudio();
 
-	createAudio();
+createGridSkills(standardCardHardskills);
 
-	createGridSkills(standardCardHardskills);
+//fazer verificação, pois a função abaixo é async e portanto deve ser necessario o uso do await para o tratamento da promisse.~
 
-	//fazer verificação, pois a função abaixo é async e portanto deve ser necessario o uso do await para o tratamento da promisse.~
-	
-		generateGraph();
-	
-
+generateGraph();
+displayFullInforrmation();

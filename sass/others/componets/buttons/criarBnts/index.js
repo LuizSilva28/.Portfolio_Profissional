@@ -14,7 +14,6 @@ export function createBntsMenu(
 	const containerMenuMobile = document.querySelector(
 		"#container-menu-mobile"
 	);
-	console.log(containerMenuMobile);
 	const bntsMenu = document.createElement("button");
 	bntsMenu.id = idBtn;
 	bntsMenu.type = typeBtn;
@@ -32,7 +31,7 @@ export function createBntsMenu(
 		: bntsMenu.addEventListener("click", (e) => {
 				e.preventDefault;
 				let bntClicked = e.currentTarget.id;
-				console.log(e.currentTarget.id);
+				
 				let textBnt = "";
 				switch (bntClicked) {
 					case "bntMenu2":
@@ -124,12 +123,12 @@ export function bntCloseSidebar() {
 		closeBnt.classList.toggle("closeBnt");
 
 		const divDadBnts = document.querySelectorAll(".divDadBnts");
-		console.log(divDadBnts);
+		
 
 		for (let i = 0; i < divDadBnts.length; i++) {
-			console.log(divDadBnts.length);
+			
 			divDadBnts[i].remove();
-			console.log(divDadBnts.length);
+			
 		}
 	});
 }
