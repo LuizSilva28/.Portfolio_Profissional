@@ -10,19 +10,10 @@
 	background-image: url(./imgs/projetos/img1.jpg);
 }
 
-// .itemListReplica-0 {
-// 	@extend .itemList-0;
-// }
-
 .itemList-1 {
 	@extend .itemList-0;
 	background-image: url(./imgs/projetos/img2.jpg);
 }
-
-// .itemListReplica-1 {
-//     @extend .itemList-0;
-// 	@extend .itemList-1;
-// }
 
 .itemList-2 {
 	@extend .itemList-0;
