@@ -8,36 +8,38 @@
   height: auto;
   overflow: hidden;
 }
-.shapesBackgroundForBody .layoutShape1, .shapesBackgroundForBody .layoutShape3, .shapesBackgroundForBody .layoutShape2 {
+.shapesBackgroundForBody .layoutShape1, .shapesBackgroundForBody .isoscelesTrapezoid, .shapesBackgroundForBody .halfOctagon, .shapesBackgroundForBody .layoutShape3, .shapesBackgroundForBody .layoutShape2 {
   position: relative;
   width: 345px;
   height: 345px;
   top: 0;
-  left: -1.15vw;
+  left: -1vw;
   background-image: url(./assets/Rectangle.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 .shapesBackgroundForBody .layoutShape2 {
-  z-index: -1;
   top: -3vh;
   left: -25vw;
-  /*
-  .shape2 {
-  	@extend .shape1;
-  }*/
 }
 .shapesBackgroundForBody .layoutShape3 {
-  z-index: -1;
-  top: -62vh;
-  left: auto;
-  right: -52vw;
-  /*
-  .shape3 {
-  	@extend .shape1;
-  	top: -300px;
-  	left: 190px;
-  }*/
+  top: -30rem;
+  left: 13rem;
+}
+.shapesBackgroundForBody .halfOctagon {
+  top: -18rem;
+  left: 0;
+  width: 100%;
+  height: 50rem;
+  rotate: 180deg;
+  background-image: url("./assets/octagon.svg");
+}
+.shapesBackgroundForBody .isoscelesTrapezoid {
+  top: -13rem;
+  left: 0;
+  width: 100%;
+  height: 40rem;
+  background-image: url("./assets/rectangle2.svg");
 }
 
 .icon0 {
@@ -147,6 +149,8 @@
 
 .containerButtons {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .containerButtons .bntAreaskills {
   display: flex;
@@ -155,7 +159,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin: 1rem;
+  margin: 0 0 0 1rem;
   width: 6.25rem;
   height: 2rem;
   color: rgb(51, 51, 51);
@@ -488,7 +492,7 @@ iframe {
   font-size: 1.2em;
   min-width: 100%;
   margin: 2rem 1rem 1rem 0;
-  gap: 0.5em 1rem;
+  gap: 0 0.2rem;
 }
 .gridSkills #container-skills .backgroundAnimated {
   position: absolute;
@@ -599,7 +603,7 @@ iframe {
 
 .containerChartAndLegend {
   display: flex;
-  margin: 2rem 0 1rem 0;
+  margin: 10rem 0 1rem 0;
 }
 .containerChartAndLegend .graficoContainer {
   /* margin: 3rem auto 3rem auto; */
@@ -618,6 +622,7 @@ iframe {
 }
 
 .square {
+  margin: 1rem 0 1rem 0;
   width: 100%;
   height: 100px;
   border-radius: 1rem;
@@ -678,7 +683,7 @@ iframe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgb(40, 0, 10));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(40, 0, 10));
   background-color: #28000a;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -691,6 +696,10 @@ iframe {
   height: 100%;
   font-size: 1rem;
   padding: 0 2rem 0 2rem;
+}
+.container-major #content .espacoVazio {
+  width: 100vw;
+  height: 100vh;
 }
 .container-major #about-me {
   display: flex;
@@ -723,13 +732,19 @@ iframe {
   width: 100%;
   height: 100%;
 }
+.container-major #area-insight {
+  margin: 7rem 0 5rem 0;
+}
 .container-major #area-insight .skillTitle {
   font-size: 1rem;
-  margin: 2rem 0 3rem 0;
+  margin: 1rem 0 7rem 0;
 }
 .container-major #profile-test {
   position: relative;
-  margin: 3rem auto 3rem auto;
+  margin: 10.5rem auto 10rem auto;
+}
+.container-major #profile-test .titleTestProfile {
+  font-size: 1rem;
 }
 
 #comentario {

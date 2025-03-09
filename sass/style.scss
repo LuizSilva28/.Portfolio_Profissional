@@ -30,7 +30,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgb(40, 0, 10));
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(40, 0, 10));
 	background-color: #28000a;
 	background-repeat: no-repeat;
 	min-height: 100vh;
@@ -42,6 +42,11 @@
 		height: 100%;
 		font-size: $font-primary;
 		padding: 0 2rem 0 2rem;
+
+		.espacoVazio{
+			width: 100vw;
+			height: 100vh;
+		}
 	}
 
 	#about-me {
@@ -80,15 +85,21 @@
 	}
 
 	#area-insight {
+		margin: 7rem 0 5rem 0;
 		.skillTitle {
 			font-size: $font-primary;
-			margin: 2rem 0 3rem 0;
+			margin: 1rem 0 7rem 0;
 		}
 	}
 
 	#profile-test {
 		position: relative;
-		margin: 3rem auto 3rem auto;
+		margin: 10.5rem auto 10rem auto;
+		
+
+		.titleTestProfile{
+			font-size: $font-primary;
+		}
 	}
 }
 
