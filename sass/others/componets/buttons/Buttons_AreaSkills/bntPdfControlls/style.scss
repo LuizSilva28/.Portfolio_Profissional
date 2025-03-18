@@ -1,0 +1,48 @@
+
+.bntsPdfControll {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin:  1rem 0 0 0;
+
+	.bntsPdfControll {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		margin: 0 1rem 0 1rem;
+		width: 6.25rem;
+		height: 2rem;
+		color: $color-black;
+		border-radius: 0.7rem;
+		background: transparent;
+		border: none;
+
+		&::before {
+			content: "";
+			display: block;
+
+			z-index: -12;
+			width: 10.375rem;
+			height: 4rem;
+			background-color: $color-dourado;
+			background-image: radial-gradient(
+				$color-dourado 2rem,
+				$color-douradoEscuro 4.2rem,
+				$color-douradoEscuro 40%
+			);
+			position: absolute;
+			transform: rotate(-15deg);
+			transition: transform 0.3s;
+		}
+
+		&:hover {
+			&::before {
+				transform: scaleY(0.8);
+				transition: transform 0.3s ease-in-out;
+			}
+		}
+	}
+}

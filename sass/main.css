@@ -141,33 +141,41 @@
   background-position: center;
 }
 
-.bntCloseModal {
-  position: inherit;
-  bottom: 0;
-  color: black;
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
 }
 
-.containerButtons {
+.bntsPdfControll, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement, .containerButtons, .hideElement {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+  margin: 1rem 0 0 0;
 }
-.containerButtons .bntAreaskills {
+.bntsPdfControll .bntsPdfControll, .containerButtons .bntsPdfControll, .containerButtons .bntAreaskills, .bntsPdfControll .containerButtons, .containerButtons .containerButtons, .hideElement .bntsPdfControll, .hideElement .containerButtons, .bntsPdfControll .hideElement, .containerButtons .hideElement, .hideElement .hideElement {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin: 0 0 0 1rem;
+  margin: 0 1rem 0 1rem;
   width: 6.25rem;
   height: 2rem;
-  color: rgb(51, 51, 51);
+  color: rgb(0, 0, 0);
   border-radius: 0.7rem;
   background: transparent;
   border: none;
 }
-.containerButtons .bntAreaskills::before {
+.bntsPdfControll .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .containerButtons .bntAreaskills::before, .bntsPdfControll .containerButtons::before, .containerButtons .containerButtons::before, .hideElement .bntsPdfControll::before, .hideElement .containerButtons::before, .bntsPdfControll .hideElement::before, .containerButtons .hideElement::before, .hideElement .hideElement::before {
   content: "";
   display: block;
   z-index: -12;
@@ -179,11 +187,15 @@
   transform: rotate(-15deg);
   transition: transform 0.3s;
 }
-.containerButtons .bntAreaskills:hover::before {
+.bntsPdfControll .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .containerButtons .bntAreaskills:hover::before, .bntsPdfControll .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .hideElement .bntsPdfControll:hover::before, .hideElement .containerButtons:hover::before, .bntsPdfControll .hideElement:hover::before, .containerButtons .hideElement:hover::before, .hideElement .hideElement:hover::before {
   transform: scaleY(0.8);
   transition: transform 0.3s ease-in-out;
 }
 
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
 .bntsMenu {
   font-size: 0.8em;
   text-align: center;
@@ -305,7 +317,7 @@
   width: 2px;
   border-radius: 0 0 8px 0;
   rotate: 170deg;
-  background-color: rgb(4, 4, 4);
+  background-color: rgb(0, 0, 0);
 }
 .bntCarousel .nextArrowPart1 {
   border-radius: 8px 0 0 0;
@@ -462,27 +474,184 @@ iframe {
             background: `url(${poster}) top center no-repeat; background-size: cover;`
 
 }*/
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(./icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
+}
+
+.bntsPdfControll, .hideElement, .containerButtons, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.bntsPdfControll .bntsPdfControll, .hideElement .bntsPdfControll, .containerButtons .bntsPdfControll, .bntsPdfControll .hideElement, .hideElement .hideElement, .containerButtons .hideElement, .bntsPdfControll .containerButtons, .hideElement .containerButtons, .containerButtons .containerButtons, .containerButtons .bntAreaskills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  width: 6.25rem;
+  height: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.7rem;
+  background: transparent;
+  border: none;
+}
+.bntsPdfControll .bntsPdfControll::before, .hideElement .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .bntsPdfControll .hideElement::before, .hideElement .hideElement::before, .containerButtons .hideElement::before, .bntsPdfControll .containerButtons::before, .hideElement .containerButtons::before, .containerButtons .containerButtons::before, .containerButtons .bntAreaskills::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(255, 217, 0);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntsPdfControll .bntsPdfControll:hover::before, .hideElement .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .bntsPdfControll .hideElement:hover::before, .hideElement .hideElement:hover::before, .containerButtons .hideElement:hover::before, .bntsPdfControll .containerButtons:hover::before, .hideElement .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .containerButtons .bntAreaskills:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(./icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
+}
+
+.bntsPdfControll, .hideElement, .containerButtons, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.bntsPdfControll .bntsPdfControll, .hideElement .bntsPdfControll, .containerButtons .bntsPdfControll, .bntsPdfControll .hideElement, .hideElement .hideElement, .containerButtons .hideElement, .bntsPdfControll .containerButtons, .hideElement .containerButtons, .containerButtons .containerButtons, .containerButtons .bntAreaskills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  width: 6.25rem;
+  height: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.7rem;
+  background: transparent;
+  border: none;
+}
+.bntsPdfControll .bntsPdfControll::before, .hideElement .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .bntsPdfControll .hideElement::before, .hideElement .hideElement::before, .containerButtons .hideElement::before, .bntsPdfControll .containerButtons::before, .hideElement .containerButtons::before, .containerButtons .containerButtons::before, .containerButtons .bntAreaskills::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(255, 217, 0);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntsPdfControll .bntsPdfControll:hover::before, .hideElement .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .bntsPdfControll .hideElement:hover::before, .hideElement .hideElement:hover::before, .containerButtons .hideElement:hover::before, .bntsPdfControll .containerButtons:hover::before, .hideElement .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .containerButtons .bntAreaskills:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+.modalCertificate {
+  position: absolute;
+  justify-items: center;
+  width: 95%;
+  height: 70%;
+  z-index: 20;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(85, 107, 47);
+  border-radius: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modalCertificate .containerCanvas {
+  justify-items: start;
+  overflow: scroll;
+  width: 100%;
+  height: 80%;
+}
+
 .gridSkills {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.gridSkills .modalCertificate {
-  position: absolute;
-  width: 95%;
-  height: 80%;
-  z-index: 20;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  background-position: center center;
-}
-.gridSkills .modalCertificate .pdfContainer {
-  width: 100%;
-  height: 90%;
 }
 .gridSkills #container-skills {
   display: grid;
@@ -491,7 +660,7 @@ iframe {
   color: white;
   font-size: 1.2em;
   min-width: 100%;
-  margin: 2rem 1rem 1rem 0;
+  margin: 2rem 0 1rem 0;
   gap: 0 0.2rem;
 }
 .gridSkills #container-skills .backgroundAnimated {
@@ -511,7 +680,7 @@ iframe {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 0.4rem;
+  border-radius: 0.6rem;
   margin: 4px;
   min-width: 4.43rem;
   min-height: 4.43rem;
@@ -522,6 +691,11 @@ iframe {
 }
 .gridSkills #container-skills .cardDetails {
   padding: 2px;
+  justify-items: center;
+  box-shadow: 1px 1px 10px;
+  box-shadow: -1px -1px 10px black;
+  border-radius: 8px;
+  height: 20rem;
 }
 .gridSkills #container-skills .cardDetails .imgOfCard {
   display: block;
@@ -530,21 +704,27 @@ iframe {
   background-repeat: no-repeat;
   border-radius: 0.4rem;
   min-width: 100%;
-  height: 100%;
+  height: 50%;
   object-fit: fill;
 }
 .gridSkills #container-skills .cardDetails .title {
   font-weight: bold;
-  margin: 0.9em 0 0.9em 0;
+  text-align: center;
+  margin: 0.7em 0 0.7em 0;
 }
 .gridSkills #container-skills .cardDetails .description {
   font-size: 0.9rem;
-  margin: 0.9em 0 0.9em 0;
+  margin: 0.7em 0 0.7em 0;
 }
 .gridSkills #container-skills .cardDetails .descriptionsOfCard {
   font-size: 0.9rem;
   text-align: end;
-  padding: 0 0 0.5em 0.5em;
+  padding: 0 0 0.5em 0em;
+}
+.gridSkills #container-skills .cardDetails .descriptionsOfCard .alingParagraphs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2em 0 0.2em 0;
 }
 .gridSkills #container-skills .item-1 {
   grid-column: 1/2;
@@ -598,7 +778,103 @@ iframe {
 }
 .gridSkills #container-skills .cardDetails {
   grid-column: 2/3;
-  grid-row: 1/3;
+  grid-row: 1/5;
+}
+
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(./icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
+}
+
+.bntsPdfControll, .hideElement, .containerButtons, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.bntsPdfControll .bntsPdfControll, .hideElement .bntsPdfControll, .containerButtons .bntsPdfControll, .bntsPdfControll .hideElement, .hideElement .hideElement, .containerButtons .hideElement, .bntsPdfControll .containerButtons, .hideElement .containerButtons, .containerButtons .containerButtons, .containerButtons .bntAreaskills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  width: 6.25rem;
+  height: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.7rem;
+  background: transparent;
+  border: none;
+}
+.bntsPdfControll .bntsPdfControll::before, .hideElement .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .bntsPdfControll .hideElement::before, .hideElement .hideElement::before, .containerButtons .hideElement::before, .bntsPdfControll .containerButtons::before, .hideElement .containerButtons::before, .containerButtons .containerButtons::before, .containerButtons .bntAreaskills::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(255, 217, 0);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntsPdfControll .bntsPdfControll:hover::before, .hideElement .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .bntsPdfControll .hideElement:hover::before, .hideElement .hideElement:hover::before, .containerButtons .hideElement:hover::before, .bntsPdfControll .containerButtons:hover::before, .hideElement .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .containerButtons .bntAreaskills:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+.modalCertificate {
+  position: absolute;
+  justify-items: center;
+  width: 95%;
+  height: 70%;
+  z-index: 20;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(85, 107, 47);
+  border-radius: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modalCertificate .containerCanvas {
+  justify-items: start;
+  overflow: scroll;
+  width: 100%;
+  height: 80%;
 }
 
 .containerChartAndLegend {
@@ -695,7 +971,7 @@ iframe {
   width: 100%;
   height: 100%;
   font-size: 1rem;
-  padding: 0 2rem 0 2rem;
+  padding: 0 1.7rem 0 1.7rem;
 }
 .container-major #content .espacoVazio {
   width: 100vw;
@@ -737,7 +1013,7 @@ iframe {
 }
 .container-major #area-insight .skillTitle {
   font-size: 1rem;
-  margin: 1rem 0 7rem 0;
+  margin: 1rem 0 9rem 0;
 }
 .container-major #profile-test {
   position: relative;
