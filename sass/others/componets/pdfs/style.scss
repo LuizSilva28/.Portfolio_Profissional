@@ -1,0 +1,22 @@
+@import "../buttons/Buttons_AreaSkills/style.scss";
+.modalCertificate {
+	position: absolute;
+	justify-items: center;
+	width: 95%;
+	height: 70%;
+	z-index: 20;
+	color: $color-black;
+	border: 2px solid $variantColor-secundary2;
+	border-radius: 0.6rem;
+	background-color: $variantColor-black1;
+	.hideElement {
+		@extend .bntAreaskills;
+	}
+
+	.containerCanvas {
+		justify-items: start;
+		overflow: scroll;
+		width: 100%;
+		height: 80%;
+	}
+}

@@ -31,7 +31,7 @@ export function createBntsMenu(
 		: bntsMenu.addEventListener("click", (e) => {
 				e.preventDefault;
 				let bntClicked = e.currentTarget.id;
-				
+
 				let textBnt = "";
 				switch (bntClicked) {
 					case "bntMenu2":
@@ -123,12 +123,9 @@ export function bntCloseSidebar() {
 		closeBnt.classList.toggle("closeBnt");
 
 		const divDadBnts = document.querySelectorAll(".divDadBnts");
-		
 
 		for (let i = 0; i < divDadBnts.length; i++) {
-			
 			divDadBnts[i].remove();
-			
 		}
 	});
 }
@@ -164,8 +161,6 @@ export function createBntsSideBar(
 }
 
 //BUTTONS CAROUSEL
-
-
 
 //BUTTONS AREA OF KNOWLEDGE
 
@@ -213,6 +208,14 @@ export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 	});
 }
 
+export function createBntsForControlls(textButtom, idBnt) {
+	const bntPanelControll = document.createElement("buttom");
+	bntPanelControll.id = idBnt;
+	bntPanelControll.classList.add("bntsPdfControll");
+	bntPanelControll.textContent = textButtom;
+	return bntPanelControll;
+}
+
 export function createBntCertificate(certificateURL) {
 	const cardDetails = document.querySelector(
 		'[data-gridskills="cardDetails"]'
@@ -234,3 +237,14 @@ export function createBntCertificate(certificateURL) {
 	});
 }
 
+export function hideElement(text, nameClass, elementToHide) {
+	const bntCloseModal = document.createElement("button");
+	bntCloseModal.textContent = text;
+	bntCloseModal.classList.add(nameClass);
+
+	bntCloseModal.addEventListener("click", () => {
+		elementToHide.parentNode.removeChild(elementToHide);
+	});
+
+	return bntCloseModal;
+}

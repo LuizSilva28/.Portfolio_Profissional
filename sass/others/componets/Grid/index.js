@@ -1,5 +1,9 @@
-import { createBntCertificate } from "../buttons/criarBnts/index.js";
-
+import {
+	createBntCertificate,
+	createBntsForControlls,
+	hideElement,
+} from "../buttons/criarBnts/index.js";
+import { displayPDF } from "/others/componets/pdfs/index.js";
 export function createGridSkills(object) {
 	let i = 0;
 	const containerSkills = document.querySelector(
@@ -95,29 +99,44 @@ export function createGridSkills(object) {
 		titleOfCard.classList.add("title");
 		titleOfCard.textContent = `${object.title}`;
 
-		const description = document.createElement("p");
-		description.textContent = "Descrição";
-		description.classList.add("description");
+		// const description = document.createElement("p");
+		// description.textContent = "Descrição:";
+		// description.classList.add("description");
 
 		const descriptionsOfCard = document.createElement("div");
 		descriptionsOfCard.classList.add("descriptionsOfCard");
 
 		const xp = document.createElement("p");
-		xp.textContent = `${object.description.xp}`;
+		xp.classList.add("alingParagraphs");
+		const xpDescription = document.createElement("span");
+		xpDescription.textContent = `Experiência: `;
+		const xpValue = document.createElement("span");
+		xpValue.textContent = `${object.description.xp}`;
 
 		const skillLevel = document.createElement("p");
-		skillLevel.textContent = `${object.description.skillLevel}`;
+		skillLevel.classList.add("alingParagraphs");
+		const skillLevelDescription = document.createElement("span");
+		skillLevelDescription.textContent = `Domínio: `;
+		const skillLevelValue = document.createElement("span");
+		skillLevelValue.textContent = `${object.description.skillLevel}`;
 
 		const projects = document.createElement("p");
-		projects.textContent = `${object.description.projects}`;
+		projects.classList.add("alingParagraphs");
+		const projectsDescription = document.createElement("span");
+		projectsDescription.textContent = `Projetos: `;
+		const projectsValue = document.createElement("span");
+		projectsValue.textContent = `${object.description.projects}`;
 
+		xp.append(xpDescription, xpValue);
+		skillLevel.append(skillLevelDescription, skillLevelValue);
+		projects.append(projectsDescription, projectsValue);
 		descriptionsOfCard.appendChild(xp);
 		descriptionsOfCard.appendChild(skillLevel);
 		descriptionsOfCard.appendChild(projects);
 
 		cardDetails.appendChild(imgOfCard);
 		cardDetails.appendChild(titleOfCard);
-		cardDetails.appendChild(description);
+		//cardDetails.appendChild(description);
 		cardDetails.appendChild(descriptionsOfCard);
 
 		containerGrid.appendChild(cardDetails);
@@ -148,22 +167,34 @@ export function createModalCertificate(certificateURL) {
 	const modal = document.createElement("div");
 	modal.classList.add("modalCertificate");
 	modal.setAttribute("data-areaskills", "modal");
+	const controlPanelBox = document.createElement("div");
+	controlPanelBox.classList.add("bntsPdfControll");
 
-	//iframe
+	const prev = createBntsForControlls("Anterior", "prev");
+	const next = createBntsForControlls("Próximo", "next");
 
-	let iframePDF = document.createElement("iframe");
-	iframePDF.setAttribute("src", certificateURL);
-	iframePDF.classList.add("pdfContainer");
+	const spanContainer = document.createElement("span");
+	spanContainer.textContent = "Page: ";
+	const spanPages = document.createElement("span");
+	spanPages.id = "page_num";
+	const spanPagesCount = document.createElement("span");
+	spanPagesCount.id = "page_count";
 
-	//modal.style.backgroundImage = `url("${image}")`;
-	//Button
-	const bntCloseModal = document.createElement("button");
-	bntCloseModal.textContent = "X";
-	bntCloseModal.classList.add("bntCloseModal");
-	modal.appendChild(bntCloseModal);
-	bntCloseModal.addEventListener("click", () => {
-		modal.parentNode.removeChild(modal);
-	});
-	modal.appendChild(iframePDF);
+	const containerCanvas = document.createElement("div");
+	containerCanvas.classList.add("containerCanvas");
+	let canvasPDF = document.createElement("canvas");
+	canvasPDF.id = "canvasPDF";
+
+	const bntCloseModal = hideElement("fechar", "hideElement", modal);
+
+	spanContainer.append(spanPages, spanPagesCount);
+	controlPanelBox.append(prev, bntCloseModal, next);
+	containerCanvas.appendChild(canvasPDF);
+	modal.append(spanContainer, containerCanvas, controlPanelBox);
 	containerSkills.appendChild(modal);
+
+	displayPDF(certificateURL);
+	// setTimeout(() => {
+	// 	displayPDF(certificateURL);
+	// }, 1000);
 }

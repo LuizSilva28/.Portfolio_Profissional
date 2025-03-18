@@ -23,17 +23,8 @@ export function createCarousel() {
 	containerCarousel.appendChild(carouselList);
 
 	createButtonNext();
-	
 	createSlidesItems(containerItems, "itemList");
 	createSlidesItems(containerItemsReplica, "itemList");
 	
 
-	
-	
-	
-
-	//slide-item
-	
-
-	//   Eventos
 }

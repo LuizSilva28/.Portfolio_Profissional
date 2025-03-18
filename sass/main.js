@@ -7,7 +7,6 @@ import { createAudio } from "./others/componets/audio/index.js";
 import { createGridSkills } from "./others/componets/Grid/index.js";
 
 import { standardCardHardskills } from "./others/componets/objects/hardskills/index.js";
-
 import {
 	generateGraph,
 	displayFullInforrmation,

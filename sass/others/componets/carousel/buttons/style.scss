@@ -1,4 +1,4 @@
-@import "../../../variables/colors.scss";
+
 
 .bntCarousel {
 	position: relative;
@@ -29,7 +29,7 @@
 		width: 2px;
 		border-radius: 0 0 8px 0;
 		rotate: calc(170deg);
-		background-color: rgb(4, 4, 4);
+		background-color: $color-black;
 	}
 	.nextArrowPart1 {
 		@extend .backArrowPart1;

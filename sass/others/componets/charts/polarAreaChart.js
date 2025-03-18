@@ -17,18 +17,6 @@ const phrases = [
 	"A tomada de riscos calculados me leva a explorar novas oportunidades e alcançar o sucesso.",
 ];
 
-/*
-	{
-	Função para criar uma animação para as frases:
-	1. precisa utilizar o setInterval() para a repetição do córdigo em intervalos de tempo;
-	2. preciso das frases e elas tem que serem divididas em caracteres, que quando unidos geram a frase;
-	3. armazenar os caracteres em um array para interar sobre ele, ou usar algum método de iteração por string;
-	4. durante a iteração, cada elemento que estiver sendo iterado executara o bloco de  código e tera um tempo até que o próximo elemento a ser iterado execute o bloco de código;
-	5. o bloco de código a ser executado em cada iteração, irá salvar o elemento da vez em uma váriavel de exibição que terá seu valor lido e exibido na tela, e a cada iteração, ou seja a cada novo valor que esta variavel de exibição receber, a exibição na tela será atualizada;
-	6. essa váriaval de exibição, terá seu valor resetado sempre que uma nova frase for ser criada;
-	
-	}
-*/
 function scribePhrases(phrase) {
 	const textContainer = document.getElementById("descriptiveText");
 	let text = `${phrase}`;
@@ -228,6 +216,7 @@ export async function generateGraph() {
 		},
 		plugins: [htmlLegendPlugin],
 	});
+
 }
 
 export function displayFullInforrmation() {

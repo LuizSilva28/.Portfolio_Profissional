@@ -4,8 +4,8 @@ export const standardCardHardskills = [
 		image: "/imgs/hardskills/img10.jpeg",
 		title: "GitHub",
 		description: {
-			xp: "2 ano",
-			skillLevel: "75%",
+			xp: "2 anos",
+			skillLevel: "50%",
 			projects: 2,
 		},
 		certificate: "",
@@ -16,21 +16,21 @@ export const standardCardHardskills = [
 		title: "Node.js",
 		description: {
 			xp: "1 ano",
-			skillLevel: "75%",
+			skillLevel: "60%",
 			projects: 5,
 		},
-		certificate: "/Pdfs/Dominando_o_Node.pdf",
+		certificate: "/filesPdfs/DominandoNode.pdf?t=123456789",
 	},
 	{
 		id: 3,
 		image: "/imgs/hardskills/img8.jpg",
 		title: "Sass",
 		description: {
-			xp: "2 ano",
-			skillLevel: "50%",
+			xp: "2 anos",
+			skillLevel: "75%",
 			projects: 5,
 		},
-		certificate: "public/Pdfs/Sass.pdf",
+		certificate: "/filesPdfs/Sass.pdf",
 	},
 	{
 		id: 4,
@@ -41,15 +41,15 @@ export const standardCardHardskills = [
 			skillLevel: "50%",
 			projects: 1,
 		},
-		certificate: "/Pdfs/Banco_de_Dados_SQL_no_NodeJs.pdf",
+		certificate: "/filesPdfs/Banco_de_Dados_SQL_no_NodeJs.pdf",
 	},
 	{
 		id: 5,
 		image: "/imgs/hardskills/img1.png",
 		title: "Bootstrap",
 		description: {
-			xp: "2 ano",
-			skillLevel: "75%",
+			xp: "2 anos",
+			skillLevel: "70%",
 			projects: 5,
 		},
 		certificate: "",
@@ -59,11 +59,11 @@ export const standardCardHardskills = [
 		image: "/imgs/hardskills/img3.jpeg",
 		title: "Html5 ",
 		description: {
-			xp: "2 ano",
-			skillLevel: "75%",
+			xp: "2 anos",
+			skillLevel: "80%",
 			projects: 5,
 		},
-		certificate: "/Pdfs/html5.pdf",
+		certificate: "/filesPdfs/html5.pdf",
 	},
 	{
 		id: 7,
@@ -71,10 +71,10 @@ export const standardCardHardskills = [
 		title: "React.js ",
 		description: {
 			xp: "1 ano",
-			skillLevel: "75%",
+			skillLevel: "60%",
 			projects: 5,
 		},
-		certificate: "public/Pdfs/Fundamentos_do_React.pdf",
+		certificate: "/filesPdfs/Fundamentos_do_React.pdf",
 	},
 	{
 		id: 8,
@@ -82,7 +82,7 @@ export const standardCardHardskills = [
 		title: "Express.js ",
 		description: {
 			xp: "1 ano",
-			skillLevel: "75%",
+			skillLevel: "65%",
 			projects: 5,
 		},
 		certificate: "",
@@ -93,7 +93,7 @@ export const standardCardHardskills = [
 		title: "Javascript",
 		description: {
 			xp: "1 ano",
-			skillLevel: "75%",
+			skillLevel: "85%",
 			projects: 5,
 		},
 		certificate: "",
@@ -103,10 +103,10 @@ export const standardCardHardskills = [
 		image: "/imgs/hardskills/img2.jpeg",
 		title: "Css",
 		description: {
-			xp: "2 ano",
-			skillLevel: "75%",
+			xp: "2 anos",
+			skillLevel: "85%",
 			projects: 5,
 		},
-		certificate: "public/Pdfs/css.pdf",
+		certificate: "/filesPdfs/css.pdf",
 	},
 ];
