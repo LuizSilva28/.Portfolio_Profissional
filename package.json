@@ -10,6 +10,7 @@
 		"crypto-browserify": "^3.12.1",
 		"css-loader": "^7.1.2",
 		"events": "^3.3.0",
+		"mini-css-extract-plugin": "^2.9.2",
 		"nodemon": "^3.1.9",
 		"path-browserify": "^1.0.1",
 		"process": "^0.11.10",
@@ -28,7 +29,7 @@
 		"@cubejs-client/core": "^0.31.0",
 		"chart.js": "^4.4.8",
 		"express": "^4.21.2",
-		"pdf-lib": "^1.17.1"
+		"pdfjs-dist": "^4.10.38"
 	},
 	"main": "script.js",
 	"keywords": [],
