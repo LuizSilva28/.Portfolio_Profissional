@@ -1,22 +1,20 @@
+const pdfjsLib = require("pdfjs-dist");
 
 
 let url = "/filesPdfs/css.pdf";
 
 export function displayPDF(url) {
-	console.log("URL: ");
-	console.log(url)
+	console.log("pdfjsLib: ");
+	console.log(pdfjsLib);
+	//const { pdfjsLib } = globalThis; ./node_modules/pdfjs-dist/build/pdf.mjs
 
-	const { pdfjsLib } = globalThis;
-	
-
-	pdfjsLib.GlobalWorkerOptions.workerSrc =
-		"./pdfjs-4.10.38-dist/build/pdf.worker.mjs";
+	pdfjsLib.GlobalWorkerOptions.workerSrc = "../../../../node_modules/pdfjs-dist/build/pdf.worker.mjs";
 
 	let pdfDoc = null,
 		pageNum = 1,
 		pageRendering = false,
 		pageNumPending = null,
-		scale = .6,
+		scale = 0.6,
 		canvas = document.getElementById("canvasPDF"),
 		ctx = canvas.getContext("2d");
 
