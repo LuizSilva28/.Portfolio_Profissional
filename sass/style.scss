@@ -2,17 +2,17 @@
 
 @import "./others/variables/colors.scss";
 @import "./others/variables/fonts.scss";
-@import "./others/componets/shapes/style.scss";
+@import "./others/components/shapes/style.scss";
 //@import "./others/componets/shape.scss";
-@import "./others/componets/menuMobile/menu/style.scss";
-@import "./others/componets/carousel/container/style.scss";
-@import "./others/componets/audio/style.scss";
-@import "./others/componets/video/style.scss";
-@import "./others/componets/Grid/style.scss";
-@import "./others/componets/pdfs/style.scss";
+@import "./others/components/menuMobile/menu/style.scss";
+@import "./others/components/carousel/container/style.scss";
+@import "./others/components/audio/style.scss";
+@import "./others/components/video/style.scss";
+@import "./others/components/Grid/style.scss";
+@import "./others/components/pdfs/style.scss";
 
 //Graphcs
-@import "./others/componets/charts/style.scss";
+@import "./others/components/charts/style.scss";
 
 * {
 	padding: 0;
