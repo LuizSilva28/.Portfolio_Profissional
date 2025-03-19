@@ -1,0 +1,1030 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+.shapesBackgroundForBody {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: hidden;
+  min-width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+.shapesBackgroundForBody .layoutShape1, .shapesBackgroundForBody .isoscelesTrapezoid, .shapesBackgroundForBody .halfOctagon, .shapesBackgroundForBody .layoutShape3, .shapesBackgroundForBody .layoutShape2 {
+  position: relative;
+  width: 345px;
+  height: 345px;
+  top: 0;
+  left: -1vw;
+  background-image: url(./assets/Rectangle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.shapesBackgroundForBody .layoutShape2 {
+  top: -3vh;
+  left: -25vw;
+}
+.shapesBackgroundForBody .layoutShape3 {
+  top: -30rem;
+  left: 13rem;
+}
+.shapesBackgroundForBody .halfOctagon {
+  top: -18rem;
+  left: 0;
+  width: 100%;
+  height: 50rem;
+  rotate: 180deg;
+  background-image: url("./assets/octagon.svg");
+}
+.shapesBackgroundForBody .isoscelesTrapezoid {
+  top: -13rem;
+  left: 0;
+  width: 100%;
+  height: 40rem;
+  background-image: url("./assets/rectangle2.svg");
+}
+
+.icon0 {
+  display: inline-block;
+  background-image: url(./icons/iconsMenu/menuClose.svg);
+  min-width: 1.88rem;
+  min-height: 1.88rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.icon1, .icon4, .icon3, .icon2 {
+  display: inline-block;
+  background-image: url(./icons/iconsMenu/home.svg);
+  min-width: 1.88rem;
+  min-height: 1.88rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.icon2 {
+  background-image: url(./icons/iconsMenu/redes.svg);
+}
+
+.icon3 {
+  background-image: url(./icons/iconsMenu/pdfs.svg);
+}
+
+.icon4 {
+  background-image: url(./icons/iconsMenu/configs.svg);
+}
+
+.SideBarIconBnt1, .SideBarIconBnt10, .SideBarIconBnt9, .SideBarIconBnt7, .SideBarIconBnt8, .SideBarIconBnt6, .SideBarIconBnt5, .SideBarIconBnt4, .SideBarIconBnt3, .SideBarIconBnt2 {
+  display: block;
+  background-image: url(./icons//iconsSideBar/iconsWhats.svg);
+  min-width: 1.76rem;
+  min-height: 1.52rem;
+  background-size: cover;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.SideBarIconBnt2 {
+  background-image: url(./icons//iconsSideBar/iconInsta.svg);
+}
+
+.SideBarIconBnt3 {
+  background-image: url(./icons//iconsSideBar/iconLikedin.svg);
+}
+
+.SideBarIconBnt4 {
+  background-image: url(./icons//iconsSideBar/iconGitHub.svg);
+}
+
+.SideBarIconBnt5 {
+  background-image: url(./icons//iconsSideBar/iconEmail.svg);
+}
+
+.SideBarIconBnt6 {
+  background-image: url(./icons/iconsSideBar/iconCurriculum.svg);
+}
+
+.SideBarIconBnt7, .SideBarIconBnt8 {
+  background-image: url(./public/icons//iconsSideBar/iconGridCurriculum.svg);
+}
+
+.SideBarIconBnt9 {
+  background-image: url(./icons/iconsSideBar/iconThemeDark.svg);
+}
+
+.SideBarIconBnt10 {
+  background-image: url(./icons//iconsSideBar/iconAccessibility.svg);
+}
+
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(./icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
+}
+
+.bntsPdfControll, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement, .containerButtons, .hideElement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.bntsPdfControll .bntsPdfControll, .containerButtons .bntsPdfControll, .containerButtons .bntAreaskills, .bntsPdfControll .containerButtons, .containerButtons .containerButtons, .hideElement .bntsPdfControll, .hideElement .containerButtons, .bntsPdfControll .hideElement, .containerButtons .hideElement, .hideElement .hideElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  width: 6.25rem;
+  height: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.7rem;
+  background: transparent;
+  border: none;
+}
+.bntsPdfControll .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .containerButtons .bntAreaskills::before, .bntsPdfControll .containerButtons::before, .containerButtons .containerButtons::before, .hideElement .bntsPdfControll::before, .hideElement .containerButtons::before, .bntsPdfControll .hideElement::before, .containerButtons .hideElement::before, .hideElement .hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(255, 217, 0);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntsPdfControll .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .containerButtons .bntAreaskills:hover::before, .bntsPdfControll .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .hideElement .bntsPdfControll:hover::before, .hideElement .containerButtons:hover::before, .bntsPdfControll .hideElement:hover::before, .containerButtons .hideElement:hover::before, .hideElement .hideElement:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+.bntsMenu {
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0px;
+  border-radius: 3px;
+  background-color: transparent;
+  border: none;
+}
+
+.sideBarBnts {
+  display: flex;
+  min-width: 1.76rem;
+  min-height: 1.76rem;
+  border-radius: 6px;
+  background-color: rgb(155, 132, 0);
+  border: none;
+  transition: 0.3s;
+}
+
+.sideBar {
+  position: fixed;
+  bottom: 0;
+  right: -60vw;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  border-top-left-radius: 5px;
+  background-image: linear-gradient(rgb(51, 51, 51), rgb(51, 51, 51)), linear-gradient(to top, rgb(245, 245, 220) 0%, rgb(51, 51, 51) 70%);
+  background-origin: padding-box;
+  background-clip: content-box, padding-box;
+  min-width: 40vw;
+  min-height: 15.63rem;
+  padding-left: 0.18rem;
+  transition: 0.3s;
+}
+.sideBar .layoutSideBar {
+  margin: 10px;
+  width: 100%;
+}
+.sideBar .layoutSideBar .divDadBnts {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  margin: 0 0 0 0.35rem;
+  transition: 0.3s;
+}
+.sideBar .layoutSideBar .divDadBnts:hover .sideBarBnts {
+  margin-top: 0.13rem;
+  min-height: 1.24rem;
+}
+
+.sideBarClose {
+  right: 0vw;
+  transition: 0.3s;
+}
+
+.bntCloseSidebar {
+  position: fixed;
+  bottom: 0;
+  left: -62vw;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-image: linear-gradient(rgb(51, 51, 51), rgb(51, 51, 51));
+  min-width: 60vw;
+  height: 4.38rem;
+  transition: 0.3s;
+}
+
+.closeBnt {
+  left: 0vw;
+  transition: 0.3s;
+}
+
+#container-menu-mobile {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  font-size: 1.2em;
+  background-color: rgb(51, 51, 51);
+  min-width: 100vw;
+  height: 4.38rem;
+  border-radius: 0.63rem 0.63rem 0 0;
+}
+
+.bntCarousel {
+  position: relative;
+  justify-items: center;
+  width: 1.5rem;
+  min-height: 100%;
+  background-color: rgba(85, 107, 47, 0.5);
+  border-radius: 0.2rem;
+  border: none;
+  padding: 3px;
+}
+.bntCarousel .backArrowPart1, .bntCarousel .nextArrowPart1 {
+  position: absolute;
+  z-index: 1;
+  top: 0.2rem;
+  left: 0.7rem;
+  height: 3.9rem;
+  width: 2px;
+  border-radius: 0 0 0 8px;
+  rotate: 10deg;
+  background-color: rgb(85, 107, 47);
+}
+.bntCarousel .backArrowPart2, .bntCarousel .nextArrowPart2 {
+  position: absolute;
+  top: 3.8rem;
+  left: 0.7rem;
+  height: 3.9rem;
+  width: 2px;
+  border-radius: 0 0 8px 0;
+  rotate: 170deg;
+  background-color: rgb(0, 0, 0);
+}
+.bntCarousel .nextArrowPart1 {
+  border-radius: 8px 0 0 0;
+  rotate: 170deg;
+}
+.bntCarousel .nextArrowPart2 {
+  border-radius: 0 8px 0 0;
+  rotate: 10deg;
+}
+
+.itemList-0, .itemList-4, .itemList-3, .itemList-2, .itemList-1 {
+  display: block;
+  position: relative;
+  min-width: 6rem;
+  margin-left: 0.415rem;
+  height: 8rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: cover;
+  background-image: url(./imgs/projetos/img1.jpg);
+}
+
+.itemList-1 {
+  background-image: url(./imgs/projetos/img2.jpg);
+}
+
+.itemList-2 {
+  background-image: url(./imgs/projetos/img3.jpg);
+}
+
+.itemList-3 {
+  background-image: url(./imgs/projetos/img4.jpg);
+}
+
+.itemList-4 {
+  background-image: url(./imgs/projetos/img5.jpg);
+}
+
+#container-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+  height: 8rem;
+  margin: 1rem 0 2rem 0;
+}
+#container-carousel .carouselList {
+  display: inherit;
+  overflow: hidden;
+  width: 16.5rem;
+  max-height: 9.4rem;
+}
+#container-carousel .carouselList .ContainerItems {
+  display: flex;
+}
+#container-carousel .carouselList .containerItemsReplica {
+  display: flex;
+}
+
+.audio-player {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0 0 0 0;
+}
+.audio-player .play-pause, .audio-player .bntVolume {
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+.audio-player .play, .audio-player .volumeMuted, .audio-player .volume, .audio-player .pause {
+  display: block;
+  background-image: url(./icons/content/iconPlay.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+}
+.audio-player .pause {
+  background-image: url(./icons/content/iconPause.svg);
+}
+.audio-player #progress-time-container {
+  flex-grow: 1;
+  max-width: 15rem;
+  min-width: 5rem;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+.audio-player #progress-time-container #progress-time {
+  height: 100%;
+  background-color: rgb(51, 72, 13);
+  width: 0;
+  border-radius: 4px;
+}
+.audio-player .bntPlaySpeedAudio {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  margin: 0 10px 0 0;
+  place-content: center;
+  place-items: center;
+  font-size: 0.7rem;
+  min-width: 2.5em;
+  min-height: 2.5em;
+  border: 2px solid rgb(51, 72, 13);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.audio-player .bntPlaySpeedAudio .textBntSpeedAudio {
+  width: auto;
+  height: 0.7rem;
+}
+.audio-player .volume {
+  background-image: url(./icons/content/iconAudio.svg);
+}
+.audio-player .volumeMuted {
+  background-image: url(./icons/content/iconAudioMuted.svg);
+}
+.audio-player #bar-volume-container {
+  flex-grow: 1;
+  max-width: 5rem;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.audio-player #bar-volume-container #bar-volume-content {
+  height: 100%;
+  background-color: #33480d;
+  width: 5rem;
+  border-radius: 4px;
+}
+
+iframe {
+  width: 20rem;
+  height: 10rem;
+  margin: 1.5rem 0 1.5rem 0;
+  /*
+  background: url("../../../../public/imgs/pexels-creative-vix-9754.jpg") ; 
+
+
+   z-index: 5;*/
+}
+
+/*{
+
+            background: `url(${poster}) top center no-repeat; background-size: cover;`
+
+}*/
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(./icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
+}
+
+.bntsPdfControll, .hideElement, .containerButtons, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.bntsPdfControll .bntsPdfControll, .hideElement .bntsPdfControll, .containerButtons .bntsPdfControll, .bntsPdfControll .hideElement, .hideElement .hideElement, .containerButtons .hideElement, .bntsPdfControll .containerButtons, .hideElement .containerButtons, .containerButtons .containerButtons, .containerButtons .bntAreaskills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  width: 6.25rem;
+  height: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.7rem;
+  background: transparent;
+  border: none;
+}
+.bntsPdfControll .bntsPdfControll::before, .hideElement .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .bntsPdfControll .hideElement::before, .hideElement .hideElement::before, .containerButtons .hideElement::before, .bntsPdfControll .containerButtons::before, .hideElement .containerButtons::before, .containerButtons .containerButtons::before, .containerButtons .bntAreaskills::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(255, 217, 0);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntsPdfControll .bntsPdfControll:hover::before, .hideElement .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .bntsPdfControll .hideElement:hover::before, .hideElement .hideElement:hover::before, .containerButtons .hideElement:hover::before, .bntsPdfControll .containerButtons:hover::before, .hideElement .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .containerButtons .bntAreaskills:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(./icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
+}
+
+.bntsPdfControll, .hideElement, .containerButtons, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.bntsPdfControll .bntsPdfControll, .hideElement .bntsPdfControll, .containerButtons .bntsPdfControll, .bntsPdfControll .hideElement, .hideElement .hideElement, .containerButtons .hideElement, .bntsPdfControll .containerButtons, .hideElement .containerButtons, .containerButtons .containerButtons, .containerButtons .bntAreaskills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  width: 6.25rem;
+  height: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.7rem;
+  background: transparent;
+  border: none;
+}
+.bntsPdfControll .bntsPdfControll::before, .hideElement .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .bntsPdfControll .hideElement::before, .hideElement .hideElement::before, .containerButtons .hideElement::before, .bntsPdfControll .containerButtons::before, .hideElement .containerButtons::before, .containerButtons .containerButtons::before, .containerButtons .bntAreaskills::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(255, 217, 0);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntsPdfControll .bntsPdfControll:hover::before, .hideElement .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .bntsPdfControll .hideElement:hover::before, .hideElement .hideElement:hover::before, .containerButtons .hideElement:hover::before, .bntsPdfControll .containerButtons:hover::before, .hideElement .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .containerButtons .bntAreaskills:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+.modalCertificate {
+  position: absolute;
+  justify-items: center;
+  width: 95%;
+  height: 70%;
+  z-index: 20;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(85, 107, 47);
+  border-radius: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modalCertificate .containerCanvas {
+  justify-items: start;
+  overflow: scroll;
+  width: 100%;
+  height: 80%;
+}
+
+.gridSkills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gridSkills #container-skills {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+  color: white;
+  font-size: 1.2em;
+  min-width: 100%;
+  margin: 2rem 0 1rem 0;
+  gap: 0 0.2rem;
+}
+.gridSkills #container-skills .backgroundAnimated {
+  position: absolute;
+  border-radius: 0.4rem;
+  background-color: rgb(155, 132, 0);
+  z-index: -1;
+  min-width: 4.43rem;
+  min-height: 4.43rem;
+  -moz-transition: transform 1.5s;
+  -webkit-transition: transform 1.5s;
+  -ms-transition: transform 1.5s;
+  -o-transition: transform 1.5s;
+  transition: transform 1.5s;
+}
+.gridSkills #container-skills .miniCard {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.6rem;
+  margin: 4px;
+  min-width: 4.43rem;
+  min-height: 4.43rem;
+}
+.gridSkills #container-skills .selected {
+  border: 2px solid rgb(255, 217, 0);
+  transition: 0.3s ease-out;
+}
+.gridSkills #container-skills .cardDetails {
+  padding: 2px;
+  justify-items: center;
+  box-shadow: 1px 1px 10px;
+  box-shadow: -1px -1px 10px black;
+  border-radius: 8px;
+  height: 20rem;
+}
+.gridSkills #container-skills .cardDetails .imgOfCard {
+  display: block;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.4rem;
+  min-width: 100%;
+  height: 50%;
+  object-fit: fill;
+}
+.gridSkills #container-skills .cardDetails .title {
+  font-weight: bold;
+  text-align: center;
+  margin: 0.7em 0 0.7em 0;
+}
+.gridSkills #container-skills .cardDetails .description {
+  font-size: 0.9rem;
+  margin: 0.7em 0 0.7em 0;
+}
+.gridSkills #container-skills .cardDetails .descriptionsOfCard {
+  font-size: 0.9rem;
+  text-align: end;
+  padding: 0 0 0.5em 0em;
+}
+.gridSkills #container-skills .cardDetails .descriptionsOfCard .alingParagraphs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2em 0 0.2em 0;
+}
+.gridSkills #container-skills .item-1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-image: url("./imgs/hardskills/img10.jpeg");
+}
+.gridSkills #container-skills .item-2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-image: url("./imgs/hardskills/img3.jpeg");
+}
+.gridSkills #container-skills .item-3 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-image: url("./imgs/hardskills/img5.png");
+}
+.gridSkills #container-skills .item-4 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background-image: url("./imgs/hardskills/img6.jpeg");
+}
+.gridSkills #container-skills .item-5 {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  background-image: url("./imgs/hardskills/img8.jpg");
+}
+.gridSkills #container-skills .item-6 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-image: url("./imgs/hardskills/img9.jpeg");
+}
+.gridSkills #container-skills .item-7 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-image: url("./imgs/hardskills/img7.jpeg");
+}
+.gridSkills #container-skills .item-8 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  background-image: url("./imgs/hardskills/img4.jpeg");
+}
+.gridSkills #container-skills .item-9 {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  background-image: url("./imgs/hardskills/img1.png");
+}
+.gridSkills #container-skills .item-10 {
+  grid-column: 3/4;
+  grid-row: 5/6;
+  background-image: url("./imgs/hardskills/img2.jpeg");
+}
+.gridSkills #container-skills .cardDetails {
+  grid-column: 2/3;
+  grid-row: 1/5;
+}
+
+.bntCertificate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 220);
+  font-size: 0.7rem;
+  width: 6.25rem;
+  height: 1.6rem;
+  color: rgb(0, 0, 0);
+}
+.bntCertificate .iconCertificate {
+  width: 1.5rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: rgb(51, 51, 51);
+  background-image: url(./icons/areaSkills/openCertificate.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hideElement {
+  color: rgb(245, 245, 220) !important;
+}
+.hideElement::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(51, 72, 13) !important;
+  background-image: radial-gradient(rgb(51, 72, 13) 2rem, rgb(85, 107, 47) 4.2rem, rgb(85, 107, 47) 40%) !important;
+}
+
+.bntsPdfControll, .hideElement, .containerButtons, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.bntsPdfControll .bntsPdfControll, .hideElement .bntsPdfControll, .containerButtons .bntsPdfControll, .bntsPdfControll .hideElement, .hideElement .hideElement, .containerButtons .hideElement, .bntsPdfControll .containerButtons, .hideElement .containerButtons, .containerButtons .containerButtons, .containerButtons .bntAreaskills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  width: 6.25rem;
+  height: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.7rem;
+  background: transparent;
+  border: none;
+}
+.bntsPdfControll .bntsPdfControll::before, .hideElement .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .bntsPdfControll .hideElement::before, .hideElement .hideElement::before, .containerButtons .hideElement::before, .bntsPdfControll .containerButtons::before, .hideElement .containerButtons::before, .containerButtons .containerButtons::before, .containerButtons .bntAreaskills::before {
+  content: "";
+  display: block;
+  z-index: -12;
+  width: 10.375rem;
+  height: 4rem;
+  background-color: rgb(255, 217, 0);
+  background-image: radial-gradient(rgb(255, 217, 0) 2rem, rgb(155, 132, 0) 4.2rem, rgb(155, 132, 0) 40%);
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+.bntsPdfControll .bntsPdfControll:hover::before, .hideElement .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .bntsPdfControll .hideElement:hover::before, .hideElement .hideElement:hover::before, .containerButtons .hideElement:hover::before, .bntsPdfControll .containerButtons:hover::before, .hideElement .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .containerButtons .bntAreaskills:hover::before {
+  transform: scaleY(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.containerButtons {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+.modalCertificate {
+  position: absolute;
+  justify-items: center;
+  width: 95%;
+  height: 70%;
+  z-index: 20;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(85, 107, 47);
+  border-radius: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modalCertificate .containerCanvas {
+  justify-items: start;
+  overflow: scroll;
+  width: 100%;
+  height: 80%;
+}
+
+.containerChartAndLegend {
+  display: flex;
+  margin: 10rem 0 1rem 0;
+}
+.containerChartAndLegend .graficoContainer {
+  /* margin: 3rem auto 3rem auto; */
+  width: 150px;
+  height: 150px;
+}
+.containerChartAndLegend #legend-container {
+  width: 150px;
+  height: 150px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 0 1rem 0;
+}
+.containerChartAndLegend #legend-container::-webkit-scrollbar {
+  display: none;
+}
+
+.square {
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  height: 100px;
+  border-radius: 1rem;
+  background-color: rgba(51, 72, 13, 0.6);
+  padding: 1rem;
+}
+
+.linkForFullMindsight {
+  display: flex;
+  justify-content: end;
+  margin: 0.5rem 0 0 0;
+  width: 100%;
+}
+.linkForFullMindsight .fullMindsight {
+  color: rgb(255, 217, 0);
+}
+
+.containerImgMindsight {
+  position: absolute;
+  justify-items: end;
+  top: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.containerImgMindsight .imgFullMindsight {
+  width: inherit;
+  height: inherit;
+  background-image: url(./imgs/mindsight/mindsight.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.containerImgMindsight .bntCloseContainerMindsight {
+  margin-top: 0.2rem;
+  color: rgb(255, 217, 0);
+}
+
+.closedSeeMindsight {
+  display: none;
+  left: -22rem;
+}
+
+.activeSeeMindsight {
+  display: block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(245, 245, 220);
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container-major {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(40, 0, 10));
+  background-color: #28000a;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.container-major #content {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  padding: 0 1.7rem 0 1.7rem;
+}
+.container-major #content .espacoVazio {
+  width: 100vw;
+  height: 100vh;
+}
+.container-major #about-me {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  font-size: 1.2em;
+  min-width: 100%;
+}
+.container-major #about-me #presentation {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.container-major #about-me #presentation .titles {
+  margin: 1rem 0 1rem 1rem;
+}
+.container-major #about-me #presentation #audio {
+  margin: 1rem 0 1rem 0;
+}
+.container-major #about-me #presentation #audio .controls {
+  background-color: none;
+}
+.container-major #about-me #presentation .textPresentation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  height: 100%;
+}
+.container-major #area-insight {
+  margin: 7rem 0 5rem 0;
+}
+.container-major #area-insight .skillTitle {
+  font-size: 1rem;
+  margin: 1rem 0 9rem 0;
+}
+.container-major #profile-test {
+  position: relative;
+  margin: 10.5rem auto 10rem auto;
+}
+.container-major #profile-test .titleTestProfile {
+  font-size: 1rem;
+}
+
+#comentario {
+  color: black;
+}
+
+/*# sourceMappingURL=mains.css.map */
