@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./sass/main.css ***!
+  \*****************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap);
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./sass/main.css (1) ***!
+  \*********************************************************************/
 .shapesBackgroundForBody {
   position: absolute;
   top: 0;
@@ -14,7 +20,7 @@
   height: 345px;
   top: 0;
   left: -1vw;
-  background-image: url("../public/assets/Rectangle.svg");
+  background-image: url(5a94a846a03080f8c24e.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -32,19 +38,19 @@
   width: 100%;
   height: 50rem;
   rotate: 180deg;
-  background-image: url("../public/assets/octagon.svg");
+  background-image: url(e05131b9c25250300edb.svg);
 }
 .shapesBackgroundForBody .isoscelesTrapezoid {
   top: -13rem;
   left: 0;
   width: 100%;
   height: 40rem;
-  background-image: url("../public/assets/rectangle2.svg");
+  background-image: url(7aad77eab572d75afe73.svg);
 }
 
 .icon0 {
   display: inline-block;
-  background-image: url("../public/icons/iconsMenu/menuClose.svg");
+  background-image: url(1b48539856843d59ba08.svg);
   min-width: 1.88rem;
   min-height: 1.88rem;
   background-size: contain;
@@ -54,7 +60,7 @@
 
 .icon1, .icon4, .icon3, .icon2 {
   display: inline-block;
-  background-image: url("../public/icons/iconsMenu/home.svg");
+  background-image: url(94ef75f477305405d85e.svg);
   min-width: 1.88rem;
   min-height: 1.88rem;
   background-size: cover;
@@ -63,20 +69,20 @@
 }
 
 .icon2 {
-  background-image: url("../public/icons/iconsMenu/redes.svg");
+  background-image: url(767c7a803225de7cdcc0.svg);
 }
 
 .icon3 {
-  background-image: url("../public/icons/iconsMenu/pdfs.svg");
+  background-image: url(45b49bf56d8ec9b5a570.svg);
 }
 
 .icon4 {
-  background-image: url("../public/icons/iconsMenu/configs.svg");
+  background-image: url(fa91a0e972d34950cbd0.svg);
 }
 
 .SideBarIconBnt1, .SideBarIconBnt10, .SideBarIconBnt9, .SideBarIconBnt7, .SideBarIconBnt8, .SideBarIconBnt6, .SideBarIconBnt5, .SideBarIconBnt4, .SideBarIconBnt3, .SideBarIconBnt2 {
   display: block;
-  background-image: url("../public/icons/iconsSideBar/iconsWhats.svg");
+  background-image: url(be7bbf539410755f6853.svg);
   min-width: 1.76rem;
   min-height: 1.52rem;
   background-size: cover;
@@ -87,35 +93,35 @@
 }
 
 .SideBarIconBnt2 {
-  background-image: url("../public/icons/iconsSideBar/iconInsta.svg");
+  background-image: url(03acd14542e5d16fd42d.svg);
 }
 
 .SideBarIconBnt3 {
-  background-image: url("../public/icons/iconsSideBar/iconLikedin.svg");
+  background-image: url(1f31665e7c84f250a402.svg);
 }
 
 .SideBarIconBnt4 {
-  background-image: url("../public/icons/iconsSideBar/iconGitHub.svg");
+  background-image: url(bf73d3687df8b717dad5.svg);
 }
 
 .SideBarIconBnt5 {
-  background-image: url("../public/icons/iconsSideBar/iconEmail.svg");
+  background-image: url(6c13cc95e9d36894c83a.svg);
 }
 
 .SideBarIconBnt6 {
-  background-image: url("../public/icons/iconsSideBar/iconCurriculum.svg");
+  background-image: url(0167e3c59954b3a8cf8f.svg);
 }
 
 .SideBarIconBnt7, .SideBarIconBnt8 {
-  background-image: url("../public/icons/iconsSideBar/iconGridCurriculum.svg");
+  background-image: url(a655e309939e3fb251b2.svg);
 }
 
 .SideBarIconBnt9 {
-  background-image: url("../public/icons/iconsSideBar/iconThemeDark.svg");
+  background-image: url(f6015753e968d8a634e3.svg);
 }
 
 .SideBarIconBnt10 {
-  background-image: url("../public/icons/iconsSideBar/iconAccessibility.svg");
+  background-image: url(85be40b135a7f0424df2.svg);
 }
 
 .bntCertificate {
@@ -135,7 +141,7 @@
   height: 1.8rem;
   border-radius: 0.5rem;
   background-color: rgb(51, 51, 51);
-  background-image: url("../public/icons/areaSkills/openCertificate.svg");
+  background-image: url(0ad264fd90d57add0a93.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -337,23 +343,23 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   object-fit: cover;
-  background-image: url("../public/imgs/projetos/img1.jpg");
+  background-image: url(a5585e52816f781f54f1.jpg);
 }
 
 .itemList-1 {
-  background-image: url("../public/imgs/projetos/img2.jpg");
+  background-image: url(9d8dedc3c8cc5bf45ecc.jpg);
 }
 
 .itemList-2 {
-  background-image: url("../public/imgs/projetos/img3.jpg");
+  background-image: url(ea39aa12be0266b7d9ae.jpg);
 }
 
 .itemList-3 {
-  background-image: url("../public/imgs/projetos/img4.jpg");
+  background-image: url(eaf8867de580e67e52dc.jpg);
 }
 
 .itemList-4 {
-  background-image: url("../public/imgs/projetos/img5.jpg");
+  background-image: url(919305c2bc59597ccdef.jpg);
 }
 
 #container-carousel {
@@ -393,14 +399,14 @@
 }
 .audio-player .play, .audio-player .volumeMuted, .audio-player .volume, .audio-player .pause {
   display: block;
-  background-image: url("../public/icons/content/iconPlay.svg");
+  background-image: url(23ff34c9c3cb0a06e0ae.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 1rem;
   height: 1rem;
 }
 .audio-player .pause {
-  background-image: url("../public/icons/content/iconPause.svg");
+  background-image: url(c33ccd8a38cdaeba1953.svg);
 }
 .audio-player #progress-time-container {
   flex-grow: 1;
@@ -437,10 +443,10 @@
   height: 0.7rem;
 }
 .audio-player .volume {
-  background-image: url("../public/icons/content/iconAudio.svg");
+  background-image: url(7ec3bd68365c4a661b97.svg);
 }
 .audio-player .volumeMuted {
-  background-image: url("../public/icons/content/iconAudioMuted.svg");
+  background-image: url(b23610801cfafa480894.svg);
 }
 .audio-player #bar-volume-container {
   flex-grow: 1;
@@ -491,7 +497,7 @@ iframe {
   height: 1.8rem;
   border-radius: 0.5rem;
   background-color: rgb(51, 51, 51);
-  background-image: url("../public/icons/areaSkills/openCertificate.svg");
+  background-image: url(0ad264fd90d57add0a93.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -569,7 +575,7 @@ iframe {
   height: 1.8rem;
   border-radius: 0.5rem;
   background-color: rgb(51, 51, 51);
-  background-image: url("../public/icons/areaSkills/openCertificate.svg");
+  background-image: url(0ad264fd90d57add0a93.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -788,7 +794,7 @@ iframe {
   height: 1.8rem;
   border-radius: 0.5rem;
   background-color: rgb(51, 51, 51);
-  background-image: url("../public/icons/areaSkills/openCertificate.svg");
+  background-image: url(0ad264fd90d57add0a93.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -916,7 +922,7 @@ iframe {
 .containerImgMindsight .imgFullMindsight {
   width: inherit;
   height: inherit;
-  background-image: url("../public/imgs/mindsight/mindsight.jpeg");
+  background-image: url(7d985ed90ec9c543958c.jpeg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1017,4 +1023,3 @@ iframe {
   color: black;
 }
 
-/*# sourceMappingURL=main.css.map */
