@@ -17,20 +17,8 @@ export function createGridSkills(object) {
 	function createBackgroundAnimated() {
 		const cardInitial = document.querySelector(".item-1");
 		const locationInitial = cardInitial.getBoundingClientRect();
-		console.log("local do elemento a ser posicionado: ");
-		console.log(locationInitial);
-
-		let locationX = locationInitial.x;
-		let locationY = locationInitial.y;
-
 		const backgroundAnimated = document.createElement("div");
 		backgroundAnimated.classList.add("backgroundAnimated");
-
-		let locationBackgroundAnimated =
-			backgroundAnimated.getBoundingClientRect();
-
-		console.log("local de origin do elemento animado:");
-		console.log(locationBackgroundAnimated);
 
 		backgroundAnimated.style.transform = `translate( ${0}px, ${0}px)`;
 		backgroundAnimated.style.width = `${locationInitial.width + 8}px`;
@@ -50,10 +38,7 @@ export function createGridSkills(object) {
 	}
 	function myPosition(objectId) {
 		const element = document.querySelector(`.item-${objectId}`);
-		console.log("position: ");
 		let locationElement = element.getBoundingClientRect();
-		console.log(locationElement);
-
 		return locationElement;
 	}
 
@@ -99,10 +84,6 @@ export function createGridSkills(object) {
 		titleOfCard.classList.add("title");
 		titleOfCard.textContent = `${object.title}`;
 
-		// const description = document.createElement("p");
-		// description.textContent = "Descrição:";
-		// description.classList.add("description");
-
 		const descriptionsOfCard = document.createElement("div");
 		descriptionsOfCard.classList.add("descriptionsOfCard");
 
@@ -136,7 +117,6 @@ export function createGridSkills(object) {
 
 		cardDetails.appendChild(imgOfCard);
 		cardDetails.appendChild(titleOfCard);
-		//cardDetails.appendChild(description);
 		cardDetails.appendChild(descriptionsOfCard);
 
 		containerGrid.appendChild(cardDetails);
@@ -151,7 +131,6 @@ export function createGridSkills(object) {
 		cardDetails.parentNode.removeChild(cardDetails);
 	}
 
-	const activeSkills = document.querySelector(".activeSkills");
 
 	object.forEach((object) => {
 		createMiniCard(object);
@@ -177,6 +156,8 @@ export function createModalCertificate(certificateURL) {
 	spanContainer.textContent = "Page: ";
 	const spanPages = document.createElement("span");
 	spanPages.id = "page_num";
+	const spanBar = document.createElement("span");
+	spanBar.textContent = " / "
 	const spanPagesCount = document.createElement("span");
 	spanPagesCount.id = "page_count";
 
@@ -187,14 +168,11 @@ export function createModalCertificate(certificateURL) {
 
 	const bntCloseModal = hideElement("fechar", "hideElement", modal);
 
-	spanContainer.append(spanPages, spanPagesCount);
+	spanContainer.append(spanPages, spanBar , spanPagesCount);
 	controlPanelBox.append(prev, bntCloseModal, next);
 	containerCanvas.appendChild(canvasPDF);
 	modal.append(spanContainer, containerCanvas, controlPanelBox);
 	containerSkills.appendChild(modal);
 
 	displayPDF(certificateURL);
-	// setTimeout(() => {
-	// 	displayPDF(certificateURL);
-	// }, 1000);
 }
