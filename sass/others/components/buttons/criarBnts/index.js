@@ -104,10 +104,17 @@ export function createBntsMenu(
 }
 
 export function bntCloseSidebar() {
+	const bntCloseSidebarExists = document.getElementById("bntCloseSidebar");
+	if (bntCloseSidebarExists) {
+		console.log("votão vai ser excluido")
+		const menu = document.getElementById("menu");
+		menu.removeChild(bntCloseSidebarExists);
+	}
+
 	const header = document.getElementById("menu");
 	const bntCloseSidebar = document.createElement("div");
 	bntCloseSidebar.id = "bntCloseSidebar";
-	bntCloseSidebar.classList.toggle("bntCloseSidebar");
+	bntCloseSidebar.classList.add("bntCloseSidebar");
 
 	const iconX = document.createElement("i");
 	iconX.classList.add("icon0");

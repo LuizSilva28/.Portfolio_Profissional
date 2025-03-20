@@ -70,21 +70,15 @@ function createEventsSlidesItems() {
 					(slideTotalSizeWidth - state.movement);
 			}
 			if (position < -615.84) {
-				console.log("teste 1: ", position);
 				position = 307.92;
-				console.log("teste 2: ", position);
-
-				console.log("teste 3: ", position);
 				animate = false;
 			}
 			slideList.style.transition =
 				animate === true ? "transform .5s" : "none";
 			translateSlide({ position: position });
 		} else {
-			console.log("position salvo: ", state.savedPosition);
 			const slideTotalSizeWidth = slideWidth + slideMargin;
 			let position = state.savedPosition + slideTotalSizeWidth;
-			console.log("position: ", position);
 			if (whoMoved === "draggedMouse") {
 				position =
 					state.savedPosition +
@@ -181,7 +175,6 @@ function createEventsSlidesItems() {
 	}
 	function onMouseMove(event) {
 		event.preventDefault();
-		console.log(state.movement, " e ", replicaState.replicaMovement);
 
 		state.movement = event.clientX - state.startPoint;
 		let position = state.currentPoint + state.movement;

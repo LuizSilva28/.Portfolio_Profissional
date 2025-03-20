@@ -219,7 +219,7 @@
   position: fixed;
   bottom: 0;
   right: -60vw;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   justify-content: space-around;
   border-top-left-radius: 5px;

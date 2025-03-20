@@ -44,15 +44,20 @@ export function createAudio() {
 		audio.addEventListener("pause", function () {
 			isPlaying = false;
 		});
+		
 
 		audio.addEventListener("timeupdate", function () {
 			const { currentTime, duration } = audio;
 			const progressPercent = (currentTime * 100) / duration;
 			progress.style.width = `${progressPercent}%`;
-
+			if (currentTime === duration) {
+				
+				playPauseBtn.classList.remove("pause");
+				playPauseBtn.classList.add("play");
+			}
 		});
 		progressContainer.addEventListener("click", function (e) {
-			const width = this.clientWidth; 
+			const width = this.clientWidth;
 			const clickX = e.offsetX;
 			const duration = audio.duration;
 
@@ -70,8 +75,6 @@ export function createAudio() {
 			speedAudio === 1
 				? (contentBntAudio.textContent = "1.5x")
 				: (contentBntAudio.textContent = "1x");
-
-			console.log(speedAudio);
 		});
 
 		function setAudioMuted(volumeAtual) {
@@ -90,11 +93,11 @@ export function createAudio() {
 			bntVolume.classList.toggle("volumeMuted");
 		});
 		barVolumeContainer.addEventListener("click", function (e) {
-			const width = this.clientWidth; 
-			const clickX = e.offsetX; 
-			audio.volume = clickX / width; 
-			audioVolumeAtualizado= audio.volume;
-			
+			const width = this.clientWidth;
+			const clickX = e.offsetX;
+			audio.volume = clickX / width;
+			audioVolumeAtualizado = audio.volume;
+
 			barVolumeContent.style.width = `${clickX}px`;
 			barVolumeContenSaved = `${clickX}px`;
 

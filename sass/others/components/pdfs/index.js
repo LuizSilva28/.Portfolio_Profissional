@@ -6,9 +6,10 @@ let url = "/filesPdfs/css.pdf";
 export function displayPDF(url) {
 	console.log("pdfjsLib: ");
 	console.log(pdfjsLib);
-	//const { pdfjsLib } = globalThis; ./node_modules/pdfjs-dist/build/pdf.mjs
+	//const { pdfjsLib } = globalThis; ../../../../node_modules/pdfjs-dist/build/pdf.worker.mjs
 
-	pdfjsLib.GlobalWorkerOptions.workerSrc = "../../../../node_modules/pdfjs-dist/build/pdf.worker.mjs";
+	pdfjsLib.GlobalWorkerOptions.workerSrc =
+		"./pdfjs_worker.bundle.min.js";
 
 	let pdfDoc = null,
 		pageNum = 1,
