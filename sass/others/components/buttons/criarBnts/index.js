@@ -106,7 +106,6 @@ export function createBntsMenu(
 export function bntCloseSidebar() {
 	const bntCloseSidebarExists = document.getElementById("bntCloseSidebar");
 	if (bntCloseSidebarExists) {
-		console.log("votão vai ser excluido")
 		const menu = document.getElementById("menu");
 		menu.removeChild(bntCloseSidebarExists);
 	}
