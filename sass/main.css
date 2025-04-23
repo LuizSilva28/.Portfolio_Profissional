@@ -337,23 +337,23 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   object-fit: cover;
-  background-image: url("../public/imgs/projetos/img1.jpg");
+  background-image: url("../public/imgs/projectsIMGs/img1.jpg");
 }
 
 .itemList-1 {
-  background-image: url("../public/imgs/projetos/img2.jpg");
+  background-image: url("../public/imgs/projectsIMGs/img2.jpg");
 }
 
 .itemList-2 {
-  background-image: url("../public/imgs/projetos/img3.jpg");
+  background-image: url("../public/imgs/projectsIMGs/img3.jpg");
 }
 
 .itemList-3 {
-  background-image: url("../public/imgs/projetos/img4.jpg");
+  background-image: url("../public/imgs/projectsIMGs/img4.jpg");
 }
 
 .itemList-4 {
-  background-image: url("../public/imgs/projetos/img5.jpg");
+  background-image: url("../public/imgs/projectsIMGs/img5.jpg");
 }
 
 #container-carousel {
@@ -693,7 +693,7 @@ iframe {
   padding: 2px;
   justify-items: center;
   box-shadow: 1px 1px 10px;
-  box-shadow: -1px -1px 10px black;
+  box-shadow: -1px -1px 10px rgb(0, 0, 0);
   border-radius: 8px;
   height: 20rem;
 }
@@ -867,6 +867,66 @@ iframe {
   height: 80%;
 }
 
+.cardPrincipal {
+  width: 60%;
+  height: 20rem;
+  margin: 0 0.9rem 0 0;
+}
+.cardPrincipal .cardDetails {
+  width: 100%;
+  padding: 2px;
+  justify-items: center;
+  box-shadow: 0 0 10px rgb(128, 0, 32);
+  border-radius: 8px;
+  height: 20rem;
+}
+.cardPrincipal .cardDetails .imgOfCard {
+  display: block;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.4rem;
+  min-width: 100%;
+  height: 50%;
+  object-fit: fill;
+}
+.cardPrincipal .cardDetails .title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.7em 0 0.7em 0;
+}
+.cardPrincipal .cardDetails .description {
+  font-size: 0.9rem;
+  margin: 0.7em 0 0.7em 0;
+}
+.cardPrincipal .cardDetails .descriptionsOfCard {
+  font-size: 0.9rem;
+  text-align: end;
+  padding: 0 0 0.5em 0em;
+}
+.cardPrincipal .cardDetails .descriptionsOfCard .alingParagraphs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2em 0 0.2em 0;
+}
+
+.carouselProjects {
+  border-radius: 0.8rem;
+  width: 30%;
+  height: 20rem;
+  overflow: scroll;
+}
+.carouselProjects .miniCard {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.6rem;
+  margin: 4px;
+  min-width: 4.43rem;
+  min-height: 4.43rem;
+}
+
 .containerChartAndLegend {
   display: flex;
   margin: 10rem 0 1rem 0;
@@ -1011,6 +1071,14 @@ iframe {
 }
 .container-major #profile-test .titleTestProfile {
   font-size: 1rem;
+}
+.container-major #area-projects {
+  position: relative;
+  margin: 10.5rem auto 10rem auto;
+}
+.container-major #area-projects #container-projects {
+  display: flex;
+  margin: 1rem 0 0 0;
 }
 
 #comentario {

@@ -1,4 +1,3 @@
-import { createButtonNext } from "../buttons/script.js";
 
 export function createSlidesItems(container, itemFor) {
 	container.style.transform = `translateX(-205.28px)`;

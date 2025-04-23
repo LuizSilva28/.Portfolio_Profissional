@@ -10,6 +10,7 @@
 @import "./others/components/video/style.scss";
 @import "./others/components/Grid/style.scss";
 @import "./others/components/pdfs/style.scss";
+@import "./others/components/projects/style.scss";
 
 //Graphcs
 @import "./others/components/charts/style.scss";
@@ -99,6 +100,16 @@
 
 		.titleTestProfile {
 			font-size: $font-primary;
+		}
+	}
+
+	#area-projects {
+		position: relative;
+		margin: 10.5rem auto 10rem auto;
+
+		#container-projects {
+			display: flex;
+			margin: 1rem 0 0 0 ;
 		}
 	}
 }

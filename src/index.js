@@ -13,6 +13,8 @@ import {
 } from "../sass/others/components/charts/polarAreaChart.js";
 
 import "../sass/main.css";
+import { createAllCardsForProjects } from "../sass/others/components/projects/index.js";
+import { standardCardProjects } from "../sass/others/components/objects/projectsOBJ/index.js";
 
 allBntsMenu();
 
@@ -26,3 +28,5 @@ createGridSkills(standardCardHardskills);
 
 generateGraph();
 displayFullInforrmation();
+
+createAllCardsForProjects(standardCardProjects);
