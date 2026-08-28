@@ -1,9 +1,9 @@
-
+/** @format */
 
 export const standardCardSoftskills = [
 	{
 		id: 1,
-		image: "/imgs/softskills/img3.jpeg",
+		image: "public/imgs/softskills/img3.jpeg",
 		title: "Gestão de tempo",
 		description: {
 			xp: "2 ano",
@@ -23,7 +23,7 @@ export const standardCardSoftskills = [
 	},
 	{
 		id: 3,
-		image: "/imgs/softskills/img6.jpeg",
+		image: "public/imgs/softskills/img6.jpeg",
 		title: "Criatividade ",
 		description: {
 			xp: "1 ano",
@@ -33,7 +33,7 @@ export const standardCardSoftskills = [
 	},
 	{
 		id: 4,
-		image: "/imgs/softskills/img1.jpeg",
+		image: "public/imgs/softskills/img1.jpeg",
 		title: "Empatia",
 		description: {
 			xp: "1 ano",
@@ -43,7 +43,7 @@ export const standardCardSoftskills = [
 	},
 	{
 		id: 5,
-		image: "/imgs/softskills/img9.jpeg",
+		image: "public/imgs/softskills/img9.jpeg",
 		title: "Trabalho em equipe",
 		description: {
 			xp: "1 ano",
@@ -53,7 +53,7 @@ export const standardCardSoftskills = [
 	},
 	{
 		id: 6,
-		image: "/imgs/softskills/img8.png",
+		image: "public/imgs/softskills/img8.png",
 		title: "Melhoria de processo",
 		description: {
 			xp: "1 ano",
@@ -64,7 +64,7 @@ export const standardCardSoftskills = [
 
 	{
 		id: 7,
-		image: "/imgs/softskills/img10.png",
+		image: "public/imgs/softskills/img10.png",
 		title: "Resolução de problemas",
 		description: {
 			xp: "1 ano",

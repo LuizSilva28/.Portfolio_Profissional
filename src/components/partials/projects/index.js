@@ -1,15 +1,21 @@
+/** @format */
+
 import { createBntCertificate } from "../buttons/criarBnts";
 
 const cardPrincipalProjects = document.getElementById("cardPrincipal");
 
 function deleteCardPrevious() {
-	let cardDetails = document.querySelector('[data-gridskills="cardDetailsProjects"]');
+	let cardDetails = document.querySelector(
+		'[data-gridskills="cardDetailsProjects"]',
+	);
 	cardDetails.parentNode.removeChild(cardDetails);
 }
 
 export function createMiniCard(object) {
+	
 	const containerGrid = document.querySelector(`#carouselProjects`);
 	const miniCard = document.createElement("div");
+
 	miniCard.classList.add("miniCard");
 	miniCard.dataset.minicard = "miniCard";
 	miniCard.classList.add(`item-${object.id}`);
@@ -21,7 +27,7 @@ export function createMiniCard(object) {
 
 	miniCard.addEventListener("click", function () {
 		const elementsMiniCard = document.querySelectorAll(
-			'[data-minicard = "miniCard"]'
+			'[data-minicard = "miniCard"]',
 		);
 		elementsMiniCard.forEach((element) => {
 			element.classList.remove("selected");
@@ -91,11 +97,9 @@ export function createCardForDetails(object) {
 	//createBntCertificate(object.certificate);
 }
 
-export function createAllCardsForProjects (object){
-
-    object.forEach((object) => {
-        createMiniCard(object);
-    });
-    createCardForDetails(object[0]);
-
+export function createAllCardsForProjects(object) {
+	object.forEach((object) => {
+		createMiniCard(object);
+	});
+	createCardForDetails(object[0]);
 }

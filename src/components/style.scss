@@ -1,26 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
-@import "./others/variables/colors.scss";
-@import "./others/variables/fonts.scss";
-@import "./others/components/shapes/style.scss";
-//@import "./others/componets/shape.scss";
-@import "./others/components/menuMobile/menu/style.scss";
-@import "./others/components/carousel/container/style.scss";
-@import "./others/components/audio/style.scss";
-@import "./others/components/video/style.scss";
-@import "./others/components/Grid/style.scss";
-@import "./others/components/pdfs/style.scss";
-@import "./others/components/projects/style.scss";
+@import "./variables/colors.scss";
+@import "./variables/fonts.scss";
+@import "./partials/shapes/style.scss";
+//@import "./componets/shape.scss";
+@import "./partials/menuMobile/menu/style.scss";
+@import "./partials/carousel/container/style.scss";
+@import "./partials/audio/style.scss";
+@import "./partials/video/style.scss";
+@import "./partials/Grid/style.scss";
+@import "./partials/pdfs/style.scss";
+@import "./partials/projects/style.scss";
 
 //Graphcs
-@import "./others/components/charts/style.scss";
+@import "./partials/charts/style.scss";
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 
-	@import "./others/variables/colors.scss";
+	@import "./variables/colors.scss";
 	color: $color-bege;
 	font-family: "Comfortaa", sans-serif;
 	font-optical-sizing: auto;

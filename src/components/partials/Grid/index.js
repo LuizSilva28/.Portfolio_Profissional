@@ -1,3 +1,5 @@
+/** @format */
+
 import {
 	createBntCertificate,
 	createBntsForControlls,
@@ -7,10 +9,16 @@ import { displayPDF } from "../pdfs/index.js";
 
 export function createGridSkills(object) {
 	
+
 	const containerSkills = document.querySelector(
-		'[data-gridSkills="gridSkills"]'
+		'[data-gridSkills="gridSkills"]',
 	);
+
+
 	const containerGrid = document.createElement("div");
+
+	
+
 	containerGrid.setAttribute("data-areaskills", "containerGrid");
 	containerGrid.id = "container-skills";
 	containerSkills.appendChild(containerGrid);
@@ -26,8 +34,6 @@ export function createGridSkills(object) {
 		backgroundAnimated.style.height = `${locationInitial.height + 8}px`;
 		containerGrid.appendChild(backgroundAnimated);
 	}
-
-	
 
 	//depurar esta função
 
@@ -59,21 +65,24 @@ function deleteCardPrevious() {
 }
 
 export function createMiniCard(object) {
+
 	const containerGrid = document.querySelector(
-		`[data-areaskills="containerGrid"]`
+		`[data-areaskills="containerGrid"]`,
 	);
 	const miniCard = document.createElement("div");
+
 	miniCard.classList.add("miniCard");
 	miniCard.dataset.minicard = "miniCard";
 	miniCard.classList.add(`item-${object.id}`);
 
 	miniCard.style.backgroundImage = `url('${object.image}')`;
 	containerGrid.appendChild(miniCard);
+	
 	object.id === 1 ? miniCard.classList.add("selected") : "";
 
 	miniCard.addEventListener("click", function () {
 		const elementsMiniCard = document.querySelectorAll(
-			'[data-minicard = "miniCard"]'
+			'[data-minicard = "miniCard"]',
 		);
 		elementsMiniCard.forEach((element) => {
 			element.classList.remove("selected");
@@ -91,7 +100,7 @@ export function createMiniCard(object) {
 
 export function createCardForDetails(object) {
 	const containerGrid = document.querySelector(
-		`[data-areaskills="containerGrid"]`
+		`[data-areaskills="containerGrid"]`,
 	);
 	const cardDetails = document.createElement("div");
 	cardDetails.classList.add("cardDetails");
@@ -143,12 +152,11 @@ export function createCardForDetails(object) {
 	containerGrid.appendChild(cardDetails);
 
 	createBntCertificate(object.certificate);
-	
 }
 
 export function createModalCertificate(certificateURL) {
 	const containerSkills = document.querySelector(
-		'[data-gridSkills="gridSkills"]'
+		'[data-gridSkills="gridSkills"]',
 	);
 	const modal = document.createElement("div");
 	modal.classList.add("modalCertificate");

@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
-//app.use(express.static("sass"));
+//app.use(express.static("components"));
 
 app.use(express.urlencoded({ extended: true }));
 
