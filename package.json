@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"dev": "nodemon  src/server.js",
-		"start": "node --watch  build src/server.js"
+		"start": "node --watch src/server.js",
+		"webpack": "webpack --watch --mode development"
 	},
 	"devDependencies": {
 		"assert": "^2.1.0",

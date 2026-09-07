@@ -59,34 +59,23 @@ export function createCardForDetails(object) {
 
 	const descriptionsOfCard = document.createElement("div");
 	descriptionsOfCard.classList.add("descriptionsOfCard");
+	
+	const subtitleOfCard = document.createElement("p");
+	subtitleOfCard.classList.add("subtitle");	
+	subtitleOfCard.textContent = `${object.subtitle}`;
 
-	const xp = document.createElement("p");
-	xp.classList.add("alingParagraphs");
-	const xpDescription = document.createElement("span");
-	xpDescription.textContent = `Experiência: `;
-	const xpValue = document.createElement("span");
-	xpValue.textContent = `${object.description.xp}`;
+	const listOfTechnologies = document.createElement("ul");
+	listOfTechnologies.className = "listOfTechnologies";
 
-	const skillLevel = document.createElement("p");
-	skillLevel.classList.add("alingParagraphs");
-	const skillLevelDescription = document.createElement("span");
-	skillLevelDescription.textContent = `Domínio: `;
-	const skillLevelValue = document.createElement("span");
-	skillLevelValue.textContent = `${object.description.skillLevel}`;
+	object.technologies.forEach((technology) => {
+		const listItem = document.createElement("li");
+		listItem.textContent = `${technology.name} - ${technology.percent}`;
+		listOfTechnologies.append(listItem);
+	},);
 
-	const projects = document.createElement("p");
-	projects.classList.add("alingParagraphs");
-	const projectsDescription = document.createElement("span");
-	projectsDescription.textContent = `Projetos: `;
-	const projectsValue = document.createElement("span");
-	projectsValue.textContent = `${object.description.projects}`;
+	
 
-	xp.append(xpDescription, xpValue);
-	skillLevel.append(skillLevelDescription, skillLevelValue);
-	projects.append(projectsDescription, projectsValue);
-	descriptionsOfCard.appendChild(xp);
-	descriptionsOfCard.appendChild(skillLevel);
-	descriptionsOfCard.appendChild(projects);
+	descriptionsOfCard.append(subtitleOfCard, listOfTechnologies);
 
 	cardDetails.appendChild(imgOfCard);
 	cardDetails.appendChild(titleOfCard);
@@ -98,6 +87,7 @@ export function createCardForDetails(object) {
 }
 
 export function createAllCardsForProjects(object) {
+	console.log(object);
 	object.forEach((object) => {
 		createMiniCard(object);
 	});
