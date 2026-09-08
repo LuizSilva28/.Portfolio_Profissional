@@ -1,5 +1,5 @@
-@import "../buttons/style.scss";
-@import "../cards/style.scss";
+@use "../buttons/style.scss" as *;
+@use "../cards/style.scss" as *;
 
 #container-carousel {
 	display: flex;

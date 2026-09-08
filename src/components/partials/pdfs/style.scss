@@ -1,4 +1,7 @@
-@import "../buttons/Buttons_AreaSkills/style.scss";
+@use "../buttons/Buttons_AreaSkills/style.scss" as *;
+@use "../../variables/fonts.scss" as *;
+@use "../../variables/colors.scss" as *;
+
 .modalCertificate {
 	position: absolute;
 	justify-items: center;

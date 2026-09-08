@@ -1,18 +1,19 @@
-@import "./bnt0CloseSidebar/style.scss";
-@import "./bnt1Menu/style.scss";
-@import "./bnt2Networks/style.scss";
-@import "./bnt3Pdfs/style.scss";
-@import "./bnt4Config/style.scss";
-@import "./bnt5Whats/style.scss";
-@import"./bnt6Insta/style.scss";
-@import"./bnt7Linkedin/style.scss";
-@import "./bnt8GitHub/style.scss";
-@import "./bnt9Email/style.scss";
-@import "./bnt10Curriculum/style.scss";
-@import "./bnt11CourseMatrix/style.scss";
-@import "./btn12Thema/style.scss";
-@import "./btn13Accessibility/style.scss";
-@import "./Buttons_AreaSkills/style.scss";
+@use "./bnt0CloseSidebar/style.scss" as *;
+@use "./bnt1Menu/style.scss" as *;
+@use "./bnt2Networks/style.scss" as *;
+@use "./bnt3Pdfs/style.scss" as *;
+@use "./bnt4Config/style.scss" as *;
+@use "./bnt5Whats/style.scss" as *;
+@use"./bnt6Insta/style.scss" as *;
+@use"./bnt7Linkedin/style.scss" as *;
+@use "./bnt8GitHub/style.scss" as *;
+@use "./bnt9Email/style.scss" as *;
+@use "./bnt10Curriculum/style.scss" as *;
+@use "./bnt11CourseMatrix/style.scss" as *;
+@use "./btn12Thema/style.scss" as *;
+@use "./btn13Accessibility/style.scss" as *;
+@use "./Buttons_AreaSkills/style.scss" as *;
+@use "../../variables/colors.scss" as *;
 
 
 

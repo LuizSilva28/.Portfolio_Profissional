@@ -1,6 +1,6 @@
-@import "./bntCertificate/style.scss";
-@import "./bntCloseCartificate/style.scss";
-@import "./bntPdfControlls/style.scss";
+@use "./bntCertificate/style.scss" as *;
+@use "./bntCloseCartificate/style.scss" as *;
+@use "./bntPdfControlls/style.scss" as *;
 
 .containerButtons {
 	@extend .bntsPdfControll;

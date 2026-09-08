@@ -1,5 +1,7 @@
-@import "../../buttons/buttons.scss";
-@import "../sideBar/sideBar.scss";
+@use "../../buttons/buttons.scss" as *;
+@use "../sideBar/sideBar.scss" as *;
+@use "../../../variables/colors.scss" as *;
+
 
 #container-menu-mobile {
 	position: fixed;
@@ -14,4 +16,11 @@
 	min-width: 100vw;
 	height: 4.38rem;
 	border-radius: 0.63rem 0.63rem 0 0;
+}
+
+
+@media (min-width: 650px) {
+	#container-menu-mobile {
+		display: none;
+	}
 }

@@ -1,4 +1,5 @@
-
+@use "../../../../variables/fonts.scss" as *;
+@use "../../../../variables/colors.scss" as *;
 .bntsPdfControll {
 	display: flex;
 	justify-content: space-between;

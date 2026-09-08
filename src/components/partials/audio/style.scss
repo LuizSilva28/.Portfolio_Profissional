@@ -1,3 +1,6 @@
+@use "../../variables/fonts.scss" as *;
+@use "../../variables/colors.scss" as *;
+
 // Fazer uma mixin para otimizar código
 .audio-player {
 	display: flex;
