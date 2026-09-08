@@ -1,0 +1,14 @@
+@use "./bntCertificate/style.scss" as *;
+@use "./bntCloseCartificate/style.scss" as *;
+@use "./bntPdfControlls/style.scss" as *;
+
+.containerButtons {
+	@extend .bntsPdfControll;
+	justify-content: center;
+margin:  2rem 0 0 0;
+	.bntAreaskills {
+		@extend .bntsPdfControll;
+		
+		
+	}
+}

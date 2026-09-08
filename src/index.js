@@ -1,18 +1,22 @@
-import { allBntsMenu } from "../sass/others/components/menuMobile/menu/index.js";
+import { allBntsMenu } from "./components/partials/menuMobile/menu/index.js";
 
-import { createCarousel } from "../sass/others/components/carousel/container/script.js";
+import { createCarousel } from "./components/partials/carousel/container/script.js";
 
-import { createAudio } from "../sass/others/components/audio/index.js";
+import { createAudio } from "./components/partials/audio/index.js";
 
-import { createGridSkills } from "../sass/others/components/Grid/index.js";
+import { createGridSkills } from "./components/partials/Grid/index.js";
 
-import { standardCardHardskills } from "../sass/others/components/objects/hardskills/index.js";
+import { standardCardHardskills } from "./components/partials/objects/hardskills/index.js";
 import {
 	generateGraph,
 	displayFullInforrmation,
-} from "../sass/others/components/charts/polarAreaChart.js";
+} from "./components/partials/charts/polarAreaChart.js";
 
-import "../sass/main.css";
+// import "./components/main.css";
+
+import { createAllCardsForProjects } from "./components/partials/projects/index.js";
+
+import { standardCardProjects } from "./components/partials/objects/projectsOBJ/index.js";
 
 allBntsMenu();
 
@@ -26,3 +30,8 @@ createGridSkills(standardCardHardskills);
 
 generateGraph();
 displayFullInforrmation();
+
+console.log("__________________________________\n" );
+console.log("standardCardProjects", standardCardProjects);
+console.log("___________________________________\n");
+createAllCardsForProjects(standardCardProjects);

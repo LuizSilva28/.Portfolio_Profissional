@@ -1,0 +1,120 @@
+
+
+@use "./variables/colors.scss" as *;
+@use "./variables/fonts.scss" as *;
+@use "./partials/shapes/style.scss" as *;
+//@use "./componets/shape.scss";
+@use "./partials/menuMobile/menu/style.scss" as *;
+@use "./partials/carousel/container/style.scss" as *;
+@use "./partials/audio/style.scss" as *;
+@use "./partials/video/style.scss" as *;
+@use "./partials/Grid/style.scss" as *;
+@use "./partials/pdfs/style.scss" as *;
+@use "./partials/projects/style.scss" as *;
+
+//Graphcs
+@use "./partials/charts/style.scss" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	color: $color-bege;
+	font-family: "Comfortaa", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.container-major {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(40, 0, 10));
+	background-color: #28000a;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	#content {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		font-size: $font-primary;
+		padding: 0 1.7rem 0 1.7rem;
+
+		.espacoVazio {
+			width: 100vw;
+			height: 100vh;
+		}
+	}
+
+	#about-me {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		color: white;
+		font-size: 1.2em;
+		min-width: 100%;
+
+		#presentation {
+			display: flex;
+			flex-direction: column;
+
+			height: auto;
+			.titles {
+				margin: 1rem 0 1rem 1rem;
+			}
+			#audio {
+				margin: 1rem 0 1rem 0;
+
+				.controls {
+					background-color: none;
+				}
+			}
+			.textPresentation {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				font-size: $font-secondary;
+				margin: 1rem 0 1rem 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	#area-insight {
+		margin: 7rem 0 5rem 0;
+		.skillTitle {
+			font-size: $font-primary;
+			margin: 1rem 0 9rem 0;
+		}
+	}
+
+	#profile-test {
+		position: relative;
+		margin: 10.5rem auto 10rem auto;
+
+		.titleTestProfile {
+			font-size: $font-primary;
+		}
+	}
+
+	#area-projects {
+		position: relative;
+		margin: 10.5rem auto 10rem auto;
+
+		#container-projects {
+			display: flex;
+			margin: 1rem 0 0 0 ;
+		}
+	}
+}
+
+#comentario {
+	color: black;
+}
