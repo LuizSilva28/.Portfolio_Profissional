@@ -1,3 +1,5 @@
+@use "../bnt5Whats/style.scss" as *;
+
 .SideBarIconBnt5 {
 	@extend .SideBarIconBnt1;
 	background-image: url("../public/icons/iconsSideBar/iconEmail.svg");

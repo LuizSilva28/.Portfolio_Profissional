@@ -14,8 +14,15 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
-				use: [MiniCssExtractPlugin.loader, "css-loader"],
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: [], //!Adicionar babel-loader para transpilar o código JS moderno para versões mais antigas, garantindo compatibilidade com navegadores mais antigos.
+			},
+			{
+				test: /\.(sa|sc|c)ss$/i,
+				use: [ MiniCssExtractPlugin.loader, "css-loader", "sass-loader",
+				],
+
 			},
 			{
 				test: /\.(svg|png|jpg|jpeg|gif)$/i,

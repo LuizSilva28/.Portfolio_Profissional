@@ -1,11 +1,13 @@
 @use "../../../../variables/fonts.scss" as *;
 @use "../../../../variables/colors.scss" as *;
+
+// !Verificar o uso da classe .bntsPdfControll, pois a mesma está sendo definida dentro de si própria
 .bntsPdfControll {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	margin:  1rem 0 0 0;
-
+a
 	.bntsPdfControll {
 		display: flex;
 		align-items: center;

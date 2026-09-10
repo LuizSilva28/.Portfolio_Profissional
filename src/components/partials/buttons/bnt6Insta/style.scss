@@ -1,3 +1,5 @@
+@use "../bnt5Whats/style.scss" as *;
+
 .SideBarIconBnt2 {
 	@extend .SideBarIconBnt1;
 	background-image: url("../public/icons/iconsSideBar/iconInsta.svg");

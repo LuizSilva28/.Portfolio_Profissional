@@ -1,3 +1,6 @@
+@use "../bnt5Whats/style.scss" as *;
+
+
 .SideBarIconBnt7 {
 	@extend .SideBarIconBnt1;
 	background-image: url("../public/icons/iconsSideBar/iconGridCurriculum.svg");

@@ -1,3 +1,5 @@
+@use "../bnt1Menu/style.scss" as *;
+
 .icon3 {
 		background-image: url("../public/icons/iconsMenu/pdfs.svg");
 		@extend .icon1;

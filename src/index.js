@@ -1,3 +1,5 @@
+import "./components/main.scss";
+
 import { allBntsMenu } from "./components/partials/menuMobile/menu/index.js";
 
 import { createCarousel } from "./components/partials/carousel/container/script.js";

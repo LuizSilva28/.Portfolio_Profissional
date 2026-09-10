@@ -1,5 +1,6 @@
 @use "../../../../variables/fonts.scss" as *;
-@use "../../../../variables/colors.scss" as *;
+@use "../../../../variables/colors.scss" as *; 
+@use "../bntPdfControlls/style.scss" as *;
 
 .hideElement {
 	@extend .bntsPdfControll;
