@@ -1,5 +1,5 @@
-@use "../../../../variables/fonts.scss" as *;
-@use "../../../../variables/colors.scss" as *;
+@use "../../../../base/variables/fonts.scss" as *;
+@use "../../../../base/variables/colors.scss" as *;
 
 // !Verificar o uso da classe .bntsPdfControll, pois a mesma está sendo definida dentro de si própria
 .bntsPdfControll {

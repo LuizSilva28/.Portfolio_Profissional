@@ -1,5 +1,5 @@
-@use "../../../variables/fonts.scss" as *;
-@use "../../../variables/colors.scss" as *;
+@use "../../../base/variables/fonts.scss" as *;
+@use "../../../base/variables/colors.scss" as *;
 
 .itemList-0 {
 	display: block;
@@ -10,23 +10,23 @@
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	object-fit: cover;
-	background-image: url("../public/imgs/projectsIMGs/img1.jpg");
+	background-image: url("../../../imgs/projectsIMGs/img1.jpg");
 }
 
 .itemList-1 {
 	@extend .itemList-0;
-	background-image: url("../public/imgs/projectsIMGs/img2.jpg");
+	background-image: url("../../../imgs/projectsIMGs/img2.jpg");
 }
 
 .itemList-2 {
 	@extend .itemList-0;
-	background-image: url("../public/imgs/projectsIMGs/img3.jpg");
+	background-image: url("../../../imgs/projectsIMGs/img3.jpg");
 }
 .itemList-3 {
 	@extend .itemList-0;
-	background-image: url("../public/imgs/projectsIMGs/img4.jpg");
+	background-image: url("../../../imgs/projectsIMGs/img4.jpg");
 }
 .itemList-4 {
 	@extend .itemList-0;
-	background-image: url("../public/imgs/projectsIMGs/img5.jpg");
+	background-image: url("../../../imgs/projectsIMGs/img5.jpg");
 }

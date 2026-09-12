@@ -1,5 +1,5 @@
-@use "../../variables/fonts.scss" as *;
-@use "../../variables/colors.scss" as *;
+@use "../../base/variables/fonts.scss" as *;
+@use "../../base/variables/colors.scss" as *;
 
 .containerChartAndLegend {
 	display: flex;
@@ -50,7 +50,7 @@
 	.imgFullMindsight {
 		width: inherit;
 		height: inherit;
-		background-image: url("../public/imgs/mindsight/mindsight.jpeg");
+		background-image: url("../../../imgs/mindsight/mindsight.jpeg");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}

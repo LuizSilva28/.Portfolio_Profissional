@@ -1,7 +1,7 @@
 @use "../buttons/Buttons_AreaSkills/style.scss" as *;
 @use "../pdfs/style.scss" as *;
-@use "../../variables/fonts.scss" as *;
-@use "../../variables/colors.scss" as *;
+@use "../../base/variables/fonts.scss" as *;
+@use "../../base/variables/colors.scss" as *;
 
 .gridSkills {
 	display: flex;

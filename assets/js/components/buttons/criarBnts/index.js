@@ -1,7 +1,7 @@
-import { standardCardHardskills } from "../../objects/hardskills/index.js";
-import { standardCardSoftskills } from "../../objects/softskills/index.js";
+import { standardCardHardskills } from "../../../../../src/utils/objects/hardskills/index.js";
+import { standardCardSoftskills } from "../../../../../src/utils/objects/softskills/index.js";
 
-import { createGridSkills, createModalCertificate } from "../../Grid/index.js";
+import { createGridSkills, createModalCertificate } from "../../grid/index.js";
 
 export function createBntsMenu(
 	idBtn,

@@ -2,7 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	entry: {
-		index: "./src/index.js",
+		index: "./assets/js/index.js",
 		pdfjs_worker: "./node_modules/pdfjs-dist/build/pdf.worker.mjs",
 	},
 	mode: "development",

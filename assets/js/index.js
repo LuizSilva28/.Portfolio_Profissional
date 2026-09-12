@@ -1,24 +1,23 @@
-import "./components/main.scss";
+import "../../scss/main.scss";
 
-import { allBntsMenu } from "./components/partials/menuMobile/menu/index.js";
+import { allBntsMenu } from "./components/menuMobile/menu/index.js";
 
-import { createCarousel } from "./components/partials/carousel/container/script.js";
+import { createCarousel } from "./components/carousel/container/script.js";
 
-import { createAudio } from "./components/partials/audio/index.js";
+import { createAudio } from "./components/audio/index.js";
 
-import { createGridSkills } from "./components/partials/Grid/index.js";
+import { createGridSkills } from "./components/grid/index.js";
 
-import { standardCardHardskills } from "./components/partials/objects/hardskills/index.js";
+import { standardCardHardskills } from "../../src/utils/objects/hardskills/index.js";
 import {
 	generateGraph,
 	displayFullInforrmation,
-} from "./components/partials/charts/polarAreaChart.js";
+} from "./modules/charts/polarAreaChart.js";
 
-// import "./components/main.css";
 
-import { createAllCardsForProjects } from "./components/partials/projects/index.js";
+import { createAllCardsForProjects } from "./components/projects/index.js";
 
-import { standardCardProjects } from "./components/partials/objects/projectsOBJ/index.js";
+import { standardCardProjects } from "../../src/utils/objects/projectsOBJ/index.js";
 
 allBntsMenu();
 

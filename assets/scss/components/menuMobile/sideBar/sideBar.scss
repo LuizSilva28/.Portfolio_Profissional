@@ -1,6 +1,6 @@
 //@import "../../buttons/bntWhats/style.scss";
-@use "../../../variables/fonts.scss" as *;
-@use "../../../variables/colors.scss" as *;
+@use "../../../base/variables/fonts.scss" as *;
+@use "../../../base/variables/colors.scss" as *;
 .sideBar {
 	position: fixed;
 	bottom: 0;
