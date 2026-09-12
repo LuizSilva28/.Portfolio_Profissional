@@ -1,0 +1,28 @@
+@use "../buttons/style.scss" as *;
+@use "../cards/style.scss" as *;
+
+#container-carousel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 20rem;
+	height: 8rem;
+	margin: 1rem 0 2rem 0;
+
+	.carouselList{
+		display: inherit;
+		overflow: hidden;
+		width: 16.5rem;
+		max-height: 9.4rem;
+		
+
+		.ContainerItems {
+			display: flex;
+			
+		}
+		.containerItemsReplica {
+			display: flex;
+			
+		}
+	}
+}

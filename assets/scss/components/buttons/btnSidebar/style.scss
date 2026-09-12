@@ -1,0 +1,64 @@
+.SideBarIconBnt1 {
+	display: block;
+	background-image: url("../public/icons/iconsSideBar/iconsWhats.svg");
+	min-width: 1.76rem;
+	min-height: 1.52rem;
+	background-size: cover;
+    border-radius: 5px;
+	background-repeat: no-repeat;
+	object-fit: cover;
+    cursor: pointer;
+
+    
+}
+.SideBarIconBnt2 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconInsta.svg");
+	
+}
+
+.SideBarIconBnt3 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconLikedin.svg");
+	
+}
+
+.SideBarIconBnt4 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconGitHub.svg");
+	
+}
+
+.SideBarIconBnt5 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconEmail.svg");
+	
+}
+
+.SideBarIconBnt6 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconCurriculum.svg");
+	
+}
+
+.SideBarIconBnt7 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconGridCurriculum.svg");
+	
+}
+
+.SideBarIconBnt8 {
+	@extend .SideBarIconBnt7;
+}
+
+.SideBarIconBnt9 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconThemeDark.svg");
+	
+}
+
+
+.SideBarIconBnt10 {
+	@extend .SideBarIconBnt1;
+	background-image: url("../public/icons/iconsSideBar/iconAccessibility.svg");
+}

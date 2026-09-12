@@ -1,0 +1,26 @@
+	.icon1 {
+		display: inline-block;
+		background-image: url("../public/icons/iconsMenu/home.svg");
+		min-width: 1.88rem;
+		min-height: 1.88rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		object-fit: cover;
+	}
+
+	.icon2 {
+		background-image: url("../public/icons/iconsMenu/redes.svg");
+		@extend .icon1;
+	}
+
+	.icon3 {
+		background-image: url("../public/icons/iconsMenu/pdfs.svg");
+		@extend .icon1;
+	}
+
+	.icon4 {
+		background-image: url("../public/icons/iconsMenu/configs.svg");
+		@extend .icon1;
+	}
+
+	

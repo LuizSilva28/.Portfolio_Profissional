@@ -1,0 +1,25 @@
+@use "./bntMenu/style.scss" as *;
+@use "./bntCloseSidebar/style.scss" as *;
+@use "./btnSidebar/style.scss" as *;
+@use "./Buttons_AreaSkills/style.scss" as *;
+
+.bntsMenu {
+	font-size: 0.8em;
+	text-align: center;
+	padding: 0px;
+	border-radius: 3px;
+	background-color: transparent;
+	border: none;
+}
+
+
+.sideBarBnts {
+	display: flex;
+	min-width: 1.76rem;
+	min-height: 1.76rem;
+	border-radius: 6px;
+	background-color: $color-douradoEscuro;
+	border: none;
+	transition: 0.3s;
+
+}

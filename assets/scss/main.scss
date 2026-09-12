@@ -1,0 +1,16 @@
+@use "./variables/colors.scss" as *;
+@use "./variables/fonts.scss" as *;
+@use "./partials/shapes/style.scss" as *;
+//@use "./componets/shape.scss";
+@use "./partials/menuMobile/menu/style.scss" as *;
+@use "./partials/carousel/container/style.scss" as *;
+@use "./partials/audio/style.scss" as *;
+@use "./partials/video/style.scss" as *;
+@use "./partials/Grid/style.scss" as *;
+@use "./partials/pdfs/style.scss" as *;
+@use "./partials/projects/style.scss" as *;
+
+//Graphcs
+@use "./partials/charts/style.scss" as *;
+
+@use "./style.scss" as *;
