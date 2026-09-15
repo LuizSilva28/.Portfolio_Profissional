@@ -1,5 +1,8 @@
+/** @format */
+
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
 	entry: {
 		index: "./assets/js/index.js",
@@ -8,35 +11,35 @@ module.exports = {
 	mode: "development",
 	devtool: "inline-source-map",
 	watch: true,
-	stats: {
-		errorDetails: true,
-	},
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: [], //!Adicionar babel-loader para transpilar o código JS moderno para versões mais antigas, garantindo compatibilidade com navegadores mais antigos.
-			},
-			{
-				test: /\.(sa|sc|c)ss$/i,
-				use: [ MiniCssExtractPlugin.loader, "css-loader", "sass-loader",
-				],
-
+				test: /\.(sa|sc)ss$/i,
+				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 			{
 				test: /\.(svg|png|jpg|jpeg|gif)$/i,
-				type: "asset/resource",
+				generator: {
+					filename: "images/[name][ext]",
+				},
 			},
 		],
 	},
+
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: "[name].css",
+			filename: "css/[name].css",
 		}),
 	],
 	output: {
 		path: path.resolve(__dirname, "public"),
-		filename: "[name].bundle.min.js",
+		filename: "js/[name].bundle.min.js",
+		clean: true, // Limpa a pasta de saída antes de cada build
+	},
+	devtool: "inline-source-map", // Gera um mapa de origem para facilitar a depuração
+	devServer: {
+		contentBase: path.join(__dirname, "public"),
+		hot: true, // Habilita o modo de atualização automática
+		open: true, // Abre o navegador automaticamente
 	},
 };

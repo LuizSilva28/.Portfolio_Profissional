@@ -1,7 +1,5 @@
-
 @use "../base/variables/colors.scss" as *;
 @use "../base/variables/fonts.scss" as *;
-
 
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
@@ -98,7 +96,7 @@
 
 		#container-projects {
 			display: flex;
-			margin: 1rem 0 0 0 ;
+			margin: 1rem 0 0 0;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 .SideBarIconBnt1 {
 	display: block;
-	background-image: url("../public/icons/iconsSideBar/iconsWhats.svg");
+	background-image: url("../../../../imgs/icons/iconsSideBar/iconsWhats.svg");
 	min-width: 1.76rem;
 	min-height: 1.52rem;
 	background-size: cover;
@@ -9,42 +9,42 @@
 	object-fit: cover;
     cursor: pointer;
 
-    
+
 }
 .SideBarIconBnt2 {
 	@extend .SideBarIconBnt1;
-	background-image: url("../public/icons/iconsSideBar/iconInsta.svg");
-	
+	background-image: url("../../../../imgs/icons/iconsSideBar/iconInsta.svg");
+
 }
 
 .SideBarIconBnt3 {
 	@extend .SideBarIconBnt1;
-	background-image: url("../public/icons/iconsSideBar/iconLikedin.svg");
-	
+	background-image: url("../../../../imgs/icons/iconsSideBar/iconLikedin.svg");
+
 }
 
 .SideBarIconBnt4 {
 	@extend .SideBarIconBnt1;
-	background-image: url("../public/icons/iconsSideBar/iconGitHub.svg");
-	
+	background-image: url("../../../../imgs/icons/iconsSideBar/iconGitHub.svg");
+
 }
 
 .SideBarIconBnt5 {
 	@extend .SideBarIconBnt1;
 	background-image: url("../../../../imgs/icons/iconsSideBar/iconEmail.svg");
-	
+
 }
 
 .SideBarIconBnt6 {
 	@extend .SideBarIconBnt1;
 	background-image: url("../../../../imgs/icons/iconsSideBar/iconCurriculum.svg");
-	
+
 }
 
 .SideBarIconBnt7 {
 	@extend .SideBarIconBnt1;
 	background-image: url("../../../../imgs/icons/iconsSideBar/iconGridCurriculum.svg");
-	
+
 }
 
 .SideBarIconBnt8 {
@@ -54,7 +54,7 @@
 .SideBarIconBnt9 {
 	@extend .SideBarIconBnt1;
 	background-image: url("../../../../imgs/icons/iconsSideBar/iconThemeDark.svg");
-	
+
 }
 
 

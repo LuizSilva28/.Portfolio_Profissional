@@ -1,6 +1,9 @@
 @use "./base/variables/colors.scss" as *;
 @use "./base/variables/fonts.scss" as *;
-@use "./components/" as *;
+
+@use "./pages/style.scss" as *;
+
+@use "./components/buttons/buttons.scss" as *;
 //@use "./componets/shape.scss";
 @use "./components/menuMobile/menu/style.scss" as *;
 @use "./components/carousel/container/style.scss" as *;
@@ -8,9 +11,8 @@
 @use "./components/video/style.scss" as *;
 @use "./components/grid/style.scss" as *;
 @use "./components/pdfs/style.scss" as *;
-@use "./components/projects/style.scss" as *;
 
 //Graphcs
 @use "./components/charts/style.scss" as *;
 
-@use "./pages/style.scss" as *;
+@use "./components/projects/style.scss" as *;

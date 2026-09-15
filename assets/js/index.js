@@ -1,4 +1,5 @@
-import "../../scss/main.scss";
+// IMPORTA ESTILOS PARA O WEBPACK USAR E MINIFICAR
+import "../../assets/scss/_index.scss";
 
 import { allBntsMenu } from "./components/menuMobile/menu/index.js";
 
