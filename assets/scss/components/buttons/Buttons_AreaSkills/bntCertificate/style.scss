@@ -1,5 +1,5 @@
-@use "../../../../base/variables/fonts.scss" as *;
-@use "../../../../base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
+@use "@styles/base/variables/colors.scss" as *;
 
 .bntCertificate {
 	display: flex;
@@ -18,10 +18,10 @@
 		height: 1.8rem;
         border-radius: 0.5rem;
 		background-color: $color-cinza;
-        background-image: url("../../../../../imgs/icons/areaSkills/openCertificate.svg");
+        background-image: url("@imgs/icons/areaSkills/openCertificate.svg");
         background-size: 70%;
         background-repeat: no-repeat;
         background-position: center;
-        
+
 	}
 }

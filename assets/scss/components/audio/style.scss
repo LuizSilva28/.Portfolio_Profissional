@@ -1,7 +1,7 @@
 /** @format */
 
-@use "../../base/variables/fonts.scss" as *;
-@use "../../base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
+@use "@styles/base/variables/colors.scss" as *;
 
 // Fazer uma mixin para otimizar código
 .audio-player {
@@ -21,7 +21,7 @@
 	.play {
 		display: block;
 
-		background-image: url("../../../imgs/icons/content/iconPlay.svg");
+		background-image: url("@imgs/icons/content/iconPlay.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 		width: 1rem;
@@ -29,7 +29,7 @@
 	}
 	.pause {
 		@extend .play;
-		background-image: url("../../../imgs/icons/content/iconPause.svg");
+		background-image: url("@imgs/icons/content/iconPause.svg");
 	}
 	#progress-time-container {
 		flex-grow: 1;
@@ -75,11 +75,11 @@
 	}
 	.volume {
 		@extend .play;
-		background-image: url("../../../imgs/icons/content/iconAudio.svg");
+		background-image: url("@imgs/icons/content/iconAudio.svg");
 	}
 	.volumeMuted {
 		@extend .play;
-		background-image: url("../../../imgs/icons/content/iconAudioMuted.svg");
+		background-image: url("@imgs/icons/content/iconAudioMuted.svg");
 	}
 
 	#bar-volume-container {

@@ -7,14 +7,20 @@ module.exports = {
 	entry: {
 		index: "./assets/js/index.js",
 		pdfjs_worker: "./node_modules/pdfjs-dist/build/pdf.worker.mjs",
-	},
+ 	},
 	mode: "development",
 	devtool: "inline-source-map",
 	watch: true,
+	resolve: {
+		alias: {
+			"@styles": path.resolve(__dirname, "assets/scss"),
+			"@imgs": path.resolve(__dirname, "assets/imgs"), 
+		},
+	},
 	module: {
 		rules: [
 			{
-				test: /\.(sa|sc)ss$/i,
+				test: /\.(sa|sc)ss$/,
 				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 			{
@@ -33,6 +39,7 @@ module.exports = {
 	],
 	output: {
 		path: path.resolve(__dirname, "public"),
+
 		filename: "js/[name].bundle.min.js",
 		clean: true, // Limpa a pasta de saída antes de cada build
 	},
