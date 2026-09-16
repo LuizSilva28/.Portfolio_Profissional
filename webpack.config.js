@@ -2,19 +2,19 @@
 
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: {
 		index: "./assets/js/index.js",
 		pdfjs_worker: "./node_modules/pdfjs-dist/build/pdf.worker.mjs",
- 	},
+	},
 	mode: "development",
-	devtool: "inline-source-map",
 	watch: true,
 	resolve: {
 		alias: {
 			"@styles": path.resolve(__dirname, "assets/scss"),
-			"@imgs": path.resolve(__dirname, "assets/imgs"), 
+			"@imgs": path.resolve(__dirname, "assets/imgs"),
 		},
 	},
 	module: {
@@ -25,8 +25,9 @@ module.exports = {
 			},
 			{
 				test: /\.(svg|png|jpg|jpeg|gif)$/i,
+				type: "asset/resource",
 				generator: {
-					filename: "images/[name][ext]",
+					filename: "assets/imgs/link_sass/[name][ext]",
 				},
 			},
 		],
@@ -36,17 +37,14 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "css/[name].css",
 		}),
+		new CopyWebpackPlugin({
+			patterns: [{ from: "assets/imgs", to: "assets/imgs" }],
+		}),
 	],
 	output: {
 		path: path.resolve(__dirname, "public"),
-
 		filename: "js/[name].bundle.min.js",
 		clean: true, // Limpa a pasta de saída antes de cada build
 	},
-	devtool: "inline-source-map", // Gera um mapa de origem para facilitar a depuração
-	devServer: {
-		contentBase: path.join(__dirname, "public"),
-		hot: true, // Habilita o modo de atualização automática
-		open: true, // Abre o navegador automaticamente
-	},
 };
+

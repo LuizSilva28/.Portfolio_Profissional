@@ -1,8 +1,8 @@
 @use "./base/variables/colors.scss" as *;
 @use "./base/variables/fonts.scss" as *;
 
+@use "./components/shapes/style.scss" as *;
 @use "./pages/style.scss" as *;
-
 @use "./components/buttons/buttons.scss" as *;
 //@use "./componets/shape.scss";
 @use "./components/menuMobile/menu/style.scss" as *;

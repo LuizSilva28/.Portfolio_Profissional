@@ -14,7 +14,7 @@ export const standardCardHardskills = [
 	},
 	{
 		id: 2,
-		image: "assets/imgs/hardskills/img5.png",
+		image: "./assets/imgs/hardskills/img5.png",
 		title: "Node.js",
 		description: {
 			xp: "1 ano",

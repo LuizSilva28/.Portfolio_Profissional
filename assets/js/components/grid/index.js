@@ -8,7 +8,7 @@ import {
 import { displayPDF } from "../pdfs/index.js";
 
 export function createGridSkills(object) {
-	
+
 
 	const containerSkills = document.querySelector(
 		'[data-gridSkills="gridSkills"]',
@@ -17,7 +17,7 @@ export function createGridSkills(object) {
 
 	const containerGrid = document.createElement("div");
 
-	
+
 
 	containerGrid.setAttribute("data-areaskills", "containerGrid");
 	containerGrid.id = "container-skills";
@@ -77,7 +77,7 @@ export function createMiniCard(object) {
 
 	miniCard.style.backgroundImage = `url('${object.image}')`;
 	containerGrid.appendChild(miniCard);
-	
+
 	object.id === 1 ? miniCard.classList.add("selected") : "";
 
 	miniCard.addEventListener("click", function () {
