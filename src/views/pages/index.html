@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!-- @format -->
+
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -72,9 +74,9 @@
 							data-audio="speed-audio">
 							<span
 								class="textBntSpeedAudio"
-								data-audio="contentBntAudio"
-								>1x</span
-							>
+								data-audio="contentBntAudio">
+								1x
+							</span>
 						</button>
 						<button
 							id="bnt-volume"
@@ -97,10 +99,17 @@
 						title="Apresentação profissional"
 						frameborder="0"
 						sandbox="allow-scripts allow-same-origin"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; 		gyroscope; picture-in-picture; web-share"
+						allow="
+							accelerometer;
+							autoplay;
+							clipboard-write;
+							encrypted-media;
+							gyroscope;
+							picture-in-picture;
+							web-share;
+						"
 						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen>
-					</iframe>
+						allowfullscreen></iframe>
 				</article>
 			</section>
 			<!-- <div class="espacoVazio"></div> -->
@@ -144,7 +153,10 @@
 						<h3>Hardskills</h3>
 						<button>Cartificado</button>
 					</div>
-					<div class="carouselVertical"></div>
+					<div class="carousel-container">
+						<div class="carousel"></div>
+						<div class="carousel-buttons"></div>
+					</div>
 				</section>
 			</section>
 
@@ -153,19 +165,22 @@
 					<i>icon</i>
 					<h2>Deixe sua avaliação</h2>
 
-					<label for="name">Nome: </label>
+					<label for="name">Nome:</label>
 					<input
 						type="text"
 						id="name"
 						placeholder="ex: João Gustavo" />
 
-					<label for="email">Email: </label>
+					<label for="email">Email:</label>
 					<input
 						type="email"
 						id="email"
 						placeholder="ex: joão@gmail.com" />
 
-					<h3>Nível de satisção <i>icon</i></h3>
+					<h3>
+						Nível de satisção
+						<i>icon</i>
+					</h3>
 					<ul id="container-stars">
 						<li></li>
 						<li></li>
@@ -188,7 +203,10 @@
 					<button>Avalie</button>
 					<div class="cardComent">
 						<p>nome</p>
-						<p>nota <i>icon</i></p>
+						<p>
+							nota
+							<i>icon</i>
+						</p>
 						<p>email</p>
 						<p>comentário</p>
 					</div>

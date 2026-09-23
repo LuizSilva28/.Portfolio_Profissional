@@ -3,7 +3,7 @@ import "../../assets/scss/_index.scss";
 
 import { allBntsMenu } from "./components/menuMobile/menu/index.js";
 
-import { createCarousel } from "./components/carousel/container/script.js";
+import { createCarousel } from "./components/carousels/carousel/container/script.js";
 
 import { createAudio } from "./components/audio/index.js";
 

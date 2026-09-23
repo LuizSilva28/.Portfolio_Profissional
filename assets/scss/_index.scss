@@ -6,7 +6,7 @@
 @use "./components/buttons/buttons.scss" as *;
 //@use "./componets/shape.scss";
 @use "./components/menuMobile/menu/style.scss" as *;
-@use "./components/carousel/container/style.scss" as *;
+@use "./components/carousels/carousel/container/style.scss" as *;
 @use "./components/audio/style.scss" as *;
 @use "./components/video/style.scss" as *;
 @use "./components/grid/style.scss" as *;
@@ -15,4 +15,5 @@
 //Graphcs
 @use "./components/charts/style.scss" as *;
 
+@use "./components/carousels/carouselVertical/styles.scss" as *;
 @use "./components/projects/style.scss" as *;

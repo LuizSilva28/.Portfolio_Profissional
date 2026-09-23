@@ -1,8 +1,12 @@
 /** @format */
 
 import { createBntCertificate } from "../buttons/criarBnts";
+import { Carousel3DVertical } from "../carousels/carouselVertical/script";
 
 const cardPrincipalProjects = document.getElementById("cardPrincipal");
+const elementCarousel = document.querySelector(".carousel");
+const carouselContainer = document.querySelector(".carousel-container");
+const carouselButtons = document.querySelector(".carousel-container");
 
 function deleteCardPrevious() {
 	let cardDetails = document.querySelector(
@@ -11,37 +15,37 @@ function deleteCardPrevious() {
 	cardDetails.parentNode.removeChild(cardDetails);
 }
 
-export function createMiniCard(object) {
-	
-	const containerGrid = document.querySelector(`#carouselProjects`);
-	const miniCard = document.createElement("div");
+// export function createMiniCard(object) {
 
-	miniCard.classList.add("miniCard");
-	miniCard.dataset.minicard = "miniCard";
-	miniCard.classList.add(`item-${object.id}`);
+// 	const containerGrid = document.querySelector(`#carouselProjects`);
+// 	const miniCard = document.createElement("div");
 
-	miniCard.style.backgroundImage = `url('${object.image}')`;
-	containerGrid.appendChild(miniCard);
+// 	miniCard.classList.add("miniCard");
+// 	miniCard.dataset.minicard = "miniCard";
+// 	miniCard.classList.add(`item-${object.id}`);
 
-	object.id === 1 ? miniCard.classList.add("selected") : "";
+// 	miniCard.style.backgroundImage = `url('${object.image}')`;
+// 	containerGrid.appendChild(miniCard);
 
-	miniCard.addEventListener("click", function () {
-		const elementsMiniCard = document.querySelectorAll(
-			'[data-minicard = "miniCard"]',
-		);
-		elementsMiniCard.forEach((element) => {
-			element.classList.remove("selected");
-		});
-		miniCard.classList.add("selected");
-		deleteCardPrevious();
-		createCardForDetails(object);
-	});
+// 	object.id === 1 ? miniCard.classList.add("selected") : "";
 
-	// miniCard.addEventListener("mouseenter", function () {
-	// 	let newLocation = myPosition(object.id);
-	// 	moveBackgroundAnimated(newLocation);
-	// });
-}
+// 	miniCard.addEventListener("click", function () {
+// 		const elementsMiniCard = document.querySelectorAll(
+// 			'[data-minicard = "miniCard"]',
+// 		);
+// 		elementsMiniCard.forEach((element) => {
+// 			element.classList.remove("selected");
+// 		});
+// 		miniCard.classList.add("selected");
+// 		deleteCardPrevious();
+// 		createCardForDetails(object);
+// 	});
+
+// 	// miniCard.addEventListener("mouseenter", function () {
+// 	// 	let newLocation = myPosition(object.id);
+// 	// 	moveBackgroundAnimated(newLocation);
+// 	// });
+// }
 
 export function createCardForDetails(object) {
 	const containerGrid = document.querySelector(`.cardPrincipal`);
@@ -59,9 +63,9 @@ export function createCardForDetails(object) {
 
 	const descriptionsOfCard = document.createElement("div");
 	descriptionsOfCard.classList.add("descriptionsOfCard");
-	
+
 	const subtitleOfCard = document.createElement("p");
-	subtitleOfCard.classList.add("subtitle");	
+	subtitleOfCard.classList.add("subtitle");
 	subtitleOfCard.textContent = `${object.subtitle}`;
 
 	const listOfTechnologies = document.createElement("ul");
@@ -71,9 +75,7 @@ export function createCardForDetails(object) {
 		const listItem = document.createElement("li");
 		listItem.textContent = `${technology.name} - ${technology.percent}`;
 		listOfTechnologies.append(listItem);
-	},);
-
-	
+	});
 
 	descriptionsOfCard.append(subtitleOfCard, listOfTechnologies);
 
@@ -86,10 +88,10 @@ export function createCardForDetails(object) {
 	//createBntCertificate(object.certificate);
 }
 
-export function createAllCardsForProjects(object) {
-	console.log(object);
-	object.forEach((object) => {
-		createMiniCard(object);
-	});
-	createCardForDetails(object[0]);
+export function createAllCardsForProjects(objects) {
+	new Carousel3DVertical(elementCarousel, carouselButtons, objects);
+	// object.forEach((object) => {
+	// 	createMiniCard(object);
+	// });
+	createCardForDetails(objects[0]);
 }
