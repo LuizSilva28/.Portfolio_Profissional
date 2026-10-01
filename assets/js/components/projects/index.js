@@ -1,97 +1,113 @@
 /** @format */
+// APLICAR SEGUINTES MUDANÇAS:
+// 1. Mudar nome da pasta para cards
+// 2. Criar classe para substituir a função createCardForDetails
+// 3. Associar a classe do cardDetais a classe Carousel3DVertical
+// 4. A instancia de Carousel3DVertical será chamando em outro script no lugar de createAllCardsForProjects
 
-import { createBntCertificate } from "../buttons/criarBnts";
 import { Carousel3DVertical } from "../carousels/carouselVertical/script";
+import { createBntForCertificate } from "./../buttons/criarBnts/index";
 
-const cardPrincipalProjects = document.getElementById("cardPrincipal");
+// const cardPrincipalProjects = document.getElementById("containerShowCase");
 const elementCarousel = document.querySelector(".carousel");
-const carouselContainer = document.querySelector(".carousel-container");
+// const carouselContainer = document.querySelector(".carousel-container");
 const carouselButtons = document.querySelector(".carousel-container");
 
-function deleteCardPrevious() {
-	let cardDetails = document.querySelector(
-		'[data-gridskills="cardDetailsProjects"]',
-	);
-	cardDetails.parentNode.removeChild(cardDetails);
-}
+// const showCaseContainer = document.getElementById("container-projects");
+const elementShowCase = document.getElementById("elementShowCase");
+const televisionImg = document.querySelector(".televisionImg");
+const title = document.querySelector(".title");
+const subtitle = document.querySelector(".subtitle");
+const listInfoContainer = document.querySelector(".listInfoContainer");
+const button = document.querySelector(".button");
 
-// export function createMiniCard(object) {
+// elementShowCase.getElementsByTagName("li")
+let showCaseInfos = {
+	elementShowCase,
+	televisionImg,
+	title,
+	subtitle,
+	listInfoContainer,
+	button,
+};
 
-// 	const containerGrid = document.querySelector(`#carouselProjects`);
-// 	const miniCard = document.createElement("div");
+export class showCase {
+	constructor(container, object) {
+		this.container = container;
+		this.object = object;
+	}
 
-// 	miniCard.classList.add("miniCard");
-// 	miniCard.dataset.minicard = "miniCard";
-// 	miniCard.classList.add(`item-${object.id}`);
+	createShowCase(object) {
+		this.televisionImg = document.createElement("div");
+		this.televisionImg.classList.add("televisionImg", "slide-in");
+		this.televisionImg.style.backgroundImage = `url(${object.image})`;
 
-// 	miniCard.style.backgroundImage = `url('${object.image}')`;
-// 	containerGrid.appendChild(miniCard);
+		this.title = document.createElement("p");
+		this.title.classList.add("title", "slide-in");
+		this.title.innerText = `${object.title}`;
 
-// 	object.id === 1 ? miniCard.classList.add("selected") : "";
+		this.subtitle = document.createElement("p");
+		this.subtitle.classList.add("subtitle", "slide-in");
+		this.subtitle.innerText = `${object?.subtitle}`;
 
-// 	miniCard.addEventListener("click", function () {
-// 		const elementsMiniCard = document.querySelectorAll(
-// 			'[data-minicard = "miniCard"]',
-// 		);
-// 		elementsMiniCard.forEach((element) => {
-// 			element.classList.remove("selected");
-// 		});
-// 		miniCard.classList.add("selected");
-// 		deleteCardPrevious();
-// 		createCardForDetails(object);
-// 	});
+		this.listInfoContainer = document.createElement("div");
+		this.listInfoContainer.classList.add("listInfoContainer", "slide-in");
 
-// 	// miniCard.addEventListener("mouseenter", function () {
-// 	// 	let newLocation = myPosition(object.id);
-// 	// 	moveBackgroundAnimated(newLocation);
-// 	// });
-// }
+		object?.list?.forEach((obj) => {
+			let li = document.createElement("li");
+			li.classList.add("alingParagraphs");
+			let spanName = document.createElement("span");
+			spanName.innerText = obj.name;
+			let spanValue = document.createElement("span");
+			spanValue.innerText = obj.value;
 
-export function createCardForDetails(object) {
-	const containerGrid = document.querySelector(`.cardPrincipal`);
-	const cardDetails = document.createElement("div");
-	cardDetails.classList.add("cardDetails");
-	cardDetails.setAttribute("data-gridSkills", "cardDetailsProjects");
+			li.append(spanName, spanValue);
 
-	const imgOfCard = document.createElement("div");
-	imgOfCard.classList.add("imgOfCard");
-	imgOfCard.style.backgroundImage = `url('${object.image}')`;
+			this.listInfoContainer.appendChild(li);
+		});
 
-	const titleOfCard = document.createElement("h6");
-	titleOfCard.classList.add("title");
-	titleOfCard.textContent = `${object.title}`;
+		// !substituir por método de classe que deve ser associada
+		this.buttonCertificate = createBntForCertificate();
 
-	const descriptionsOfCard = document.createElement("div");
-	descriptionsOfCard.classList.add("descriptionsOfCard");
+		// this.btnShowCase = document.createElement("button");
+		// this.btnShowCase.classList.add("btn-showCase");
+	}
 
-	const subtitleOfCard = document.createElement("p");
-	subtitleOfCard.classList.add("subtitle");
-	subtitleOfCard.textContent = `${object.subtitle}`;
+	upShowCase(currentObj) {
+		this.container.removeChild(this.televisionImg);
+		this.container.removeChild(this.title);
+		this.container.removeChild(this.subtitle);
+		this.container.removeChild(this.listInfoContainer);
+		this.container.removeChild(this.buttonCertificate);
+		this.createShowCase(currentObj);
+		this.container.append(
+			this.televisionImg,
+			this.title,
+			this.subtitle,
+			this.listInfoContainer,
+			this.buttonCertificate,
+		);
+	}
 
-	const listOfTechnologies = document.createElement("ul");
-	listOfTechnologies.className = "listOfTechnologies";
-
-	object.technologies.forEach((technology) => {
-		const listItem = document.createElement("li");
-		listItem.textContent = `${technology.name} - ${technology.percent}`;
-		listOfTechnologies.append(listItem);
-	});
-
-	descriptionsOfCard.append(subtitleOfCard, listOfTechnologies);
-
-	cardDetails.appendChild(imgOfCard);
-	cardDetails.appendChild(titleOfCard);
-	cardDetails.appendChild(descriptionsOfCard);
-
-	containerGrid.appendChild(cardDetails);
-
-	//createBntCertificate(object.certificate);
+	render() {
+		this.createShowCase(this.object);
+		this.container.append(
+			this.televisionImg,
+			this.title,
+			this.subtitle,
+			this.listInfoContainer,
+			this.buttonCertificate,
+		);
+		console.log(this.container);
+	}
 }
 
 export function createAllCardsForProjects(objects) {
-	new Carousel3DVertical(elementCarousel, carouselButtons, objects);
-	// object.forEach((object) => {
-	// 	createMiniCard(object);
-	// });
-	createCardForDetails(objects[0]);
+	new Carousel3DVertical(
+		elementCarousel,
+		carouselButtons,
+		objects,
+		{ showCase: true },
+		elementShowCase,
+	);
 }

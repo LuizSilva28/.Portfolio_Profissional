@@ -1,27 +1,29 @@
+/** @format */
+
 @use "@styles/base/variables/fonts.scss" as *;
 @use "@styles/base/variables/colors.scss" as *;
 
 .bntCertificate {
 	display: flex;
-    justify-content: end;
-    align-items: center;
+	justify-content: end;
+	align-items: center;
 	border: none;
 	border-radius: 0.5rem;
 	background-color: $color-bege;
-    font-size: $font-small;
+	font-size: $font-small;
 	width: 6.25rem;
 	height: 1.6rem;
 	color: $color-black;
+	margin: auto auto 10px auto;
 
 	.iconCertificate {
 		width: 1.5rem;
 		height: 1.8rem;
-        border-radius: 0.5rem;
+		border-radius: 0.5rem;
 		background-color: $color-cinza;
-        background-image: url("@imgs/icons/areaSkills/openCertificate.svg");
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center;
-
+		background-image: url("@imgs/icons/areaSkills/openCertificate.svg");
+		background-size: 70%;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 }

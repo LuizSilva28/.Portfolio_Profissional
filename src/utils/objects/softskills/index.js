@@ -5,101 +5,110 @@ export const standardCardSoftskills = [
 		id: 1,
 		image: "assets/imgs/softskills/img3.jpeg",
 		title: "Gestão de tempo",
-		description: {
-			xp: "2 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
+		list: [
+			{name:"xp", value: "2 ano"},
+			{name: "skillLevel", value: "75%"},
+			{name: "projects", value: 5},
+		],
 	},
 	{
 		id: 2,
 		image: "assets/imgs/softskills/img7.jpeg",
 		title: "Comunicação",
-		description: {
-			xp: "3 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
+		list: [
+			{name: "xp", value: "3 ano"},
+			{name: "skillLevel", value: "75%"},
+			{name: "projects", value: 5},
+		],
 	},
 	{
 		id: 3,
 		image: "assets/imgs/softskills/img6.jpeg",
 		title: "Criatividade ",
-		description: {
-			xp: "1 ano",
-			skillLevel: "50%",
-			projects: 5,
-		},
+		list: [
+			{
+				name: "xp",
+				value: "1 ano"
+			},
+			{ name:"skillLevel", value: "50%"},
+			{name:"projects", value: 5},
+		],
 	},
 	{
 		id: 4,
 		image: "assets/imgs/softskills/img1.jpeg",
 		title: "Empatia",
-		description: {
-			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 2,
-		},
+		list: [
+
+			{name: "xp", value: "1 ano"},
+			{name:"skillLevel", value: "75%"},
+			{name: "projects", value: 2},
+		],
 	},
 	{
 		id: 5,
 		image: "assets/imgs/softskills/img9.jpeg",
 		title: "Trabalho em equipe",
-		description: {
-			xp: "1 ano",
-			skillLevel: "50%",
-			projects: 1,
-		},
+		list: [
+
+			{name: "xp", value: "1 ano"},
+			{name: "skillLevel", value: "50%"},
+			{name: "projects", value: 1},
+		],
 	},
 	{
 		id: 6,
 		image: "assets/imgs/softskills/img8.png",
 		title: "Melhoria de processo",
-		description: {
-			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
+		list: [
+
+			{name: "xp", value: "1 ano"},
+			{ name: "skillLevel", value: "75%"},
+			{name: "projects", value: 5},
+		],
 	},
 
 	{
 		id: 7,
 		image: "assets/imgs/softskills/img10.png",
 		title: "Resolução de problemas",
-		description: {
-			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
+		list: [
+
+			{name: "xp", value: "1 ano"},
+			{ name: "skillLevel", value: "75%"},
+			{name: "projects", value: 5},
+		],
 	},
 	{
 		id: 8,
 		image: "assets/imgs/softskills/img4.jpeg",
 		title: "Curiosidade",
-		description: {
-			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
+		list: [
+
+			{name: "xp", value: "1 ano"},
+			{ name: "skillLevel", value: "75%"},
+			{name: "projects", value: 5},
+		],
 	},
 	{
 		id: 9,
 		image: "assets/imgs/softskills/img5.png",
 		title: "Capacidade de Analise",
-		description: {
-			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
+		list: [
+
+			{name: "xp", value: "1 ano"},
+			{ name: "skillLevel", value: "75%"},
+			{name: "projects", value: 5},
+		],
 	},
 	{
 		id: 10,
 		image: "assets/imgs/softskills/img2.gif",
 		title: "lógica de programação",
-		description: {
-			xp: "1 ano",
-			skillLevel: "75%",
-			projects: 5,
-		},
+		list: [
+			{name: "xp", value: "1 ano"},
+			{ name: "skillLevel", value: "75%"},
+			{name: "projects", value: 5},
+		],
 	},
 ];

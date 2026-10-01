@@ -1,3 +1,7 @@
+/** @format */
+
+// !Refatorar usar classes e lógica de poo para melhorar o código
+
 import { standardCardHardskills } from "../../../../../src/utils/objects/hardskills/index.js";
 import { standardCardSoftskills } from "../../../../../src/utils/objects/softskills/index.js";
 
@@ -9,10 +13,10 @@ export function createBntsMenu(
 	classBtn,
 	classIcon,
 	textId,
-	textBtn
+	textBtn,
 ) {
 	const containerMenuMobile = document.querySelector(
-		"#container-menu-mobile"
+		"#container-menu-mobile",
 	);
 	const bntsMenu = document.createElement("button");
 	bntsMenu.id = idBtn;
@@ -26,81 +30,75 @@ export function createBntsMenu(
 	bntsMenu.appendChild(icon);
 	bntsMenu.appendChild(text);
 	containerMenuMobile.appendChild(bntsMenu);
-	bntsMenu.id === "bntMenu1"
-		? 0
-		: bntsMenu.addEventListener("click", (e) => {
-				e.preventDefault;
-				let bntClicked = e.currentTarget.id;
+	bntsMenu.id === "bntMenu1" ?
+		0
+	:	bntsMenu.addEventListener("click", (e) => {
+			e.preventDefault;
+			let bntClicked = e.currentTarget.id;
 
-				let textBnt = "";
-				switch (bntClicked) {
-					case "bntMenu2":
-						for (let i = 1; i <= 5; i++) {
-							i === 1
-								? (textBnt = "whatsapp")
-								: i === 2
-								? (textBnt = "instagram")
-								: i === 3
-								? (textBnt = "linkedin")
-								: i === 4
-								? (textBnt = "github")
-								: (textBnt = "email");
+			let textBnt = "";
+			switch (bntClicked) {
+				case "bntMenu2":
+					for (let i = 1; i <= 5; i++) {
+						i === 1 ? (textBnt = "whatsapp")
+						: i === 2 ? (textBnt = "instagram")
+						: i === 3 ? (textBnt = "linkedin")
+						: i === 4 ? (textBnt = "github")
+						: (textBnt = "email");
 
-							createBntsSideBar(
-								`sideBarBnt-${i}`,
-								"button",
-								"sideBarBnts",
-								`SideBarIconBnt${i}`,
-								`text${i}`,
-								textBnt
-							);
-						}
-						bntCloseSidebar();
-						break;
-					case "bntMenu3":
-						for (let i = 6; i <= 8; i++) {
-							i === 6
-								? (textBnt = "Currículo")
-								: i === 7
-								? (textBnt = "Unicesumar")
-								: (textBnt = "Onibitcode");
+						createBntsSideBar(
+							`sideBarBnt-${i}`,
+							"button",
+							"sideBarBnts",
+							`SideBarIconBnt${i}`,
+							`text${i}`,
+							textBnt,
+						);
+					}
+					bntCloseSidebar();
+					break;
+				case "bntMenu3":
+					for (let i = 6; i <= 8; i++) {
+						i === 6 ? (textBnt = "Currículo")
+						: i === 7 ? (textBnt = "Unicesumar")
+						: (textBnt = "Onibitcode");
 
-							createBntsSideBar(
-								`sideBarBnt-${i}`,
-								"button",
-								"sideBarBnts",
-								`SideBarIconBnt${i}`,
-								`text${i}`,
-								textBnt
-							);
-						}
-						bntCloseSidebar();
+						createBntsSideBar(
+							`sideBarBnt-${i}`,
+							"button",
+							"sideBarBnts",
+							`SideBarIconBnt${i}`,
+							`text${i}`,
+							textBnt,
+						);
+					}
+					bntCloseSidebar();
 
-						break;
-					case "bntMenu4":
-						for (let i = 9; i <= 10; i++) {
-							i === 9
-								? (textBnt = "tema")
-								: (textBnt = "Acessibilidade");
-							createBntsSideBar(
-								`sideBarBnt-${i}`,
-								"button",
-								"sideBarBnts",
-								`SideBarIconBnt${i}`,
-								`text${i}`,
-								textBnt
-							);
-						}
-						bntCloseSidebar();
-						break;
-					default:
-						console.log("Deu erro");
-				}
-				const sideBar = document.getElementById("side-bar");
-				sideBar.classList.add("sideBarClose");
-				const closeBnt = document.querySelector("#bntCloseSidebar");
-				closeBnt.classList.add("closeBnt");
-		  });
+					break;
+				case "bntMenu4":
+					for (let i = 9; i <= 10; i++) {
+						i === 9 ?
+							(textBnt = "tema")
+						:	(textBnt = "Acessibilidade");
+						createBntsSideBar(
+							`sideBarBnt-${i}`,
+							"button",
+							"sideBarBnts",
+							`SideBarIconBnt${i}`,
+							`text${i}`,
+							textBnt,
+						);
+					}
+					bntCloseSidebar();
+					break;
+				default:
+					console.log("Deu erro");
+			}
+			const sideBar = document.getElementById("side-bar");
+			sideBar.classList.add("sideBarClose");
+			const closeBnt = document.querySelector("#bntCloseSidebar");
+			closeBnt.classList.add("closeBnt");
+		});
 }
 
 export function bntCloseSidebar() {
@@ -142,7 +140,7 @@ export function createBntsSideBar(
 	classBtn,
 	classIcon,
 	textId,
-	textBtn
+	textBtn,
 ) {
 	const containerlayoutSideBar = document.querySelector(".layoutSideBar");
 	const divDadBnts = document.createElement("div");
@@ -172,7 +170,7 @@ export function createBntsSideBar(
 
 export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 	const containerButtons = document.querySelector(
-		'[data-areaSkills="containerButtons"]'
+		'[data-areaSkills="containerButtons"]',
 	);
 	const buttonsAreaSkills = document.createElement("buttom");
 
@@ -186,27 +184,27 @@ export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 
 	buttonsAreaSkills.addEventListener("click", () => {
 		const bntSoftskills = document.querySelector(
-			'[data-areaSkills="Softskills"]'
+			'[data-areaSkills="Softskills"]',
 		);
 		const bntHardskills = document.querySelector(
-			'[data-areaSkills="Hardskills"]'
+			'[data-areaSkills="Hardskills"]',
 		);
 		const gridskiils = document.querySelector(
-			'[data-areaskills="containerGrid"]'
+			'[data-areaskills="containerGrid"]',
 		);
 		if (idBtn === 1) {
-			bntHardskills === null
-				? buttonsAreaSkills.classList.add("activeSkills")
-				: "";
+			bntHardskills === null ?
+				buttonsAreaSkills.classList.add("activeSkills")
+			:	"";
 
 			gridskiils.parentNode.removeChild(gridskiils);
 
 			createGridSkills(standardCardHardskills);
 		} else if (idBtn === 2) {
 			bntHardskills.classList.remove("activeSkills");
-			bntSoftskills === null
-				? buttonsAreaSkills.classList.add("activeSkills")
-				: "";
+			bntSoftskills === null ?
+				buttonsAreaSkills.classList.add("activeSkills")
+			:	"";
 
 			gridskiils.parentNode.removeChild(gridskiils);
 			createGridSkills(standardCardSoftskills);
@@ -222,9 +220,10 @@ export function createBntsForControlls(textButtom, idBnt) {
 	return bntPanelControll;
 }
 
+// !TRANSFORMAR EM CLASSE E UNIFICAR BOTÕES DO GRID DE HABILIDADES COM DE PROJETOS
 export function createBntCertificate(certificateURL) {
 	const cardDetails = document.querySelector(
-		'[data-gridskills="cardDetails"]'
+		'[data-gridskills="cardDetails"]',
 	);
 
 	const bntCertificate = document.createElement("button");
@@ -241,6 +240,26 @@ export function createBntCertificate(certificateURL) {
 		//window.location.href = `${certificateURL}`;
 		createModalCertificate(certificateURL);
 	});
+}
+
+// !TRANSFORMAR EM CLASSE
+export function createBntForCertificate(certificateURL) {
+	const bntCertificate = document.createElement("button");
+	bntCertificate.textContent = "Certificado";
+	bntCertificate.classList.add("bntCertificate");
+
+	const iconBntCertificate = document.createElement("i");
+	iconBntCertificate.classList.add("iconCertificate");
+
+	bntCertificate.appendChild(iconBntCertificate);
+	// container.appendChild(bntCertificate);
+
+	bntCertificate.addEventListener("click", () => {
+		//window.location.href = `${certificateURL}`;
+		createModalCertificate(certificateURL);
+	});
+
+	return bntCertificate;
 }
 
 export function hideElement(text, nameClass, elementToHide) {

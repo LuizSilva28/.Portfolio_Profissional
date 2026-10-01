@@ -8,16 +8,11 @@ import {
 import { displayPDF } from "../pdfs/index.js";
 
 export function createGridSkills(object) {
-
-
 	const containerSkills = document.querySelector(
 		'[data-gridSkills="gridSkills"]',
 	);
 
-
 	const containerGrid = document.createElement("div");
-
-
 
 	containerGrid.setAttribute("data-areaskills", "containerGrid");
 	containerGrid.id = "container-skills";
@@ -65,7 +60,6 @@ function deleteCardPrevious() {
 }
 
 export function createMiniCard(object) {
-
 	const containerGrid = document.querySelector(
 		`[data-areaskills="containerGrid"]`,
 	);
@@ -122,21 +116,21 @@ export function createCardForDetails(object) {
 	const xpDescription = document.createElement("span");
 	xpDescription.textContent = `Experiência: `;
 	const xpValue = document.createElement("span");
-	xpValue.textContent = `${object.description.xp}`;
+	xpValue.textContent = `${object.list[0].value}`;
 
 	const skillLevel = document.createElement("p");
 	skillLevel.classList.add("alingParagraphs");
 	const skillLevelDescription = document.createElement("span");
 	skillLevelDescription.textContent = `Domínio: `;
 	const skillLevelValue = document.createElement("span");
-	skillLevelValue.textContent = `${object.description.skillLevel}`;
+	skillLevelValue.textContent = `${object.list[1].value}`;
 
 	const projects = document.createElement("p");
 	projects.classList.add("alingParagraphs");
 	const projectsDescription = document.createElement("span");
 	projectsDescription.textContent = `Projetos: `;
 	const projectsValue = document.createElement("span");
-	projectsValue.textContent = `${object.description.projects}`;
+	projectsValue.textContent = `${object.list[2].value}`;
 
 	xp.append(xpDescription, xpValue);
 	skillLevel.append(skillLevelDescription, skillLevelValue);

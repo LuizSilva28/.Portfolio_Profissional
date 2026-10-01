@@ -4,10 +4,10 @@ export const standardCardProjects = [
 		image: "assets/imgs/projectsIMGs/img1.jpg",
 		title: "FashowShop",
 		subtitle: "Tecnologias usadas: ",
-		technologies: [
+		list: [
 			{
 				name: "HTML",
-				percent: "100%",
+				value: "100%",
 			}
 		],
 		access: "",
@@ -17,10 +17,10 @@ export const standardCardProjects = [
 		image: "assets/imgs/projectsIMGs/img2.jpg",
 		title: "Node.js",
 		subtitle: "Tecnologias usadas: ",
-		technologies: [
+		list: [
 			{
 				name: "Node.js",
-				percent: "80%",
+				value: "80%",
 			}
 		],
 		access: "",
@@ -30,10 +30,10 @@ export const standardCardProjects = [
 		image: "assets/imgs/projectsIMGs/img3.jpg",
 		title: "Sass",
 		subtitle: "Tecnologias usadas: ",
-		technologies: [
+		list: [
 			{
 				name: "Sass",
-				percent: "70%",
+				value: "70%",
 			}
 		],
 		access: "",
@@ -43,8 +43,8 @@ export const standardCardProjects = [
 		image: "assets/imgs/projectsIMGs/img4.jpg",
 		title: "PostgreSQL ",
 		subtitle: "Tecnologias usadas: ",
-		technologies: [
-			{name: "PostgreSQL", percent: "60%"}
+		list: [
+			{name: "PostgreSQL", value: "60%"}
 		],
 		access: "",
 	},
@@ -53,10 +53,10 @@ export const standardCardProjects = [
 		image: "assets/imgs/projectsIMGs/img5.jpg",
 		title: "Bootstrap",
 		subtitle: "Tecnologias usadas: ",
-		technologies: [
+		list: [
 			{
 				name: "Bootstrap",
-				percent: "90%",
+				value: "90%",
 			}
 		],
 		access: "",
