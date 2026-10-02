@@ -1,0 +1,139 @@
+/** @format */
+@use "@styles/base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
+.form-feedback {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	margin: 0 auto 10rem auto;
+	padding: 4rem 0rem 0 0rem;
+	font-size: $font-primary;
+
+	.layoutShape6 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		width: 100%;
+		min-width: 100vw;
+		height: 75rem;
+
+		overflow: hidden;
+		background-image: url("@imgs/Forma1.svg");
+		background-repeat: no-repeat;
+		background-size: 160%;
+		background-position-x: center;
+	}
+
+	.iconAvaliable {
+		margin: 3rem 0 0rem 0;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 0.5rem;
+		background-image: url("@imgs/icons/iconsAvaliable/customerReview.svg");
+		background-size: 70%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.titleFeedback {
+		margin: 0rem 0 3rem 0;
+
+		font-size: $font-primary;
+	}
+
+	.containerInput {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto 0.5rem auto;
+		width: 80%;
+		font-size: $font-secondary;
+
+		input {
+			height: 2em;
+			padding: 0.25rem;
+			border: 0.1rem solid $color-cinza;
+			border-radius: 0.2rem;
+			color: $color-cinza;
+
+			&:focus {
+				outline: none;
+				border: 0.1rem solid $color-cinza;
+			}
+		}
+	}
+
+	.containerLevelSatisfaction {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 0 auto;
+
+		h3 {
+			font-size: $font-primary;
+		}
+
+		.iconLevelSatsfaction {
+			@extend .iconAvaliable;
+			margin: 0 0 0 1rem;
+			background-image: url("@imgs/icons/iconsAvaliable/levelSatisfaction.svg");
+		}
+	}
+
+	.container-stars {
+		display: flex;
+		height: 2.5rem;
+		width: auto;
+
+		margin: 0 auto 1.5rem auto;
+		::marker {
+			content: none;
+		}
+
+		.star {
+			width: 1.875rem;
+			height: 1.875rem;
+			background-repeat: no-repeat;
+			background-size: 90%;
+			background-position: center;
+			cursor: pointer;
+
+			input[type="radio"] {
+				opacity: 0;
+				width: 50%;
+				height: 100%;
+			}
+		}
+
+		.star-empty {
+			background-image: url("@imgs/icons/iconsAvaliable/star-empty.svg");
+		}
+
+		.star-half {
+			background-image: url("@imgs/icons/iconsAvaliable/star-half.svg");
+		}
+
+		.star-full {
+			background-image: url("@imgs/icons/iconsAvaliable/star-full.svg");
+		}
+	}
+
+	#comentario {
+		color: black;
+		background-color: $color-bege;
+		height: 8rem;
+		width: 15rem;
+
+		&:focus {
+			outline: none;
+			border: 0.1rem solid $color-cinza;
+			padding: 0.5rem;
+		}
+	}
+}

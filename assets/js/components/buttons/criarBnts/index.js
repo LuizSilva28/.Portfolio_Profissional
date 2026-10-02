@@ -273,3 +273,155 @@ export function hideElement(text, nameClass, elementToHide) {
 
 	return bntCloseModal;
 }
+
+// ** Preciso criar um botão de avaliação em estrelas, requesitos:
+// ** ! 1- São 5 estrelas
+// *TODO
+// ** ! 2- As estrelas devem ser interativas, com o seguinte comportamento: ao passar o mouse sobre a primeira estrela, ela deve ficar preenchida pela metade ou por inteira, ao passar o mouse sobre a segunda estrela, a primeira deve ficar preenchidas e a segunda deve ser preenchida pela metade ou por inteira dependendo da escolha do usuário, e assim por diante até a quinta estrela. Ao clicar em uma estrela, todas as estrelas até aquela devem permanecer preenchidas, indicando a avaliação selecionada.
+// *TODO
+// ** ! 3- Cada estrela é um icone e cada icone(estrela) deve ter 2 estados: VAZIO, PREENCHIDO - logo se eu clicar na terceira estrela, as 3 primeiras devem ficar preenchidas e as 2 últimas devem ficar vazias, e se eu clicar na segunda estrela, a primeira e a segunda devem ficar preenchidas e as 3 últimas devem ficar vazias.
+// *TODO
+// ** ! 4- Deve haver feedback visual ao selecionar
+
+// *? IDEIAS: criar um icone html, com dois inputs radio dentro um para meio preenchido e outro para preenchido por completo.
+// *? O icone html terá um estilo padrão com estrela vazia que é o estado inicial.
+// *? Os inputs radio serão escondidos, e cada input terá dois papeis, 1- feedback visual e valor selecionado, ou seja, ou seja, os inputs terão um hover para incicar o valor a ser selecionado, 2- ao clicar no input o valor será aplicado se é 2.5 estrelas ou 3 estrelas, assim definindo o icone de meio preenchida ou totalmente preenchida.
+// *? Além disso, cada input terá o evento de click, esse evento irá atualizar o estado de avaliação para preencher estrelas anteriores e deixar vazias as posteriores, e também atualizar o valor de avaliação selecionado, que será usado para enviar para o backend ou salvar localmente.
+
+export class StarRating {
+	constructor() {
+		this.stars = [];
+		this.oldStars = [];
+		this.rating = 0;
+		this.statusStar = {
+			EMPTY: "empty",
+			HALF: "half",
+			FULL: "full",
+		};
+	}
+
+	addEventListenersToStars(event, status, starId, element) {
+		const events = {
+			click: () => {
+				this.updateStars(this.stars, status, starId, element.value);
+			},
+
+			mouseover: () => {
+				this.oldStars = [...this.stars.map((star) => ({ ...star }))];
+				this.updateStars(this.oldStars, status, starId);
+			},
+
+			mouseout: () => {
+				this.updateStars(this.stars, status);
+			},
+		};
+
+		events[event] && element.addEventListener(event, events[event]);
+	}
+
+	createStar(index, margin) {
+		const star = document.createElement("li");
+		star.classList.add("star", `star-${this.statusStar.EMPTY}`);
+		star.style.marginTop = `${margin}px` || "0x";
+		star.dataset.id = index;
+
+		const halfStar = document.createElement("input");
+		halfStar.type = "radio";
+		halfStar.name = "star";
+		halfStar.classList.add("input-half-star");
+		halfStar.value = `${index + 0.5}`;
+
+		this.addEventListenersToStars(
+			"click",
+			this.statusStar.HALF,
+			star.dataset.id,
+			halfStar,
+		);
+
+		this.addEventListenersToStars(
+			"mouseover",
+			this.statusStar.HALF,
+			star.dataset.id,
+			halfStar,
+		);
+
+		this.addEventListenersToStars(
+			"mouseout",
+			this.statusStar.HALF,
+			star.dataset.id,
+			halfStar,
+		);
+
+		const fullStar = document.createElement("input");
+		fullStar.type = "radio";
+		fullStar.name = "star";
+		fullStar.classList.add("input-full-star");
+		fullStar.value = `${index + 1}`;
+
+		this.addEventListenersToStars(
+			"click",
+			this.statusStar.FULL,
+			star.dataset.id,
+			fullStar,
+		);
+
+		this.addEventListenersToStars(
+			"mouseover",
+			this.statusStar.FULL,
+			star.dataset.id,
+			fullStar,
+		);
+
+		this.addEventListenersToStars(
+			"mouseout",
+			this.statusStar.FULL,
+			star.dataset.id,
+			fullStar,
+		);
+
+		star.append(halfStar, fullStar);
+
+		this.stars[index] = {
+			id: index,
+			status: this.statusStar.EMPTY,
+			element: star,
+		};
+		return this.stars[index].element;
+	}
+
+	updateStars(starsArray, newStatus, starId, newRating) {
+		// * * O que Atualizar? 1 - status das estrelas, para alterar o icone, 2 - rating com valor selecionado, 3 - status de todas as estrelas anterior a selecionada devem ficar como full, e as posteriores como empty,
+
+		this.rating = newRating || this.rating;
+
+		starsArray.forEach((star, index) => {
+			if (starId && index == starId) star.status = newStatus;
+
+			if (starId && index < starId) star.status = this.statusStar.FULL;
+
+			if (starId && index > starId) star.status = this.statusStar.EMPTY;
+
+			star.element.className = `star star-${star.status}`;
+		});
+	}
+
+	renderStars(container, qtdStars = 5) {
+		const center = (qtdStars - 1) / 2;
+		console.log(center);
+		for (let i = 0; i < qtdStars; i++) {
+			const distanceOfCenter = Math.abs(i - center);
+			console.log(distanceOfCenter);
+
+			if (qtdStars % 2 === 0) {
+				distanceOfCenter = Math.floor(distanceOfCenter);
+				console.log(distanceOfCenter, "par");
+			}
+
+			const margemTop = distanceOfCenter * 5;
+			console.log(margemTop);
+
+			const star = this.createStar(i, margemTop);
+			container.appendChild(star);
+		}
+	}
+}

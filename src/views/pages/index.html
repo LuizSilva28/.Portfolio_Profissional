@@ -33,9 +33,6 @@
 			<div class="halfOctagon"></div>
 
 			<div class="isoscelesTrapezoid"></div>
-
-			<div class="layoutShape"></div>
-
 		</div>
 		<header id="menu">
 			<nav id="container-menu-mobile"></nav>
@@ -168,32 +165,35 @@
 			</section>
 
 			<section id="area-feedback">
-				<section>
-					<i>icon</i>
-					<h2>Deixe sua avaliação</h2>
+				<section
+					id="form-feedback"
+					class="form-feedback">
+					<div class="layoutShape6"></div>
 
-					<label for="name">Nome:</label>
-					<input
-						type="text"
-						id="name"
-						placeholder="ex: João Gustavo" />
+					<i class="iconAvaliable"></i>
+					<h2 class="titleFeedback">Deixe sua avaliação</h2>
 
-					<label for="email">Email:</label>
-					<input
-						type="email"
-						id="email"
-						placeholder="ex: joão@gmail.com" />
+					<div class="containerInput">
+						<label for="name">Nome:</label>
+						<input
+							type="text"
+							id="name"
+							placeholder="ex: João Gustavo" />
+					</div>
+					<div class="containerInput">
+						<label for="email">Email:</label>
+						<input
+							type="email"
+							id="email"
+							placeholder="ex: joão@gmail.com" />
+					</div>
 
-					<h3>
-						Nível de satisção
-						<i>icon</i>
-					</h3>
-					<ul id="container-stars">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+					<div class="containerLevelSatisfaction">
+						<h3>Nível de satisção</h3>
+						<i class="iconLevelSatsfaction"></i>
+					</div>
+
+					<ul id="container-stars" class="container-stars"> 
 					</ul>
 
 					<label for="comentario">Comentário:</label>
@@ -206,73 +206,76 @@
 					<br />
 					<button>Enviar</button>
 				</section>
-				<section>
-					<button>Avalie</button>
-					<div class="cardComent">
-						<p>nome</p>
-						<p>
-							nota
+
+				<div class="backgroundFeedback">
+					<section>
+						<button>Avalie</button>
+						<div class="cardComent">
+							<p>nome</p>
+							<p>
+								nota
+								<i>icon</i>
+							</p>
+							<p>email</p>
+							<p>comentário</p>
+						</div>
+					</section>
+					<section id="formacoes">
+						<div>
+							<div>
+								<!-- <img
+									src=""
+									alt="" /> -->
+							</div>
+
+							<button>1</button>
+						</div>
+						<div>
+							<div>
+								<!-- <img
+									src=""
+									alt="" /> -->
+							</div>
+
+							<button>2</button>
+						</div>
+						<div>
+							<div>
+								<!-- <img
+									src=""
+									alt="" /> -->
+							</div>
+
+							<button>3</button>
+						</div>
+					</section>
+					<footer>
+						<div>
 							<i>icon</i>
-						</p>
-						<p>email</p>
-						<p>comentário</p>
-					</div>
-				</section>
-				<section id="formacoes">
-					<div>
-						<div>
-							<!-- <img
-								src=""
-								alt="" /> -->
+							<p>name</p>
 						</div>
-
-						<button>1</button>
-					</div>
-					<div>
 						<div>
-							<!-- <img
-								src=""
-								alt="" /> -->
+							<i>icon</i>
+							<p>name</p>
 						</div>
-
-						<button>2</button>
-					</div>
-					<div>
 						<div>
-							<!-- <img
-								src=""
-								alt="" /> -->
+							<i>icon</i>
+							<p>name</p>
 						</div>
-
-						<button>3</button>
-					</div>
-				</section>
-				<footer>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-				</footer>
+						<div>
+							<i>icon</i>
+							<p>name</p>
+						</div>
+						<div>
+							<i>icon</i>
+							<p>name</p>
+						</div>
+						<div>
+							<i>icon</i>
+							<p>name</p>
+						</div>
+					</footer>
+				</div>
 			</section>
 		</main>
 	</body>

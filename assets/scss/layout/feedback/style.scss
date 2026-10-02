@@ -1,0 +1,7 @@
+@use "@styles/base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
+
+.backgroundFeedback {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(51, 72, 13));
+	height: 70rem;
+}

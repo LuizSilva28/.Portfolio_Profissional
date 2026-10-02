@@ -1,3 +1,5 @@
+/** @format */
+
 // IMPORTA ESTILOS PARA O WEBPACK USAR E MINIFICAR
 import "../../assets/scss/_index.scss";
 
@@ -15,10 +17,11 @@ import {
 	displayFullInforrmation,
 } from "./modules/charts/polarAreaChart.js";
 
-
 import { createAllCardsForProjects } from "./components/projects/index.js";
 
 import { standardCardProjects } from "../../src/utils/objects/projectsOBJ/index.js";
+
+import "./layouts/avaliableSection/index.js";
 
 allBntsMenu();
 
@@ -33,7 +36,7 @@ createGridSkills(standardCardHardskills);
 generateGraph();
 displayFullInforrmation();
 
-console.log("__________________________________\n" );
+console.log("__________________________________\n");
 console.log("standardCardProjects", standardCardProjects);
 console.log("___________________________________\n");
 createAllCardsForProjects(standardCardProjects);
