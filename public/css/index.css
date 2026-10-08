@@ -295,6 +295,22 @@
   justify-content: center;
   margin: 2rem 0 0 0;
 }
+/** @format */
+.toAssess {
+  min-height: 1.5rem;
+  height: auto;
+  min-width: 60px;
+  width: 40%;
+  max-width: 150px;
+  border-radius: 5px;
+  border: none;
+  padding: 3px;
+  background-color: rgb(64, 224, 208);
+  background-image: url(../assets/imgs/link_sass/toAssess.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .bntsMenu {
   font-size: 0.8em;
   text-align: center;

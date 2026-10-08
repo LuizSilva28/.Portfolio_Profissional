@@ -165,7 +165,7 @@
 			</section>
 
 			<section id="area-feedback">
-				<section
+				<form
 					id="form-feedback"
 					class="form-feedback">
 					<div class="layoutShape6"></div>
@@ -178,6 +178,7 @@
 						<input
 							type="text"
 							id="name"
+							name="name"
 							placeholder="ex: João Gustavo" />
 					</div>
 					<div class="containerInput">
@@ -185,6 +186,7 @@
 						<input
 							type="email"
 							id="email"
+							name="email"
 							placeholder="ex: joão@gmail.com" />
 					</div>
 
@@ -193,19 +195,23 @@
 						<i class="iconLevelSatsfaction"></i>
 					</div>
 
-					<ul id="container-stars" class="container-stars"> 
-					</ul>
+					<ul
+						id="container-stars"
+						class="container-stars"></ul>
 
-					<label for="comentario">Comentário:</label>
+					<label for="comment">Comentário:</label>
 					<textarea
-						name=""
-						id="comentario"
+						name="comment"
+						id="comment"
 						cols="30"
 						rows="10"
 						maxlength="200"></textarea>
 					<br />
-					<button>Enviar</button>
-				</section>
+					<button
+						id="toAssess"
+						class="toAssess"
+						type="submit"></button>
+				</form>
 
 				<div class="backgroundFeedback">
 					<section>

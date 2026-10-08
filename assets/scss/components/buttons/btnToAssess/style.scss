@@ -1,0 +1,20 @@
+/** @format */
+
+@use "@styles/base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
+
+.toAssess {
+	min-height: 1.5rem;
+	height: auto;
+	min-width: 60px;
+	width: 40%;
+	max-width: 150px;
+	border-radius: 5px;
+	border: none;
+	padding: 3px;
+
+	background-color: $color-turquesa;
+    background-image: url("@imgs/icons/iconsAvaliable/toAssess.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
