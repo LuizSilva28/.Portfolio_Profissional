@@ -165,57 +165,58 @@
 			</section>
 
 			<section id="area-feedback">
-				<form
-					id="form-feedback"
-					class="form-feedback">
-					<div class="layoutShape6"></div>
-
+				<div class="assessment-container">
 					<i class="iconAvaliable"></i>
 					<h2 class="titleFeedback">Deixe sua avaliação</h2>
+					<form
+						id="form-feedback"
+						class="form-feedback">
+						<div class="layoutShape6"></div>
 
-					<div class="containerInput">
-						<label for="name">Nome:</label>
-						<input
-							type="text"
-							id="name"
-							name="name"
-							placeholder="ex: João Gustavo" />
-					</div>
-					<div class="containerInput">
-						<label for="email">Email:</label>
-						<input
-							type="email"
-							id="email"
-							name="email"
-							placeholder="ex: joão@gmail.com" />
-					</div>
+						<div class="containerInput">
+							<label for="name">Nome:</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								placeholder="ex: João Gustavo" />
+						</div>
+						<div class="containerInput">
+							<label for="email">Email:</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="ex: joão@gmail.com" />
+						</div>
 
-					<div class="containerLevelSatisfaction">
-						<h3>Nível de satisção</h3>
-						<i class="iconLevelSatsfaction"></i>
-					</div>
+						<div class="containerLevelSatisfaction">
+							<h3>Nível de satisção</h3>
+							<i class="iconLevelSatsfaction"></i>
+						</div>
 
-					<ul
-						id="container-stars"
-						class="container-stars"></ul>
+						<ul
+							id="container-stars"
+							class="container-stars"></ul>
 
-					<label for="comment">Comentário:</label>
-					<textarea
-						name="comment"
-						id="comment"
-						cols="30"
-						rows="10"
-						maxlength="200"></textarea>
-					<br />
-					<button
-						id="toAssess"
-						class="toAssess"
-						type="submit"></button>
-				</form>
+						<label for="comment">Comentário:</label>
+						<textarea
+							name="comment"
+							id="comment"
+							cols="30"
+							rows="10"
+							maxlength="200"></textarea>
+						<br />
+						<button
+							id="toAssess"
+							class="toAssess sendReview"
+							type="submit"></button>
+					</form>
+				</div>
 
 				<div class="backgroundFeedback">
 					<section>
-						<button>Avalie</button>
+						<button class="toAssess">Avalie</button>
 						<div class="cardComent">
 							<p>nome</p>
 							<p>

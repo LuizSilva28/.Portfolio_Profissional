@@ -1,7 +1,25 @@
+/** @format */
+
 @use "@styles/base/variables/colors.scss" as *;
 @use "@styles/base/variables/fonts.scss" as *;
 
 .backgroundFeedback {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(51, 72, 13));
+	position: relative;
+	background: $color-secondary;
+
+	width: 100%;
 	height: 70rem;
+	z-index: 2;
+}
+
+.backgroundFeedback::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(51, 72, 13));
+	z-index: -2;
 }

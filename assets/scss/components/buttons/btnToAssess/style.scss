@@ -14,7 +14,13 @@
 	padding: 3px;
 
 	background-color: $color-turquesa;
-    background-image: url("@imgs/icons/iconsAvaliable/toAssess.svg");
+
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.sendReview{
+	@extend .toAssess;
+	background-image: url("@imgs/icons/iconsAvaliable/toAssess.svg");
+}
+
