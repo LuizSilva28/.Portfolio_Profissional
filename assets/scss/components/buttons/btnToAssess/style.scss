@@ -3,11 +3,17 @@
 @use "@styles/base/variables/colors.scss" as *;
 @use "@styles/base/variables/fonts.scss" as *;
 
+#ancorForAssess {
+	position: absolute;
+	top: 0;
+	right: 5px;
+}
+
 .toAssess {
 	min-height: 1.5rem;
 	height: auto;
 	min-width: 60px;
-	width: 40%;
+	width: auto;
 	max-width: 150px;
 	border-radius: 5px;
 	border: none;
@@ -15,12 +21,13 @@
 
 	background-color: $color-turquesa;
 
-    background-repeat: no-repeat;
-    background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-.sendReview{
+.sendReview {
 	@extend .toAssess;
+
+	position: static;
 	background-image: url("@imgs/icons/iconsAvaliable/toAssess.svg");
 }
-

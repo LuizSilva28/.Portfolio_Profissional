@@ -7,6 +7,7 @@ import { standardCardSoftskills } from "../../../../../src/utils/objects/softski
 
 import { createGridSkills, createModalCertificate } from "../../grid/index.js";
 
+// ! Refatorar esta função
 export function createBntsMenu(
 	idBtn,
 	typeBtn,
@@ -164,10 +165,6 @@ export function createBntsSideBar(
 	containerlayoutSideBar.appendChild(divDadBnts);
 }
 
-//BUTTONS CAROUSEL
-
-//BUTTONS AREA OF KNOWLEDGE
-
 export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
 	const containerButtons = document.querySelector(
 		'[data-areaSkills="containerButtons"]',
@@ -242,7 +239,7 @@ export function createBntCertificate(certificateURL) {
 	});
 }
 
-// !TRANSFORMAR EM CLASSE
+// !TRANSFORMAR EM CLASSE (Validar Necessidade)
 export function createBntForCertificate(certificateURL) {
 	const bntCertificate = document.createElement("button");
 	bntCertificate.textContent = "Certificado";
@@ -273,7 +270,7 @@ export function hideElement(text, nameClass, elementToHide) {
 
 	return bntCloseModal;
 }
-
+// Cria Botões de estrelas agrupados
 export class StarRating {
 	constructor() {
 		this.stars = [];
@@ -407,5 +404,96 @@ export class StarRating {
 			const star = this.createStar(i, margemTop);
 			container.appendChild(star);
 		}
+	}
+}
+
+export function createBtnToAssessMobile(content, container) {
+	const btn = document.createElement("button");
+	const ancor = document.createElement("a");
+	ancor.id = "ancorForAssess";
+	ancor.href = "#area-feedback";
+	btn.type = "button";
+	btn.classList.add("toAssess", "BtnParalaxY");
+	btn.innerText = content;
+
+	new ParallaxButtonController(ancor, container);
+
+	ancor.addEventListener("click", (e) => {
+		e.preventDefault();
+
+		const target = document.querySelector("#area-feedback");
+		if (target) {
+			target.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		}
+	});
+
+	ancor.appendChild(btn);
+	container.appendChild(ancor);
+}
+
+class ParallaxButtonController {
+	constructor(buttonElement, containerElement) {
+		this.button = buttonElement;
+		this.container = containerElement;
+
+		this.initialOffsetTop = 0;
+		this.lastWindowScroll = 0;
+		this.lastContainerScroll = 0;
+
+		this.currentTranslateY = 0;
+
+		this.handleScroll = this.handleScroll.bind(this);
+
+		this.init();
+	}
+
+	init() {
+		if (!this.button || !this.container) return;
+
+		const rect = this.container.getBoundingClientRect();
+		this.initialOffsetTop = rect.top + window.scrollY;
+
+		this.lastWindowScroll = window.scrollY;
+		this.lastContainerScroll = this.container.scrollTop;
+
+		window.addEventListener("scroll", this.handleScroll);
+	}
+
+	getMaxTranslateY() {
+		const containerHeight = this.container.clientHeight;
+		const buttonHeight = this.button.offsetHeight;
+		return containerHeight - buttonHeight - 10; // 10px de folga/margem de segurança
+	}
+
+	applyMovement(delta, speed) {
+		this.currentTranslateY += delta * speed;
+		const maxLimit = Math.max(0, this.getMaxTranslateY());
+
+		this.currentTranslateY = Math.max(
+			0,
+			Math.min(this.currentTranslateY, maxLimit),
+		);
+
+		this.button.style.transform = `translateY(${this.currentTranslateY}px)`;
+	}
+
+	handleScroll() {
+		const scrollTop = window.scrollY;
+
+		if (scrollTop < this.initialOffsetTop) {
+			this.lastWindowScroll = scrollTop;
+			return;
+		}
+
+		const delta = scrollTop - this.lastWindowScroll;
+		const speed = 0.5;
+
+		this.applyMovement(delta, speed);
+
+		this.lastWindowScroll = scrollTop;
+		this.lastContainerScroll = this.container.scrollTop;
 	}
 }

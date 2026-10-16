@@ -22,6 +22,7 @@ import { createAllCardsForProjects } from "./components/projects/index.js";
 import { standardCardProjects } from "../../src/utils/objects/projectsOBJ/index.js";
 
 import "./layouts/avaliableSection/index.js";
+import "./layouts/commentsSection/index.js";
 
 allBntsMenu();
 

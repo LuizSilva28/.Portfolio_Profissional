@@ -1,6 +1,7 @@
 /** @format */
 @use "@styles/base/variables/colors.scss" as *;
 @use "@styles/base/variables/fonts.scss" as *;
+
 .assessment-container {
 	position: relative;
 	display: flex;
@@ -29,6 +30,7 @@
 		background-size: 70%;
 		background-repeat: no-repeat;
 		background-position: center;
+		object-fit: scale-down;
 	}
 
 	.titleFeedback {
