@@ -1,3 +1,5 @@
+/** @format */
+
 @use "./base/variables/colors.scss" as *;
 @use "./base/variables/fonts.scss" as *;
 
@@ -19,3 +21,4 @@
 @use "./components/projects/style.scss" as *;
 @use "./layout/avaliableSection/style.scss" as *;
 @use "./layout/commentsSection/style.scss" as *;
+@use "./layout/sectioninstitutes/style.scss" as *;

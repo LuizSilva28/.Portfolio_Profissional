@@ -6,6 +6,7 @@ import { standardCardHardskills } from "../../../../../src/utils/objects/hardski
 import { standardCardSoftskills } from "../../../../../src/utils/objects/softskills/index.js";
 
 import { createGridSkills, createModalCertificate } from "../../grid/index.js";
+import { bnt1 } from "./../index";
 
 // ! Refatorar esta função
 export function createBntsMenu(
@@ -166,19 +167,24 @@ export function createBntsSideBar(
 }
 
 export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {
+	//conatiner pai deve ser fornecido por que chama a função
 	const containerButtons = document.querySelector(
 		'[data-areaSkills="containerButtons"]',
 	);
-	const buttonsAreaSkills = document.createElement("buttom");
 
+	const buttonsAreaSkills = document.createElement("buttom");
 	buttonsAreaSkills.setAttribute("data-areaSkills", `${dataValue}`);
 	buttonsAreaSkills.classList.add("bntAreaskills");
 	buttonsAreaSkills.id = `bnnSkill-${idBtn}`;
-	idBtn === 1 ? buttonsAreaSkills.classList.add("activeSkills") : "";
 
 	buttonsAreaSkills.textContent = `${txtButtom}`;
 	containerButtons.appendChild(buttonsAreaSkills);
 
+	// criar um maper para os eventos onde será fonecido como parametro um valor
+	// desse maper para qual ação o evento click acionará, dividir as ações atual do
+	//  evento em duas funções separadas, e criar um terceira função para o novo botão
+
+	idBtn === 1 ? buttonsAreaSkills.classList.add("activeSkills") : "";
 	buttonsAreaSkills.addEventListener("click", () => {
 		const bntSoftskills = document.querySelector(
 			'[data-areaSkills="Softskills"]',
@@ -217,7 +223,19 @@ export function createBntsForControlls(textButtom, idBnt) {
 	return bntPanelControll;
 }
 
-// !TRANSFORMAR EM CLASSE E UNIFICAR BOTÕES DO GRID DE HABILIDADES COM DE PROJETOS
+export function hideElement(text, nameClass, elementToHide) {
+	const bntCloseModal = document.createElement("button");
+	bntCloseModal.textContent = text;
+	bntCloseModal.classList.add(nameClass);
+
+	bntCloseModal.addEventListener("click", () => {
+		elementToHide.parentNode.removeChild(elementToHide);
+	});
+
+	return bntCloseModal;
+}
+
+// *! UNIFICAR BOTÕES DO GRID DE HABILIDADES COM DE PROJETOS
 export function createBntCertificate(certificateURL) {
 	const cardDetails = document.querySelector(
 		'[data-gridskills="cardDetails"]',
@@ -239,7 +257,6 @@ export function createBntCertificate(certificateURL) {
 	});
 }
 
-// !TRANSFORMAR EM CLASSE (Validar Necessidade)
 export function createBntForCertificate(certificateURL) {
 	const bntCertificate = document.createElement("button");
 	bntCertificate.textContent = "Certificado";
@@ -259,17 +276,6 @@ export function createBntForCertificate(certificateURL) {
 	return bntCertificate;
 }
 
-export function hideElement(text, nameClass, elementToHide) {
-	const bntCloseModal = document.createElement("button");
-	bntCloseModal.textContent = text;
-	bntCloseModal.classList.add(nameClass);
-
-	bntCloseModal.addEventListener("click", () => {
-		elementToHide.parentNode.removeChild(elementToHide);
-	});
-
-	return bntCloseModal;
-}
 // Cria Botões de estrelas agrupados
 export class StarRating {
 	constructor() {
@@ -496,4 +502,27 @@ class ParallaxButtonController {
 		this.lastWindowScroll = scrollTop;
 		this.lastContainerScroll = this.container.scrollTop;
 	}
+}
+
+export function createBtnsFormations({
+	textButtom,
+	idBtn,
+	action,
+	certificateURL,
+}) {
+	console.log(textButtom, idBtn, action, certificateURL);
+	const btn = document.createElement("buttom");
+	btn.id = idBtn;
+	btn.classList.add("btnsPdfFormations");
+	btn.textContent = textButtom;
+
+	let maper = {
+		openModal: () => {
+			createModalCertificate(certificateURL);
+		},
+	};
+
+	btn.addEventListener("click", maper[action]);
+
+	return btn;
 }

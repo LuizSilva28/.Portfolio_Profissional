@@ -23,6 +23,7 @@ import { standardCardProjects } from "../../src/utils/objects/projectsOBJ/index.
 
 import "./layouts/avaliableSection/index.js";
 import "./layouts/commentsSection/index.js";
+import "./layouts/institutesSection/index.js";
 
 allBntsMenu();
 

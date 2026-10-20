@@ -1,0 +1,50 @@
+/** @format */
+@use "@styles/base/variables/fonts.scss" as *;
+@use "@styles/base/variables/colors.scss" as *;
+
+@use "../../components/buttons/Buttons_AreaSkills/bntPdfControlls/style.scss"
+	as *;
+
+.formation {
+	margin-top: 5rem;
+	display: flex;
+	width: 100%;
+	padding: 0px 5px 0 5px;
+	margin-bottom: 5rem;
+
+	.specificformation {
+		@extend .bntsPdfContainer;
+
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+		gap: 10px;
+
+		.logo {
+			height: 100px;
+			width: 100px;
+			object-fit: cover;
+			overflow: hidden;
+			border-radius: 50%;
+			margin: 0px auto 0px auto;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.btnsPdfFormations {
+			@extend .bntsPdfControll;
+
+			z-index: 1;
+			width: auto;
+			height: auto;
+			min-width: 80px;
+			min-height: 1.875rem;
+			margin: 0px 10px 0px 10px;
+			font-size: $font-secondary;
+		}
+	}
+}

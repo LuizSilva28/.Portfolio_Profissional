@@ -7,6 +7,7 @@
   \****************************************************************************************************************************/
 /** @format */
 /** @format */
+/** @format */
 .shapesBackgroundForBody {
   position: absolute;
   top: 0;
@@ -138,6 +139,23 @@
 .container-major #area-feedback {
   background-color: transparent;
 }
+.container-major #area-feedback .backgroundFeedback {
+  position: relative;
+  background: rgb(51, 72, 13);
+  width: 100%;
+  height: 70rem;
+  z-index: 2;
+}
+.container-major #area-feedback .backgroundFeedback::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(51, 72, 13));
+  z-index: -2;
+}
 
 .icon1, .icon4, .icon3, .icon2 {
   display: inline-block;
@@ -216,6 +234,7 @@
 }
 
 /** @format */
+/** @format */
 .bntCertificate {
   display: flex;
   justify-content: end;
@@ -240,13 +259,14 @@
   background-position: center;
 }
 
-.bntsPdfControll, .containerButtons, .containerButtons .bntAreaskills, .containerButtons .modalCertificate .hideElement, .modalCertificate .containerButtons .hideElement, .hideElement {
+/** @format */
+.bntsPdfContainer, .formation .specificformation, .containerButtons {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 1rem 0 0 0;
 }
-.bntsPdfControll .bntsPdfControll, .containerButtons .bntsPdfControll, .hideElement .bntsPdfControll, .bntsPdfControll .containerButtons, .containerButtons .containerButtons, .hideElement .containerButtons, .containerButtons .bntAreaskills, .bntsPdfControll .hideElement, .containerButtons .hideElement, .hideElement .hideElement {
+.bntsPdfContainer .bntsPdfControll, .formation .specificformation .bntsPdfControll, .containerButtons .bntsPdfControll, .formation .specificformation .btnsPdfFormations, .containerButtons .bntAreaskills, .bntsPdfContainer .hideElement, .formation .specificformation .hideElement, .containerButtons .hideElement {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,7 +281,7 @@
   background: transparent;
   border: none;
 }
-.bntsPdfControll .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .hideElement .bntsPdfControll::before, .bntsPdfControll .containerButtons::before, .containerButtons .containerButtons::before, .hideElement .containerButtons::before, .containerButtons .bntAreaskills::before, .bntsPdfControll .hideElement::before, .containerButtons .hideElement::before, .hideElement .hideElement::before {
+.bntsPdfContainer .bntsPdfControll::before, .formation .specificformation .bntsPdfControll::before, .containerButtons .bntsPdfControll::before, .formation .specificformation .btnsPdfFormations::before, .containerButtons .bntAreaskills::before, .bntsPdfContainer .hideElement::before, .formation .specificformation .hideElement::before, .containerButtons .hideElement::before {
   content: "";
   display: block;
   z-index: -12;
@@ -273,7 +293,7 @@
   transform: rotate(-15deg);
   transition: transform 0.3s;
 }
-.bntsPdfControll .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .hideElement .bntsPdfControll:hover::before, .bntsPdfControll .containerButtons:hover::before, .containerButtons .containerButtons:hover::before, .hideElement .containerButtons:hover::before, .containerButtons .bntAreaskills:hover::before, .bntsPdfControll .hideElement:hover::before, .containerButtons .hideElement:hover::before, .hideElement .hideElement:hover::before {
+.bntsPdfContainer .bntsPdfControll:hover::before, .formation .specificformation .bntsPdfControll:hover::before, .containerButtons .bntsPdfControll:hover::before, .formation .specificformation .btnsPdfFormations:hover::before, .containerButtons .bntAreaskills:hover::before, .bntsPdfContainer .hideElement:hover::before, .formation .specificformation .hideElement:hover::before, .containerButtons .hideElement:hover::before {
   transform: scaleY(0.8);
   transition: transform 0.3s ease-in-out;
 }
@@ -296,11 +316,17 @@
   margin: 2rem 0 0 0;
 }
 /** @format */
+#ancorForAssess {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
 .toAssess, .sendReview {
   min-height: 1.5rem;
   height: auto;
   min-width: 60px;
-  width: 40%;
+  width: auto;
   max-width: 150px;
   border-radius: 5px;
   border: none;
@@ -311,6 +337,7 @@
 }
 
 .sendReview {
+  position: static;
   background-image: url(../assets/imgs/link_sass/toAssess.svg);
 }
 
@@ -1013,6 +1040,7 @@ iframe {
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
+  object-fit: scale-down;
 }
 .assessment-container .titleFeedback {
   margin: 0rem 0 3rem 0;
@@ -1092,21 +1120,90 @@ iframe {
 }
 
 /** @format */
-.backgroundFeedback {
-  position: relative;
-  background: rgb(51, 72, 13);
-  width: 100%;
-  height: 70rem;
-  z-index: 2;
+.commentArea {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 31.25rem;
+}
+.commentArea .cardComment {
+  width: 90%;
+  height: auto;
+}
+.commentArea .cardComment .divContainer {
+  display: flex;
+  font-size: 1rem;
+  gap: 20px;
+  padding: 0 0px 0 0px;
+  align-items: center;
+  height: 1.5rem;
+}
+.commentArea .cardComment .divContainer .rating {
+  display: flex;
+  gap: 5px;
+}
+.commentArea .cardComment .divContainer .rating .iconRatingFull {
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  background-image: url(../assets/imgs/link_sass/star-full.svg);
+}
+.commentArea .cardComment .divContainer .rating .iconRatingHalf {
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  background-image: url(../assets/imgs/link_sass/star-half.svg);
+}
+.commentArea .cardComment .emailComment {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  padding: 0 0px 0 0px;
+  color: rgb(155, 132, 0);
+}
+.commentArea .cardComment .comment {
+  font-size: 0.9rem;
+  color: rgb(245, 245, 220);
 }
 
-.backgroundFeedback::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+/** @format */
+.formation {
+  margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  padding: 0px 5px 0 5px;
+  margin-bottom: 5rem;
+}
+.formation .specificformation {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  gap: 10px;
+}
+.formation .specificformation .logo {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0px auto 0px auto;
+}
+.formation .specificformation .logo img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(51, 72, 13));
-  z-index: -2;
+  object-fit: cover;
+}
+.formation .specificformation .btnsPdfFormations {
+  z-index: 1;
+  width: auto;
+  height: auto;
+  min-width: 80px;
+  min-height: 1.875rem;
+  margin: 0px 10px 0px 10px;
+  font-size: 0.9rem;
 }
