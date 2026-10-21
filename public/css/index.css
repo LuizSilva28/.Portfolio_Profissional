@@ -318,7 +318,7 @@
 /** @format */
 #ancorForAssess {
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 5px;
 }
 
@@ -1127,6 +1127,12 @@ iframe {
   align-items: center;
   overflow-y: auto;
   max-height: 31.25rem;
+  margin: 0px 5px 0px 5px;
+  padding: 15px 0px 10px 0px;
+  border-top: 2px solid rgb(155, 132, 0);
+  border-bottom: 2px solid rgb(155, 132, 0);
+  -webkit-mask-image: linear-gradient(black 1px, transparent 2px, black 6%, black 94%, transparent calc(100% - 2px), black calc(100% - 1px));
+  mask-image: linear-gradient(black 1px, transparent 2px, black 6%, black 94%, transparent calc(100% - 2px), black calc(100% - 1px));
 }
 .commentArea .cardComment {
   width: 90%;
