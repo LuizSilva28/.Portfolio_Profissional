@@ -136,6 +136,7 @@ export function bntCloseSidebar() {
 	});
 }
 
+//! Alterar nomenclaturas para deixar mais genérica, e não pertecente a um unico local (reutilizavel)
 export function createBntsSideBar(
 	idBtn,
 	typeBtn,

@@ -1,4 +1,6 @@
 /** @format */
+@use "@styles/base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
 
 .shapesBackgroundForBody {
 	position: absolute;
@@ -8,6 +10,7 @@
 	min-width: 100vw;
 	height: auto;
 	overflow: hidden;
+
 
 	.layoutShape1 {
 		position: relative;
@@ -52,5 +55,6 @@
 
 		background-image: url("@imgs/Rectangle2.svg");
 	}
-	
 }
+
+
