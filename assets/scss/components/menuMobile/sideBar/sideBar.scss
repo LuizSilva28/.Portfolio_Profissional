@@ -1,3 +1,5 @@
+/** @format */
+
 //@import "../../buttons/bntWhats/style.scss";
 @use "@styles/base/variables/fonts.scss" as *;
 @use "@styles/base/variables/colors.scss" as *;
@@ -9,7 +11,8 @@
 	display: flex;
 	justify-content: space-around;
 	border-top-left-radius: 5px;
-	background-image: linear-gradient($color-cinza, $color-cinza),
+	background-image:
+		linear-gradient($color-cinza, $color-cinza),
 		linear-gradient(to top, $color-bege 0%, $color-cinza 70%);
 	background-origin: padding-box;
 	background-clip: content-box, padding-box;
@@ -25,9 +28,9 @@
 		.divDadBnts {
 			display: flex;
 			align-items: center;
-			gap: .4rem;
+			gap: 0.4rem;
 			min-height: 2.5rem;
-			margin: 0 0 0 .35rem;
+			margin: 0 0 0 0.35rem;
 			transition: 0.3s;
 
 			&:hover {
@@ -45,10 +48,10 @@
 	transition: 0.3s;
 }
 
-.bntCloseSidebar{
+.bntCloseSidebar {
 	position: fixed;
 	bottom: 0;
-	left: -62vw;
+	left: 0vw;
 	z-index: 3;
 	display: flex;
 	justify-content: flex-end;
@@ -57,11 +60,9 @@
 	background-image: linear-gradient($color-cinza, $color-cinza);
 	min-width: 60vw;
 	height: 4.38rem;
-	transition: 0.3s;
-
+	transition: left 0.3s ease;
 }
 
-.closeBnt {
-	left: 0vw;
-	transition: 0.3s;
+.closeBtn {
+	left: -62vw;
 }

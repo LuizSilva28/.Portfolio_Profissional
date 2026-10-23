@@ -20,6 +20,7 @@ export function createBntsMenu(
 	const containerMenuMobile = document.querySelector(
 		"#container-menu-mobile",
 	);
+
 	const bntsMenu = document.createElement("button");
 	bntsMenu.id = idBtn;
 	bntsMenu.type = typeBtn;
@@ -37,6 +38,7 @@ export function createBntsMenu(
 	:	bntsMenu.addEventListener("click", (e) => {
 			e.preventDefault;
 			let bntClicked = e.currentTarget.id;
+			const closeBtnSidebar = document.querySelector(".bntCloseSidebar");
 
 			let textBnt = "";
 			switch (bntClicked) {
@@ -57,7 +59,8 @@ export function createBntsMenu(
 							textBnt,
 						);
 					}
-					bntCloseSidebar();
+					console.log("close: ", closeBtnSidebar);
+					
 					break;
 				case "bntMenu3":
 					for (let i = 6; i <= 8; i++) {
@@ -74,7 +77,7 @@ export function createBntsMenu(
 							textBnt,
 						);
 					}
-					bntCloseSidebar();
+					
 
 					break;
 				case "bntMenu4":
@@ -91,15 +94,15 @@ export function createBntsMenu(
 							textBnt,
 						);
 					}
-					bntCloseSidebar();
+					
 					break;
 				default:
 					console.log("Deu erro");
 			}
 			const sideBar = document.getElementById("side-bar");
 			sideBar.classList.add("sideBarClose");
-			const closeBnt = document.querySelector("#bntCloseSidebar");
-			closeBnt.classList.add("closeBnt");
+			const closeBtn = document.querySelector("#bntCloseSidebar");
+			closeBtn?.classList.toggle("closeBtn");
 		});
 }
 
@@ -113,7 +116,7 @@ export function bntCloseSidebar() {
 	const header = document.getElementById("menu");
 	const bntCloseSidebar = document.createElement("div");
 	bntCloseSidebar.id = "bntCloseSidebar";
-	bntCloseSidebar.classList.add("bntCloseSidebar");
+	bntCloseSidebar.classList.add("bntCloseSidebar", "closeBtn");
 
 	const iconX = document.createElement("i");
 	iconX.classList.add("icon0");
@@ -125,8 +128,8 @@ export function bntCloseSidebar() {
 		const sideBar = document.getElementById("side-bar");
 		sideBar.classList.toggle("sideBarClose");
 
-		const closeBnt = document.querySelector(".closeBnt");
-		closeBnt.classList.toggle("closeBnt");
+		const closeBtn = document.querySelector(".bntCloseSidebar");
+		closeBtn.classList.toggle("closeBtn");
 
 		const divDadBnts = document.querySelectorAll(".divDadBnts");
 

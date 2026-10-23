@@ -1,7 +1,8 @@
+/** @format */
+
 @use "../../buttons/buttons.scss" as *;
 @use "../sideBar/sideBar.scss" as *;
 @use "@styles/base/variables/colors.scss" as *;
-
 
 #container-menu-mobile {
 	position: fixed;
@@ -15,15 +16,14 @@
 	// background-color: $color-cinza;
 	min-width: 100vw;
 
-	background-color: red;
+	background-color: $color-cinza;
 	height: 4.38rem;
 	border-radius: 0.63rem 0.63rem 0 0;
 }
 
-
 @media (min-width: 400px) and (max-width: 600px) {
 	#container-menu-mobile {
-		background-color: red;
+		background-color: $color-cinza;
 		display: none;
 	}
 }
