@@ -1,10 +1,14 @@
+/** @format */
+
 @use "../buttons/Buttons_AreaSkills/style.scss" as *;
 @use "@styles/base/variables/fonts.scss" as *;
 @use "@styles/base/variables/colors.scss" as *;
 
 .modalCertificate {
-	position: absolute;
+	position: fixed;
 	justify-items: center;
+	top: 2rem;
+	left: 0;
 	width: 95%;
 	height: 70%;
 	z-index: 20;

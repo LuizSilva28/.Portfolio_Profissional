@@ -3,7 +3,7 @@
 // IMPORTA ESTILOS PARA O WEBPACK USAR E MINIFICAR
 import "../../assets/scss/_index.scss";
 
-import { allBntsMenu } from "./components/menuMobile/menu/index.js";
+import { allBtnsMenu } from "./components/menus/menu/index.js";
 
 import { createCarousel } from "./components/carousels/carousel/container/script.js";
 
@@ -24,12 +24,16 @@ import { standardCardProjects } from "../../src/utils/objects/projectsOBJ/index.
 import "./layouts/avaliableSection/index.js";
 import "./layouts/commentsSection/index.js";
 import "./layouts/institutesSection/index.js";
+import { btnHardskills, btnSoftskills } from "./components/buttons/index.js";
 
-allBntsMenu();
+allBtnsMenu();
 
 createCarousel();
 
 createAudio();
+
+btnHardskills();
+btnSoftskills();
 
 createGridSkills(standardCardHardskills);
 

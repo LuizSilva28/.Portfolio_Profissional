@@ -6,7 +6,7 @@ import { standardCardHardskills } from "../../../../../src/utils/objects/hardski
 import { standardCardSoftskills } from "../../../../../src/utils/objects/softskills/index.js";
 
 import { createGridSkills, createModalCertificate } from "../../grid/index.js";
-import { bnt1 } from "./../index";
+import { confirmationMessage } from "../../messages/confirmationMessage.js"; 
 
 // ! Refatorar esta função
 export function createBntsMenu(
@@ -17,8 +17,16 @@ export function createBntsMenu(
 	textId,
 	textBtn,
 ) {
+	let mapRede = {
+		whatsapp: "https://api.whatsapp.com/send?phone=+5535991858716",
+		instagram: "https://www.instagram.com/luiz_h.s.silva/",
+		linkedin: "https://www.linkedin.com/in/luiz-henrique-801259243/",
+		github: "https://github.com/LuizSilva28",
+		email: "mailto:luiz.henrique.dossantos062000%40gmail.com",
+	};
+	const documentBody = document.querySelector("body");
 	const containerMenuMobile = document.querySelector(
-		"#container-menu-mobile",
+		"#container-menu",
 	);
 
 	const bntsMenu = document.createElement("button");
@@ -38,17 +46,16 @@ export function createBntsMenu(
 	:	bntsMenu.addEventListener("click", (e) => {
 			e.preventDefault;
 			let bntClicked = e.currentTarget.id;
-			const closeBtnSidebar = document.querySelector(".bntCloseSidebar");
 
-			let textBnt = "";
+			let textBtn = "";
 			switch (bntClicked) {
 				case "bntMenu2":
 					for (let i = 1; i <= 5; i++) {
-						i === 1 ? (textBnt = "whatsapp")
-						: i === 2 ? (textBnt = "instagram")
-						: i === 3 ? (textBnt = "linkedin")
-						: i === 4 ? (textBnt = "github")
-						: (textBnt = "email");
+						i === 1 ? (textBtn = "whatsapp")
+						: i === 2 ? (textBtn = "instagram")
+						: i === 3 ? (textBtn = "linkedin")
+						: i === 4 ? (textBtn = "github")
+						: (textBtn = "email");
 
 						createBntsSideBar(
 							`sideBarBnt-${i}`,
@@ -56,17 +63,20 @@ export function createBntsMenu(
 							"sideBarBnts",
 							`SideBarIconBnt${i}`,
 							`text${i}`,
-							textBnt,
+							textBtn,
+							confirmationMessage,
+							mapRede[textBtn],
+							textBtn,
+							documentBody,
 						);
 					}
-					console.log("close: ", closeBtnSidebar);
-					
+
 					break;
 				case "bntMenu3":
 					for (let i = 6; i <= 8; i++) {
-						i === 6 ? (textBnt = "Currículo")
-						: i === 7 ? (textBnt = "Unicesumar")
-						: (textBnt = "Onibitcode");
+						i === 6 ? (textBtn = "Currículo")
+						: i === 7 ? (textBtn = "Unicesumar")
+						: (textBtn = "Onibitcode");
 
 						createBntsSideBar(
 							`sideBarBnt-${i}`,
@@ -74,27 +84,26 @@ export function createBntsMenu(
 							"sideBarBnts",
 							`SideBarIconBnt${i}`,
 							`text${i}`,
-							textBnt,
+							textBtn,
 						);
 					}
-					
 
 					break;
 				case "bntMenu4":
 					for (let i = 9; i <= 10; i++) {
 						i === 9 ?
-							(textBnt = "tema")
-						:	(textBnt = "Acessibilidade");
+							(textBtn = "tema")
+						:	(textBtn = "Acessibilidade");
 						createBntsSideBar(
 							`sideBarBnt-${i}`,
 							"button",
 							"sideBarBnts",
 							`SideBarIconBnt${i}`,
 							`text${i}`,
-							textBnt,
+							textBtn,
 						);
 					}
-					
+
 					break;
 				default:
 					console.log("Deu erro");
@@ -147,15 +156,17 @@ export function createBntsSideBar(
 	classIcon,
 	textId,
 	textBtn,
+	callback,
+	...args
 ) {
 	const containerlayoutSideBar = document.querySelector(".layoutSideBar");
 	const divDadBnts = document.createElement("div");
 	divDadBnts.classList.add("divDadBnts");
 
-	const bntsSideBar = document.createElement("button");
-	bntsSideBar.id = idBtn;
-	bntsSideBar.type = typeBtn;
-	bntsSideBar.classList.add(`${classBtn}`);
+	const btnSideBar = document.createElement("button");
+	btnSideBar.id = idBtn;
+	btnSideBar.type = typeBtn;
+	btnSideBar.classList.add(`${classBtn}`);
 
 	const icon = document.createElement("i");
 	icon.classList.add(`${classIcon}`);
@@ -164,8 +175,14 @@ export function createBntsSideBar(
 	text.id = `${textId}`;
 	text.textContent = `${textBtn}`;
 
-	bntsSideBar.appendChild(icon);
-	divDadBnts.appendChild(bntsSideBar);
+	btnSideBar.addEventListener("click", () => {
+		if (!callback) return console.log("Erro, função não foi passada");
+
+		callback(...args);
+	});
+
+	btnSideBar.appendChild(icon);
+	divDadBnts.appendChild(btnSideBar);
 	divDadBnts.appendChild(text);
 	containerlayoutSideBar.appendChild(divDadBnts);
 }
@@ -514,7 +531,6 @@ export function createBtnsFormations({
 	action,
 	certificateURL,
 }) {
-	console.log(textButtom, idBtn, action, certificateURL);
 	const btn = document.createElement("buttom");
 	btn.id = idBtn;
 	btn.classList.add("btnsPdfFormations");
