@@ -6,6 +6,10 @@ import {
 	btnPdfs,
 	btnConfigs,
 	btnClose,
+	btnOpenMenuDesk,
+	btnAccessibilityMenuDesk,
+	btnLightMenuDesk,
+	btnDarkMenuDesk,
 } from "../../buttons/index.js";
 
 export function allBtnsMenu() {
@@ -14,4 +18,9 @@ export function allBtnsMenu() {
 	btnPdfs();
 	btnConfigs();
 	btnClose();
+
+	btnOpenMenuDesk();
+	btnLightMenuDesk();
+	btnDarkMenuDesk();
+	btnAccessibilityMenuDesk();
 }

@@ -4,7 +4,7 @@
 @use "../sideBar/sideBar.scss" as *;
 @use "@styles/base/variables/colors.scss" as *;
 
-#container-menu {
+.container-menu {
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -22,11 +22,11 @@
 }
 
 @media (min-width: 600px) {
-	#container-menu {
+	.container-menu {
 		background-color: transparent;
 		border-bottom: $color-secondary;
 		top: 0;
 		bottom: auto;
-		display: none;
+		justify-content: start;
 	}
 }

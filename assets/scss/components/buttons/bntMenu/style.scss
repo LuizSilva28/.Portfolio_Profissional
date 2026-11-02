@@ -1,25 +1,118 @@
-	.icon1 {
+/** @format */
+
+@use "@styles/base/variables/colors.scss" as *;
+
+.bntsMenuMobile {
+	font-size: 0.8em;
+	text-align: center;
+	padding: 0px;
+	border-radius: 3px;
+	background-color: transparent;
+	border: none;
+}
+
+.btnsMenuDesk {
+	display: none;
+}
+.btnOpenMenuDesk {
+	display: none;
+}
+
+.sideBarBnts {
+	display: flex;
+	min-width: 1.76rem;
+	min-height: 1.76rem;
+	border-radius: 6px;
+	background-color: $color-douradoEscuro;
+	border: none;
+	transition: 0.3s;
+}
+
+.icon1 {
+	display: inline-block;
+	background-image: url("@imgs/icons/iconsMenu/home.svg");
+	min-width: 1.88rem;
+	min-height: 1.88rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
+
+.icon2 {
+	@extend .icon1;
+	background-image: url("@imgs/icons/iconsMenu/redes.svg");
+}
+
+.icon3 {
+	@extend .icon1;
+	background-image: url("@imgs/icons/iconsMenu/pdfs.svg");
+}
+
+.icon4 {
+	@extend .icon1;
+	background-image: url("@imgs/icons/iconsMenu/configs.svg");
+}
+
+.iconOpenMenuDesk {
+	@extend .icon1;
+	background-image: url("@imgs/icons/iconsMenu/openMenu.svg");
+	background-color: transparent;
+}
+
+@media screen AND (min-width: 600px) {
+	.bntsMenuMobile {
+		display: none;
+	}
+}
+
+@media (min-width: 601px) {
+	.btnsMenuDesk {
+		display: flex;
+		font-size: 0.8em;
+		text-align: center;
+		padding: 0px;
+		border-radius: 3px;
+		background-color: transparent;
+		border: none;
+		margin: 0 .5rem 0 .5rem;
+	}
+
+	.btnOpenMenuDesk {
+		display: flex;
+		font-size: 0.8em;
+		text-align: center;
+		padding: 0px;
+		border-radius: 3px;
+		background-color: transparent;
+		border: none;
+		margin: 0 3rem 0 2rem;
+	}
+	.iconLightMenuDesk {
 		display: inline-block;
-		background-image: url("@imgs/icons/iconsMenu/home.svg");
-		min-width: 1.88rem;	
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeLightDesk.svg");
+		min-width: 1.88rem;
+		min-height: 1.88rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		object-fit: cover;
+	}
+	.iconDarkMenuDesk {
+		display: inline-block;
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeDarkDesk.svg");
+		min-width: 1.88rem;
 		min-height: 1.88rem;
 		background-size: cover;
 		background-repeat: no-repeat;
 		object-fit: cover;
 	}
 
-	.icon2 {
-		background-image: url("@imgs/icons/iconsMenu/redes.svg");
-		@extend .icon1;
+	.iconAccessibilityMenuDesk {
+		display: inline-block;
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeAccessibilityDesk.svg");
+		min-width: 1.88rem;
+		min-height: 1.88rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		object-fit: cover;
 	}
-
-	.icon3 {
-		background-image: url("@imgs/icons/iconsMenu/pdfs.svg");
-		@extend .icon1;
-	}
-
-	.icon4 {
-		background-image: url("@imgs/icons/iconsMenu/configs.svg");
-		@extend .icon1;
-	}
-
+}

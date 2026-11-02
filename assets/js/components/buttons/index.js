@@ -2,29 +2,91 @@
 
 import {
 	bntCloseSidebar,
-	createBntsMenu,
+	createBtnsMenu,
 	createShowSkillsButtons,
 } from "./criarBnts/index.js";
 
 export const btnHome = () => {
-	createBntsMenu("bntMenu1", "button", "bntsMenu", "icon1", "text1", "home");
+	createBtnsMenu(
+		"bntMenu1",
+		"button",
+		"bntsMenuMobile",
+		"icon1",
+		"text1",
+		"home",
+	);
 };
 
 export const btnRedes = () => {
-	createBntsMenu("bntMenu2", "button", "bntsMenu", "icon2", "text2", "redes");
+	createBtnsMenu(
+		"bntMenu2",
+		"button",
+		"bntsMenuMobile",
+		"icon2",
+		"text2",
+		"redes",
+	);
 };
 export const btnPdfs = () => {
-	createBntsMenu("bntMenu3", "button", "bntsMenu", "icon3", "text3", "pdfs");
+	createBtnsMenu(
+		"bntMenu3",
+		"button",
+		"bntsMenuMobile",
+		"icon3",
+		"text3",
+		"pdfs",
+	);
 };
 
 export const btnConfigs = () => {
-	createBntsMenu(
+	createBtnsMenu(
 		"bntMenu4",
 		"button",
-		"bntsMenu",
+		"bntsMenuMobile",
 		"icon4",
 		"text4",
 		"configs",
+	);
+};
+
+export const btnOpenMenuDesk = () => {
+	createBtnsMenu(
+		"btnOpenMenuDesk",
+		"button",
+		"btnOpenMenuDesk",
+		"iconOpenMenuDesk",
+		"",
+		"",
+	);
+};
+export const btnLightMenuDesk = () => {
+	createBtnsMenu(
+		"btnOpenMenuDesk",
+		"button",
+		"btnsMenuDesk",
+		"iconLightMenuDesk",
+		"",
+		"",
+	);
+};
+export const btnDarkMenuDesk = () => {
+	createBtnsMenu(
+		"btnOpenMenuDesk",
+		"button",
+		"btnsMenuDesk",
+		"iconDarkMenuDesk",
+		"",
+		"",
+	);
+};
+export const btnAccessibilityMenuDesk = () => {
+	createBtnsMenu(
+		"btnOpenMenuDesk",
+		"button",
+		"btnsMenuDesk",
+		"iconAccessibilityMenuDesk",
+		"",
+		"",
 	);
 };
 

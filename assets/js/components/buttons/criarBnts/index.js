@@ -6,17 +6,10 @@ import { standardCardHardskills } from "../../../../../src/utils/objects/hardski
 import { standardCardSoftskills } from "../../../../../src/utils/objects/softskills/index.js";
 
 import { createGridSkills, createModalCertificate } from "../../grid/index.js";
-import { confirmationMessage } from "../../messages/confirmationMessage.js"; 
+import { confirmationMessage } from "../../messages/confirmationMessage.js";
 
 // ! Refatorar esta função
-export function createBntsMenu(
-	idBtn,
-	typeBtn,
-	classBtn,
-	classIcon,
-	textId,
-	textBtn,
-) {
+export function createBtnsMenu(idBtn, typeBtn, classBtn, classIcon, textId, textBtn) {
 	let mapRede = {
 		whatsapp: "https://api.whatsapp.com/send?phone=+5535991858716",
 		instagram: "https://www.instagram.com/luiz_h.s.silva/",
@@ -25,25 +18,25 @@ export function createBntsMenu(
 		email: "mailto:luiz.henrique.dossantos062000%40gmail.com",
 	};
 	const documentBody = document.querySelector("body");
-	const containerMenuMobile = document.querySelector(
-		"#container-menu",
-	);
+	const containerMenuMobile = document.querySelector("#container-menu");
 
-	const bntsMenu = document.createElement("button");
-	bntsMenu.id = idBtn;
-	bntsMenu.type = typeBtn;
-	bntsMenu.classList.add(`${classBtn}`);
+	const btnsMenu = document.createElement("button");
+	btnsMenu.id = idBtn;
+	btnsMenu.type = typeBtn;
+	btnsMenu.classList.add(`${classBtn}`);
 	const icon = document.createElement("i");
 	icon.classList.add(`${classIcon}`);
 	const text = document.createElement("p");
 	text.id = `${textId}`;
 	text.textContent = `${textBtn}`;
-	bntsMenu.appendChild(icon);
-	bntsMenu.appendChild(text);
-	containerMenuMobile.appendChild(bntsMenu);
-	bntsMenu.id === "bntMenu1" ?
+	btnsMenu.appendChild(icon);
+	btnsMenu.appendChild(text);
+	containerMenuMobile.appendChild(btnsMenu);
+
+
+	btnsMenu.id === "bntMenu1" ?
 		0
-	:	bntsMenu.addEventListener("click", (e) => {
+	:	btnsMenu.addEventListener("click", (e) => {
 			e.preventDefault;
 			let bntClicked = e.currentTarget.id;
 
@@ -57,7 +50,7 @@ export function createBntsMenu(
 						: i === 4 ? (textBtn = "github")
 						: (textBtn = "email");
 
-						createBntsSideBar(
+						createBtnsSideBar(
 							`sideBarBnt-${i}`,
 							"button",
 							"sideBarBnts",
@@ -78,7 +71,7 @@ export function createBntsMenu(
 						: i === 7 ? (textBtn = "Unicesumar")
 						: (textBtn = "Onibitcode");
 
-						createBntsSideBar(
+						createBtnsSideBar(
 							`sideBarBnt-${i}`,
 							"button",
 							"sideBarBnts",
@@ -94,7 +87,7 @@ export function createBntsMenu(
 						i === 9 ?
 							(textBtn = "tema")
 						:	(textBtn = "Acessibilidade");
-						createBntsSideBar(
+						createBtnsSideBar(
 							`sideBarBnt-${i}`,
 							"button",
 							"sideBarBnts",
@@ -114,6 +107,7 @@ export function createBntsMenu(
 			closeBtn?.classList.toggle("closeBtn");
 		});
 }
+
 
 export function bntCloseSidebar() {
 	const bntCloseSidebarExists = document.getElementById("bntCloseSidebar");
@@ -149,7 +143,7 @@ export function bntCloseSidebar() {
 }
 
 //! Alterar nomenclaturas para deixar mais genérica, e não pertecente a um unico local (reutilizavel)
-export function createBntsSideBar(
+export function createBtnsSideBar(
 	idBtn,
 	typeBtn,
 	classBtn,
