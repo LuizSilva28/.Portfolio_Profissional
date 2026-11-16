@@ -5,6 +5,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
+html,
 * {
 	padding: 0;
 	margin: 0;
@@ -19,20 +20,30 @@
 
 .container-major {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(40, 0, 10));
-	background-color: #28000a;
+	flex-direction: column;
+
+	background-color: $color-primary;
 	background-repeat: no-repeat;
-	min-height: 100vh;
+	background-image:
+		radial-gradient(
+			circle at 50% 50%,
+			rgba(40, 0, 10, 0.6),
+			transparent 70%
+		),
+		linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgb(40, 0, 10));
+	background-size:
+		200% 200%,
+		300% 300%;
+	animation: moverGradienteOrganico 18s ease-in-out infinite;
+	background-attachment: fixed;
+
 	#content {
-		position: absolute;
-		top: 0;
 		z-index: 1;
 		width: 100%;
 		height: 100%;
 		font-size: $font-primary;
-		padding: 0 0.7rem 0 0.7rem;
 
 		.espacoVazio {
 			width: 100vw;
@@ -101,8 +112,53 @@
 			margin: 1rem 0 0 0;
 		}
 	}
+
+	#area-feedback {
+		background-color: transparent;
+
+		.backgroundFeedback {
+			position: relative;
+			background: $color-secondary;
+			padding-bottom: 2rem;
+			width: 100%;
+			height: auto;
+			z-index: 2;
+		}
+
+		.backgroundFeedback::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(51, 72, 13));
+			z-index: -2;
+		}
+	}
+
+	@keyframes moverGradienteOrganico {
+		0% {
+			background-position: 0% 50%;
+		}
+		25% {
+			background-position: 50% 100%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		75% {
+			background-position: 50% 0%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
 }
 
-#comentario {
-	color: black;
+@media (min-width: 600px) {
+	.container-major {
+		padding-top: 4rem; 
+	}
 }

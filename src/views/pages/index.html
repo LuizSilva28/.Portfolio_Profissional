@@ -33,17 +33,17 @@
 			<div class="halfOctagon"></div>
 
 			<div class="isoscelesTrapezoid"></div>
-
-			<div class="layoutShape"></div>
-
 		</div>
-		<header id="menu">
-			<nav id="container-menu-mobile"></nav>
+
+		<header id="header">
+			<nav id="container-menu" class="container-menu"></nav>
 
 			<section
 				class="sideBar"
 				id="side-bar">
-				<div class="layoutSideBar"></div>
+				<div class="layoutSideBar">
+
+				</div>
 			</section>
 		</header>
 		<main id="content">
@@ -168,111 +168,115 @@
 			</section>
 
 			<section id="area-feedback">
-				<section>
-					<i>icon</i>
-					<h2>Deixe sua avaliação</h2>
+				<div class="assessment-container">
+					<i class="iconAvaliable"></i>
+					<h2 class="titleFeedback">Deixe sua avaliação</h2>
+					<form
+						id="form-feedback"
+						class="form-feedback">
+						<div class="layoutShape6"></div>
 
-					<label for="name">Nome:</label>
-					<input
-						type="text"
-						id="name"
-						placeholder="ex: João Gustavo" />
-
-					<label for="email">Email:</label>
-					<input
-						type="email"
-						id="email"
-						placeholder="ex: joão@gmail.com" />
-
-					<h3>
-						Nível de satisção
-						<i>icon</i>
-					</h3>
-					<ul id="container-stars">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-
-					<label for="comentario">Comentário:</label>
-					<textarea
-						name=""
-						id="comentario"
-						cols="30"
-						rows="10"
-						maxlength="200"></textarea>
-					<br />
-					<button>Enviar</button>
-				</section>
-				<section>
-					<button>Avalie</button>
-					<div class="cardComent">
-						<p>nome</p>
-						<p>
-							nota
-							<i>icon</i>
-						</p>
-						<p>email</p>
-						<p>comentário</p>
-					</div>
-				</section>
-				<section id="formacoes">
-					<div>
-						<div>
-							<!-- <img
-								src=""
-								alt="" /> -->
+						<div class="containerInput">
+							<label for="name">Nome:</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								placeholder="ex: João Gustavo" />
+						</div>
+						<div class="containerInput">
+							<label for="email">Email:</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="ex: joão@gmail.com" />
 						</div>
 
-						<button>1</button>
-					</div>
-					<div>
-						<div>
-							<!-- <img
-								src=""
-								alt="" /> -->
+						<div class="containerLevelSatisfaction">
+							<h3>Nível de satisção</h3>
+							<i class="iconLevelSatsfaction"></i>
 						</div>
 
-						<button>2</button>
-					</div>
-					<div>
-						<div>
-							<!-- <img
-								src=""
-								alt="" /> -->
+						<ul
+							id="container-stars"
+							class="container-stars"></ul>
+
+						<label for="comment">Comentário:</label>
+						<textarea
+							name="comment"
+							id="comment"
+							cols="30"
+							rows="10"
+							maxlength="200"></textarea>
+						<br />
+						<button
+							id="toAssess"
+							class="toAssess sendReview"
+							type="submit"></button>
+					</form>
+				</div>
+
+				<div class="backgroundFeedback">
+					<section
+						id="commentArea"
+						class="commentArea"></section>
+					<section
+						id="formation"
+						class="formation">
+						<div
+							class="specificformation"
+							id="containerUniversity">
+							<div class="logo">
+								<img
+									src="../../../assets/imgs/logos/logo_unicesumar.png"
+									alt="logo unicesmar" />
+							</div>
 						</div>
 
-						<button>3</button>
-					</div>
-				</section>
-				<footer>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-					<div>
-						<i>icon</i>
-						<p>name</p>
-					</div>
-				</footer>
+						<div
+							class="specificformation"
+							id="containerCouse">
+							<div class="logo">
+								<img
+									src="../../../assets/imgs/logos/logo_onebitcode.webp"
+									alt="logo onibitcode" />
+							</div>
+						</div>
+
+						<div
+							class="specificformation"
+							id="containerCurriculum">
+							<div class="logo">
+								<img
+									src="../../../assets/imgs/logos/logo_onebitcode.webp"
+									alt="logo onibitcode" />
+							</div>
+						</div>
+					</section>
+					<!-- <footer class="contactsContainer">
+						<div class="contact">
+							<i class="linkedin"></i>
+							<p>linkedin</p>
+						</div>
+						<div class="contact">
+							<i class="whats"></i>
+							<p>whats</p>
+						</div>
+						<div class="contact">
+							<i class="insta"></i>
+							<p>insta</p>
+						</div>
+						<div class="contact">
+							<i class="github"></i>
+							<p>github</p>
+						</div>
+						<div class="contact">
+							<i class="email"></i>
+							<p>email</p>
+						</div>
+					</footer> -->
+				</div>
 			</section>
 		</main>
 	</body>

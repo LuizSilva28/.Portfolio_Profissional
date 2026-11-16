@@ -1,64 +1,56 @@
-.SideBarIconBnt1 {
+/** @format */
+
+.sidebarIconRede0 {
 	display: block;
 	background-image: url("@imgs/icons/iconsSideBar/iconsWhats.svg");
-	min-width: 1.76rem;
-	min-height: 1.52rem;
+	width: 100%;
+	height: 1.52rem;
 	background-size: cover;
-    border-radius: 5px;
+	border-radius: 5px;
 	background-repeat: no-repeat;
 	object-fit: cover;
-    cursor: pointer;
-
-
+	cursor: pointer;
 }
-.SideBarIconBnt2 {
-	@extend .SideBarIconBnt1;
+.sidebarIconRede1 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconInsta.svg");
-
 }
 
-.SideBarIconBnt3 {
-	@extend .SideBarIconBnt1;
+.sidebarIconRede2 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconLikedin.svg");
-
 }
 
-.SideBarIconBnt4 {
-	@extend .SideBarIconBnt1;
+.sidebarIconRede3 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconGitHub.svg");
-
 }
 
-.SideBarIconBnt5 {
-	@extend .SideBarIconBnt1;
+.sidebarIconRede4 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconEmail.svg");
-
 }
 
-.SideBarIconBnt6 {
-	@extend .SideBarIconBnt1;
+.sidebarIconPdfs0 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconCurriculum.svg");
-
 }
 
-.SideBarIconBnt7 {
-	@extend .SideBarIconBnt1;
+.sidebarIconPdfs1 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconGridCurriculum.svg");
-
 }
 
-.SideBarIconBnt8 {
-	@extend .SideBarIconBnt7;
+.sidebarIconPdfs2 {
+	@extend .sidebarIconPdfs0;
 }
 
-.SideBarIconBnt9 {
-	@extend .SideBarIconBnt1;
+.sidebarIconConfigs0 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconThemeDark.svg");
-
 }
 
-
-.SideBarIconBnt10 {
-	@extend .SideBarIconBnt1;
+.sidebarIconConfigs1 {
+	@extend .sidebarIconRede0;
 	background-image: url("@imgs/icons/iconsSideBar/iconAccessibility.svg");
 }

@@ -156,7 +156,7 @@ export function createModalCertificate(certificateURL) {
 	modal.classList.add("modalCertificate");
 	modal.setAttribute("data-areaskills", "modal");
 	const controlPanelBox = document.createElement("div");
-	controlPanelBox.classList.add("bntsPdfControll");
+	controlPanelBox.classList.add("bntsPdfContainer");
 
 	const prev = createBntsForControlls("Anterior", "prev");
 	const next = createBntsForControlls("Próximo", "next");

@@ -1,0 +1,37 @@
+/** @format */
+@use "@styles/base/variables/fonts.scss" as *;
+@use "@styles/base/variables/colors.scss" as *;
+@use "../buttons/Buttons_AreaSkills/bntPdfControlls/style.scss" as *;
+@use "../pdfs/style.scss" as *;
+
+.messageConfirm {
+	@extend .modalCertificate;
+	@extend .bntsPdfContainer;
+
+	position: fixed;
+	top: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	gap: 10px;
+	padding: 15px 0 15px 0;
+
+	.messageContent {
+		margin: 0px auto 0px auto;
+		width: 100%;
+		text-align: center;
+	}
+
+	.btnAncorConfirm {
+		@extend .bntsPdfControll;
+		text-decoration: none;
+		color: $color-black;
+
+		.btnMessageConfirm {
+			background-color: transparent;
+			border: none;
+		}
+	}
+}

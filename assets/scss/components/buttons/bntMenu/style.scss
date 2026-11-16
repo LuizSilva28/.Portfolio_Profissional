@@ -1,25 +1,158 @@
-	.icon1 {
+/** @format */
+
+@use "@styles/base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
+
+.bntsMenuMobile {
+	font-size: 0.8em;
+	text-align: center;
+	padding: 0px;
+	border-radius: 3px;
+	background-color: transparent;
+	border: none;
+	width: 2rem;
+	height: 2rem;
+}
+
+.btnsMenuDesk {
+	display: none;
+}
+.btnOpenMenuDesk {
+	display: none;
+}
+
+.sideBarBnts {
+	display: flex;
+	min-width: 1.76rem;
+	min-height: 1.76rem;
+	border-radius: 6px;
+	background-color: $color-douradoEscuro;
+	border: none;
+	transition: 0.3s;
+}
+
+.icon1 {
+	display: inline-block;
+	background-image: url("@imgs/icons/iconsMenu/home.svg");
+	min-width: 1.88rem;
+	min-height: 1.88rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
+
+.icon2 {
+	@extend .icon1;
+	background-image: url("@imgs/icons/iconsMenu/redes.svg");
+}
+
+.icon3 {
+	@extend .icon1;
+	background-image: url("@imgs/icons/iconsMenu/pdfs.svg");
+}
+
+.icon4 {
+	@extend .icon1;
+	background-image: url("@imgs/icons/iconsMenu/configs.svg");
+}
+
+@media screen AND (min-width: 600px) {
+	.bntsMenuMobile {
+		display: none;
+	}
+}
+
+@media (min-width: 601px) {
+	.btnsMenuDesk {
+		position: relative;
+		display: flex;
+		width: auto;
+		height: auto;
+		min-width: 2rem;
+		min-height: 2rem;
+		font-size: $font-large;
+		z-index: 10;
+		text-align: center;
+		padding: 0px;
+		border-radius: 3px;
+		background-color: transparent;
+		border: none;
+		margin: 0 0.5rem 0 0.5rem;
+		gap: 0.5rem;
+
+		&:hover {
+			p {
+				color: $color-bege;
+			}
+		}
+
+		p {
+			color: $color-douradoEscuro;
+			transition: 0.3s;
+		}
+	}
+	.selected {
+		p {
+			color: $color-bege !important;
+			transition: 0.3s;
+		}
+	}
+
+	.btnOpenMenuDesk {
+		display: flex;
+		font-size: 0.8em;
+		text-align: center;
+		padding: 0px;
+		border-radius: 3px;
+		background-color: transparent;
+		border: none;
+		margin: 0 3rem 0 2rem;
+	}
+
+	.iconOpenMenuDesk {
 		display: inline-block;
-		background-image: url("@imgs/icons/iconsMenu/home.svg");
-		min-width: 1.88rem;	
+		background-image: url("@imgs/icons/iconsMenu/openMenu.svg");
+		background-color: transparent;
+		min-width: 1.88rem;
 		min-height: 1.88rem;
 		background-size: cover;
 		background-repeat: no-repeat;
 		object-fit: cover;
 	}
 
-	.icon2 {
-		background-image: url("@imgs/icons/iconsMenu/redes.svg");
-		@extend .icon1;
+	.iconLightMenuDesk {
+		@extend .iconOpenMenuDesk;
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeLightDesk.svg");
+	}
+	.iconDarkMenuDesk {
+		@extend .iconOpenMenuDesk;
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeDarkDesk.svg");
 	}
 
-	.icon3 {
-		background-image: url("@imgs/icons/iconsMenu/pdfs.svg");
-		@extend .icon1;
+	.iconAccessibilityMenuDesk {
+		@extend .iconOpenMenuDesk;
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeAccessibilityDesk.svg");
 	}
 
-	.icon4 {
-		background-image: url("@imgs/icons/iconsMenu/configs.svg");
-		@extend .icon1;
+	.icon1 {
+		width: 100%;
+		height: 100%;
+		min-width: 1.5rem;
+		min-height: 1.5rem;
+		margin: auto 0 auto 0;
 	}
+
+	.text1 {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.text2 {
+		@extend .text1;
+	}
+	.text3 {
+		@extend .text1;
+	}
+}
+
 

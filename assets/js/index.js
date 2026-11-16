@@ -1,7 +1,9 @@
+/** @format */
+
 // IMPORTA ESTILOS PARA O WEBPACK USAR E MINIFICAR
 import "../../assets/scss/_index.scss";
 
-import { allBntsMenu } from "./components/menuMobile/menu/index.js";
+import { menu } from "./components/menus/menu/index.js";
 
 import { createCarousel } from "./components/carousels/carousel/container/script.js";
 
@@ -15,16 +17,23 @@ import {
 	displayFullInforrmation,
 } from "./modules/charts/polarAreaChart.js";
 
-
 import { createAllCardsForProjects } from "./components/projects/index.js";
 
 import { standardCardProjects } from "../../src/utils/objects/projectsOBJ/index.js";
 
-allBntsMenu();
+import "./layouts/avaliableSection/index.js";
+import "./layouts/commentsSection/index.js";
+import "./layouts/institutesSection/index.js";
+import { btnHardskills, btnSoftskills } from "./components/buttons/index.js";
+
+menu();
 
 createCarousel();
 
 createAudio();
+
+btnHardskills();
+btnSoftskills();
 
 createGridSkills(standardCardHardskills);
 
@@ -33,7 +42,7 @@ createGridSkills(standardCardHardskills);
 generateGraph();
 displayFullInforrmation();
 
-console.log("__________________________________\n" );
+console.log("__________________________________\n");
 console.log("standardCardProjects", standardCardProjects);
 console.log("___________________________________\n");
 createAllCardsForProjects(standardCardProjects);

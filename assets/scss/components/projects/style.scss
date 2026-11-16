@@ -3,6 +3,8 @@
 @use "@styles/base/variables/fonts.scss" as *;
 @use "@styles/base/variables/colors.scss" as *;
 
+
+// !Alterar nome da pasta de project para showcase verificar utilidade da classe carouselProjects
 .container-projects {
 	display: flex;
 	align-items: center;
