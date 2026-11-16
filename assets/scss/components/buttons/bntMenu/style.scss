@@ -1,6 +1,7 @@
 /** @format */
 
 @use "@styles/base/variables/colors.scss" as *;
+@use "@styles/base/variables/fonts.scss" as *;
 
 .bntsMenuMobile {
 	font-size: 0.8em;
@@ -9,6 +10,8 @@
 	border-radius: 3px;
 	background-color: transparent;
 	border: none;
+	width: 2rem;
+	height: 2rem;
 }
 
 .btnsMenuDesk {
@@ -53,12 +56,6 @@
 	background-image: url("@imgs/icons/iconsMenu/configs.svg");
 }
 
-.iconOpenMenuDesk {
-	@extend .icon1;
-	background-image: url("@imgs/icons/iconsMenu/openMenu.svg");
-	background-color: transparent;
-}
-
 @media screen AND (min-width: 600px) {
 	.bntsMenuMobile {
 		display: none;
@@ -67,14 +64,38 @@
 
 @media (min-width: 601px) {
 	.btnsMenuDesk {
+		position: relative;
 		display: flex;
-		font-size: 0.8em;
+		width: auto;
+		height: auto;
+		min-width: 2rem;
+		min-height: 2rem;
+		font-size: $font-large;
+		z-index: 10;
 		text-align: center;
 		padding: 0px;
 		border-radius: 3px;
 		background-color: transparent;
 		border: none;
-		margin: 0 .5rem 0 .5rem;
+		margin: 0 0.5rem 0 0.5rem;
+		gap: 0.5rem;
+
+		&:hover {
+			p {
+				color: $color-bege;
+			}
+		}
+
+		p {
+			color: $color-douradoEscuro;
+			transition: 0.3s;
+		}
+	}
+	.selected {
+		p {
+			color: $color-bege !important;
+			transition: 0.3s;
+		}
 	}
 
 	.btnOpenMenuDesk {
@@ -87,18 +108,11 @@
 		border: none;
 		margin: 0 3rem 0 2rem;
 	}
-	.iconLightMenuDesk {
+
+	.iconOpenMenuDesk {
 		display: inline-block;
-		background-image: url("@imgs/icons/iconsSideBar/iconThemeLightDesk.svg");
-		min-width: 1.88rem;
-		min-height: 1.88rem;
-		background-size: cover;
-		background-repeat: no-repeat;
-		object-fit: cover;
-	}
-	.iconDarkMenuDesk {
-		display: inline-block;
-		background-image: url("@imgs/icons/iconsSideBar/iconThemeDarkDesk.svg");
+		background-image: url("@imgs/icons/iconsMenu/openMenu.svg");
+		background-color: transparent;
 		min-width: 1.88rem;
 		min-height: 1.88rem;
 		background-size: cover;
@@ -106,13 +120,39 @@
 		object-fit: cover;
 	}
 
+	.iconLightMenuDesk {
+		@extend .iconOpenMenuDesk;
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeLightDesk.svg");
+	}
+	.iconDarkMenuDesk {
+		@extend .iconOpenMenuDesk;
+		background-image: url("@imgs/icons/iconsSideBar/iconThemeDarkDesk.svg");
+	}
+
 	.iconAccessibilityMenuDesk {
-		display: inline-block;
+		@extend .iconOpenMenuDesk;
 		background-image: url("@imgs/icons/iconsSideBar/iconThemeAccessibilityDesk.svg");
-		min-width: 1.88rem;
-		min-height: 1.88rem;
-		background-size: cover;
-		background-repeat: no-repeat;
-		object-fit: cover;
+	}
+
+	.icon1 {
+		width: 100%;
+		height: 100%;
+		min-width: 1.5rem;
+		min-height: 1.5rem;
+		margin: auto 0 auto 0;
+	}
+
+	.text1 {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.text2 {
+		@extend .text1;
+	}
+	.text3 {
+		@extend .text1;
 	}
 }
+
+

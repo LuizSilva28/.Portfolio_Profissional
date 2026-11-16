@@ -20,29 +20,26 @@
 	min-height: 15.63rem;
 	padding-left: 0.18rem;
 	transition: 0.3s;
+}
+.layoutSideBar {
+	margin: 10px;
+	width: 100%;
+}
+.divDadBnts {
+	display: none;
+	align-items: center;
+	gap: 0.4rem;
+	min-height: 2.5rem;
+	margin: 0 0 0 0.35rem;
+	transition: 0.3s;
 
-	.layoutSideBar {
-		margin: 10px;
-		width: 100%;
-
-		.divDadBnts {
-			display: flex;
-			align-items: center;
-			gap: 0.4rem;
-			min-height: 2.5rem;
-			margin: 0 0 0 0.35rem;
-			transition: 0.3s;
-
-			&:hover {
-				.sideBarBnts {
-					margin-top: 0.13rem;
-					min-height: 1.24rem;
-				}
-			}
+	&:hover {
+		.sideBarBnts {
+			margin-top: 0.13rem;
+			min-height: 1.24rem;
 		}
 	}
 }
-
 .sideBarClose {
 	right: 0vw;
 	transition: 0.3s;
@@ -61,6 +58,7 @@
 	min-width: 60vw;
 	height: 4.38rem;
 	transition: left 0.3s ease;
+	cursor: pointer;
 }
 
 .closeBtn {
@@ -73,6 +71,8 @@
 		bottom: auto;
 		left: 0;
 		right: 0vw;
+		display: flex;
+		justify-content: center;
 
 		z-index: 3;
 
@@ -83,28 +83,50 @@
 				$variantColor-secundary2 0%,
 				$color-preto 2%
 			);
+		backdrop-filter: blur(2px);
+		--webkit-backdrop-filter: blur(2px);
 
-		min-height: 8.63rem;
+		min-height: 6rem;
+	}
+	.layoutSideBar {
+		justify-content: center;
+		margin: 0;
+		width: 100%;
+		max-width: 50rem;
+		height: 6rem;
+	}
+	.containerMainBtns {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: 1rem;
+		margin: 0rem 2rem 0 5rem;
+	}
 
-		.layoutSideBar {
-			margin: 10px;
-			width: 100%;
-
-			.divDadBnts {
-				display: flex;
-				align-items: center;
-				gap: 0.4rem;
-				min-height: 2.5rem;
-				margin: 0 0 0 0.35rem;
-				transition: 0.3s;
-
-				&:hover {
-					.sideBarBnts {
-						margin-top: 0.13rem;
-						min-height: 1.24rem;
-					}
-				}
+	.divDadBnts {
+		display: none;
+		align-items: center;
+		justify-content: space-around;
+		gap: 1rem;
+		margin: 0.8rem 2rem 0 5rem;
+		min-height: 2.5rem;
+		transition: 0.3s;
+		// remove o hover de divDadBtns
+		&:hover {
+			.sideBarBnts {
+				margin-top: 0;
+				min-height: 1.76rem;
 			}
+		}
+
+		.sideBarBnts:hover {
+			margin-top: 0.13rem;
+			min-height: 1.24rem;
+			background-color: $color-preto;
+		}
+
+		p {
+			display: none;
 		}
 	}
 	.sideBarClose {
@@ -114,17 +136,26 @@
 	.bntCloseSidebar {
 		top: 0;
 		bottom: auto;
-		left: 0vw;
+		left: 0;
 		z-index: 4;
-		justify-content: flex-start;
-
-		padding: 1rem 2rem;
+		justify-content: center;
+		min-height: 5.9rem;
+		min-width: 5rem;
+		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 		background-image: linear-gradient($color-preto, $color-preto);
-
+		border-radius: 0.35rem;
 		transition: top 0.3s ease;
 	}
 
 	.closeBtn {
 		top: -22vw;
+	}
+}
+
+@media (min-width: 901px) {
+	.divDadBnts {
+		p {
+			display: flex;
+		}
 	}
 }

@@ -3,7 +3,7 @@
 // IMPORTA ESTILOS PARA O WEBPACK USAR E MINIFICAR
 import "../../assets/scss/_index.scss";
 
-import { allBtnsMenu } from "./components/menus/menu/index.js";
+import { menu } from "./components/menus/menu/index.js";
 
 import { createCarousel } from "./components/carousels/carousel/container/script.js";
 
@@ -26,7 +26,7 @@ import "./layouts/commentsSection/index.js";
 import "./layouts/institutesSection/index.js";
 import { btnHardskills, btnSoftskills } from "./components/buttons/index.js";
 
-allBtnsMenu();
+menu();
 
 createCarousel();
 

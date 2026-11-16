@@ -6,126 +6,50 @@ import { standardCardHardskills } from "../../../../../src/utils/objects/hardski
 import { standardCardSoftskills } from "../../../../../src/utils/objects/softskills/index.js";
 
 import { createGridSkills, createModalCertificate } from "../../grid/index.js";
-import { confirmationMessage } from "../../messages/confirmationMessage.js";
 
 // ! Refatorar esta função
-export function createBtnsMenu(idBtn, typeBtn, classBtn, classIcon, textId, textBtn) {
-	let mapRede = {
-		whatsapp: "https://api.whatsapp.com/send?phone=+5535991858716",
-		instagram: "https://www.instagram.com/luiz_h.s.silva/",
-		linkedin: "https://www.linkedin.com/in/luiz-henrique-801259243/",
-		github: "https://github.com/LuizSilva28",
-		email: "mailto:luiz.henrique.dossantos062000%40gmail.com",
-	};
-	const documentBody = document.querySelector("body");
-	const containerMenuMobile = document.querySelector("#container-menu");
-
+export function createBtnsMenu(
+	idBtn,
+	typeBtn,
+	classBtn,
+	classIcon,
+	textClass,
+	textBtn,
+) {
 	const btnsMenu = document.createElement("button");
 	btnsMenu.id = idBtn;
 	btnsMenu.type = typeBtn;
-	btnsMenu.classList.add(`${classBtn}`);
+	btnsMenu.classList.add(...classBtn);
+
 	const icon = document.createElement("i");
-	icon.classList.add(`${classIcon}`);
+	if (classIcon) icon.classList.add(`${classIcon}`);
+
 	const text = document.createElement("p");
-	text.id = `${textId}`;
+	if (textClass) text.classList.add(textClass);
+
 	text.textContent = `${textBtn}`;
 	btnsMenu.appendChild(icon);
 	btnsMenu.appendChild(text);
-	containerMenuMobile.appendChild(btnsMenu);
 
-
-	btnsMenu.id === "bntMenu1" ?
-		0
-	:	btnsMenu.addEventListener("click", (e) => {
-			e.preventDefault;
-			let bntClicked = e.currentTarget.id;
-
-			let textBtn = "";
-			switch (bntClicked) {
-				case "bntMenu2":
-					for (let i = 1; i <= 5; i++) {
-						i === 1 ? (textBtn = "whatsapp")
-						: i === 2 ? (textBtn = "instagram")
-						: i === 3 ? (textBtn = "linkedin")
-						: i === 4 ? (textBtn = "github")
-						: (textBtn = "email");
-
-						createBtnsSideBar(
-							`sideBarBnt-${i}`,
-							"button",
-							"sideBarBnts",
-							`SideBarIconBnt${i}`,
-							`text${i}`,
-							textBtn,
-							confirmationMessage,
-							mapRede[textBtn],
-							textBtn,
-							documentBody,
-						);
-					}
-
-					break;
-				case "bntMenu3":
-					for (let i = 6; i <= 8; i++) {
-						i === 6 ? (textBtn = "Currículo")
-						: i === 7 ? (textBtn = "Unicesumar")
-						: (textBtn = "Onibitcode");
-
-						createBtnsSideBar(
-							`sideBarBnt-${i}`,
-							"button",
-							"sideBarBnts",
-							`SideBarIconBnt${i}`,
-							`text${i}`,
-							textBtn,
-						);
-					}
-
-					break;
-				case "bntMenu4":
-					for (let i = 9; i <= 10; i++) {
-						i === 9 ?
-							(textBtn = "tema")
-						:	(textBtn = "Acessibilidade");
-						createBtnsSideBar(
-							`sideBarBnt-${i}`,
-							"button",
-							"sideBarBnts",
-							`SideBarIconBnt${i}`,
-							`text${i}`,
-							textBtn,
-						);
-					}
-
-					break;
-				default:
-					console.log("Deu erro");
-			}
-			const sideBar = document.getElementById("side-bar");
-			sideBar.classList.add("sideBarClose");
-			const closeBtn = document.querySelector("#bntCloseSidebar");
-			closeBtn?.classList.toggle("closeBtn");
-		});
+	return btnsMenu;
 }
-
 
 export function bntCloseSidebar() {
 	const bntCloseSidebarExists = document.getElementById("bntCloseSidebar");
+	const menu = document.getElementById("header");
 	if (bntCloseSidebarExists) {
-		const menu = document.getElementById("menu");
 		menu.removeChild(bntCloseSidebarExists);
 	}
 
-	const header = document.getElementById("menu");
 	const bntCloseSidebar = document.createElement("div");
 	bntCloseSidebar.id = "bntCloseSidebar";
-	bntCloseSidebar.classList.add("bntCloseSidebar", "closeBtn");
+	bntCloseSidebar.classList.add(...["bntCloseSidebar", "closeBtn"]);
 
 	const iconX = document.createElement("i");
 	iconX.classList.add("icon0");
 
 	bntCloseSidebar.appendChild(iconX);
-	header.appendChild(bntCloseSidebar);
+	menu.appendChild(bntCloseSidebar);
 
 	bntCloseSidebar.addEventListener("click", () => {
 		const sideBar = document.getElementById("side-bar");
@@ -133,12 +57,6 @@ export function bntCloseSidebar() {
 
 		const closeBtn = document.querySelector(".bntCloseSidebar");
 		closeBtn.classList.toggle("closeBtn");
-
-		const divDadBnts = document.querySelectorAll(".divDadBnts");
-
-		for (let i = 0; i < divDadBnts.length; i++) {
-			divDadBnts[i].remove();
-		}
 	});
 }
 
@@ -148,15 +66,11 @@ export function createBtnsSideBar(
 	typeBtn,
 	classBtn,
 	classIcon,
-	textId,
+	textClass,
 	textBtn,
 	callback,
 	...args
 ) {
-	const containerlayoutSideBar = document.querySelector(".layoutSideBar");
-	const divDadBnts = document.createElement("div");
-	divDadBnts.classList.add("divDadBnts");
-
 	const btnSideBar = document.createElement("button");
 	btnSideBar.id = idBtn;
 	btnSideBar.type = typeBtn;
@@ -166,7 +80,7 @@ export function createBtnsSideBar(
 	icon.classList.add(`${classIcon}`);
 
 	const text = document.createElement("p");
-	text.id = `${textId}`;
+	text.classList.add(textClass);
 	text.textContent = `${textBtn}`;
 
 	btnSideBar.addEventListener("click", () => {
@@ -176,9 +90,8 @@ export function createBtnsSideBar(
 	});
 
 	btnSideBar.appendChild(icon);
-	divDadBnts.appendChild(btnSideBar);
-	divDadBnts.appendChild(text);
-	containerlayoutSideBar.appendChild(divDadBnts);
+
+	return { btnSideBar, text };
 }
 
 export function createShowSkillsButtons(txtButtom, dataValue, idBtn) {

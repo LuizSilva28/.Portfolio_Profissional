@@ -8,6 +8,8 @@
 /** @format */
 /** @format */
 /** @format */
+/** @format */
+/** @format */
 .shapesBackgroundForBody {
   position: absolute;
   top: 0;
@@ -51,6 +53,7 @@
   background-image: url(../assets/imgs/link_sass/Rectangle2.svg);
 }
 
+/** @format */
 html,
 * {
   padding: 0;
@@ -184,6 +187,7 @@ html,
 }
 /** @format */
 /** @format */
+/** @format */
 .bntsMenuMobile {
   font-size: 0.8em;
   text-align: center;
@@ -191,6 +195,8 @@ html,
   border-radius: 3px;
   background-color: transparent;
   border: none;
+  width: 2rem;
+  height: 2rem;
 }
 
 .btnsMenuDesk {
@@ -211,7 +217,7 @@ html,
   transition: 0.3s;
 }
 
-.icon1, .iconOpenMenuDesk, .icon4, .icon3, .icon2 {
+.icon1, .icon4, .icon3, .icon2 {
   display: inline-block;
   background-image: url(../assets/imgs/link_sass/home.svg);
   min-width: 1.88rem;
@@ -233,11 +239,6 @@ html,
   background-image: url(../assets/imgs/link_sass/configs.svg);
 }
 
-.iconOpenMenuDesk {
-  background-image: url(../assets/imgs/link_sass/openMenu.svg);
-  background-color: transparent;
-}
-
 @media screen and (min-width: 600px) {
   .bntsMenuMobile {
     display: none;
@@ -245,14 +246,32 @@ html,
 }
 @media (min-width: 601px) {
   .btnsMenuDesk {
+    position: relative;
     display: flex;
-    font-size: 0.8em;
+    width: auto;
+    height: auto;
+    min-width: 2rem;
+    min-height: 2rem;
+    font-size: 1.3rem;
+    z-index: 10;
     text-align: center;
     padding: 0px;
     border-radius: 3px;
     background-color: transparent;
     border: none;
     margin: 0 0.5rem 0 0.5rem;
+    gap: 0.5rem;
+  }
+  .btnsMenuDesk:hover p {
+    color: rgb(245, 245, 220);
+  }
+  .btnsMenuDesk p {
+    color: rgb(155, 132, 0);
+    transition: 0.3s;
+  }
+  .selected p {
+    color: rgb(245, 245, 220) !important;
+    transition: 0.3s;
   }
   .btnOpenMenuDesk {
     display: flex;
@@ -264,32 +283,35 @@ html,
     border: none;
     margin: 0 3rem 0 2rem;
   }
-  .iconLightMenuDesk {
+  .iconOpenMenuDesk, .iconAccessibilityMenuDesk, .iconDarkMenuDesk, .iconLightMenuDesk {
     display: inline-block;
-    background-image: url(../assets/imgs/link_sass/iconThemeLightDesk.svg);
+    background-image: url(../assets/imgs/link_sass/openMenu.svg);
+    background-color: transparent;
     min-width: 1.88rem;
     min-height: 1.88rem;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
+  }
+  .iconLightMenuDesk {
+    background-image: url(../assets/imgs/link_sass/iconThemeLightDesk.svg);
   }
   .iconDarkMenuDesk {
-    display: inline-block;
     background-image: url(../assets/imgs/link_sass/iconThemeDarkDesk.svg);
-    min-width: 1.88rem;
-    min-height: 1.88rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
   }
   .iconAccessibilityMenuDesk {
-    display: inline-block;
     background-image: url(../assets/imgs/link_sass/iconThemeAccessibilityDesk.svg);
-    min-width: 1.88rem;
-    min-height: 1.88rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
+  }
+  .icon1, .icon2, .icon3, .icon4 {
+    width: 100%;
+    height: 100%;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    margin: auto 0 auto 0;
+  }
+  .text1, .text3, .text2 {
+    display: flex;
+    align-items: flex-end;
   }
 }
 .icon0 {
@@ -302,11 +324,12 @@ html,
   object-fit: cover;
 }
 
-.SideBarIconBnt1, .SideBarIconBnt10, .SideBarIconBnt9, .SideBarIconBnt7, .SideBarIconBnt8, .SideBarIconBnt6, .SideBarIconBnt5, .SideBarIconBnt4, .SideBarIconBnt3, .SideBarIconBnt2 {
+/** @format */
+.sidebarIconRede0, .sidebarIconConfigs1, .sidebarIconConfigs0, .sidebarIconPdfs1, .sidebarIconPdfs0, .sidebarIconPdfs2, .sidebarIconRede4, .sidebarIconRede3, .sidebarIconRede2, .sidebarIconRede1 {
   display: block;
   background-image: url(../assets/imgs/link_sass/iconsWhats.svg);
-  min-width: 1.76rem;
-  min-height: 1.52rem;
+  width: 100%;
+  height: 1.52rem;
   background-size: cover;
   border-radius: 5px;
   background-repeat: no-repeat;
@@ -314,38 +337,39 @@ html,
   cursor: pointer;
 }
 
-.SideBarIconBnt2 {
+.sidebarIconRede1 {
   background-image: url(../assets/imgs/link_sass/iconInsta.svg);
 }
 
-.SideBarIconBnt3 {
+.sidebarIconRede2 {
   background-image: url(../assets/imgs/link_sass/iconLikedin.svg);
 }
 
-.SideBarIconBnt4 {
+.sidebarIconRede3 {
   background-image: url(../assets/imgs/link_sass/iconGitHub.svg);
 }
 
-.SideBarIconBnt5 {
+.sidebarIconRede4 {
   background-image: url(../assets/imgs/link_sass/iconEmail.svg);
 }
 
-.SideBarIconBnt6 {
+.sidebarIconPdfs0, .sidebarIconPdfs2 {
   background-image: url(../assets/imgs/link_sass/iconCurriculum.svg);
 }
 
-.SideBarIconBnt7, .SideBarIconBnt8 {
+.sidebarIconPdfs1 {
   background-image: url(../assets/imgs/link_sass/iconGridCurriculum.svg);
 }
 
-.SideBarIconBnt9 {
+.sidebarIconConfigs0 {
   background-image: url(../assets/imgs/link_sass/iconThemeDark.svg);
 }
 
-.SideBarIconBnt10 {
+.sidebarIconConfigs1 {
   background-image: url(../assets/imgs/link_sass/iconAccessibility.svg);
 }
 
+/** @format */
 /** @format */
 /** @format */
 .bntCertificate {
@@ -372,6 +396,8 @@ html,
   background-position: center;
 }
 
+/** @format */
+/** @format */
 /** @format */
 .bntsPdfContainer, .messageConfirm, .formation .specificformation, .containerButtons {
   display: flex;
@@ -429,6 +455,7 @@ html,
   margin: 2rem 0 0 0;
 }
 /** @format */
+/** @format */
 #ancorForAssess {
   position: absolute;
   top: 2px;
@@ -456,6 +483,7 @@ html,
 
 /** @format */
 /** @format */
+/** @format */
 .sideBar {
   position: fixed;
   bottom: 0;
@@ -472,19 +500,21 @@ html,
   padding-left: 0.18rem;
   transition: 0.3s;
 }
-.sideBar .layoutSideBar {
+
+.layoutSideBar {
   margin: 10px;
   width: 100%;
 }
-.sideBar .layoutSideBar .divDadBnts {
-  display: flex;
+
+.divDadBnts {
+  display: none;
   align-items: center;
   gap: 0.4rem;
   min-height: 2.5rem;
   margin: 0 0 0 0.35rem;
   transition: 0.3s;
 }
-.sideBar .layoutSideBar .divDadBnts:hover .sideBarBnts {
+.divDadBnts:hover .sideBarBnts {
   margin-top: 0.13rem;
   min-height: 1.24rem;
 }
@@ -507,6 +537,7 @@ html,
   min-width: 60vw;
   height: 4.38rem;
   transition: left 0.3s ease;
+  cursor: pointer;
 }
 
 .closeBtn {
@@ -519,25 +550,48 @@ html,
     bottom: auto;
     left: 0;
     right: 0vw;
+    display: flex;
+    justify-content: center;
     z-index: 3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(to top, rgb(85, 107, 47) 0%, rgba(0, 0, 0, 0.5) 2%);
-    min-height: 8.63rem;
+    backdrop-filter: blur(2px);
+    --webkit-backdrop-filter: blur(2px);
+    min-height: 6rem;
   }
-  .sideBar .layoutSideBar {
-    margin: 10px;
+  .layoutSideBar {
+    justify-content: center;
+    margin: 0;
     width: 100%;
+    max-width: 50rem;
+    height: 6rem;
   }
-  .sideBar .layoutSideBar .divDadBnts {
+  .containerMainBtns {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0rem 2rem 0 5rem;
+  }
+  .divDadBnts {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0.8rem 2rem 0 5rem;
     min-height: 2.5rem;
-    margin: 0 0 0 0.35rem;
     transition: 0.3s;
   }
-  .sideBar .layoutSideBar .divDadBnts:hover .sideBarBnts {
+  .divDadBnts:hover .sideBarBnts {
+    margin-top: 0;
+    min-height: 1.76rem;
+  }
+  .divDadBnts .sideBarBnts:hover {
     margin-top: 0.13rem;
     min-height: 1.24rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .divDadBnts p {
+    display: none;
   }
   .sideBarClose {
     top: 0vh;
@@ -545,17 +599,29 @@ html,
   .bntCloseSidebar {
     top: 0;
     bottom: auto;
-    left: 0vw;
+    left: 0;
     z-index: 4;
-    justify-content: flex-start;
-    padding: 1rem 2rem;
+    justify-content: center;
+    min-height: 5.9rem;
+    min-width: 5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: 0.35rem;
     transition: top 0.3s ease;
   }
   .closeBtn {
     top: -22vw;
   }
 }
+@media (min-width: 901px) {
+  .divDadBnts p {
+    display: flex;
+  }
+}
+.active {
+  display: flex !important;
+}
+
 .container-menu {
   position: fixed;
   bottom: 0;
@@ -580,6 +646,7 @@ html,
     justify-content: start;
   }
 }
+/** @format */
 /** @format */
 .bntCarousel {
   position: relative;
@@ -621,6 +688,7 @@ html,
   rotate: 10deg;
 }
 
+/** @format */
 .itemList-0, .itemList-4, .itemList-3, .itemList-2, .itemList-1 {
   display: block;
   position: relative;
@@ -670,6 +738,7 @@ html,
   display: flex;
 }
 
+/** @format */
 /** @format */
 .audio-player {
   display: flex;
@@ -769,6 +838,7 @@ iframe {
 
 }*/
 /** @format */
+/** @format */
 .modalCertificate, .messageConfirm {
   position: fixed;
   justify-items: center;
@@ -789,6 +859,7 @@ iframe {
   height: 80%;
 }
 
+/** @format */
 .gridSkills {
   display: flex;
   justify-content: center;
@@ -912,6 +983,7 @@ iframe {
   grid-row: 1/5;
 }
 
+/** @format */
 .containerChartAndLegend {
   display: flex;
   margin: 10rem 0 1rem 0;
@@ -1072,6 +1144,7 @@ iframe {
 }
 
 /** @format */
+/** @format */
 .container-projects {
   display: flex;
   align-items: center;
@@ -1157,6 +1230,7 @@ iframe {
   min-height: 4.43rem;
 }
 
+/** @format */
 /** @format */
 .assessment-container {
   position: relative;
@@ -1264,6 +1338,7 @@ iframe {
 }
 
 /** @format */
+/** @format */
 .commentArea {
   display: flex;
   flex-direction: column;
@@ -1322,6 +1397,7 @@ iframe {
 }
 
 /** @format */
+/** @format */
 .formation {
   margin-top: 3rem;
   display: flex;
@@ -1370,6 +1446,7 @@ iframe {
   display: flex;
 }
 
+/** @format */
 /** @format */
 .messageConfirm {
   position: fixed;

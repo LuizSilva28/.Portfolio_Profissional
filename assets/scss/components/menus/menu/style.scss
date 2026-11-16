@@ -4,6 +4,10 @@
 @use "../sideBar/sideBar.scss" as *;
 @use "@styles/base/variables/colors.scss" as *;
 
+.active {
+	display: flex !important;
+}
+
 .container-menu {
 	position: fixed;
 	bottom: 0;
